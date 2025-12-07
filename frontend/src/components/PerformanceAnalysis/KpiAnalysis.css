@@ -1,0 +1,1095 @@
+/* KPI Dashboard Styles */
+
+/* Main Container */
+.audit-kpi-container {
+  margin-left: 280px;
+  padding: 12px;
+  margin-top:20px;
+  background: white;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Heading */
+.audit-kpi-heading {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+/* Row Layout - 2 KPIs per row */
+.audit-kpi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Section Layout */
+.audit-kpi-section-left,
+.audit-kpi-section-right {
+  width: 100%;
+}
+
+/* Card Wrapper */
+.audit-kpi-card-wrapper {
+  height: 100%;
+}
+
+/* Base Card Styles */
+.audit-kpi-card {
+  background: transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* Specific heights for cards with more content */
+.audit-kpi-readiness-card {
+  height: 350px;
+}
+
+/* Compliance Readiness Card - Two Section Layout */
+.audit-kpi-readiness-left {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.audit-kpi-readiness-right {
+  flex: 0 0 45%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #f1f5f9;
+}
+
+/* Evidence Collection Card - Two Section Layout */
+.audit-kpi-evidence-left {
+  flex: 1 1 calc(100% - 240px);
+  max-width: calc(100% - 240px);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.audit-kpi-evidence-card .audit-kpi-audit-selector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.audit-kpi-evidence-card .audit-kpi-audit-select {
+  width: 100%;
+  max-width: 220px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.audit-kpi-evidence-right {
+  flex: 0 0 38%;
+  max-width: 240px;
+  padding: 12px 12px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #f1f5f9;
+}
+
+/* Cycle Time Card - Two Section Layout */
+.audit-kpi-cycle-time-left {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.audit-kpi-cycle-time-right {
+  flex: 0 0 45%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #f1f5f9;
+}
+
+/* Criticality Breakdown Styles */
+.audit-kpi-criticality-breakdown {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-breakdown-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-criticality-bars {
+  margin-top: 8px;
+}
+
+.audit-kpi-criticality-bar-item {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.audit-kpi-criticality-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.audit-kpi-criticality-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.audit-kpi-criticality-counts {
+  font-size: 10px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Framework Distribution Chart */
+.audit-kpi-framework-distribution {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-framework-chart-container {
+  height: 140px;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Evidence Audits Styles */
+.audit-kpi-evidence-audits {
+  width: 100%;
+  max-width: 220px;
+  padding: 10px;
+  margin-left: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-evidence-audits-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-evidence-audit-list {
+  margin-top: 8px;
+}
+
+.audit-kpi-evidence-audit-item {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audit-kpi-evidence-audit-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+.audit-kpi-evidence-audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.audit-kpi-evidence-audit-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.audit-kpi-evidence-audit-percentage {
+  font-size: 10px;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.audit-kpi-evidence-audit-framework {
+  font-size: 9px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.audit-kpi-evidence-audit-progress {
+  margin-top: 6px;
+}
+
+/* Evidence Details Styles */
+.audit-kpi-evidence-details {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-evidence-details-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-evidence-detail-summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.audit-kpi-evidence-detail-count {
+  text-align: center;
+  padding: 6px 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.audit-kpi-view-all-button {
+  width: 100%;
+  padding: 8px 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audit-kpi-view-all-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Cycle Time Distribution Styles */
+.audit-kpi-cycle-distribution {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-cycle-distribution-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-cycle-distribution-chart {
+  height: 120px;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.audit-kpi-cycle-distribution-legend {
+  margin-top: 8px;
+}
+
+.audit-kpi-cycle-legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 6px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #e5e7eb;
+}
+
+.audit-kpi-cycle-legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.audit-kpi-cycle-legend-text {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audit-kpi-cycle-legend-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.audit-kpi-cycle-legend-count {
+  font-size: 9px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Cycle Time Performance Metrics */
+.audit-kpi-cycle-performance {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-cycle-performance-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-cycle-performance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.audit-kpi-cycle-performance-item {
+  text-align: center;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.audit-kpi-cycle-performance-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 3px;
+}
+
+.audit-kpi-cycle-performance-label {
+  font-size: 9px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* No Data State */
+.audit-kpi-no-data {
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-no-data-icon {
+  margin-bottom: 8px;
+}
+
+.audit-kpi-no-data-text {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.audit-kpi-evidence-card {
+  height: 350px;
+}
+
+.audit-kpi-non-compliance-card {
+  height: 350px;
+}
+
+.audit-kpi-cycle-time-card {
+  height: 350px;
+}
+
+.audit-kpi-time-to-close-card {
+  height: 350px;
+}
+
+.audit-kpi-audit-completion-card {
+  height: 350px;
+}
+
+.audit-kpi-card:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Card Content Layout - Chart Left, Content Right */
+.audit-kpi-card .v-card-item {
+  padding: 0;
+  height: 100%;
+}
+
+.audit-kpi-card .d-flex {
+  height: 100%;
+  flex-direction: row;
+}
+
+/* Chart Section (Left Side) */
+.audit-kpi-card-graph-right {
+  flex: 0 0 40%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 10px;
+  position: relative;
+  border-right: none;
+}
+
+/* Content Section (Right Side) */
+.audit-kpi-card-content-left {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* Remove all specific card gradient backgrounds */
+.audit-kpi-non-compliance-card .audit-kpi-card-graph-right,
+.audit-kpi-cycle-time-card .audit-kpi-card-graph-right,
+.audit-kpi-time-to-close-card .audit-kpi-card-graph-right,
+.audit-kpi-readiness-card .audit-kpi-card-graph-right,
+.audit-kpi-evidence-card .audit-kpi-card-graph-right,
+.audit-kpi-audit-completion-card .audit-kpi-card-graph-right {
+  background: #ffffff;
+  border-right: 1px solid #f1f5f9;
+}
+
+/* Typography */
+.audit-kpi-text-h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.audit-kpi-text-body-2 {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Badges and Metrics */
+.audit-kpi-issues-badge,
+.audit-kpi-time-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 8px 0;
+  min-width: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.audit-kpi-time-unit {
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+/* Status Classes */
+.efficiency-good { color: #059669; border-color: #d1fae5; background-color: #ecfdf5; }
+.efficiency-warning { color: #d97706; border-color: #fed7aa; background-color: #fffbeb; }
+.efficiency-poor { color: #dc2626; border-color: #fecaca; background-color: #fef2f2; }
+
+.close-time-good { color: #059669; border-color: #d1fae5; background-color: #ecfdf5; }
+.close-time-fair { color: #d97706; border-color: #fed7aa; background-color: #fffbeb; }
+.close-time-poor { color: #dc2626; border-color: #fecaca; background-color: #fef2f2; }
+
+.issues-trend-good { color: #059669; border-color: #d1fae5; background-color: #ecfdf5; }
+.issues-trend-neutral { color: #6b7280; border-color: #e5e7eb; background-color: #f9fafb; }
+.issues-trend-bad { color: #dc2626; border-color: #fecaca; background-color: #fef2f2; }
+
+/* Gauge Container */
+.audit-kpi-gauge-container {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.audit-kpi-gauge-chart {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Target Info */
+.audit-kpi-target-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.audit-kpi-target-label {
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.audit-kpi-efficiency-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Period Selectors */
+.audit-kpi-period-selector {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.audit-kpi-period-button {
+  flex: 1;
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audit-kpi-period-button.active {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.audit-kpi-period-button:hover:not(.active) {
+  background: #e2e8f0;
+}
+
+/* Severity Filters */
+.audit-kpi-severity-filter {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.audit-kpi-severity-button {
+  flex: 1;
+  padding: 4px 6px;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audit-kpi-severity-button.active {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Severity Breakdown */
+.audit-kpi-severity-breakdown {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.audit-kpi-severity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.audit-kpi-severity-name {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.audit-kpi-severity-count {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Chart Container Styles */
+.audit-kpi-chart-container {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Chart Title */
+.audit-kpi-chart-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* Progress Bars */
+.audit-kpi-progress-bar-container {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.audit-kpi-progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.audit-kpi-progress-text {
+  font-size: 9px;
+  font-weight: 600;
+  color: #4b5563;
+  margin-left: 6px;
+}
+
+/* Metrics Grid */
+.audit-kpi-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.audit-kpi-metric-item {
+  text-align: center;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.audit-kpi-metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.audit-kpi-metric-label {
+  font-size: 10px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+/* Dropdown Filters */
+.audit-kpi-filter-dropdown {
+  margin-bottom: 10px;
+}
+
+.audit-kpi-filter-select {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #374151;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.audit-kpi-filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* View Toggle */
+.audit-kpi-view-toggle-container {
+  display: flex;
+  gap: 1px;
+  background: #f1f5f9;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+.audit-kpi-view-toggle-button {
+  flex: 1;
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audit-kpi-view-toggle-button.active {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Error States */
+.audit-kpi-error-text {
+  color: #dc2626;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Modal Styles */
+.audit-kpi-modal-title {
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .audit-kpi-container {
+    margin-left: 260px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .audit-kpi-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .audit-kpi-container {
+    margin-left: 240px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .audit-kpi-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  .audit-kpi-card {
+    height: auto;
+    min-height: 250px;
+  }
+  
+  .audit-kpi-card .d-flex {
+    flex-direction: column;
+  }
+  
+  .audit-kpi-card-graph-right {
+    flex: none;
+    height: 150px;
+  }
+  
+  .audit-kpi-card-content-left {
+    flex: none;
+  }
+}
+
+/* Loading States */
+.audit-kpi-card[loading] {
+  opacity: 0.7;
+}
+
+/* Trend Indicators */
+.audit-kpi-trend-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  margin-left: 6px;
+}
+
+/* Focus States */
+.audit-kpi-period-button:focus,
+.audit-kpi-severity-button:focus,
+.audit-kpi-view-toggle-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Non-Compliance Issues Card - Two Section Layout */
+.audit-kpi-non-compliance-card .d-flex {
+  flex-direction: row;
+}
+
+.audit-kpi-non-compliance-left {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.audit-kpi-non-compliance-right {
+  flex: 0 0 50%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bar Chart for Non-Compliance Issues */
+.audit-kpi-issues-bar-chart {
+  width: 100%;
+  height: 250px;
+  background: transparent;
+  border-radius: 0;
+  padding: 12px;
+  border: none;
+  position: relative;
+}
+
+/* Chart container styles for different chart types */
+.audit-kpi-trend-chart-container,
+.audit-kpi-close-time-chart-container,
+.audit-kpi-bar-chart-container {
+  width: 100%;
+  height: 250px;
+  background: transparent;
+  border-radius: 0;
+  padding: 12px;
+  border: none;
+  position: relative;
+}
+
+/* S24 Basel Findings Styles */
+.audit-kpi-basel-findings-card {
+  height: 350px;
+}
+
+.audit-kpi-findings-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 8px 0;
+  min-width: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.audit-kpi-findings-unit {
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+.audit-kpi-aging-buckets {
+  width: 100%;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.audit-kpi-aging-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.audit-kpi-aging-bars {
+  margin-top: 8px;
+}
+
+.audit-kpi-aging-bar-item {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.audit-kpi-aging-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.audit-kpi-aging-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.audit-kpi-aging-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* S25 Remediation Time Styles */
+.audit-kpi-remediation-time-card {
+  height: 350px;
+}
+
+.audit-kpi-boxplot-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.audit-kpi-boxplot-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  background: white;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.audit-kpi-boxplot-label {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.audit-kpi-boxplot-value {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+.audit-kpi-remediation-trend-container {
+  width: 100%;
+  height: 250px;
+  background: transparent;
+  border-radius: 0;
+  padding: 12px;
+  border: none;
+  position: relative;
+}
+
+/* Readiness and Evidence badges */
+.readiness-excellent,
+.evidence-excellent {
+  color: #16a34a;
+  background-color: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+.readiness-good,
+.evidence-good {
+  color: #059669;
+  background-color: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+
+.readiness-fair,
+.evidence-fair {
+  color: #d97706;
+  background-color: #fed7aa;
+  border: 1px solid #fde68a;
+}
+
+.readiness-poor,
+.evidence-poor {
+  color: #dc2626;
+  background-color: #fecaca;
+  border: 1px solid #fca5a5;
+}

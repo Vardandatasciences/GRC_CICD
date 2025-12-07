@@ -1,0 +1,842 @@
+2025-05-25T06:01:31.506Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-25T06:02:00.960Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-25T06:09:25.317Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:09:37.984Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-25T06:14:09.546Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-25T06:14:14.583Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:16:46.490Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:17:39.997Z [INFO] [RISK] Risk Module - Action: ASSIGN on RiskInstance | Details: Assigning risk 8 to user 5 
+2025-05-25T06:17:40.044Z [INFO] [RISK] Risk Module - Action: ASSIGN on RiskInstance | Details: Successfully assigned risk 8 to user 5 
+2025-05-25T06:18:04.813Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:18:07.541Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 5 [Risk viewed or clicked] 
+2025-05-25T06:18:07.545Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 5 [Risk viewed or clicked] 
+2025-05-25T06:18:14.058Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 8 to Work In Progress [Risk updated] 
+2025-05-25T06:25:59.788Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-25T06:26:01.581Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:26:05.378Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:26:55.877Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-25T06:27:00.436Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:27:03.625Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-25T06:27:03.628Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-25T06:27:07.534Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 3 [Risk viewed or clicked] 
+2025-05-25T06:27:07.536Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 3 [Risk viewed or clicked] 
+2025-05-25T06:27:12.733Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:27:57.203Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:28:41.160Z [INFO] [RISK] Risk Module - Action: ASSIGN on RiskInstance | Details: Assigning risk 8 to user 5 
+2025-05-25T06:28:41.199Z [INFO] [RISK] Risk Module - Action: ASSIGN on RiskInstance | Details: Successfully assigned risk 8 to user 5 
+2025-05-25T06:28:50.943Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T06:28:54.966Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 5 [Risk viewed or clicked] 
+2025-05-25T06:28:54.968Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 5 [Risk viewed or clicked] 
+2025-05-25T06:29:06.176Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 8 to Work In Progress [Risk updated] 
+2025-05-25T06:29:10.483Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:29:10.545Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:29:10.563Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:30:28.949Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 8 to Revision Required by Reviewer [Risk updated] 
+2025-05-25T06:32:17.611Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-25T06:32:17.615Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-25T06:36:04.871Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 5 [Risk viewed or clicked] 
+2025-05-25T06:36:04.874Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 5 [Risk viewed or clicked] 
+2025-05-25T06:36:16.993Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:36:17.069Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:36:17.139Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 8 [Risk viewed or clicked] 
+2025-05-25T06:37:09.538Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 8 to Revision Required by Reviewer [Risk updated] 
+2025-05-25T06:37:30.988Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-25T06:37:30.991Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-25T06:38:05.668Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 5 [Risk viewed or clicked] 
+2025-05-25T06:38:05.672Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 5 [Risk viewed or clicked] 
+2025-05-25T06:38:13.662Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:09:26.009Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:18:28.295Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:20:46.862Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:21:30.646Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:21:32.086Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 3 [Risk viewed or clicked] 
+2025-05-25T21:21:32.184Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 3 [Risk viewed or clicked] 
+2025-05-25T21:21:34.630Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-25T21:21:34.680Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-25T21:21:34.776Z [ERROR] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Error viewing user risks: 'datetime.date' object has no attribute 'utcoffset' 
+2025-05-25T21:21:36.977Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 3 [Risk viewed or clicked] 
+2025-05-25T21:21:36.993Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 3 [Risk viewed or clicked] 
+2025-05-25T21:21:39.618Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 4 [Risk viewed or clicked] 
+2025-05-25T21:21:39.667Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 4 [Risk viewed or clicked] 
+2025-05-25T21:21:42.116Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-25T21:21:42.128Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-25T21:21:42.186Z [ERROR] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Error viewing user risks: 'datetime.date' object has no attribute 'utcoffset' 
+2025-05-25T21:25:51.874Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-25T21:25:55.864Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:27:42.112Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:28:10.052Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:28:11.854Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:28:14.548Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-25T21:28:14.612Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-25T21:30:27.424Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:30:29.412Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:30:33.848Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-25T21:30:33.859Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-25T21:30:38.378Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 20 to Work In Progress [Risk updated] 
+2025-05-25T21:30:41.625Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 20 [Risk viewed or clicked] 
+2025-05-25T21:30:41.771Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 20 [Risk viewed or clicked] 
+2025-05-25T21:30:41.845Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 20 [Risk viewed or clicked] 
+2025-05-25T21:31:09.291Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 19 [Risk viewed or clicked] 
+2025-05-25T21:31:09.452Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 19 [Risk viewed or clicked] 
+2025-05-25T21:31:09.530Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 19 [Risk viewed or clicked] 
+2025-05-25T21:32:57.214Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:49:39.911Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:51:33.338Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:52:26.895Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:53:18.004Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:53:28.926Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:55:41.988Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-25T21:56:03.943Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T03:55:41.756Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:30:02.406Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:51:34.718Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:51:41.660Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:51:44.417Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-26T04:51:44.424Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-26T04:51:51.724Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:51:52.531Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T04:51:54.593Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-26T04:51:54.601Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-26T04:51:57.988Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 18 to Work In Progress [Risk updated] 
+2025-05-26T04:51:59.946Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-26T04:52:00.043Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-26T04:52:00.115Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-26T04:52:29.965Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T06:07:14.625Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T06:07:27.075Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T06:07:28.829Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-26T06:07:28.837Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-26T06:07:30.987Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-26T06:07:31.059Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-26T06:07:31.110Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-26T06:08:23.021Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 21 to Work In Progress [Risk updated] 
+2025-05-26T06:08:25.731Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 20 to Completed [Risk updated] 
+2025-05-26T12:35:05.928Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T12:42:49.914Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T12:44:13.312Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T12:44:16.939Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T12:44:33.721Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T20:24:34.392Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T20:24:38.495Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-26T20:24:40.474Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:24:57.234Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:29:47.010Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:29:54.439Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:31:33.889Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T20:31:37.003Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:36:10.284Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:36:16.024Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:40:19.612Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:40:34.185Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:50:48.146Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:50:51.708Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-26T20:50:51.717Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-26T20:50:51.751Z [ERROR] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Error viewing user risks: 'datetime.date' object has no attribute 'utcoffset' 
+2025-05-26T20:50:57.350Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 3 [Risk viewed or clicked] 
+2025-05-26T20:50:57.351Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 3 [Risk viewed or clicked] 
+2025-05-26T20:51:17.388Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T20:51:19.205Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:51:24.000Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:56:37.563Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T20:56:38.989Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-26T20:56:39.083Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-26T20:57:54.564Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:31:18.911Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:31:26.279Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-26T21:31:26.285Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-26T21:31:28.975Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:31:54.100Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:31:57.010Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T21:32:38.303Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:32:39.352Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-26T21:32:40.461Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:32:55.152Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-26T21:32:57.031Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:33:22.835Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:33:28.641Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:33:30.504Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:33:32.760Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:33:54.534Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:34:11.301Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:34:16.700Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:34:16.741Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:34:33.019Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:34:38.099Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:34:38.143Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:36:02.591Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:36:06.338Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:36:06.371Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:39:04.616Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:39:04.836Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:39:20.731Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:39:20.778Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:39:50.245Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T01:39:55.934Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:40:06.823Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:40:10.387Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:40:10.425Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:40:18.279Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:40:22.439Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:40:22.477Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:43:11.676Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:43:11.943Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:43:23.525Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:54:00.200Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:54:13.277Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:54:13.381Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:55:17.412Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:59:45.792Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T01:59:49.482Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:59:49.525Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:59:53.865Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T01:59:53.922Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T01:59:55.611Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T02:05:06.244Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T02:05:09.963Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T02:05:10.097Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T02:05:35.996Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T02:06:18.861Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T02:07:24.766Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T04:19:27.747Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T04:50:35.263Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T04:50:38.723Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T04:50:47.069Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T04:50:53.125Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T04:50:55.270Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-27T04:50:55.725Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T04:51:23.348Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T04:51:32.501Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T04:51:41.604Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:03:50.026Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:03:54.772Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-27T05:03:55.921Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:03:58.455Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:04:05.987Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:04:09.691Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:04:12.255Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:05:26.725Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:10:58.821Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:16:48.129Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:16:49.751Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:16:51.951Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:16:53.609Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:17:01.373Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:24:04.930Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:25:10.208Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:25:19.331Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:25:24.640Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:26:11.668Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:26:24.261Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-27T05:26:25.263Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:27:33.770Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:27:35.352Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:33:00.034Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:35:17.701Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:35:27.501Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T05:35:32.665Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:35:35.113Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T05:35:35.149Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T05:35:46.500Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:36:03.394Z [INFO] [INCIDENT] Incident Module - Action: ANALYZE on Incident | Details: Analyzing incident with SLM model 
+2025-05-27T05:36:10.125Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T05:36:14.870Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 14 
+2025-05-27T05:36:14.915Z [INFO] [INCIDENT] Incident Module - Action: UPDATE on Incident | Details: Updating incident 14 
+2025-05-27T05:36:31.993Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:39:20.823Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:39:42.846Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:40:11.614Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:42:28.868Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:42:41.541Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:46:48.092Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:46:52.299Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T05:47:04.866Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T08:08:05.403Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T08:08:28.928Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T08:08:29.015Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T08:08:35.447Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T08:08:37.392Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T08:08:43.905Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T08:08:51.463Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T08:08:56.589Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T08:08:58.389Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T08:09:00.137Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T08:09:04.305Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-27T08:09:38.778Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T10:56:36.479Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:09:43.559Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:11:09.195Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:11:20.848Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 15 
+2025-05-27T11:11:20.910Z [INFO] [INCIDENT] Incident Module - Action: UPDATE on Incident | Details: Updating incident 15 
+2025-05-27T11:11:29.908Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 15 
+2025-05-27T11:11:29.929Z [INFO] [INCIDENT] Incident Module - Action: UPDATE on Incident | Details: Updating incident 15 
+2025-05-27T11:11:43.309Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:15:49.991Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:19:01.971Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:27:40.771Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:31:02.316Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:31:15.200Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:32:26.272Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:32:31.397Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:32:33.268Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:32:33.305Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:38:04.617Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:38:04.747Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:39:32.741Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T11:39:45.491Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:39:45.538Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:43:04.681Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:43:04.828Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:45:53.617Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:45:53.831Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:46:13.004Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:46:13.069Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T11:49:19.772Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T11:49:19.877Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T14:48:26.162Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T14:48:26.460Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T14:49:01.856Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T14:49:01.944Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T15:07:42.920Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T15:07:43.146Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T15:13:04.376Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T15:13:06.156Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T15:13:10.696Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T15:13:13.585Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T15:13:16.708Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T15:13:16.778Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T15:13:20.250Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T15:13:22.553Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T15:17:47.513Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T15:39:07.741Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T16:28:43.056Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T16:37:10.904Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T16:43:39.958Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:30:31.641Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:36:27.102Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:36:38.317Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T17:36:42.681Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:36:42.740Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T17:36:44.789Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T17:36:46.844Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:38:00.037Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:43:40.574Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T17:53:31.058Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T18:00:10.971Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T18:56:57.995Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T18:58:48.029Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T19:02:04.717Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T19:04:29.825Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T19:04:36.089Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:04:51.056Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T19:04:51.096Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T19:04:52.864Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:05:07.996Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:13:12.537Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:19:58.887Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:25:43.552Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:27:52.582Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:28:34.392Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:28:35.833Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:28:38.857Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:32:06.348Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:32:27.752Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:32:31.425Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T19:32:31.429Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T19:42:03.964Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:42:08.688Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:42:20.619Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:42:29.072Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:42:30.080Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:42:32.798Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T19:42:37.604Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T19:42:40.529Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:42:41.908Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:43:10.081Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:43:16.507Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T19:43:16.509Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T19:51:02.600Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:51:07.118Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T19:51:07.139Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T19:57:01.137Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T19:57:04.264Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T19:57:04.267Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T19:57:14.322Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 20 [Risk viewed or clicked] 
+2025-05-27T19:57:14.437Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 20 [Risk viewed or clicked] 
+2025-05-27T19:57:14.502Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 20 [Risk viewed or clicked] 
+2025-05-27T19:57:59.804Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 20 [Risk viewed or clicked] 
+2025-05-27T19:58:00.109Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 20 [Risk viewed or clicked] 
+2025-05-27T19:58:00.179Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:08:28.633Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T21:08:36.143Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T21:08:36.154Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T21:08:42.288Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:08:42.390Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:08:42.441Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:09:26.931Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 19 [Risk viewed or clicked] 
+2025-05-27T21:09:27.071Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 19 [Risk viewed or clicked] 
+2025-05-27T21:09:27.132Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 19 [Risk viewed or clicked] 
+2025-05-27T21:43:42.355Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T21:43:48.790Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T21:43:48.815Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T21:43:52.914Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:43:53.053Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:43:53.114Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-27T21:45:17.463Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T21:45:23.367Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T21:45:23.375Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T21:45:26.131Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:45:26.192Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:45:26.256Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:52:34.993Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T21:52:39.751Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-27T21:52:39.761Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-27T21:52:43.271Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:52:43.357Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:52:43.409Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 20 [Risk viewed or clicked] 
+2025-05-27T21:53:21.496Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 20 to Revision Required by Reviewer [Risk updated] 
+2025-05-27T21:55:08.564Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-27T21:55:08.622Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-27T22:05:26.639Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:05:31.381Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-27T22:05:31.384Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-27T22:13:07.719Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:13:11.496Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-27T22:13:11.566Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-27T22:20:29.408Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:20:40.333Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-27T22:20:40.343Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-27T22:33:23.921Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:33:27.314Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-27T22:33:27.447Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-27T22:33:49.057Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:34:01.529Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:34:03.433Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:34:06.944Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:34:38.939Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:34:44.496Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:46:18.923Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:46:36.274Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:46:45.540Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:46:47.414Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:46:53.089Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:53:44.803Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-27T22:53:56.477Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T22:54:07.447Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:54:11.297Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T22:54:14.502Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:54:17.508Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T22:54:17.550Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-27T22:54:20.103Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:54:21.352Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-27T22:54:21.409Z [INFO] [INCIDENT] Incident Module - Action: UPDATE on Incident | Details: Updating incident 1 
+2025-05-27T22:54:30.775Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-27T22:54:41.767Z [INFO] [INCIDENT] Incident Module - Action: ANALYZE on Incident | Details: Analyzing incident with SLM model 
+2025-05-28T04:12:07.375Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:12:11.382Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T04:12:21.008Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:12:22.795Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T04:12:22.828Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T04:12:33.781Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:12:42.507Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:12:57.988Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:13:00.985Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T04:13:00.990Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T04:13:02.621Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T04:13:02.673Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T04:13:02.730Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T04:13:15.433Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:13:21.302Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:13:24.848Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:17:04.489Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:17:05.677Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:17:15.245Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:17:16.167Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:17:16.967Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:17:19.741Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T04:22:48.169Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:22:56.740Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:23:01.230Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T04:23:02.393Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:23:03.050Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T04:23:04.421Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T04:23:58.699Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T05:03:09.527Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T05:35:35.326Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T05:35:38.720Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T05:35:38.729Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T05:53:15.191Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T05:53:34.688Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T05:53:34.693Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T05:53:36.557Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T05:53:36.562Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T05:55:33.295Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T05:55:36.561Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T05:55:38.589Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:02:33.725Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:02:37.256Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:02:37.260Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:03:01.943Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T06:03:01.947Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T06:03:08.963Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:03:08.971Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:03:17.734Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 19 [Risk viewed or clicked] 
+2025-05-28T06:03:17.872Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 19 [Risk viewed or clicked] 
+2025-05-28T06:03:17.944Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 19 [Risk viewed or clicked] 
+2025-05-28T06:03:25.966Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:12:14.119Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:21:40.085Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:21:44.124Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:21:44.130Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:22:02.252Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:22:03.391Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:22:03.395Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:26:57.739Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:27:00.034Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:27:00.047Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:27:20.159Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T06:27:20.170Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T06:27:26.355Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:27:26.384Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:27:27.732Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:27:27.793Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:27:27.853Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:28:45.490Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:28:45.736Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:28:45.892Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:43:45.971Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:43:54.552Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:43:54.555Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:44:03.700Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:44:03.834Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:44:03.882Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T06:49:35.788Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:49:40.569Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:49:40.685Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:49:45.091Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T06:49:45.097Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:54:40.993Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T06:54:48.248Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T06:54:48.253Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:00:03.822Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:00:04.696Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:00:04.701Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:17:19.641Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:17:21.670Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:17:21.678Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:19:30.654Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T07:19:32.811Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:19:34.595Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:22:47.908Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:22:49.123Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:22:49.129Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:30:32.802Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:30:33.872Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:30:33.885Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:37:10.434Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:37:12.105Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:37:12.113Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:37:24.209Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:37:24.431Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:37:24.499Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:38:25.590Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:38:25.669Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:38:25.713Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:38:56.227Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T07:38:58.813Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T07:38:58.840Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T07:39:00.914Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:39:01.030Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T07:39:01.104Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:10:12.850Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:10:15.750Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:10:15.756Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:10:21.771Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:10:21.820Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:10:21.854Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:19:26.917Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:19:29.829Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:19:29.841Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:19:31.371Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:19:31.436Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:19:31.479Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:27:57.903Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:28:01.302Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:28:01.363Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:28:02.546Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:28:02.634Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:28:02.709Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:29:08.319Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:29:10.606Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:29:10.746Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:29:11.661Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:29:11.723Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:29:11.767Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:25.499Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:25.662Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:25.703Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:31.229Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:31:34.416Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:31:34.432Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:31:35.413Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:35.456Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:31:35.487Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:36:48.384Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:36:49.684Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:36:49.690Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:36:50.927Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:36:51.006Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:36:51.096Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:37:20.438Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:37:20.489Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:37:20.513Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:38:28.642Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:38:31.326Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:38:31.332Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:38:32.500Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:38:32.596Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:38:32.664Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:43:29.779Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:43:30.607Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:43:30.694Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:43:31.873Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:43:31.929Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:43:31.971Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:43:53.700Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:43:58.699Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:43:58.708Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:44:00.161Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:44:00.207Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:44:00.232Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T09:44:19.728Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 18 to Completed [Risk updated] 
+2025-05-28T09:44:32.601Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 19 to Work In Progress [Risk updated] 
+2025-05-28T09:44:46.662Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T09:44:46.666Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T09:58:04.654Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T09:58:07.745Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T09:58:07.755Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:58:12.597Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T09:58:12.606Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T09:58:28.204Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T09:58:28.212Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:05:11.375Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:05:13.910Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T10:05:13.919Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:05:18.326Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T10:05:18.368Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T10:05:46.381Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:05:47.967Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T10:05:47.977Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T10:15:04.026Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:15:05.415Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:15:05.434Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T10:15:07.308Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T10:15:07.312Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T10:18:11.978Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T10:18:15.102Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:18:17.169Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T10:18:17.206Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T10:18:20.293Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:18:22.597Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:18:22.601Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T10:18:44.278Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:18:44.320Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:18:44.353Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:26:24.703Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:26:26.706Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:26:26.711Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T10:26:31.551Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T10:26:31.565Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T10:26:44.668Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:26:46.352Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:26:46.359Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T10:26:48.021Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:26:48.150Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:26:48.259Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 19 [Risk viewed or clicked] 
+2025-05-28T10:27:03.179Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:27:05.530Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:27:06.865Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T10:27:08.642Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:27:12.423Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T10:27:12.449Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T10:27:13.664Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:27:30.264Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:27:33.232Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T10:27:35.153Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:27:36.285Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:27:40.622Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T10:27:45.967Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T10:27:49.315Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T10:27:49.317Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T11:00:27.061Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:00:29.349Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T11:00:29.357Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T11:00:32.143Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T11:00:32.198Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T11:00:32.233Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T11:00:37.829Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:00:37.834Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:06:29.782Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:06:30.928Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:06:30.934Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:15:06.420Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:15:07.591Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:15:07.596Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:22:58.539Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:26:56.089Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T11:26:57.253Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T11:26:58.508Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:26:59.707Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:27:05.985Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:27:05.990Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:33:26.566Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:33:30.234Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:33:30.238Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:50:23.226Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T11:50:24.821Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T11:50:24.929Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T11:50:43.808Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T11:50:43.812Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T12:01:49.824Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T12:01:50.534Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T12:01:50.635Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T12:09:10.496Z [INFO] [RISK] Risk Module - Action: UPDATE on RiskMitigation | Details: Updating mitigation status for risk 20 to Work In Progress [Risk updated] 
+2025-05-28T12:09:32.349Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T12:09:56.183Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T12:10:13.847Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T12:10:31.936Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T12:15:58.642Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T12:16:11.383Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T12:16:11.437Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T12:16:30.690Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T12:16:58.305Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T12:17:01.271Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T12:17:04.331Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T12:17:04.338Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T12:17:08.347Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMitigation | Details: Viewing mitigations for risk 18 [Risk viewed or clicked] 
+2025-05-28T12:17:08.442Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing latest review for risk 18 [Risk viewed or clicked] 
+2025-05-28T12:17:08.483Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing assigned reviewer for risk 18 [Risk viewed or clicked] 
+2025-05-28T12:17:29.885Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T12:17:29.898Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T12:17:56.317Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T12:17:56.354Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T18:27:54.590Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:23:46.712Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:23:50.153Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T19:23:52.054Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:23:54.736Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:23:54.740Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:33:10.814Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:33:12.109Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:33:12.130Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:35:22.105Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:38:15.356Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:38:15.430Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:38:43.423Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:38:44.353Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:38:44.367Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:41:32.996Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:41:35.774Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:41:35.779Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:41:51.360Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:41:56.375Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:41:56.385Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:46:26.771Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:46:26.867Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:47:42.604Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:47:42.821Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:48:47.763Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:50:05.644Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:52:00.255Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:52:01.824Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:52:01.829Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:52:35.539Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 3 [Risk viewed or clicked] 
+2025-05-28T19:52:35.626Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 3 [Risk viewed or clicked] 
+2025-05-28T19:54:50.407Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:54:50.542Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:55:06.104Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:55:07.277Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:55:07.372Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T19:57:09.478Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:57:09.673Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T19:57:59.448Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T19:57:59.482Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:01:04.169Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:02:43.173Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:02:43.208Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:03:36.255Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:03:42.143Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:03:43.907Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:03:43.916Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:09.326Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:04:11.000Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:11.005Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:19.330Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:04:24.784Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:24.790Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:52.113Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:04:54.632Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:54.753Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:58.417Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:04:59.765Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:04:59.770Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:05:09.281Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T20:05:21.459Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 4 [Risk viewed or clicked] 
+2025-05-28T20:05:21.467Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 4 [Risk viewed or clicked] 
+2025-05-28T20:05:23.896Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T20:05:23.914Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T20:05:25.413Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T20:05:25.426Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T20:05:49.000Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T20:05:50.872Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-28T20:05:53.108Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:09:56.009Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:10:55.638Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:37:57.062Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:38:06.592Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T20:38:06.659Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T20:38:09.126Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:39:01.353Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:39:15.209Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:39:21.591Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:39:36.902Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:40:18.080Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:40:26.564Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:41:18.553Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:42:00.319Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T20:42:09.819Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:42:55.618Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:42:58.519Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:42:58.556Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T21:43:01.617Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:43:05.006Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:43:05.066Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T21:43:07.194Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:43:13.261Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:43:14.594Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:43:20.596Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:43:29.093Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:43:29.132Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T21:43:30.104Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T21:43:32.099Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 2 [Risk viewed or clicked] 
+2025-05-28T21:43:32.105Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 2 [Risk viewed or clicked] 
+2025-05-28T21:43:33.936Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskInstance | Details: Viewing risks assigned to user 1 [Risk viewed or clicked] 
+2025-05-28T21:43:33.945Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskReview | Details: Viewing reviewer tasks for user 1 [Risk viewed or clicked] 
+2025-05-28T21:43:46.188Z [INFO] [USER] User Module - Action: VIEW on CustomUser | Details: Viewing custom users 
+2025-05-28T21:44:10.850Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T21:44:14.088Z [DEBUG] [RISK] Risk Module - Action: VIEW on RiskMetrics | Details: Viewing risk metrics dashboard [Risk viewed or clicked] 
+2025-05-28T21:44:15.810Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:44:18.665Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:44:18.732Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-28T21:44:31.354Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:44:53.960Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:44:56.426Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-28T21:44:58.159Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-28T21:44:58.194Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-30T04:22:00.494Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-30T04:22:00.637Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-30T04:22:08.433Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-30T04:22:12.324Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-30T04:22:12.353Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 
+2025-05-30T04:22:13.833Z [INFO] [INCIDENT] Incident Module - Action: LIST on Incident | Details: Viewing all incidents 
+2025-05-30T04:22:26.909Z [INFO] [INCIDENT] Incident Module - Action: VIEW on Incident | Details: Viewing incident 1 
+2025-05-30T04:22:26.955Z [INFO] [RISK] Risk Module - Action: LIST on Risk | Details: Viewing all risks 

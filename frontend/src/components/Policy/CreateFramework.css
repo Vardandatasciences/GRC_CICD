@@ -1,0 +1,479 @@
+.create-framework-container {
+  margin-left: 280px !important;
+  padding: 30px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.framework-form-container {
+  max-width: 600px;
+  margin: 0 auto 24px;
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 32px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #5165ff);
+  border-radius: 3px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-group input::placeholder {
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group input[type="date"] {
+  cursor: pointer;
+  color: #333;
+}
+
+.form-group .upload-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.file-input {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.form-group .input-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 8px;
+  color: #3498db;
+  font-size: 18px;
+  z-index: 1;
+  transition: color 0.2s ease;
+}
+
+.form-group input:focus + .input-icon,
+.form-group textarea:focus + .input-icon {
+  color: #2575fc;
+}
+
+.upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  background: #f0f7ff;
+  border: 1px dashed #3498db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #3498db;
+  font-weight: 500;
+}
+
+.upload-label:hover {
+  background: #e1f0fe;
+  border-color: #2980b9;
+}
+
+.upload-text::before {
+  content: '';
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.create-btn {
+  background: linear-gradient(90deg, #3498db, #5165ff);
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  width: auto;
+  min-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.create-btn:hover {
+  background: linear-gradient(90deg, #2980b9, #3f51b5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.3);
+}
+
+.create-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Extraction Popup Styles */
+.extraction-popup-overlay {
+  display: none;
+}
+
+/* New styles for inline extraction content */
+.extraction-inline-container {
+  margin: 24px auto;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.extraction-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  max-height: 800px;
+}
+
+/* Update existing styles */
+.extraction-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.extraction-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+  background-color: #fcfcfc;
+  background-image: linear-gradient(to bottom, #f7f9fc, #ffffff);
+}
+
+.extraction-stepper {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.extraction-step {
+  display: flex;
+  align-items: center;
+  background: #f3f3fa;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #6a11cb !important;
+  padding: 12px 24px 10px 18px;
+  margin-right: -2px;
+  position: relative;
+  z-index: 2;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.extraction-step:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.extraction-step.active {
+  background: white;
+  color: #6a11cb !important;
+  font-weight: 700;
+  z-index: 3;
+  border-bottom: 2px solid white;
+}
+
+.extraction-step .tab-close {
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 10px;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extraction-step .tab-close:hover {
+  color: #ff4757;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.policy-main {
+  margin-bottom: 28px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  border-left: 4px solid #2575fc;
+}
+
+.policy-main b {
+  display: block;
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.subpolicies-group {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding: 12px 4px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.extraction-subpolicy {
+  background: linear-gradient(145deg, #ffffff, #f5f9ff);
+  border: 1px solid rgba(214, 233, 255, 0.6);
+  border-radius: 16px;
+  padding: 24px 20px;
+  min-width: 220px;
+  max-width: 280px;
+  width: 32%;
+  font-size: 14px;
+  box-shadow: 0 8px 16px rgba(42, 112, 219, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.extraction-subpolicy:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(42, 112, 219, 0.12);
+  border-color: #a9d2ff;
+}
+
+.extraction-subpolicy b {
+  color: #2575fc;
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+.extraction-subpolicy b:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 3px;
+}
+
+.extraction-subpolicy label {
+  color: #6a11cb;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.extraction-subpolicy label:before {
+  content: "•";
+  color: #6a11cb;
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.extraction-subpolicy input,
+.extraction-subpolicy textarea {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #d1e3fa;
+  border-radius: 10px;
+  font-size: 13px;
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(42, 112, 219, 0.04);
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.extraction-subpolicy input:focus,
+.extraction-subpolicy textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.08);
+  background: #ffffff;
+}
+
+.extraction-subpolicy textarea {
+  min-height: 100px;
+  resize: none;
+  width: 100%;
+}
+
+.extraction-body label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6a11cb;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.extraction-body input,
+.extraction-body textarea {
+  width: 70% !important;
+  max-width: 500px;
+  border: 1px solid #d6e9ff;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  margin-bottom: 16px;
+  color: #333;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.extraction-body input:focus,
+.extraction-body textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.1), inset 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.extraction-body textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.extraction-body .create-btn {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-width: 120px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  margin-left: auto;
+  font-size: 14px;
+  width: auto;
+  max-width: 150px;
+}
+
+.extraction-body .create-btn:hover {
+  background: linear-gradient(135deg, #5e0fb5 0%, #1c68e3 100%);
+  box-shadow: 0 8px 16px rgba(106, 17, 203, 0.2);
+}
+
+.extraction-body .policy-main input,
+.extraction-body .policy-main textarea {
+  width: 60% !important;
+  max-width: 500px;
+}
+
+.extraction-body .extraction-subpolicy input,
+.extraction-body .extraction-subpolicy textarea {
+  width: 100% !important;
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1d9f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9d2ff;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-section > .form-group {
+  max-width: 100%;
+} 

@@ -1,0 +1,460 @@
+.sidebar {
+    height: 100vh;
+    width: 280px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+/* Optional: Style the scrollbar for webkit browsers */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+/* When sidebar is collapsed */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .submenu,
+.sidebar.collapsed .bottom-profile span,
+.sidebar.collapsed .menu-item span {
+    display: none;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #6b7280;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.toggle:hover {
+    background-color: #f3f4f6;
+}
+
+.menu {
+    flex-grow: 1;
+    padding: 1.5rem 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/* Style scrollbar for menu section */
+.menu::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: #374151;
+    text-decoration: none;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.menu-item:hover {
+    background-color: #f3f4f6;
+}
+
+.menu-item .icon {
+    margin-right: 0;
+    font-size: 1.1rem;
+}
+
+.menu-item.has-submenu {
+    position: relative;
+    font-weight: 600;
+}
+
+.submenu-arrow {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+}
+
+.menu-item.has-submenu.expanded .submenu-arrow {
+    transform: rotate(90deg);
+}
+
+.submenu {
+    padding-left: 2rem;
+    margin-top: 0;
+    background-color: #f9fafb;
+}
+
+.submenu .menu-item {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #6b7280;
+    padding: 0.6rem 1.5rem;
+    opacity: 1;
+}
+
+.submenu .menu-item:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+}
+
+.submenu .submenu {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    border-left: 1px solid #e5e7eb;
+}
+
+.submenu .submenu .menu-item {
+    font-size: 0.9rem;
+    opacity: 1;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Style for third-level nested submenu */
+.submenu .submenu .submenu {
+    padding-left: 1.2rem;
+    margin-top: 0;
+    border-left: 1px solid #e5e7eb;
+}
+
+.submenu .submenu .submenu .menu-item {
+    font-size: 0.85rem;
+    opacity: 1;
+    padding: 0.4rem 1.5rem;
+}
+
+.submenu .submenu .submenu .menu-item:hover {
+    opacity: 1;
+}
+
+.submenu .submenu .menu-item:hover {
+    opacity: 1;
+}
+
+/* For nested policy management submenu */
+.submenu .has-submenu {
+    position: relative;
+}
+
+.submenu .has-submenu > .submenu {
+    padding-left: 1.5rem;
+    margin-top: 0;
+    border-left: 1px solid #e5e7eb;
+}
+
+.submenu .has-submenu > .submenu .menu-item {
+    font-size: 0.9rem;
+    opacity: 1;
+    padding: 0.5rem 1.5rem;
+}
+
+.menu-item.active {
+    color: #ffffff;
+    font-weight: 600;
+    background: #3b82f6;
+    border-radius: 0;
+    padding-left: 1.5rem;
+}
+
+.bottom-profile {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 0.75rem;
+    color: #6b7280;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    border-top: 1px solid var(--border-color, #333);
+    position: relative;
+}
+
+.bottom-profile:hover {
+    background-color: var(--hover-bg, #333);
+    color: #374151;
+}
+
+.bottom-profile:active {
+    transform: scale(0.98);
+}
+
+.bottom-profile::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.bottom-profile:hover::after {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Nested submenu styles */
+.submenu .nested-submenu {
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+    background-color: var(--submenu-bg, #0f0f0f);
+}
+
+.submenu .menu-item {
+    position: relative;
+}
+
+.nested-submenu .menu-item {
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: #6b7280;
+}
+
+.nested-submenu .menu-item:before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: #6b7280;
+}
+
+.nested-submenu .menu-item:hover {
+    color: #374151;
+}
+
+/* CSS Variables for theming */
+:root {
+    --sidebar-bg: #1a1a1a;
+    --submenu-bg: #0f0f0f;
+    --border-color: #333;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --hover-bg: #333;
+    --active-bg: #4a90e2;
+}
+
+/* Theme variations */
+[data-theme="blue"] .sidebar {
+    --sidebar-bg: #1e3a8a;
+    --submenu-bg: #1e40af;
+    --border-color: #3b82f6;
+    --hover-bg: #2563eb;
+    --active-bg: #60a5fa;
+}
+
+[data-theme="light"] .sidebar {
+    --sidebar-bg: #f8fafc;
+    --submenu-bg: #f1f5f9;
+    --border-color: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --hover-bg: #e2e8f0;
+    --active-bg: #3b82f6;
+}
+
+/* Bottom Section */
+.bottom-section {
+    border-top: 1px solid var(--border-color, #333);
+    padding-top: 0.5rem;
+    flex-shrink: 0;
+    background-color: #ffffff;
+}
+
+/* Theme Menu Item */
+.theme-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    text-decoration: none;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.theme-menu-item:hover {
+    background-color: var(--hover-bg, #333);
+    color: #374151;
+}
+
+.theme-arrow {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.theme-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Theme Submenu */
+.theme-submenu {
+    background-color: var(--submenu-bg, #0f0f0f);
+    border-top: 1px solid var(--border-color, #333);
+    padding: 0.5rem 0;
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    position: relative;
+}
+
+.theme-option:hover {
+    background-color: var(--hover-bg, #333);
+    color: #374151;
+}
+
+.theme-option.active {
+    background-color: var(--active-bg, #4a90e2);
+    color: #ffffff;
+}
+
+/* Theme Preview */
+.theme-preview {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color, #333);
+    flex-shrink: 0;
+}
+
+.light-theme {
+    background: linear-gradient(45deg, #f8fafc 50%, #e2e8f0 50%);
+}
+
+.dark-theme {
+    background: linear-gradient(45deg, #1a1a1a 50%, #333 50%);
+}
+
+.blue-theme {
+    background: linear-gradient(45deg, #1e3a8a 50%, #3b82f6 50%);
+}
+
+.theme-check {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+/* Responsive adjustments for collapsed state */
+.sidebar.collapsed .theme-menu-item span,
+.sidebar.collapsed .theme-arrow,
+.sidebar.collapsed .theme-submenu {
+    display: none;
+}
+
+.sidebar.collapsed .theme-menu-item {
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.sidebar.collapsed .theme-menu-item .icon {
+    margin: 0;
+}
+  

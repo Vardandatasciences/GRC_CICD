@@ -1,0 +1,75 @@
+ComplianceId,SubPolicyId,PolicyId,FrameworkId,Date,Time,User,Complied,Comments,Count,AuditFindingsId
+1673,1155,1138,2,2022-12-01,09:37:50,1,2,"Outstanding compliance with User Authentication Mechanisms requirements.",3,375
+1673,1192,1150,2,2025-08-20,14:55:57,1,0,"Complete adherence to Compliance Officer Appointment standards confirmed.",2,473
+1674,1155,1139,2,2022-12-03,09:13:20,1,0,"Does not meet the requirements for Regular Access Control Reviews. Remediation needed.",5,377
+1674,1155,1140,2,2022-12-04,08:45:39,1,1,"Good progress on Access Control Training Program, additional work required for full compliance.",1,378
+1675,1155,1141,2,2022-12-05,12:28:17,1,2,"Outstanding compliance with Access Control Monitoring Procedures requirements.",3,379
+1675,1156,1142,2,2022-12-06,15:59:30,1,0,"Failed to comply with Establishment of Incident Response Team standards. Corrective measures required.",1,380
+1676,1156,1142,2,2022-12-07,17:20:12,1,1,"Most requirements met for Development of Incident Response Plan, but some gaps remain.",1,381
+1676,1156,1143,2,2022-12-08,17:11:19,1,2,"Outstanding compliance with Implementation of Incident Detection Mechanisms requirements.",2,382
+1677,1156,1143,2,2022-12-09,10:38:45,1,0,"Non-compliance identified in Testing of Incident Response Plan. Immediate action required.",4,383
+1677,1156,1144,2,2022-12-10,15:19:45,1,2,"All requirements for Reporting of Security Incidents successfully implemented.",3,384
+1678,1157,1144,2,2022-12-11,14:08:25,1,1,"Adequate implementation of Information Security Roles and Responsibilities Documentation with room for enhancement.",2,385
+1678,1157,1145,2,2022-12-12,08:32:55,1,0,"Failed to comply with Annual Review and Update of Information Security Roles and Responsibilities standards. Corrective measures required.",3,386
+1679,1193,1150,2,2025-08-23,00:48:50,1,1,,3,602
+1680,1157,1146,2,2022-12-15,17:23:59,1,1,"Most requirements met for Established Process for Role Review and Update, but some gaps remain.",4,389
+1680,1158,1146,2,2022-12-16,17:32:14,1,1,"Good progress on Information Security Management Structure Definition, additional work required for full compliance.",5,390
+1681,1193,1150,2,2025-08-23,00:48:50,1,0,"IR testing program absent plan defined to establish SOP, scenarios, AAR governance, and KPIs in line",4,604
+1682,1158,1148,2,2022-12-19,14:05:01,1,2,"Complete adherence to Establishment of Reporting Mechanism for Information Security Incidents standards confirmed.",5,393
+1682,1158,1159,2,2022-12-20,11:33:09,1,2,"Full compliance verified for Regular Reviews of Organizational Structure for Information Security. All requirements met.",2,394
+1683,1159,1149,2,2022-12-21,14:51:40,1,1,"Most requirements met for Access Control Training Program, but some gaps remain.",3,395
+1683,1159,1150,2,2022-12-22,16:10:23,1,0,"Does not meet the requirements for Role-Based Access Control Implementation. Remediation needed.",2,396
+1684,1194,1151,2,2025-08-23,12:55:41,1,2,"The organization is fully compliant with the annual review and update process for information security roles and responsibilities.",3,628
+1685,1159,1152,2,2022-12-25,10:38:17,1,1,"Adequate implementation of Password Policy Enforcement with room for enhancement.",3,399
+1685,1160,1153,2,2022-12-26,15:09:22,1,2,"Outstanding compliance with Security Awareness Training Program Development requirements.",5,400
+1686,1160,1154,2,2022-12-27,09:40:37,1,1,"Substantially compliant with Asset Inventory Classification, minor issues to address.",2,401
+1686,1161,1155,2,2022-12-28,08:18:05,1,2,"Excellent implementation of Sensitive Data Identification and Classification controls.",5,402
+1687,1161,1156,2,2022-12-29,15:14:08,1,2,"Full compliance verified for Encryption Mechanisms Implementation. All requirements met.",5,403
+1687,1161,1157,2,2022-12-30,11:36:30,1,2,"Full compliance verified for Access Control Measures Establishment. All requirements met.",3,404
+1688,1195,1151,2,2025-08-23,12:55:41,1,2,"The organization is fully compliant with ISO 27001:2022 A.6.1.1 regarding the definition and management of information security roles and responsibilities.",3,632
+1689,1162,1159,2,2023-01-02,10:43:20,1,2,"Full compliance verified for User Access List Maintenance. All requirements met.",2,407
+1689,1162,1160,2,2023-01-03,13:22:09,1,1,"Most requirements met for Multi-Factor Authentication Implementation, but some gaps remain.",2,408
+1690,1195,1151,2,2025-08-23,12:55:41,1,1,"The process for communication and escalation of security incidents is partially compliant, with identified gaps in timeliness and clarity of certain procedures. Remediation plan in progress to address these gaps.",5,634
+1691,1162,1162,2,2023-01-06,14:24:49,1,1,"Partial compliance achieved for Access Reviews Conduct. Minor improvements needed.",3,411
+1691,1163,1163,2,2023-01-07,08:07:57,1,2,"Complete adherence to Strong Cryptographic Key Generation standards confirmed.",1,412
+1692,1195,1151,2,2025-08-23,12:55:41,1,1,"The review process for the organizational structure is partially compliant, with improvements needed to ensure better alignment with evolving security objectives and requirements.",2,636
+1693,1163,1163,2,2023-01-10,11:36:03,1,1,"Most requirements met for End-to-End Encryption Implementation, but some gaps remain.",5,415
+1694,1163,1163,2,2023-01-12,16:00:18,1,2,"Excellent implementation of Encryption Protocol Monitoring Procedure controls.",4,417
+1694,1164,1163,2,2023-01-13,08:51:16,1,0,"Significant deficiencies noted in Implementation of Access Control Mechanisms controls.",3,418
+1695,1164,1163,2,2023-01-14,17:05:49,1,1,"Critical gaps found in Regular Access Reviews and Audits implementation.",4,419
+1696,1164,1163,2,2023-01-16,14:30:17,1,1,"Good progress on Employee Training on Access Control Policies, additional work required for full compliance.",1,421
+1697,1165,1163,2,2023-01-18,10:17:08,1,1,"Partial compliance achieved for Visitor Sign-In Requirement. Minor improvements needed.",2,423
+1698,1165,1163,2,2023-01-20,08:25:54,1,1,"Good progress on Visitor Escort Requirement, additional work required for full compliance.",2,425
+1699,1165,1163,2,2023-01-22,09:47:19,1,2,"Excellent implementation of Visitor Management Policy Review controls.",5,427
+1699,1166,1163,2,2023-01-23,12:57:23,1,2,"Excellent implementation of Role-Based Access Control Implementation controls.",4,428
+1700,1199,1153,2,2025-08-23,12:02:52,3,1,"Data classification processes not formalized a remediation plan with owners and timelines is required for implementation and ongoing governance.",5,607
+1701,1199,1153,2,2025-08-23,12:02:52,3,2,"Encryption mechanisms are complete",2,608
+1702,1199,1153,2,2025-08-23,12:02:52,3,0,"Access control policies and procedures not formalized access reviews, MFA, and logging to be implemented as part of remediation plan with owners and SLAs defined.",6,609
+1703,1199,1153,2,2025-08-23,12:02:52,3,1,"Training and awareness processes are absent remediation plan defined to establish policies, track participation, and reinforce through ongoing campaigns.",5,610
+1704,1167,1163,2,2023-02-01,16:30:35,1,2,"Complete adherence to Post-Incident Review and Plan Update standards confirmed.",4,437
+1704,1168,1163,2,2023-02-02,09:10:21,1,1,"Outstanding compliance with Encryption Protocol Implementation requirements.",3,438
+1705,1169,1163,2,2023-02-03,12:54:57,1,1,"Does not meet the requirements for Role-Based Access Control Implementation. Remediation needed.",4,439
+1705,1170,1163,2,2023-02-04,17:38:44,1,1,"Good progress on Secure Coding Standards Development, additional work required for full compliance.",5,440
+1706,1200,1154,2,2025-08-23,12:04:05,2,2,"MFA implementation is complete across the organization",3,617
+1707,1200,1154,2,2025-08-23,12:04:05,2,2,"Access review processes formalized",4,618
+1708,1200,1154,2,2025-08-23,12:04:05,2,0,"Logging and monitoring processes are not formalized remediation plan with owners and deadlines defined for full implementation.",2,619
+1709,1200,1154,2,2025-08-23,12:04:05,2,0,"Access reviews are not formalized remediation plan with owners and deadlines for implementation defined.",4,620
+1710,1172,1163,2,2023-02-13,09:36:04,1,1,"Good progress on Intrusion Detection System Implementation, additional work required for full compliance.",4,449
+1711,1172,1163,2,2023-02-15,15:21:31,1,2,"Outstanding compliance with Monthly Vulnerability Scans requirements.",5,451
+1711,1173,1163,2,2023-02-16,17:52:29,1,2,"All requirements for Incident Reporting Procedure Establishment successfully implemented.",4,452
+1712,1173,1163,2,2023-02-17,14:50:13,1,2,"Full compliance verified for Incident Severity Level Definition. All requirements met.",1,453
+1713,1173,1163,2,2023-02-19,14:14:18,1,1,"Adequate implementation of Employee Incident Reporting Training with room for enhancement.",2,455
+1714,1174,1163,2,2023-02-21,17:49:15,1,2,"Full compliance verified for Incident Response Team Roles and Responsibilities. All requirements met.",5,457
+1715,1174,1163,2,2023-02-23,11:48:07,1,2,"Complete adherence to Regular Incident Response Plan Exercises standards confirmed.",4,459
+1716,1174,1163,2,2023-02-25,08:18:55,1,1,"Most requirements met for Quarterly Tabletop Exercises, but some gaps remain.",3,461
+1716,1175,1163,2,2023-02-26,10:45:12,1,2,"Outstanding compliance with Critical Business Functions Identification requirements.",5,462
+1717,1175,1163,2,2023-02-27,17:50:50,1,0,"Non-compliance identified in Disruption Impact Analysis. Immediate action required.",3,463
+1718,1175,1163,2,2023-03-01,08:17:39,1,1,"Most requirements met for BIA Scope and Objectives Definition, but some gaps remain.",4,465
+1719,1176,1163,2,2023-03-03,11:19:37,1,1,"Substantially compliant with Establish BCP Team Roles and Responsibilities, minor issues to address.",2,467
+1719,1177,1163,2,2023-03-04,16:13:27,1,0,"Non-compliance identified in Identify Key Response and Recovery Strategies. Immediate action required.",4,468
+1720,1178,1163,2,2023-03-05,14:42:19,1,0,"Critical gaps found in Develop BCP Procedures and Documentation implementation.",4,469
+1721,1178,1163,2,2023-03-07,08:14:21,1,2,"Excellent implementation of Review and Update BCP Regularly controls.",3,471
+1771,1217,1163,2,2025-08-08,12:34:30,1,0,"Partial compliance achieved for Legal and Regulatory Requirements Register Review. Minor improvements needed.",3,472
+1776,1281,1199,334,2025-09-03,22:54:43,3,1,,1,652
+1777,1281,1199,334,2025-09-03,22:54:43,3,2,,0,653
+999999,1,1,1,2025-09-03,22:54:43,1,1,"Test record",1,999999

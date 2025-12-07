@@ -1,0 +1,1341 @@
+/* ==================== SENTINEL INTEGRATION STYLES ==================== */
+/* All styles are prefixed with 'sentinel-' to avoid conflicts with other components */
+
+/* ==================== BASE CONTAINER ==================== */
+.sentinel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 280px !important; /* Push content away from sidebar */
+    padding: 20px;
+    background: #ffffff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==================== HEADER ==================== */
+.sentinel-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.sentinel-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sentinel-header p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    color: #666;
+}
+
+/* ==================== INTEGRATIONS GRID ==================== */
+.sentinel-integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sentinel-integration-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.sentinel-integration-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.sentinel-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sentinel-service-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.sentinel-service-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.sentinel-service-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.sentinel-card-body {
+    margin-bottom: 20px;
+}
+
+.sentinel-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.sentinel-feature-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.sentinel-connection-status {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sentinel-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.sentinel-status.connected {
+    color: #28a745;
+}
+
+.sentinel-status.disconnected {
+    color: #dc3545;
+}
+
+.sentinel-user-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #28a745;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.sentinel-card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==================== SENTINEL BUTTONS (UNIQUE CLASSES) ==================== */
+.sentinel-container .sentinel-btn,
+.sentinel-container button.sentinel-btn,
+.sentinel-incidents-section .sentinel-btn,
+.sentinel-incidents-section button.sentinel-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #495057 !important;
+    cursor: pointer !important;
+    font-size: 0.8rem !important;
+    background: #495057 !important;
+    color: white !important;
+    font-family: inherit !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+/* Save Button Styling */
+.sentinel-container .sentinel-btn-save,
+.sentinel-container button.sentinel-btn-save,
+.sentinel-incidents-section .sentinel-btn-save,
+.sentinel-incidents-section button.sentinel-btn-save {
+    background: #28a745 !important;
+    border-color: #28a745 !important;
+    padding: 6px 12px !important;
+    min-width: 40px !important;
+}
+
+.sentinel-container .sentinel-btn-save:hover,
+.sentinel-container button.sentinel-btn-save:hover,
+.sentinel-incidents-section .sentinel-btn-save:hover,
+.sentinel-incidents-section button.sentinel-btn-save:hover {
+    background: #218838 !important;
+    border-color: #218838 !important;
+}
+
+.sentinel-container .sentinel-btn-save:disabled,
+.sentinel-container button.sentinel-btn-save:disabled,
+.sentinel-incidents-section .sentinel-btn-save:disabled,
+.sentinel-incidents-section button.sentinel-btn-save:disabled {
+    background: #6c757d !important;
+    border-color: #6c757d !important;
+    cursor: not-allowed !important;
+    opacity: 0.6 !important;
+}
+
+.sentinel-container .sentinel-btn-save i,
+.sentinel-container button.sentinel-btn-save i,
+.sentinel-incidents-section .sentinel-btn-save i,
+.sentinel-incidents-section button.sentinel-btn-save i {
+    margin: 0 !important;
+}
+
+.sentinel-container .sentinel-btn:hover,
+.sentinel-container button.sentinel-btn:hover,
+.sentinel-incidents-section .sentinel-btn:hover,
+.sentinel-incidents-section button.sentinel-btn:hover {
+    background: #343a40 !important;
+    color: white !important;
+    border-color: #343a40 !important;
+    transform: none !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.sentinel-container .sentinel-btn-primary,
+.sentinel-container button.sentinel-btn-primary,
+.sentinel-incidents-section .sentinel-btn-primary,
+.sentinel-incidents-section button.sentinel-btn-primary {
+    background: #f8f9fa !important;
+    color: #6c757d !important;
+    border-color: #dee2e6 !important;
+}
+
+.sentinel-container .sentinel-btn-primary:hover,
+.sentinel-container button.sentinel-btn-primary:hover,
+.sentinel-incidents-section .sentinel-btn-primary:hover,
+.sentinel-incidents-section button.sentinel-btn-primary:hover {
+    background: #e9ecef !important;
+    color: #495057 !important;
+    border-color: #adb5bd !important;
+}
+
+.sentinel-container .sentinel-btn-secondary,
+.sentinel-container button.sentinel-btn-secondary,
+.sentinel-incidents-section .sentinel-btn-secondary,
+.sentinel-incidents-section button.sentinel-btn-secondary {
+    background: #f8f9fa !important;
+    color: #6c757d !important;
+    border-color: #dee2e6 !important;
+}
+
+.sentinel-container .sentinel-btn-secondary:hover,
+.sentinel-container button.sentinel-btn-secondary:hover,
+.sentinel-incidents-section .sentinel-btn-secondary:hover,
+.sentinel-incidents-section button.sentinel-btn-secondary:hover {
+    background: #e9ecef !important;
+    color: #495057 !important;
+    border-color: #adb5bd !important;
+}
+
+.sentinel-container .sentinel-btn-sm,
+.sentinel-container button.sentinel-btn-sm,
+.sentinel-incidents-section .sentinel-btn-sm,
+.sentinel-incidents-section button.sentinel-btn-sm {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+}
+
+.sentinel-container .sentinel-btn-outline,
+.sentinel-container button.sentinel-btn-outline,
+.sentinel-incidents-section .sentinel-btn-outline,
+.sentinel-incidents-section button.sentinel-btn-outline {
+    background: #f8f9fa !important;
+    color: #6c757d !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.sentinel-container .sentinel-btn-outline:hover,
+.sentinel-container button.sentinel-btn-outline:hover,
+.sentinel-incidents-section .sentinel-btn-outline:hover,
+.sentinel-incidents-section button.sentinel-btn-outline:hover {
+    background: #e9ecef !important;
+    color: #495057 !important;
+    border-color: #adb5bd !important;
+}
+
+/* ==================== OVERRIDE ANY BUTTON STYLES ==================== */
+.sentinel-container button,
+.sentinel-incidents-section button,
+.sentinel-container .btn,
+.sentinel-incidents-section .btn {
+    background: #495057 !important;
+    color: white !important;
+    border: 1px solid #495057 !important;
+    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.sentinel-container button:hover,
+.sentinel-incidents-section button:hover,
+.sentinel-container .btn:hover,
+.sentinel-incidents-section .btn:hover {
+    background: #343a40 !important;
+    color: white !important;
+    border-color: #343a40 !important;
+    transform: none !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==================== ALERTS ==================== */
+.sentinel-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    max-width: 400px;
+}
+
+.sentinel-alert.alert-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.sentinel-alert.alert-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+}
+
+.sentinel-alert.alert-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+/* ==================== INCIDENTS SECTION ==================== */
+.sentinel-incidents-section {
+    margin-top: 40px;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.sentinel-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.sentinel-section-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* ==================== STATISTICS ==================== */
+.sentinel-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.sentinel-stat-card {
+    background: #ffffff;
+    color: #667eea;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #667eea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sentinel-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sentinel-stat-card.sentinel-stat-critical {
+    background: #ffffff;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.sentinel-stat-card.sentinel-stat-high {
+    background: #ffffff;
+    color: #fd7e14;
+    border-color: #fd7e14;
+}
+
+.sentinel-stat-card.sentinel-stat-medium {
+    background: #ffffff;
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.sentinel-stat-card.sentinel-stat-low {
+    background: #ffffff;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.sentinel-stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.sentinel-stat-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+/* ==================== FILTERS ==================== */
+.sentinel-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.sentinel-filter-select,
+.sentinel-filter-input {
+    padding: 10px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.sentinel-filter-select:focus,
+.sentinel-filter-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.sentinel-filter-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ==================== LOADING & EMPTY STATES ==================== */
+.sentinel-loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.sentinel-loading i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.sentinel-no-incidents {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.sentinel-no-incidents i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.sentinel-no-incidents h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ==================== INCIDENTS TABLE ==================== */
+.sentinel-incidents-container {
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sentinel-incidents-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.sentinel-incidents-table thead {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.sentinel-incidents-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.sentinel-incidents-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s ease;
+}
+
+.sentinel-incidents-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.sentinel-incidents-table td {
+    padding: 16px;
+    font-size: 0.9rem;
+    color: #333;
+    vertical-align: middle;
+}
+
+.sentinel-incident-row {
+    cursor: pointer;
+}
+
+/* ==================== SEVERITY BADGES ==================== */
+.sentinel-severity-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: 1px solid;
+}
+
+.sentinel-severity-critical {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.sentinel-severity-high {
+    background: #fff3cd;
+    color: #856404;
+    border-color: #ffeaa7;
+}
+
+.sentinel-severity-medium {
+    background: #d1ecf1;
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+.sentinel-severity-low {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* ==================== STATUS BADGES ==================== */
+.sentinel-status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: 1px solid;
+}
+
+.sentinel-status-new {
+    background: #e3f2fd;
+    color: #1565c0;
+    border-color: #bbdefb;
+}
+
+.sentinel-status-active {
+    background: #fff3e0;
+    color: #ef6c00;
+    border-color: #ffcc02;
+}
+
+.sentinel-status-closed {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border-color: #c8e6c9;
+}
+
+/* ==================== PLAYBOOK BADGE ==================== */
+.sentinel-playbook-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 8px;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+/* ==================== ALERT COUNT ==================== */
+.sentinel-alert-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    padding: 0 6px;
+    border-radius: 50%;
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.sentinel-alert-count.sentinel-high-count {
+    background: #dc3545;
+    color: white;
+}
+
+/* ==================== SENTINEL MODAL (UNIQUE CLASSES) ==================== */
+.sentinel-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 99999 !important;
+    padding: 20px !important;
+}
+
+.sentinel-modal-content {
+    background: white !important;
+    border-radius: 15px !important;
+    max-width: 1400px !important;
+    width: 95% !important;
+    min-width: 1200px !important;
+    max-height: 90vh !important;
+    overflow: hidden !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3) !important;
+    position: relative !important;
+    border: 2px solid #e9ecef !important;
+}
+
+.sentinel-modal-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid #e9ecef !important;
+    background: #f8f9fa !important;
+}
+
+.sentinel-modal-header h3 {
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 1.2rem !important;
+}
+
+.sentinel-modal-close {
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    color: #666 !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+}
+
+.sentinel-modal-close:hover {
+    background: #e9ecef !important;
+    color: #333 !important;
+}
+
+.sentinel-modal-body {
+    padding: 20px !important;
+    max-height: calc(95vh - 80px) !important;
+    overflow-y: auto !important;
+}
+
+.sentinel-incident-details-modal {
+    max-width: 1600px !important;
+    width: 98% !important;
+    min-width: 1400px !important;
+}
+
+.incident-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    font-size: 0.85rem;
+}
+
+.banner-content i {
+    color: #667eea;
+}
+
+.sentinel-two-column-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+    align-items: start !important;
+    padding: 20px 0 !important;
+}
+
+.sentinel-alert-details {
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.sentinel-incident-summary-details {
+    background: #f8f9fa !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.alert-details,
+.incident-summary-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== ALERT DETAILS TABLE ==================== */
+.alerts-table-container {
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.alerts-table-header {
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-bottom: 2px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alerts-table-header h4 {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.alerts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.alerts-table thead {
+    background-color: #f8f9fa;
+}
+
+.alerts-table th {
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.alerts-table th.center {
+    text-align: center;
+}
+
+.alerts-table td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.alert-table-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+}
+
+.alert-table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.action-tag {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.alert-table-description {
+    max-width: 300px;
+    line-height: 1.3;
+    font-size: 0.75rem;
+}
+
+.alert-table-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+}
+
+.user-email {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #495057;
+    background: #f8f9fa;
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid #dee2e6;
+}
+
+.alert-table-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+}
+
+.alert-table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.expand-row-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.expand-row-btn:hover {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+.expanded-row-content {
+    background-color: #f9fafb;
+    padding: 15px 20px;
+}
+
+.expanded-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.expanded-detail-section {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.expanded-detail-section h5 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.expanded-detail-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.expanded-detail-label {
+    color: #666;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.expanded-detail-value {
+    color: #333;
+    flex: 1;
+}
+
+.severity-badge {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.no-alerts-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.no-alerts-message i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* ==================== SENTINEL INCIDENT SUMMARY (UNIQUE CLASSES) ==================== */
+.sentinel-incident-summary {
+    padding: 12px !important;
+    background: #f8f9fa !important;
+    border-radius: 8px !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.sentinel-incident-summary h4 {
+    margin: 0 0 10px 0 !important;
+    color: #333 !important;
+    font-size: 0.9rem !important;
+}
+
+.sentinel-summary-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+}
+
+.sentinel-summary-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    background: white !important;
+    border-radius: 8px !important;
+    border: 1px solid #e9ecef !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.sentinel-summary-label {
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #495057 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.sentinel-summary-value {
+    font-size: 0.9rem !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+    text-align: right !important;
+}
+
+/* ==================== OVERRIDE ANY OVERLAPPING ELEMENTS ==================== */
+.sentinel-modal-overlay * {
+    z-index: 100000 !important;
+}
+
+/* Ensure no buttons overlap the modal */
+.sentinel-modal-overlay ~ * {
+    z-index: 1 !important;
+}
+
+/* Hide any elements that might overlap */
+.sentinel-modal-overlay ~ .btn,
+.sentinel-modal-overlay ~ button,
+.sentinel-modal-overlay ~ [class*="btn"] {
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* ==================== SENTINEL ALERTS TABLE (UNIQUE CLASSES) ==================== */
+.sentinel-alerts-table-container {
+    margin-top: 20px !important;
+    background: white !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border: 1px solid #e9ecef !important;
+}
+
+.sentinel-alerts-table-header {
+    background: #f8f9fa !important;
+    padding: 10px 12px !important;
+    border-bottom: 2px solid #e9ecef !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.sentinel-alerts-table-header h4 {
+    margin: 0 !important;
+    color: #333 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.sentinel-alert-count-badge {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+}
+
+.sentinel-alerts-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.sentinel-alerts-table thead {
+    background-color: #f8f9fa !important;
+}
+
+.sentinel-alerts-table th {
+    padding: 8px 10px !important;
+    text-align: left !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.sentinel-alerts-table th.center {
+    text-align: center !important;
+}
+
+.sentinel-alerts-table tbody tr.sentinel-alert-row {
+    border-bottom: 1px solid #f0f0f0 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+}
+
+.sentinel-alerts-table tbody tr.sentinel-alert-row:hover {
+    background-color: #f9f9f9 !important;
+}
+
+.sentinel-alerts-table td {
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    color: #333 !important;
+}
+
+.sentinel-alert-table-time {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 0.75rem !important;
+}
+
+.sentinel-alert-table-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+}
+
+.sentinel-action-tag-blue {
+    display: inline-block !important;
+    padding: 4px 12px !important;
+    border-radius: 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    background-color: #0078d4 !important;
+    color: white !important;
+    margin-right: 6px !important;
+}
+
+.sentinel-expand-alert-btn {
+    background: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: #333 !important;
+    padding: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: color 0.2s !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.sentinel-expand-alert-btn:hover {
+    color: #0078d4 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Override any container styling for expand button */
+.sentinel-alerts-table .sentinel-expand-alert-btn,
+.sentinel-alerts-table button.sentinel-expand-alert-btn {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: auto !important;
+    min-height: auto !important;
+}
+
+.sentinel-expand-alert-btn i {
+    font-size: 1rem !important;
+    color: #333 !important;
+    display: block !important;
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+}
+
+
+.sentinel-activity-count-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    padding: 0 8px !important;
+    border-radius: 50% !important;
+    background-color: #ffebee !important;
+    color: #c62828 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+}
+
+.sentinel-activity-count-badge.sentinel-high-count {
+    background: #d32f2f !important;
+    color: white !important;
+}
+
+.sentinel-alert-user-cell {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.sentinel-alert-user-cell i {
+    color: #666 !important;
+    font-size: 0.9rem !important;
+}
+
+.sentinel-user-email-text {
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 0.85rem !important;
+    color: #333 !important;
+}
+
+.sentinel-expanded-alert-row {
+    background-color: #fafafa !important;
+}
+
+.sentinel-expanded-alert-content {
+    padding: 20px 24px !important;
+}
+
+.sentinel-expanded-alert-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+}
+
+.sentinel-expanded-section {
+    background: white !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.sentinel-expanded-section h5 {
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    margin: 0 0 12px 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.sentinel-info-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin-bottom: 10px !important;
+}
+
+.sentinel-info-label {
+    font-size: 0.8rem !important;
+    color: #666 !important;
+    font-weight: 500 !important;
+    min-width: 120px !important;
+}
+
+.sentinel-info-value {
+    font-size: 0.85rem !important;
+    color: #333 !important;
+}
+
+.sentinel-full-title {
+    margin: 0 !important;
+    font-size: 0.85rem !important;
+    color: #333 !important;
+    line-height: 1.5 !important;
+}
+
+.sentinel-text-muted {
+    color: #999 !important;
+    font-size: 0.85rem !important;
+}
+
+.sentinel-alert-table-description {
+    max-width: 300px !important;
+    line-height: 1.3 !important;
+    font-size: 0.75rem !important;
+}
+
+.sentinel-no-alerts-message {
+    text-align: center !important;
+    padding: 40px 20px !important;
+    color: #666 !important;
+}
+
+.sentinel-no-alerts-message i {
+    font-size: 3rem !important;
+    color: #ccc !important;
+    margin-bottom: 15px !important;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+    .sentinel-container {
+        margin-left: 250px !important; /* Smaller sidebar on medium screens */
+    }
+    
+    .alerts-table-container {
+        overflow-x: auto;
+    }
+    
+    .alerts-table {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sentinel-container {
+        margin-left: 0 !important; /* No sidebar margin on mobile */
+        padding: 15px;
+    }
+    
+    .sentinel-header h1 {
+        font-size: 2rem;
+    }
+    
+    .sentinel-integrations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sentinel-two-column-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sentinel-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sentinel-expanded-alert-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .incident-banner {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sentinel-container {
+        margin-left: 0 !important;
+        padding: 10px;
+    }
+    
+    .sentinel-card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sentinel-service-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .sentinel-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

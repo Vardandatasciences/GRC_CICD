@@ -1,0 +1,286 @@
+/* Styling for the main performance page */
+.performance-page {
+  padding: 20px;
+  margin-left: 180px;
+  background: #f7f9fa;
+  min-height: 100vh;
+}
+
+.performance-page h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.search-container:focus-within {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  width: 250px;
+  color: #4a5568;
+}
+
+.search-icon {
+  color: #a0aec0;
+  margin-right: 8px;
+}
+
+/* Policy Cards Grid */
+.policy-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Policy Card Styles */
+.policy-card {
+  background: #f5f6fa;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 260px;
+  max-width: 420px;
+  font-size: 0.97rem;
+  border: 3px solid #a084e8;
+}
+
+.policy-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.policy-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f5f6fa;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #7c3aed;
+  border: 2px solid #a084e8;
+}
+
+.policy-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #7c3aed;
+  flex: 1;
+}
+
+.policy-card-upload {
+  background: #4f6cff;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.12);
+}
+
+.policy-card-progressbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.progress-bar-main {
+  background: #e5e7eb;
+  width: 90px;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 4px;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, #b6f7b0, #4f6cff);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s;
+}
+
+.policy-card-progress-label {
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.policy-card-analytics {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.policy-card-analytics-arrow {
+  font-size: 1rem;
+  margin-left: 2px;
+}
+
+.policy-card-list {
+  background: #f5f6fa;
+  border-radius: 8px;
+  padding: 8px 6px 6px 6px;
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.policy-card-list-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.policy-card-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.policy-card-list-label {
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+  flex: 1;
+}
+
+.policy-card-list-progress {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.progress-bar-sub {
+  background: #e5e7eb;
+  width: 40px;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 2px;
+}
+
+.progress-bar-fill-sub {
+  background: linear-gradient(90deg, #b6f7b0, #4f6cff);
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s;
+}
+
+.policy-card-list-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 2px;
+}
+
+.policy-card-list-status.completed {
+  background: #b6f7b0;
+  color: #222;
+}
+
+.policy-card-list-status.inprogress-modern::before {
+  content: '⏳';
+  font-size: 0.85rem;
+}
+
+/* Remove old search bar and status styles */
+.search-bar, .search-container, .search-icon, .policy-card-list-status.completed, .policy-card-list-status.inprogress {
+  display: none !important;
+}
+
+.search-bar-screenshot-style {
+  position: relative;
+  width: 320px;
+  margin-bottom: 32px;
+}
+.search-input-screenshot-style {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #bdbdbd;
+  border-radius: 10px;
+  padding: 0 48px 0 16px;
+  font-size: 1.2rem;
+  color: #888;
+  background: #fff;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-input-screenshot-style::placeholder {
+  color: #bdbdbd;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+.search-btn-screenshot-style {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 38px;
+  height: 38px;
+  background: #6c2cff;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(108,44,255,0.12);
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.search-btn-screenshot-style i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.search-btn-screenshot-style:active,
+.search-btn-screenshot-style:focus {
+  background: #4b1bb3;
+}

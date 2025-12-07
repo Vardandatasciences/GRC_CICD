@@ -1,0 +1,1099 @@
+/* ===== CONTAINER & LAYOUT ===== */
+.tree-container {
+  min-height: 100vh;
+  background: transparent;
+  margin: 0 2rem 0 280px; /* 2rem margin on right, 280px on left to account for sidebar */
+  width: calc(100vw - 280px - 2rem); /* Subtract sidebar width and right margin */
+  box-sizing: border-box;
+  padding: 1rem 2rem 1rem 0; /* Remove left padding to move content to the left */
+}
+
+/* ===== MAIN TITLE AND SUBTITLE ===== */
+.main-title {
+  color: #1f2937;
+  font-size: 2.2rem;
+  margin: 2rem 0 0.5rem 0;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 0;
+  width: 100%;
+  display: block;
+}
+
+.main-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 0;
+  width: 100%;
+  display: block;
+}
+
+/* ===== FRAMEWORK SELECTOR - LEFT ALIGNED ===== */
+.framework-selector {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.framework-selector label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.framework-dropdown {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 300px;
+  max-width: 400px;
+  width: auto;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.framework-dropdown:hover {
+  border-color: #9ca3af;
+}
+
+.framework-dropdown:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* ===== CONTROL BUTTONS WITHIN FRAMEWORK SELECTOR ===== */
+.control-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 420px;
+}
+
+/* ===== LOADING AND ERROR STATES ===== */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background: transparent;
+}
+
+.loading-container i {
+  font-size: 2.5rem;
+  color: #6366f1;
+  margin-bottom: 1rem;
+}
+
+.error-container i {
+  font-size: 3rem;
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.error-container p {
+  color: #dc2626;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.retry-button {
+  padding: 0.6rem 1.2rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== TREE VISUALIZATION - HIERARCHICAL TREE LAYOUT ===== */
+.tree-visualization {
+  background: white;
+  padding: 2rem;
+  overflow: auto;
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* SVG Connection lines container */
+.connection-lines-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.connection-lines-container path {
+  transition: all 0.3s ease;
+}
+
+/* ===== TREE CONTROLS ===== */
+/* Removed - controls are now part of framework selector */
+
+.control-btn {
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expand-all-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.expand-all-btn:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.collapse-btn {
+  background: #6b7280;
+  color: white;
+}
+
+.collapse-btn:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+}
+
+.tree-diagram {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 3rem 0 2rem 0;
+  z-index: 2;
+}
+
+/* ===== TREE TABLE LAYOUT ===== */
+.tree-table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-height: 100%;
+}
+
+.tree-row {
+  display: table-row;
+  width: 100%;
+  height: auto;
+}
+
+.tree-cell {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0.5rem;
+  border-right: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.tree-cell:last-child {
+  border-right: none;
+}
+
+/* ===== HEADER ROW ===== */
+.header-row {
+  background: #f8f9fa;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.header-row .tree-cell {
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #374151;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+/* ===== VERTICAL NODES CONTAINER ===== */
+.vertical-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  min-height: 120px;
+  justify-content: flex-start;
+}
+
+/* ===== TREE NODES ===== */
+.tree-node {
+  position: relative;
+  display: flex;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree-node:hover {
+  transform: translateY(-1px);
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  min-width: 180px;
+  max-width: 250px;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.node-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  color: #6b7280;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.expand-icon.rotated {
+  transform: rotate(90deg);
+}
+
+/* ===== FRAMEWORK ICON STYLING ===== */
+.framework-icon-container {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+  margin: 0 auto !important;
+  padding: 1rem !important;
+  outline: none !important;
+  gap: 0.75rem !important;
+  min-height: 120px !important;
+}
+
+.framework-icon-container:hover,
+.framework-icon-container:focus,
+.framework-icon-container:active {
+  transform: translateY(-2px);
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.framework-icon-container:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Global overrides to remove any default browser styles - but not from framework-name */
+.framework-icon-container *:not(.framework-name) {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.framework-icon-container *:not(.framework-name):hover,
+.framework-icon-container *:not(.framework-name):focus,
+.framework-icon-container *:not(.framework-name):active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.framework-icon {
+  font-size: 2.8rem !important;
+  color: #6b7280 !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  margin-bottom: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  line-height: 1 !important;
+}
+
+.framework-icon.expanded {
+  color: #374151;
+  transform: scale(1.1);
+}
+
+.framework-name {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  text-align: center !important;
+  max-width: 250px !important;
+  min-width: 150px !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  transition: all 0.3s ease !important;
+  display: block !important;
+  line-height: 1.5 !important;
+  padding: 0.25rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 0.75rem !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  position: relative !important;
+}
+
+.framework-tooltip {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.framework-icon-container:hover .framework-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Force framework name to always be visible - but only if it has content */
+.framework-cell .framework-name:not(:empty),
+.framework-icon-container .framework-name:not(:empty),
+div.framework-name:not(:empty) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Hide framework name when empty */
+.framework-name:empty {
+  display: none !important;
+}
+
+.framework-icon-container:hover .framework-name {
+  color: #000000 !important;
+  transform: scale(1.02) !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.framework-icon-container:hover .framework-icon {
+  color: #374151;
+  transform: scale(1.08);
+}
+
+.framework-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+/* ===== NODE TOOLTIPS ===== */
+.node-tooltip {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-content:hover .node-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.node-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.9);
+}
+
+/* ===== NODE TYPE STYLING ===== */
+.root-node .node-content {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #374151;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+/* Override root-node styles for framework icon */
+.framework-cell .root-node {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.framework-cell .root-node:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.policy-node .node-content {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.subpolicy-node .node-content {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.compliance-node .node-content {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.risk-node .node-content {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+/* ===== NO CSS-BASED CONNECTION LINES ===== */
+
+/* Remove ALL CSS-based connection lines - we use only SVG connections */
+.tree-cell::before,
+.tree-cell::after,
+.tree-node::before,
+.tree-node::after {
+  display: none !important;
+}
+
+/* Remove any remaining connection line styles */
+.framework-cell .tree-node::after,
+.policies-cell .tree-node::after,
+.subpolicies-cell .tree-node::after,
+.compliances-cell .tree-node::after,
+.risks-cell .tree-node::after {
+  display: none !important;
+}
+
+/* ===== CLEAN NODE LAYOUT ===== */
+
+/* All connection lines are handled by SVG - no CSS lines needed */
+
+/* ===== CLEAN LAYOUT WITHOUT TABLE BACKGROUND ===== */
+
+/* Remove table borders and background */
+.tree-table {
+  border: none;
+  background: transparent;
+}
+
+.tree-cell {
+  border: none;
+  background: transparent;
+  padding: 1rem;
+}
+
+.tree-cell:hover {
+  background: transparent;
+}
+
+/* Clean header styling */
+.header-row {
+  background: transparent;
+  border: none;
+}
+
+.header-row .tree-cell {
+  background: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #374151;
+  text-transform: none;
+  letter-spacing: normal;
+  padding: 1rem;
+}
+
+/* Enhanced node styling for better flow visualization */
+.node-content {
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.node-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.node-content:hover::before {
+  opacity: 1;
+}
+
+/* All connection lines have been removed for clean layout */
+
+/* Enhanced node type styling with better contrast */
+.root-node .node-content {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.policy-node .node-content {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.subpolicy-node .node-content {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.compliance-node .node-content {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.risk-node .node-content {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+/* Enhanced hover effects */
+.tree-node:hover .node-content {
+  transform: translateY(-1px);
+  border-color: #9ca3af;
+}
+
+/* ===== CELL SPECIFIC STYLING ===== */
+.framework-cell {
+  width: 20%;
+  text-align: center;
+  vertical-align: top;
+  padding: 1rem;
+}
+
+.framework-cell .tree-node {
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.policies-cell {
+  width: 20%;
+  vertical-align: top;
+}
+
+.subpolicies-cell {
+  width: 20%;
+  vertical-align: top;
+}
+
+.compliances-cell {
+  width: 20%;
+  vertical-align: top;
+}
+
+.risks-cell {
+  width: 20%;
+  vertical-align: top;
+}
+
+/* ===== INITIAL STATE ===== */
+.initial-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #666;
+  background: transparent;
+}
+
+.initial-state i {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+  color: #d1d5db;
+}
+
+.initial-state p {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  max-width: 500px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== TRANSITIONS ===== */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  .tree-cell {
+    padding: 0.75rem;
+  }
+  
+  .node-content {
+    min-width: 140px;
+    max-width: 200px;
+    padding: 0.6rem 1rem;
+  }
+  
+  .node-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.6rem;
+  }
+
+  .main-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .framework-selector {
+    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .framework-dropdown {
+    min-width: 250px;
+    width: auto;
+  }
+  
+  .tree-visualization {
+    padding: 1rem;
+  }
+  
+  .tree-table {
+    display: block;
+  }
+  
+  .tree-row {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  
+  .tree-cell {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .header-row .tree-cell {
+    font-weight: 600;
+  }
+  
+  .node-content {
+    min-width: 200px;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+  }
+  
+  .node-label {
+    font-size: 0.9rem;
+  }
+  
+  /* No connection lines needed for mobile or desktop */
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+.tree-visualization::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.tree-visualization::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.tree-visualization::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.tree-visualization::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== SMOOTH SCROLLING ===== */
+.tree-visualization {
+  scroll-behavior: smooth;
+}
+
+/* ===== METADATA TOOLTIP STYLING ===== */
+.metadata-tooltip {
+  position: fixed !important;
+  background: white !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  min-width: 320px !important;
+  max-width: 450px !important;
+  max-height: 500px !important;
+  overflow-y: auto !important;
+  z-index: 99999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  animation: fadeInTooltip 0.2s ease-out forwards;
+  pointer-events: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+@keyframes fadeInTooltip {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.metadata-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+
+.metadata-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #e5e7eb;
+  z-index: 0;
+}
+
+.metadata-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid #f3f4f6;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.metadata-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metadata-type-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+}
+
+.metadata-content {
+  padding: 1rem 1.25rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.metadata-item {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.metadata-item:last-child {
+  border-bottom: none;
+}
+
+.metadata-item:hover {
+  background-color: #f9fafb;
+  margin: 0 -1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 6px;
+}
+
+.metadata-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.875rem;
+  min-width: 140px;
+  flex-shrink: 0;
+  margin-right: 0.75rem;
+}
+
+.metadata-value {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
+}
+
+.metadata-empty {
+  padding: 1rem;
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.metadata-loading {
+  padding: 1rem;
+  text-align: center;
+  color: #6366f1;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.metadata-loading::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e5e7eb;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Custom scrollbar for metadata tooltip */
+.metadata-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.metadata-content::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.metadata-content::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.metadata-content::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Node type specific tooltip colors */
+.policy-node .metadata-tooltip .metadata-type-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.subpolicy-node .metadata-tooltip .metadata-type-badge {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.compliance-node .metadata-tooltip .metadata-type-badge {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.risk-node .metadata-tooltip .metadata-type-badge {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+.framework-icon-container .metadata-tooltip .metadata-type-badge {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  box-shadow: 0 2px 4px rgba(107, 114, 128, 0.3);
+}
+
+/* Position is now handled by JavaScript for fixed positioning */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .metadata-tooltip {
+    min-width: 280px;
+    max-width: 90vw;
+  }
+  
+  .metadata-label {
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+  
+  .metadata-value {
+    font-size: 0.8rem;
+  }
+}

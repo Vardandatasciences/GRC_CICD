@@ -1,0 +1,1307 @@
+.risk-scoring-container {
+  padding: 20px 30px;
+  max-width: 100%;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .risk-scoring-container {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+    padding: 15px;
+  }
+}
+
+.risk-scoring-container h1 {
+  margin-bottom: 25px;
+  color: #333;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  width: 100%;
+}
+
+/* Header row with back button and title */
+.risk-scoring-page-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.risk-scoring-page-header h1 {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+/* Section Container Styles */
+.risk-scoring-section-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Section title styling */
+.risk-scoring-section-title {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  width: 100%;
+}
+
+.risk-scoring-loading {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.risk-scoring-spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 16px;
+  height: 16px;
+  animation: risk-scoring-spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes risk-scoring-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.risk-scoring-error-message {
+  display: none;
+}
+
+.risk-scoring-no-data {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.risk-scoring-details {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.risk-scoring-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -20px;
+  margin-top: 30px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.risk-scoring-detail-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 17px;
+}
+
+.risk-scoring-action-header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.risk-scoring-map-btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.risk-scoring-map-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Mapping Risks Section Styles */
+.risk-scoring-mapping-risks-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid #e0e0e0;
+}
+
+.risk-scoring-mapping-description {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Updated selectors to match ScoringDetails.vue class name */
+.risk-scoring-mapping-risks-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.risk-scoring-mapping-risks-table table {
+  width: 100%;
+  border-collapse: separate; /* allow header separators */
+  border-spacing: 0; /* reset default spacing */
+  font-size: 14px;
+}
+
+.risk-scoring-mapping-risks-table th {
+  background-color: #f8fafc; /* slightly lighter for clarity */
+  padding: 14px 18px; /* increase horizontal padding for clearer gaps */
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* Visual separation between header columns */
+.risk-scoring-mapping-risks-table th:not(:first-child) {
+  border-left: 1px solid #e5e7eb;
+}
+
+.risk-scoring-mapping-risks-table td {
+  padding: 12px 18px; /* match header horizontal padding */
+  vertical-align: middle;
+}
+
+/* Visual separation between body columns */
+.risk-scoring-mapping-risks-table td:not(:first-child) {
+  border-left: 1px solid #e5e7eb;
+}
+
+.risk-scoring-mapping-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.risk-scoring-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+
+.risk-scoring-selected-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 8px 0;
+  gap: 15px;
+}
+
+/* Styles for the selected-risks actions block (matches layout of selected-actions) */
+.risk-scoring-selected-risks-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding: 8px 0;
+  gap: 15px;
+  border-top: none !important; /* remove any top border line if inherited */
+}
+
+.risk-scoring-selected-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.risk-scoring-selected-risks-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .risk-scoring-selected-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .risk-scoring-selected-risks-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .risk-scoring-selected-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .risk-scoring-selected-risks-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .risk-scoring-create-btn {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+.risk-scoring-selected-count {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #ebf5fb;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.risk-scoring-fill-btn {
+  padding: 6px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.risk-scoring-fill-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 5px rgba(52, 152, 219, 0.3);
+}
+
+.risk-scoring-no-matching-risks {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Additional styling for the create-risk-btn in no-matching-risks section */
+.risk-scoring-no-matching-risks .risk-scoring-create-btn {
+  margin-top: 5px;
+}
+
+.risk-scoring-create-btn {
+  padding: 6px 12px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 12px;
+  width: auto;
+  min-width: 90px;
+  max-width: 110px;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(46, 204, 113, 0.2);
+}
+
+.risk-scoring-create-btn:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 5px rgba(46, 204, 113, 0.3);
+}
+
+/* Special styling for the create risk button in the mapping table */
+.risk-scoring-selected-actions .risk-scoring-create-btn {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.risk-scoring-back-button {
+  padding: 8px 12px;
+  background-color: white;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgb(193, 193, 193);
+  font-weight: bold;
+  transition: background-color 0.2s;
+  min-width: auto;
+  font-size: 13px;
+}
+
+.risk-scoring-back-button:hover {
+  background-color: #f1fcfd;
+}
+
+/* Back button icon spacing */
+.risk-scoring-back-button i {
+  margin-right: 6px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.risk-scoring-submit-button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  min-width: 180px;
+  font-size: 14px;
+}
+
+.risk-scoring-submit-button:hover {
+  background-color: #2980b9;
+}
+
+.risk-scoring-submit-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Update detail grid container for better spacing */
+.risk-scoring-detail-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.risk-scoring-detail-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .risk-scoring-detail-item {
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .risk-scoring-detail-item {
+    max-width: 100%;
+  }
+}
+
+.risk-scoring-detail-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.risk-scoring-detail-item.full-width {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.risk-scoring-detail-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+}
+
+.risk-scoring-detail-value {
+  color: #333;
+  word-break: break-word;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.risk-scoring-form-input,
+.risk-scoring-form-select,
+.risk-scoring-form-textarea,
+.risk-scoring-business-impact-dropdown-header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Tighter native number spinner arrows inside field boxes (WebKit-based browsers) */
+.risk-scoring-form-input[type="number"]::-webkit-inner-spin-button,
+.risk-scoring-form-input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;           /* remove default gap */
+  padding: 0;          /* tighten spacing */
+  width: 12px;         /* slightly narrower spinner */
+  height: 16px;        /* slightly shorter to bring arrows closer */
+}
+
+/* Reduce extra right padding so spinner sits tighter to the text */
+.risk-scoring-form-input[type="number"] {
+  padding-right: 6px;
+}
+
+.risk-scoring-form-input:focus,
+.risk-scoring-form-select:focus,
+.risk-scoring-form-textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.risk-scoring-form-input:hover,
+.risk-scoring-form-select:hover,
+.risk-scoring-form-textarea:hover {
+  border-color: #bbb;
+}
+
+.risk-scoring-form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.risk-scoring-json-textarea {
+  min-height: 120px;
+  font-family: monospace;
+  font-size: 13px;
+  width: 100%;
+}
+
+/* Rejected Appetite Styling */
+.risk-scoring-rejected-appetite {
+  background-color: #ffebee !important;
+  border-color: #e57373 !important;
+  color: #c62828 !important;
+  font-weight: bold !important;
+}
+
+.risk-scoring-rejected-appetite:focus {
+  box-shadow: 0 0 0 2px rgba(229, 115, 115, 0.3) !important;
+}
+
+.risk-scoring-form-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+/* Success message */
+.risk-scoring-success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.risk-scoring-success-message i {
+  margin-right: 8px;
+  color: #155724;
+}
+
+.risk-scoring-readonly-input {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  color: #555;
+  border-color: #ddd;
+}
+
+.risk-scoring-readonly-input:focus, .risk-scoring-readonly-input:hover {
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+/* Read-only mode styling */
+.risk-scoring-read-only-mode .risk-scoring-form-input,
+.risk-scoring-read-only-mode .risk-scoring-form-textarea,
+.risk-scoring-read-only-mode .risk-scoring-form-select,
+.risk-scoring-read-only-mode .risk-scoring-business-impact-dropdown-header {
+  background-color: #f8f9fa;
+  border-color: #eee;
+  color: #555;
+  pointer-events: none;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-form-input:focus,
+.risk-scoring-read-only-mode .risk-scoring-form-textarea:focus,
+.risk-scoring-read-only-mode .risk-scoring-form-select:focus {
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-submit-button {
+  display: none;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-back-button {
+  background-color: #3498db;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-back-button:hover {
+  background-color: #2980b9;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-detail-header::after {
+  content: '(View Only)';
+  color: #3498db;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-mapping-section,
+.risk-scoring-read-only-mode .risk-scoring-selected-actions {
+  display: none;
+}
+
+/* Business Impact Dropdown Styles */
+.risk-scoring-business-impact-standalone-section {
+  display: none;
+}
+
+.risk-scoring-business-impact-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  height: 38px;
+}
+
+.risk-scoring-business-impact-dropdown-header:hover {
+  border-color: #bbb;
+}
+
+.risk-scoring-business-impact-dropdown-header i {
+  transition: transform 0.2s ease;
+}
+
+.risk-scoring-business-impact-dropdown-header.active i {
+  transform: rotate(180deg);
+}
+
+.risk-scoring-business-impact-dropdown {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin-top: 2px;
+  min-width: 300px;
+}
+
+.risk-scoring-dropdown-search-container {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  align-items: center;
+  height: 56px;
+}
+
+.risk-scoring-dropdown-search {
+  flex: 1;
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  height: 36px;
+}
+
+.risk-scoring-dropdown-search:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.risk-scoring-add-impact-btn {
+  padding: 8px 15px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.risk-scoring-add-impact-btn:hover {
+  background-color: #4f46e5;
+}
+
+.risk-scoring-dropdown-items {
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.risk-scoring-dropdown-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.risk-scoring-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.risk-scoring-dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+.risk-scoring-dropdown-item input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px !important;
+  accent-color: #3498db !important;
+}
+
+.risk-scoring-dropdown-item label {
+  cursor: pointer;
+  flex: 1;
+  font-size: 14px;
+}
+
+.risk-scoring-selected-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px; /* tighter to the field */
+  padding: 0; /* reduce extra space below */
+  min-height: 0; /* collapse when empty */
+}
+
+.risk-scoring-selected-item {
+  display: flex;
+  align-items: center;
+  background-color: #e8f4fd;
+  border: 1px solid #b3d7ff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #0366d6;
+}
+
+.risk-scoring-selected-item i {
+  margin-left: 6px;
+  cursor: pointer;
+  color: #666;
+  font-size: 12px;
+}
+
+.risk-scoring-selected-item i:hover {
+  color: #e74c3c;
+}
+
+/* Bring Business Impact helper text closer to its field */
+.risk-scoring-selected-items + .risk-scoring-helper-text {
+  margin-top: 2px !important;
+}
+
+/* No chips selected: remove any residual gap */
+.risk-scoring-selected-items:empty {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+}
+
+/* Modal Styles */
+.risk-scoring-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
+
+.risk-scoring-modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.risk-scoring-modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.risk-scoring-modal-form-group {
+  margin-bottom: 20px;
+}
+
+.risk-scoring-modal-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.risk-scoring-modal-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.risk-scoring-modal-form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.risk-scoring-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.risk-scoring-cancel-btn {
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.risk-scoring-cancel-btn:hover {
+  background-color: #ddd;
+}
+
+.risk-scoring-add-btn {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.risk-scoring-add-btn:hover {
+  background-color: #2980b9;
+}
+
+.risk-scoring-add-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Checkbox styling overrides */
+.risk-scoring-dropdown-item input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px !important;
+  accent-color: #3498db !important;
+}
+
+/* Risk Mitigation Form Styles */
+.risk-scoring-mitigation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0 !important; /* prevent extra gap before helper text */
+}
+
+.risk-scoring-mitigation-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.risk-scoring-mitigation-input-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.risk-scoring-action-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+/* Remove trailing space from the last mitigation action row */
+.risk-scoring-action-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Ensure the last child within the mitigation form doesn't push the helper text down */
+.risk-scoring-mitigation-form > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.risk-scoring-action-item input {
+  flex: 1;
+}
+
+.risk-scoring-remove-action {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.risk-scoring-remove-action:hover {
+  background-color: #c82333;
+}
+
+.risk-scoring-add-action {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+  align-self: flex-start;
+  margin-bottom: 0 !important; /* avoid pushing helper text down */
+}
+
+.risk-scoring-add-action:hover {
+  background-color: #218838;
+}
+
+/* Read-only state styles */
+.risk-scoring-read-only-mode .risk-scoring-mitigation-form {
+  background-color: #f8f9fa;
+  opacity: 0.9;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-action-item input {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* Category Styles */
+.risk-scoring-category-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-scoring-category-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.risk-scoring-selected-category {
+  padding: 8px 12px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.risk-scoring-selected-category:hover {
+  border-color: #6a5acd;
+}
+
+.risk-scoring-category-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  margin-top: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.risk-scoring-category-search {
+  padding: 8px;
+  border-bottom: 1px solid #f1f3f4;
+  display: flex;
+  gap: 8px;
+}
+
+.risk-scoring-category-search input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.risk-scoring-add-category-btn {
+  padding: 6px 12px;
+  background: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.risk-scoring-add-category-btn:hover {
+  background: #5a4abd;
+}
+
+.risk-scoring-category-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.risk-scoring-category-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.risk-scoring-category-item:last-child {
+  border-bottom: none;
+}
+
+.risk-scoring-category-item:hover {
+  background-color: rgba(106, 90, 205, 0.05);
+}
+
+.risk-scoring-category-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+  accent-color: #6a5acd;
+}
+
+.risk-scoring-category-item span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+/* Update validation summary to work with new containers */
+.risk-scoring-validation-summary {
+  background-color: #fff3f3;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin: 0 0 25px 0;
+  color: #d32f2f;
+}
+
+.risk-scoring-validation-summary h4 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #d32f2f;
+}
+
+.risk-scoring-validation-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.risk-scoring-validation-summary li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.validation-error {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.risk-scoring-form-input.invalid,
+.risk-scoring-form-select.invalid,
+.risk-scoring-form-textarea.invalid {
+  border-color: #d32f2f;
+  background-color: #fff8f8;
+}
+
+.risk-scoring-form-input.invalid:focus,
+.risk-scoring-form-select.invalid:focus,
+.risk-scoring-form-textarea.invalid:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+/* Add validation styles for read-only mode */
+.risk-scoring-read-only-mode .validation-error,
+.risk-scoring-read-only-mode .risk-scoring-validation-summary {
+  display: none;
+}
+
+.risk-scoring-read-only-mode .risk-scoring-form-input.invalid,
+.risk-scoring-read-only-mode .risk-scoring-form-select.invalid,
+.risk-scoring-read-only-mode .risk-scoring-form-textarea.invalid {
+  border-color: #ddd;
+  background-color: #f8f9fa;
+}
+
+.risk-scoring-selected-risks-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.risk-scoring-selected-risks-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.risk-scoring-selected-risks-count {
+  font-weight: 600;
+  color: #3498db;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.risk-scoring-fill-scoring-button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white!important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-scoring-fill-scoring-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.risk-scoring-fill-scoring-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.risk-scoring-create-risk-btn {
+  padding: 8px 16px;
+  background-color: #57d68c;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.risk-scoring-create-risk-btn:hover {
+  background-color: #27ae60;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(46, 204, 113, 0.2);
+}
+
+.risk-scoring-create-risk-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .risk-scoring-selected-risks-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .risk-scoring-selected-risks-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .risk-scoring-create-risk-btn {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .risk-scoring-fill-scoring-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Add disabled state styles */
+.risk-scoring-fill-scoring-button:disabled,
+.risk-scoring-create-risk-btn:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Add icon styles */
+.risk-scoring-fill-scoring-button i,
+.risk-scoring-create-risk-btn i {
+  font-size: 14px;
+}
+
+/* Add focus styles for accessibility */
+.risk-scoring-fill-scoring-button:focus,
+.risk-scoring-create-risk-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.risk-scoring-create-risk-btn:focus {
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3);
+}
+
+/* Helper Text Styles */
+.risk-scoring-helper-text {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 0 !important;
+  line-height: 1.3;
+  font-style: italic;
+  padding-left: 2px;
+}
+
+/* Ensure helper text appears below all form elements */
+.risk-scoring-detail-item .risk-scoring-helper-text {
+  margin-top: 0 !important;
+  margin-bottom: 0;
+}
+
+/* Ensure helper text doesn't interfere with validation errors */
+.risk-scoring-detail-item .risk-scoring-helper-text + .validation-error {
+  margin-top: 2px;
+}
+
+/* Ensure helper text appears below custom dropdown components */
+.risk-scoring-category-container .risk-scoring-helper-text,
+.risk-scoring-business-impact-dropdown-header + .risk-scoring-helper-text {
+  margin-top: 0 !important;
+  padding-left: 2px;
+}
+
+ 

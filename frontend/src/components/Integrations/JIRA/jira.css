@@ -1,0 +1,598 @@
+/* Jira Integration Component Styles */
+.jira-container {
+  padding: 20px;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: calc(100vh - 60px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jira-container h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.jira-container h1::before {
+  content: "🔗";
+  font-size: 1.5rem;
+}
+
+/* Connection Section */
+.connection-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #10b981;
+  font-weight: 500;
+}
+
+.connection-status i {
+  font-size: 1.2rem;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #4f8cff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3d7aff;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+/* Loading Section */
+.loading-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.loading-section i {
+  font-size: 1.2rem;
+  color: #4f8cff;
+}
+
+/* Error Section */
+.error-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #dc2626;
+  margin: 20px 0;
+}
+
+.error-section i {
+  font-size: 1.1rem;
+  color: #dc2626;
+}
+
+/* Projects Section */
+.projects-section {
+  margin-top: 30px;
+}
+
+.projects-section h3 {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Projects List View - Similar to AllCompliance */
+.projects-list-view {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.projects-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin: 0;
+}
+
+.projects-table th {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.projects-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #f1f3f4;
+  color: #495057;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.projects-table tr {
+  transition: all 0.2s ease;
+}
+
+.projects-table tr:hover {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f7ff 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
+}
+
+.projects-table tr.clickable-row {
+  cursor: pointer;
+}
+
+.projects-table tr:last-child td {
+  border-bottom: none;
+}
+
+.project-name {
+  min-width: 150px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.project-key-badge {
+  background: transparent;
+  color: #1f2937;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: monospace;
+  display: inline-block;
+}
+
+.project-description {
+  max-width: 300px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Action Buttons - Similar to AllCompliance */
+.project-action-btn {
+  padding: 6px 8px !important;
+  font-size: 0.85rem;
+  margin-right: 6px;
+  border-radius: 8px;
+  background: #f8f9fa !important;
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+  border: 1px solid #dee2e6 !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-width: auto;
+  width: auto;
+}
+
+.project-action-btn:hover {
+  background: #e9ecef !important;
+  background-color: #e9ecef !important;
+  color: #212529 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-action-btn.primary {
+  background: #f8f9fa !important;
+  background-color: #f8f9fa !important;
+  color: #495057 !important;
+  border-color: #dee2e6 !important;
+}
+
+.project-action-btn.primary:hover {
+  background: #e9ecef !important;
+  background-color: #e9ecef !important;
+  border-color: #dee2e6 !important;
+}
+
+.project-action-btn i {
+  font-size: 0.9rem;
+}
+
+/* Project Details Section */
+.project-details-section {
+  margin-top: 30px;
+}
+
+.back-button {
+  margin-bottom: 30px;
+}
+
+.project-details-content h2 {
+  color: #1f2937;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Info Cards */
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h3 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #4f8cff;
+}
+
+.info-card h3 i {
+  color: #4f8cff;
+  font-size: 1.1rem;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.info-link {
+  color: #4f8cff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.info-link:hover {
+  color: #3d7aff;
+  text-decoration: underline;
+}
+
+/* Components List */
+.components-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.component-item {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.component-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.component-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Versions List */
+.versions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.version-item {
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.version-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.version-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.version-status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.version-status.released {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.version-status.unreleased {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.version-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Issues List */
+.issues-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.issue-item {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  background: #fafafa;
+}
+
+.issue-item:last-child {
+  border-bottom: none;
+}
+
+.issue-header {
+  margin-bottom: 8px;
+}
+
+.issue-key {
+  background: #4f8cff;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: monospace;
+  margin-right: 8px;
+}
+
+.issue-summary {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.issue-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.issue-detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: #9ca3af;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .jira-container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 768px) {
+  .jira-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  /* Make table responsive on mobile */
+  .projects-table,
+  .projects-table thead,
+  .projects-table tbody,
+  .projects-table th,
+  .projects-table td,
+  .projects-table tr {
+    display: block;
+  }
+  
+  .projects-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .projects-table tr {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .projects-table td {
+    border: none;
+    position: relative;
+    padding: 8px 10px 8px 40%;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .projects-table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 35%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #4b5563;
+  }
+  
+  .projects-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .components-list,
+  .versions-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .issue-details {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jira-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .project-card {
+    padding: 16px;
+  }
+  
+  .info-card {
+    padding: 16px;
+  }
+  
+  .project-details-content h2 {
+    font-size: 1.3rem;
+  }
+}

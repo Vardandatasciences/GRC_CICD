@@ -1,0 +1,1746 @@
+/* Unified CSS Variables */
+:root {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-light: rgba(99, 102, 241, 0.08);
+  --success-color: #10b981;
+  --success-hover: #059669;
+  --danger-color: #ef4444;
+  --danger-hover: #dc2626;
+  --warning-color: #f8961e;
+  --secondary-color: #4cc9f0;
+  --text-primary: #1e293b;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-light: #b6c0ce;
+  --background-light: #f8fafc;
+  --background-white: #ffffff;
+  --background-input: #f9fafb;
+  --border-color: #e2e8f0;
+  --border-focus: #6366f1;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-radius-xs: 4px;
+  --transition: all 0.2s ease;
+  
+  /* Additional variables for compliance mapping */
+  --bg-card: #ffffff;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --bg-hover: #f8fafc;
+}
+
+/* Global Incident Form Styles */
+.incident-form-page {
+  padding: 20px;
+  padding-left: 280px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-secondary);
+}
+
+/* Page Header */
+.incident-form-page-header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.incident-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.incident-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.incident-back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 50%;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.incident-back-link:hover {
+  color: inherit;
+  background: transparent;
+}
+
+.incident-back-link i {
+  font-size: 1rem;
+}
+
+.incident-form-page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary)));
+  margin: 0;
+  letter-spacing: 0.01em;
+  background: transparent;
+  font-family: var(--font-family-primary);
+  position: relative;
+}
+
+.incident-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Form Container */
+.incident-form-box {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+}
+
+
+
+/* Form Grid Layout */
+.incident-create-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  background-color: var(--background-white);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05), 0 1px 4px rgba(15, 23, 42, 0.04);
+  position: relative !important;
+  z-index: 0 !important;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+}
+
+.incident-create-form > .field-full {
+  grid-column: 1 / -1;
+}
+
+.incident-create-form > .field-two-thirds {
+  grid-column: span 2;
+}
+
+.incident-create-form > .field-third {
+  grid-column: span 1;
+}
+
+/* Form Fields */
+.incident-create-form > label,
+.incident-create-form > .incident-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0;
+}
+
+.incident-create-form label span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+
+/* Date picker specific fixes */
+.incident-create-form input[type="date"] {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.incident-create-form input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  z-index: 2 !important;
+}
+
+/* Time picker specific fixes */
+.incident-create-form input[type="time"] {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.incident-create-form input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute !important;
+  right: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  z-index: 2 !important;
+}
+
+/* Ensure date and time input containers work properly */
+.incident-create-form label:has(input[type="date"]),
+.incident-create-form label:has(input[type="time"]) {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Input Styling */
+.incident-create-form input[type="text"],
+.incident-create-form input[type="date"],
+.incident-create-form input[type="time"],
+.incident-create-form input[type="number"],
+.incident-create-form select,
+.incident-create-form textarea {
+  width: 100% !important;
+  padding: 2px 5px !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 3px !important;
+  font-size: 0.75rem !important;
+  color: var(--text-secondary) !important;
+  background-color: var(--background-input) !important;
+  transition: var(--transition) !important;
+  box-shadow: none !important;
+  font-family: inherit;
+  box-sizing: border-box;
+  line-height: 1.1 !important;
+}
+
+.incident-create-form textarea {
+  min-height: 32px;
+  resize: vertical;
+}
+
+.incident-create-form textarea.large {
+  min-height: 80px;
+}
+
+/* Select dropdown styling */
+.incident-create-form select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2399a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 18px center !important;
+  background-size: 22px !important;
+  cursor: pointer !important;
+}
+
+/* Focus states */
+.incident-create-form input[type="text"]:focus,
+.incident-create-form input[type="date"]:focus,
+.incident-create-form input[type="time"]:focus,
+.incident-create-form input[type="number"]:focus,
+.incident-create-form select:focus,
+.incident-create-form textarea:focus {
+  border-color: var(--border-focus) !important;
+  background: var(--background-white) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px var(--primary-light) !important;
+}
+
+/* Disabled fields */
+.incident-create-form input[disabled] {
+  background-color: rgba(99, 102, 241, 0.05) !important;
+  color: var(--primary-color) !important;
+  font-weight: 500 !important;
+  border-color: transparent !important;
+  cursor: not-allowed;
+}
+
+/* Placeholder styling */
+.incident-create-form input::placeholder,
+.incident-create-form textarea::placeholder {
+  color: var(--text-light);
+  font-weight: 400;
+  opacity: 1;
+}
+
+/* Remove number input spinners */
+.incident-create-form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.incident-create-form input[type="number"]::-webkit-outer-spin-button,
+.incident-create-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Form Actions */
+.incident-form-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  gap: 1rem !important;
+  grid-column: 1 / -1 !important;
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Button Styling */
+.incident-submit-btn {
+  background: var(--primary-color, #4f7cff) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 0.875rem 1.75rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  min-width: 120px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.incident-submit-btn:hover {
+  background: var(--primary-hover, #3d5ce6) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(79, 124, 255, 0.3) !important;
+}
+
+.incident-submit-btn:disabled {
+  background: #3d5ce6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.incident-submit-btn:disabled:hover {
+  background: var(--text-muted) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.incident-cancel-btn {
+  background: var(--background-white) !important;
+  color: var(--text-secondary) !important;
+  border: 1.5px solid var(--border-color) !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 0.875rem 1.75rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: var(--transition) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  min-width: 120px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.incident-cancel-btn:hover {
+  background: var(--border-color) !important;
+  color: var(--text-primary) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Status Indicators */
+.criticality-form-high {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-xs);
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.75rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.criticality-form-medium {
+  background-color: rgba(248, 150, 30, 0.1);
+  color: var(--warning-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-xs);
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.75rem;
+  border: 1px solid rgba(248, 150, 30, 0.2);
+}
+
+.criticality-form-low {
+  background-color: rgba(76, 201, 240, 0.1);
+  color: var(--secondary-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-xs);
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.75rem;
+  border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.form-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 28px;
+}
+
+.form-section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236366f1'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Validation and Error States */
+.validation-error {
+  color: var(--danger-color);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.validation-error::before {
+  content: "⚠️";
+  font-size: 0.9rem;
+}
+
+/* Success Messages */
+.success-message {
+  background-color: #f0fdf4;
+  color: #166534;
+  border-left: 4px solid var(--success-color);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid var(--danger-color);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .incident-create-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-create-form > .field-two-thirds {
+    grid-column: span 2;
+  }
+  
+  .incident-create-form > .field-third {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .incident-form-page {
+    padding: 16px;
+    padding-left: 16px;
+  }
+  
+  .incident-form-box {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .incident-create-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .incident-create-form > .field-two-thirds,
+  .incident-create-form > .field-third,
+  .incident-create-form > .field-full {
+    grid-column: 1 / -1;
+  }
+  
+  .incident-form-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .incident-submit-btn,
+  .incident-cancel-btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .incident-form-page-title {
+    font-size: 1.4rem;
+  }
+  
+  .incident-form-box-title {
+    font-size: 1rem;
+  }
+}
+
+/* Compliance Mapping Styles */
+.compliance-mapping-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.compliance-selector {
+  position: relative;
+  width: 100%;
+}
+
+.compliance-search {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 0.9rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease;
+}
+
+.compliance-search:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.compliance-loading {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.compliance-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  max-height: 450px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.incident .compliance-options-container {
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.incident .compliance-options-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.incident .compliance-options-container::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+.incident .compliance-options-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.incident .compliance-options-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+.incident .compliance-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.incident .compliance-checkbox {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.incident .compliance-checkbox input[type="radio"] {
+  display: none;
+}
+
+.incident .compliance-checkbox .radio-label {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.incident .compliance-checkbox .radio-label:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.incident .compliance-checkbox input[type="radio"]:checked + .radio-label {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+}
+
+.incident .compliance-checkbox input[type="radio"]:checked + .radio-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+.incident .compliance-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.compliance-option:last-child {
+  border-bottom: none;
+}
+
+.compliance-option:hover {
+  background: var(--bg-hover);
+}
+
+.compliance-option.selected {
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary-color);
+}
+
+.compliance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.compliance-header strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.compliance-criticality {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+.criticality-high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.criticality-medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.criticality-low {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.criticality-critical {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+
+.compliance-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.framework-name,
+.policy-name {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.compliance-mitigation {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.no-compliances {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* No compliances available message */
+.no-compliances-available {
+  padding: 1.5rem;
+  border: 2px dashed var(--warning-color);
+  border-radius: 8px;
+  background: rgba(248, 150, 30, 0.05);
+}
+
+.external-risk-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-primary);
+}
+
+.external-risk-message i {
+  color: var(--warning-color);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.external-risk-message strong {
+  color: var(--warning-color);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.external-risk-message p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+/* Compliance info section */
+.compliance-info {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.compliance-info i {
+  color: var(--primary-color);
+}
+
+/* Selected Compliance Card */
+.selected-compliance {
+  margin-top: 1.5rem;
+}
+
+.selected-compliance h4 {
+  color: var(--success-color);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.compliance-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--success-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.compliance-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.compliance-card-header strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+  flex: 1;
+}
+
+.compliance-card-body p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.compliance-card-body strong {
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
+.clear-compliance-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-compliance-btn:hover {
+  background: #dc2626;
+}
+
+/* Responsive adjustments for compliance mapping */
+@media (max-width: 768px) {
+  .compliance-mapping-section {
+    padding: 1rem;
+  }
+  
+  .compliance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .compliance-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .compliance-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .clear-compliance-btn {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+/* Incident Status Information Panel */
+.incident-status-info {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.status-header i {
+  font-size: 1.1rem;
+}
+
+.status-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-item .label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 100px;
+}
+
+.status-item .value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.status-item .value.warning {
+  color: var(--warning-color);
+}
+
+.incident-type-compliance-linked-incident {
+  color: var(--success-color);
+}
+
+.incident-type-external-risk {
+  color: var(--warning-color);
+}
+
+.incident-type-regular-incident {
+  color: var(--primary-color);
+}
+
+/* Enhanced Tooltip Styling */
+[title] {
+  position: relative;
+  cursor: help;
+}
+
+/* Custom tooltip styling for form elements */
+.incident-create-form input[title]:hover::after,
+.incident-create-form textarea[title]:hover::after,
+.incident-create-form select[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 41, 59, 0.95);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: normal;
+  max-width: 280px;
+  width: max-content;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+  animation: tooltipFadeIn 0.2s ease-out;
+}
+
+/* Tooltip arrow */
+.incident-create-form input[title]:hover::before,
+.incident-create-form textarea[title]:hover::before,
+.incident-create-form select[title]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(30, 41, 59, 0.95);
+  z-index: 1001;
+  pointer-events: none;
+  animation: tooltipFadeIn 0.2s ease-out;
+}
+
+/* Tooltip animation */
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Enhanced placeholder styling */
+.incident-create-form input::placeholder,
+.incident-create-form textarea::placeholder {
+  color: var(--text-light);
+  font-weight: 400;
+  opacity: 0.8;
+  font-style: italic;
+  transition: opacity 0.3s ease;
+}
+
+.incident-create-form input:focus::placeholder,
+.incident-create-form textarea:focus::placeholder {
+  opacity: 0.6;
+  transform: translateY(-2px);
+}
+
+/* Enhanced label styling */
+.incident-create-form label span {
+  position: relative;
+}
+
+/* Responsive tooltip adjustments */
+@media (max-width: 768px) {
+  .incident-create-form input[title]:hover::after,
+  .incident-create-form textarea[title]:hover::after,
+  .incident-create-form select[title]:hover::after {
+    max-width: 250px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .incident-create-form input[title]:hover::after,
+  .incident-create-form textarea[title]:hover::after,
+  .incident-create-form select[title]:hover::after {
+    max-width: 200px;
+    font-size: 0.7rem;
+    padding: 5px 8px;
+    left: 10px;
+    transform: none;
+  }
+  
+  .incident-create-form input[title]:hover::before,
+  .incident-create-form textarea[title]:hover::before,
+  .incident-create-form select[title]:hover::before {
+    left: 30px;
+    transform: none;
+  }
+}
+
+/* Enhance compliance search tooltip */
+.compliance-search[title]:hover::after {
+  max-width: 320px;
+  white-space: normal;
+}
+
+/* Help text enhancement */
+.field-help-text {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.field-help-text::before {
+  content: "💡";
+  font-size: 0.8rem;
+}
+
+/* Enhanced focus states with tooltip consideration */
+.incident-create-form input:focus,
+.incident-create-form textarea:focus,
+.incident-create-form select:focus {
+  outline: none;
+  border-color: var(--border-focus) !important;
+  background: var(--background-white) !important;
+  box-shadow: 0 0 0 3px var(--primary-light) !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure tooltips don't interfere with form layout */
+.incident-create-form label {
+  position: relative;
+  overflow: visible;
+}
+
+.incident-create-form label {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+/* Multi-Select Dropdown Styles */
+.multi-select-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.multi-select-input {
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  padding: 4px 8px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.multi-select-input:hover {
+  border-color: var(--primary-color);
+}
+
+.multi-select-input:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.selected-items {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 24px;
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.selected-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.selected-item i {
+  cursor: pointer;
+  font-size: 10px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.selected-item i:hover {
+  opacity: 1;
+}
+
+.dropdown-arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  border: 1.5px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.search-box {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  background: #f8f9fa;
+}
+
+.search-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.add-new-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-new-btn:hover {
+  background: #3d7bc6;
+}
+
+.options-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.option-item:hover {
+  background: #f8f9fa;
+}
+
+.option-item:last-child {
+  border-bottom: none;
+}
+
+.option-item input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+}
+
+.option-item span {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.no-options {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive adjustments for multi-select */
+@media (max-width: 768px) {
+  .selected-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .selected-item {
+    margin-bottom: 2px;
+  }
+  
+  .dropdown-panel {
+    max-height: 250px;
+  }
+  
+  .options-list {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .multi-select-input {
+    min-height: 40px;
+    padding: 6px 10px;
+  }
+  
+  .selected-item {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+  
+  .search-input {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .option-item {
+    padding: 8px 10px;
+  }
+  
+  .add-new-btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+/* Incident Title and Description Section Styles */
+.incident-title-description-section {
+  grid-column: 1 / -1;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Removed shimmer effect */
+
+/* Removed unused shimmer animation */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.section-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-header h3 i {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.generate-analysis-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.generate-analysis-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.generate-analysis-btn:hover::before {
+  left: 100%;
+}
+
+.generate-analysis-btn:hover {
+  transform: translateY(-2px);
+  background: #1d4ed8;
+}
+
+.generate-analysis-btn:active {
+  transform: translateY(0);
+}
+
+.generate-analysis-btn i {
+  font-size: 1rem;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(180deg); }
+}
+
+.title-description-fields {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.field-title,
+.field-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field-title input,
+.field-description textarea {
+  border: 2px solid rgba(99, 102, 241, 0.2) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease !important;
+}
+
+.field-title input:focus,
+.field-description textarea:focus {
+  border-color: var(--primary-color) !important;
+  background: white !important;
+  box-shadow: none !important;
+  transform: none;
+}
+
+.field-description textarea {
+  min-height: 120px !important;
+  resize: vertical;
+}
+
+/* Responsive adjustments for title-description section */
+@media (max-width: 1200px) {
+  .title-description-fields {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .generate-analysis-btn {
+    align-self: center;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .incident-title-description-section {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header h3 {
+    font-size: 1rem;
+  }
+  
+  .generate-analysis-btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .title-description-fields {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header {
+    text-align: center;
+  }
+  
+  .generate-analysis-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.field-helper-tip {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Enhanced Placeholder Styling */
+.incident-create-form input::placeholder,
+.incident-create-form textarea::placeholder,
+.incident-create-form select option[value=""] {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.incident-create-form input:focus::placeholder,
+.incident-create-form textarea:focus::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+/* Enhanced Tooltip Styling */
+.incident-create-form input[title],
+.incident-create-form textarea[title],
+.incident-create-form select[title] {
+  position: relative;
+  cursor: help;
+}
+
+.incident-create-form input[title]:hover,
+.incident-create-form textarea[title]:hover,
+.incident-create-form select[title]:hover {
+  border-color: var(--primary-color);
+  transition: border-color 0.2s ease;
+}
+
+/* Custom Tooltip Implementation */
+.incident-create-form input[title]:hover::after,
+.incident-create-form textarea[title]:hover::after,
+.incident-create-form select[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  z-index: 1000;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: tooltipFadeIn 0.2s ease-out;
+  max-width: 350px;
+  min-width: 250px;
+}
+
+.incident-create-form input[title]:hover::before,
+.incident-create-form textarea[title]:hover::before,
+.incident-create-form select[title]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20px;
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+}
+
+/* Enhanced Field Helper Tips */
+.field-helper-tip {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  padding: 6px 10px;
+  background: var(--background-light);
+  border-radius: 4px;
+  border-left: 3px solid var(--primary-color);
+  line-height: 1.4;
+  display: block;
+}
+
+.field-helper-tip::before {
+  content: "💡 ";
+  color: var(--primary-color);
+  font-size: 11px;
+}
+
+/* Improved Focus States with Placeholder Enhancement */
+.incident-create-form input:focus,
+.incident-create-form textarea:focus,
+.incident-create-form select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: rgba(99, 102, 241, 0.02);
+}
+
+/* Enhanced Label Styling */
+.incident-create-form label {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.incident-create-form label span {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+}
+
+/* Multi-select dropdown placeholder enhancement */
+.multi-select-dropdown .placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+/* Compliance search placeholder */
+.compliance-search::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+/* Enhanced select option styling */
+.incident-create-form select option {
+  padding: 8px 12px;
+  color: var(--text-primary);
+}
+
+.incident-create-form select option[value=""] {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Responsive tooltip adjustments */
+@media (max-width: 768px) {
+  .incident-create-form input[title]:hover::after,
+  .incident-create-form textarea[title]:hover::after,
+  .incident-create-form select[title]:hover::after {
+    max-width: 280px;
+    min-width: 200px;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .field-helper-tip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .incident-create-form input[title]:hover::after,
+  .incident-create-form textarea[title]:hover::after,
+  .incident-create-form select[title]:hover::after {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: none;
+    min-width: auto;
+  }
+  
+  .incident-create-form input[title]:hover::before,
+  .incident-create-form textarea[title]:hover::before,
+  .incident-create-form select[title]:hover::before {
+    display: none;
+  }
+}
+
+/* Special styling for compliance search with tooltip */
+.compliance-search[title]:hover::after {
+  bottom: calc(100% + 5px);
+  max-width: 300px;
+  min-width: 250px;
+}
+
+/* Cost field container */
+.cost-field-container {
+  position: relative;
+  width: 100%;
+}
+
+/* AI badge */
+.ai-badge {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #4a90e2;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: help;
+  z-index: 2;
+}
+
+/* Number input styling for cost */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 40px;
+}
+
+/* Add dollar sign prefix visualization */
+label.field-third input[type="number"] {
+  padding-left: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='1' x2='12' y2='23'%3E%3C/line%3E%3Cpath d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 14px 14px;
+}

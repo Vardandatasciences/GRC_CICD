@@ -1,0 +1,1142 @@
+/* Basel KPI Dashboard CSS */
+/* Using unique prefixes to avoid conflicts with other components */
+
+.basel-kpi-dashboard-wrapper {
+  padding: 40px;
+  padding-left: 280px; /* Account for sidebar */
+  background: white;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+/* Loading State */
+.basel-kpi-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 18px;
+  color: #7f8c8d;
+  gap: 15px;
+}
+
+.basel-kpi-loading i {
+  font-size: 24px;
+  color: #3498db;
+}
+
+/* Header Section */
+.basel-kpi-header {
+  text-align: left;
+  margin-bottom: 39px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.basel-kpi-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 6px 0;
+  text-shadow: none;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.basel-kpi-title::before,
+.basel-kpi-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+.basel-kpi-header::before,
+.basel-kpi-header::after {
+  content: none !important;
+  display: none !important;
+}
+
+.basel-kpi-subtitle {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Section Styling */
+.basel-kpi-section {
+  margin-bottom: 24px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.basel-kpi-section-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #34495e;
+  margin: 0 0 12px 0;
+  padding: 0;
+  border: none;
+  position: static;
+}
+
+.basel-kpi-section-title::after {
+  content: none;
+}
+
+/* Row Layout */
+.basel-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Card Styling */
+.basel-kpi-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e8ed;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.basel-kpi-card::before {
+  content: none;
+  display: none;
+}
+
+.basel-kpi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.basel-kpi-card-wide {
+  grid-column: span 1;
+  min-height: 260px;
+}
+
+.basel-kpi-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+/* Gauge Components */
+.basel-kpi-gauge-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.basel-kpi-gauge {
+  position: relative;
+  width: 160px;
+  height: 90px;
+}
+
+.basel-kpi-gauge-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.basel-kpi-gauge-progress {
+  transition: stroke-dasharray 1.5s ease-in-out;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.basel-kpi-gauge-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  fill: #2c3e50;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.basel-kpi-gauge-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  fill: #7f8c8d;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Trend Charts */
+.basel-kpi-trend-mini {
+  width: 180px;
+  height: 54px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-trend-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.basel-kpi-trend-small {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-trend-small-svg {
+  width: 100%;
+  height: 50px;
+}
+
+.basel-kpi-trend-label {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.basel-kpi-trend-area {
+  margin: 15px 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-trend-area-svg {
+  width: 100%;
+  height: 80px;
+  background: #f8f9fa;
+}
+
+/* Waterfall + table */
+.basel-kpi-waterfall-and-table { display: flex; gap: 16px; align-items: center; }
+.basel-kpi-waterfall-svg { width: 60%; height: 120px; }
+.basel-kpi-simple-table { flex: 1; }
+.basel-kpi-table-row { display: grid; grid-template-columns: 1fr 60px 1fr; padding: 6px 8px; border-bottom: 1px solid #e9ecef; font-size: 0.8rem; }
+.basel-kpi-table-head { background: #f8f9fa; font-weight: 600; }
+.basel-kpi-waterfall-label { font-size: 0.7rem; fill: #64748b; }
+
+/* Ranked table */
+.basel-kpi-ranked-table { width: 100%; }
+.basel-kpi-ranked-bar { position: relative; height: 12px; background: #eef2f7; border-radius: 6px; overflow: hidden; }
+.basel-kpi-ranked-fill { height: 100%; border-radius: 6px; }
+.basel-kpi-ranked-value { margin-left: 6px; font-size: 0.75rem; color: #374151; }
+
+/* Mini heatmap */
+.basel-kpi-mini-heatmap-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.basel-kpi-mini-heatmap-cell { padding: 8px; color: #fff; border-radius: 6px; text-align: center; }
+.basel-kpi-mini-heatmap-label { font-size: 0.75rem; display: block; }
+.basel-kpi-mini-heatmap-value { font-weight: 700; font-size: 0.8rem; }
+.basel-kpi-mini-note { font-size: 0.75rem; color: #64748b; margin-top: 6px; }
+
+/* Radar */
+.basel-kpi-radar-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.basel-kpi-radar-svg { width: 150px; height: 120px; }
+.basel-kpi-radar-score { font-size: 0.8rem; fill: #374151; }
+
+/* Scatter & Bubble */
+.basel-kpi-scatter-wrap, .basel-kpi-bubble-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.basel-kpi-scatter-svg { width: 220px; height: 120px; }
+.basel-kpi-bubble-svg { width: 240px; height: 120px; }
+.basel-kpi-bubble-legend { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+
+/* Waterfall metric */
+.basel-kpi-waterfall-and-metric { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.basel-kpi-shortfall-metric { font-weight: 700; color: #1f2937; }
+
+/* Exposure Breakdown */
+.basel-kpi-exposure-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.basel-kpi-exposure-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: none;
+}
+
+.basel-kpi-exposure-label {
+  font-size: 0.9rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.basel-kpi-exposure-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Donut Charts */
+.basel-kpi-donut-composition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.basel-kpi-donut-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.basel-kpi-donut-center {
+  font-size: 0.8rem;
+  font-weight: 600;
+  fill: #2c3e50;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.basel-kpi-donut-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.basel-kpi-donut-large-svg {
+  width: 200px;
+  height: 200px;
+}
+
+.basel-kpi-donut-center-large {
+  font-size: 1.2rem;
+  font-weight: 700;
+  fill: #2c3e50;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* HQLA Legend */
+.basel-kpi-hqla-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.basel-kpi-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.basel-kpi-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Funding Bars (ASF/RSF) */
+.basel-kpi-asf-rsf {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.basel-kpi-funding-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.basel-kpi-funding-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 35px;
+  flex-shrink: 0;
+}
+
+.basel-kpi-funding-progress {
+  flex: 1;
+  height: 20px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.basel-kpi-funding-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.basel-kpi-funding-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* RWA Container */
+.basel-kpi-rwa-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.basel-kpi-rwa-value {
+  text-align: center;
+  padding: 15px;
+}
+
+.basel-kpi-large-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+}
+
+.basel-kpi-unit {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+/* Stacked Chart */
+.basel-kpi-stacked-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basel-kpi-stacked-svg {
+  width: 100%;
+  height: 60px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.basel-kpi-rwa-legend {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Category Values */
+.basel-kpi-category-values {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.basel-kpi-category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: none;
+}
+
+.basel-kpi-category-label {
+  font-size: 0.9rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.basel-kpi-category-amount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Heatmap */
+.basel-kpi-heatmap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.basel-kpi-heatmap-cell {
+  padding: 12px 8px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.basel-kpi-heatmap-cell:hover {
+  transform: scale(1.05);
+  border-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.basel-kpi-rating-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.basel-kpi-rating-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 4px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.basel-kpi-heatmap-scale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #6c757d;
+  justify-content: center;
+}
+
+.basel-kpi-color-scale {
+  display: flex;
+  height: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.basel-kpi-scale-segment {
+  width: 20px;
+  height: 100%;
+}
+
+/* Bar Charts */
+.basel-kpi-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.basel-kpi-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.basel-kpi-bar-label {
+  font-size: 0.8rem;
+  color: #495057;
+  font-weight: 500;
+  width: 120px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.basel-kpi-bar-track {
+  flex: 1;
+  height: 20px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.basel-kpi-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.basel-kpi-bar-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 40px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* Expected Loss Components */
+.basel-kpi-el-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.basel-kpi-el-value {
+  text-align: center;
+  padding: 15px;
+}
+
+.basel-kpi-el-components {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-component-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basel-kpi-component-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.basel-kpi-component-label {
+  font-size: 0.8rem;
+  color: #495057;
+  font-weight: 500;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.basel-kpi-component-bar {
+  flex: 1;
+  height: 16px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.basel-kpi-component-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 1s ease-in-out;
+}
+
+.basel-kpi-component-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 35px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* NPL Container */
+.basel-kpi-npl-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-npl-value {
+  text-align: center;
+  padding: 15px;
+}
+
+.basel-kpi-npl-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.basel-kpi-product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: none;
+}
+
+.basel-kpi-product-label {
+  font-size: 0.85rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.basel-kpi-product-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+/* VaR Container */
+.basel-kpi-var-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-var-current {
+  text-align: center;
+  padding: 15px;
+}
+
+.basel-kpi-var-chart {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-var-svg {
+  width: 100%;
+  height: 100px;
+  background: #f8f9fa;
+}
+
+.basel-kpi-limit-label {
+  font-size: 0.8rem;
+  fill: #e74c3c;
+  font-weight: 600;
+}
+
+/* Operational Risk */
+.basel-kpi-op-risk-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.basel-kpi-bi-gauge {
+  align-self: center;
+}
+
+.basel-kpi-bi-components {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.basel-kpi-bi-component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.basel-kpi-bi-label {
+  font-size: 0.8rem;
+  color: #495057;
+  font-weight: 500;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.basel-kpi-bi-bar {
+  flex: 1;
+  height: 16px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.basel-kpi-bi-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 1s ease-in-out;
+}
+
+.basel-kpi-bi-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 50px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Interest Rate Risk */
+.basel-kpi-irrbb-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-scenario-table {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.basel-kpi-scenario-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #495057;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.basel-kpi-scenario-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  color: #495057;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background 0.2s ease;
+}
+
+.basel-kpi-scenario-row:hover {
+  background: #f8f9fa;
+}
+
+.basel-kpi-scenario-row:last-child {
+  border-bottom: none;
+}
+
+.basel-kpi-scenario-breach {
+  background: #fff5f5;
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.basel-kpi-sensitivity-chart {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-sensitivity-svg {
+  width: 100%;
+  height: 80px;
+}
+
+/* FX Exposure */
+.basel-kpi-fx-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.basel-kpi-fx-table {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.basel-kpi-fx-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #495057;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.basel-kpi-fx-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  color: #495057;
+  border-bottom: 1px solid #f1f3f4;
+  transition: background 0.2s ease;
+}
+
+.basel-kpi-fx-row:hover {
+  background: #f8f9fa;
+}
+
+.basel-kpi-fx-row:last-child {
+  border-bottom: none;
+}
+
+.basel-kpi-currency-code {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.basel-kpi-world-map {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.basel-kpi-map-svg {
+  width: 100%;
+  height: 150px;
+}
+
+.basel-kpi-map-label {
+  font-size: 0.8rem;
+  fill: #6c757d;
+  font-weight: 500;
+}
+
+/* ILM Container */
+.basel-kpi-ilm-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.basel-kpi-ilm-gauge {
+  align-self: center;
+}
+
+.basel-kpi-ilm-trend {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .basel-kpi-dashboard-wrapper {
+    padding-left: 280px;
+  }
+  
+  .basel-kpi-row { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+}
+
+@media (max-width: 1200px) {
+  .basel-kpi-dashboard-wrapper {
+    padding-left: 260px;
+  }
+  
+  .basel-kpi-card-wide {
+    grid-column: span 1;
+  }
+  
+  .basel-kpi-row { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+}
+
+@media (max-width: 992px) {
+  .basel-kpi-dashboard-wrapper {
+    padding-left: 240px;
+  }
+  
+  .basel-kpi-title {
+    font-size: 2rem;
+  }
+  
+  .basel-kpi-subtitle {
+    font-size: 1rem;
+  }
+  
+  .basel-kpi-section-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .basel-kpi-dashboard-wrapper {
+    padding: 15px;
+    padding-left: 220px;
+  }
+  
+  .basel-kpi-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .basel-kpi-card {
+    padding: 15px;
+  }
+  
+  .basel-kpi-title {
+    font-size: 1.8rem;
+  }
+  
+  .basel-kpi-section {
+    padding: 20px;
+  }
+  
+  .basel-kpi-gauge {
+    width: 140px;
+    height: 80px;
+  }
+  
+  .basel-kpi-large-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .basel-kpi-dashboard-wrapper {
+    padding: 10px;
+    padding-left: 200px;
+  }
+  
+  .basel-kpi-header {
+    padding: 15px;
+  }
+  
+  .basel-kpi-title {
+    font-size: 1.5rem;
+  }
+  
+  .basel-kpi-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .basel-kpi-section {
+    padding: 15px;
+  }
+  
+  .basel-kpi-section-title {
+    font-size: 1.2rem;
+  }
+  
+  .basel-kpi-card {
+    padding: 12px;
+  }
+  
+  .basel-kpi-gauge {
+    width: 120px;
+    height: 70px;
+  }
+  
+  .basel-kpi-heatmap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .basel-kpi-scenario-header,
+  .basel-kpi-scenario-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  
+  .basel-kpi-fx-header,
+  .basel-kpi-fx-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
+/* Animation and Transitions */
+@keyframes basel-kpi-fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.basel-kpi-card {
+  animation: basel-kpi-fadeIn 0.6s ease-out;
+}
+
+.basel-kpi-section:nth-child(2) .basel-kpi-card {
+  animation-delay: 0.1s;
+}
+
+.basel-kpi-section:nth-child(3) .basel-kpi-card {
+  animation-delay: 0.2s;
+}
+
+.basel-kpi-section:nth-child(4) .basel-kpi-card {
+  animation-delay: 0.3s;
+}
+
+.basel-kpi-section:nth-child(5) .basel-kpi-card {
+  animation-delay: 0.4s;
+}
+
+.basel-kpi-section:nth-child(6) .basel-kpi-card {
+  animation-delay: 0.5s;
+}
+
+/* Utility Classes */
+.basel-kpi-text-success {
+  color: #2ecc71 !important;
+}
+
+.basel-kpi-text-warning {
+  color: #f39c12 !important;
+}
+
+.basel-kpi-text-danger {
+  color: #e74c3c !important;
+}
+
+.basel-kpi-bg-success {
+  background-color: #2ecc71 !important;
+}
+
+.basel-kpi-bg-warning {
+  background-color: #f39c12 !important;
+}
+
+.basel-kpi-bg-danger {
+  background-color: #e74c3c !important;
+}
+
+/* Focus and Accessibility */
+.basel-kpi-heatmap-cell:focus,
+.basel-kpi-scenario-row:focus,
+.basel-kpi-fx-row:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .basel-kpi-dashboard-wrapper {
+    padding: 0;
+    background: white;
+    color: black;
+  }
+  
+  .basel-kpi-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .basel-kpi-section {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

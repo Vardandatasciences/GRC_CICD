@@ -1,0 +1,1883 @@
+/* Incident KPI Dashboard CSS */
+
+.incident-kpi-incident-dashboard-wrapper {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-right:20px;
+  margin-top: 0;
+  margin-right:-20px;
+  margin-bottom: -30px;
+  padding-left: 280px; /* Add left padding to account for sidebar width */
+  background: white;
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 101.5%;
+  box-sizing: border-box; /* Ensure no additional margin */
+}
+
+/* Dashboard Title */
+.incident-kpi-dashboard-title {
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.incident-kpi-dashboard-title h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.5px;
+  display: inline-block;
+}
+
+/* KPI Row Layout - 3 cards per row */
+.incident-kpi-kpi-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Change from center to flex-start */
+  max-width: calc(100vw - 320px); /* Ensure content doesn't exceed viewport minus sidebar */
+}
+
+/* KPI Card Styling */
+.incident-kpi-kpi-card {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  flex: 1;
+  min-width: 260px;
+  max-width: calc(33.333% - 8px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.incident-kpi-kpi-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-kpi-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.incident-kpi-kpi-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.incident-kpi-kpi-value .incident-kpi-unit {
+  font-size: 0.9rem;
+  margin-left: 3px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Chart Components */
+.incident-kpi-kpi-chart {
+  height: auto;
+  position: relative;
+  margin-bottom: 4px;
+  margin-top: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Line Chart Styles */
+.incident-kpi-line-chart {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.incident-kpi-line-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced MTTR Chart Styles */
+.enhanced-mttr-chart {
+  min-height: 180px !important;
+}
+
+/* Centered Value Display Styles */
+.incident-kpi-centered-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 120px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.incident-kpi-large-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.incident-kpi-large-unit {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.incident-kpi-enhanced-chart-container {
+  display: flex;
+  align-items: stretch;
+  height: 80px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.incident-kpi-y-axis-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  padding-right: 8px;
+  align-items: flex-end;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.incident-kpi-y-label {
+  line-height: 1;
+  font-weight: 500;
+}
+
+.enhanced-line-chart {
+  flex: 1;
+  height: 80px;
+  position: relative;
+}
+
+.enhanced-line-chart svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.incident-kpi-enhanced-line {
+  filter: drop-shadow(0 1px 2px rgba(41, 128, 185, 0.3));
+}
+
+.incident-kpi-enhanced-point {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  transition: r 0.2s ease;
+}
+
+.incident-kpi-enhanced-point:hover {
+  r: 5;
+}
+
+.enhanced-months {
+  margin-top: 8px;
+  margin-left: 35px; /* Align with chart area */
+}
+
+.incident-kpi-month-label {
+  font-size: 0.65rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.incident-kpi-chart-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12px;
+  padding: 8px;
+  background: rgba(52, 152, 219, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.incident-kpi-stat-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: #34495e;
+  font-weight: 500;
+  gap: 4px;
+}
+
+.incident-kpi-stat-item i {
+  font-size: 0.65rem;
+}
+
+.text-green {
+  color: #27ae60 !important;
+}
+
+.text-red {
+  color: #e74c3c !important;
+}
+
+.text-blue {
+  color: #3498db !important;
+}
+
+/* Time Filter Styles */
+.incident-kpi-time-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: rgba(52, 152, 219, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.incident-kpi-filter-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #34495e;
+  white-space: nowrap;
+}
+
+.incident-kpi-filter-select {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.incident-kpi-filter-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Simplified Chart Styles */
+.incident-kpi-simple-chart {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.incident-kpi-simple-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.incident-kpi-simple-line {
+  filter: drop-shadow(0 1px 2px rgba(52, 152, 219, 0.3));
+}
+
+.incident-kpi-simple-point {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+  transition: r 0.2s ease;
+}
+
+.incident-kpi-simple-point:hover {
+  r: 4;
+}
+
+.simple-months {
+  margin-top: 6px;
+}
+
+.simple-months .incident-kpi-month-label {
+  font-size: 0.6rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.incident-kpi-line-path {
+  stroke: #3b82f6;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+.incident-kpi-line-area {
+  fill: rgba(59, 130, 246, 0.10);
+}
+
+.incident-kpi-line-point {
+  fill: #3b82f6;
+  stroke: #fff;
+  stroke-width: 2;
+  r: 3;
+}
+
+.incident-kpi-data-point {
+  cursor: pointer;
+}
+
+.incident-kpi-hover-area {
+  cursor: pointer;
+}
+
+/* Bar Chart Styles */
+.incident-kpi-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.incident-kpi-bar-chart.incident-kpi-vertical {
+  align-items: flex-end;
+  height: 60px;
+}
+
+.incident-kpi-bar {
+  background: #3498db;
+  flex: 1;
+  margin: 0 1px;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-bar:hover {
+  background: #2980b9;
+  transform: scaleY(1.05);
+}
+
+/* MTTD Bar Chart Specific Styles */
+.incident-kpi-bar-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.incident-kpi-bar-grid line {
+  stroke: #f0f0f0;
+  stroke-width: 1;
+}
+
+.incident-kpi-bar-group {
+  cursor: pointer;
+}
+
+.incident-kpi-bar-group .incident-kpi-bar {
+  fill: #3498db;
+  transition: fill 0.2s ease;
+}
+
+.incident-kpi-bar-group:hover .incident-kpi-bar {
+  fill: #2980b9;
+}
+
+/* MTTC Curve Chart Styles */
+.incident-kpi-curve-chart {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  overflow: visible;
+  background: transparent;
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.incident-kpi-curve-chart svg {
+  width: 100%;
+  height: 60px;
+  overflow: visible;
+  display: block;
+}
+
+.incident-kpi-curve-line {
+  stroke: #9b59b6 !important; /* Purple color with !important */
+  stroke-width: 3 !important;
+  fill: url(#mttc-gradient) !important;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.incident-kpi-curve-chart .incident-kpi-data-point {
+  fill: #9b59b6 !important;
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  transition: all 0.2s ease;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.incident-kpi-curve-chart .incident-kpi-data-point-group:hover .incident-kpi-data-point {
+  fill: #8e44ad !important;
+  stroke: #ffffff !important;
+  stroke-width: 3 !important;
+  r: 5 !important;
+}
+
+.incident-kpi-curve-chart .incident-kpi-hover-area {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.incident-kpi-curve-chart .incident-kpi-hover-area:hover {
+  opacity: 0.1;
+  background: rgba(155, 89, 182, 0.1);
+}
+
+.incident-kpi-chart-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  margin-top: 6px;
+}
+
+.incident-kpi-chart-months {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: #7f8c8d;
+  margin-top: 6px;
+  padding: 0 3px;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.incident-kpi-chart-months span {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  font-size: 0.6rem;
+  line-height: 1.1;
+  opacity: 0.9;
+  color: #5a6c7d;
+  font-weight: 500;
+}
+
+/* Value Change Indicators */
+.incident-kpi-value-change {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.incident-kpi-value-change.incident-kpi-positive {
+  color: #4ade80;
+}
+
+.incident-kpi-value-change.incident-kpi-negative {
+  color: #f87171;
+}
+
+.incident-kpi-value-change i {
+  margin-right: 2px;
+}
+
+/* Reopened Incidents Chart */
+.incident-kpi-reopened-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.incident-kpi-reopened-bar-container {
+  width: 100%;
+  height: 28px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 8px 0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-reopened-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  border-radius: 8px;
+  transition: width 0.8s ease-in-out;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  cursor: pointer;
+  animation: incident-kpi-slideIn 1s ease-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@keyframes incident-kpi-slideIn {
+  from { width: 0%; }
+  to { width: var(--final-width); }
+}
+
+.incident-kpi-reopened-bar:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-reopened-label {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+/* Closure Rate Chart */
+.incident-kpi-closure-rate-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.incident-kpi-closure-rate-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(52, 152, 219, 0.2));
+}
+
+.incident-kpi-closure-rate-circle:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(52, 152, 219, 0.3));
+}
+
+.incident-kpi-closure-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  animation: incident-kpi-drawCircle 2s ease-out;
+}
+
+@keyframes incident-kpi-drawCircle {
+  from { 
+    stroke-dasharray: 0 314; 
+    opacity: 0.7;
+  }
+  to { 
+    stroke-dasharray: var(--final-dasharray); 
+    opacity: 1;
+  }
+}
+
+.incident-kpi-closure-rate-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2c3e50;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.incident-kpi-closure-rate-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.incident-kpi-closure-rate-description {
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 120px;
+}
+
+/* Escalation Rate Chart */
+.incident-kpi-escalation-rate-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.incident-kpi-escalation-rate-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.2));
+}
+
+.incident-kpi-escalation-rate-circle:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(245, 158, 11, 0.3));
+}
+
+.incident-kpi-escalation-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  animation: incident-kpi-drawEscalationCircle 2s ease-out;
+}
+
+@keyframes incident-kpi-drawEscalationCircle {
+  from { 
+    stroke-dasharray: 0 314; 
+    opacity: 0.7;
+  }
+  to { 
+    stroke-dasharray: var(--final-dasharray); 
+    opacity: 1;
+  }
+}
+
+.incident-kpi-escalation-rate-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2c3e50;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.incident-kpi-escalation-rate-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.incident-kpi-escalation-rate-description {
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 120px;
+}
+
+/* False Positive Rate Chart */
+.incident-kpi-false-positive-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.incident-kpi-false-positive-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.2));
+}
+
+.incident-kpi-false-positive-circle:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(239, 68, 68, 0.3));
+}
+
+.incident-kpi-false-positive-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  animation: incident-kpi-drawFalsePositiveCircle 2s ease-out;
+}
+
+@keyframes incident-kpi-drawFalsePositiveCircle {
+  from { 
+    stroke-dasharray: 0 314; 
+    opacity: 0.7;
+  }
+  to { 
+    stroke-dasharray: var(--final-dasharray); 
+    opacity: 1;
+  }
+}
+
+.incident-kpi-false-positive-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #2c3e50;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.incident-kpi-false-positive-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.incident-kpi-false-positive-description {
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 120px;
+}
+
+.incident-kpi-false-positive-segment {
+  transition: stroke-dasharray 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.incident-kpi-false-positive-segment:hover {
+  stroke-width: 14;
+  filter: brightness(1.1);
+}
+
+/* Detection Accuracy Chart */
+.incident-kpi-detection-accuracy-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.incident-kpi-detection-accuracy-bar-container {
+  width: 100%;
+  height: 18px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin: 8px 0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-detection-accuracy-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 10px;
+  transition: width 0.8s ease-in-out;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 25px;
+  cursor: pointer;
+  animation: incident-kpi-slideInDetection 1s ease-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+@keyframes incident-kpi-slideInDetection {
+  from { width: 0%; }
+  to { width: var(--final-width); }
+}
+
+.incident-kpi-detection-accuracy-bar:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-detection-accuracy-label {
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  margin-left: 6px;
+}
+
+.incident-kpi-detection-accuracy-text {
+  color: #7f8c8d;
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 6px;
+  line-height: 1.1;
+}
+
+/* Cost Breakdown Styles */
+.incident-kpi-cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.incident-kpi-cost-chart-container {
+  margin-top: 8px;
+}
+
+.incident-kpi-cost-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.incident-kpi-cost-chart-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.incident-kpi-cost-severity-label {
+  width: 55px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  color: #374151;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.incident-kpi-cost-bar-wrapper {
+  flex: 1;
+  height: 24px;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  min-width: 0;
+}
+
+.incident-kpi-cost-bar-chart {
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  padding-left: 8px;
+  transition: all 0.3s ease;
+  min-width: 60px;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-cost-bar-chart:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.incident-kpi-cost-bar-value {
+  font-weight: 700;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.incident-kpi-cost-bar-chart.incident-kpi-critical {
+  background: linear-gradient(135deg, #fecaca, #fca5a5);
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  box-shadow: 0 2px 4px rgba(254, 202, 202, 0.3);
+}
+
+.incident-kpi-cost-bar-chart.incident-kpi-high {
+  background: linear-gradient(135deg, #fed7aa, #fdba74);
+  color: #92400e;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 2px 4px rgba(254, 215, 170, 0.3);
+}
+
+.incident-kpi-cost-bar-chart.incident-kpi-medium {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92400e;
+  border: 1px solid #fef3c7;
+  box-shadow: 0 2px 4px rgba(254, 243, 199, 0.3);
+}
+
+.incident-kpi-cost-bar-chart.incident-kpi-low {
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  color: #166534;
+  border: 1px solid #dcfce7;
+  box-shadow: 0 2px 4px rgba(220, 252, 231, 0.3);
+}
+
+/* Severity Donut Chart */
+.incident-kpi-severity-donut-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 8px;
+}
+
+.incident-kpi-severity-donut {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(132, 204, 22, 0.2));
+}
+
+.incident-kpi-severity-donut:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(132, 204, 22, 0.3));
+}
+
+.incident-kpi-severity-donut-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  animation: incident-kpi-drawSeverityDonut 2s ease-out;
+}
+
+@keyframes incident-kpi-drawSeverityDonut {
+  from { 
+    stroke-dasharray: 0 314; 
+    opacity: 0.7;
+  }
+  to { 
+    stroke-dasharray: var(--final-dasharray); 
+    opacity: 1;
+  }
+}
+
+.incident-kpi-severity-segment {
+  transition: stroke-dasharray 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.incident-kpi-severity-segment:hover {
+  stroke-width: 14;
+  filter: brightness(1.1);
+}
+
+.incident-kpi-severity-donut-hole {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-severity-donut-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Pie Chart Styles */
+.incident-kpi-chart-with-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 8px;
+}
+
+.incident-kpi-pie-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin-top: 8px;
+}
+
+.incident-kpi-pie-chart-svg {
+  width: 45px;
+  height: 45px;
+}
+
+.incident-kpi-pie-segment-path {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-pie-segment-path:hover {
+  filter: brightness(1.1);
+}
+
+.incident-kpi-pie-segment {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-pie-segment:hover {
+  filter: brightness(1.1);
+  stroke: #ffffff;
+  stroke-width: 1;
+}
+
+/* Donut Chart Styles */
+.incident-kpi-small-donut-container {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Horizontal Chart Container */
+.incident-kpi-horizontal-chart-container {
+  height: auto;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Horizontal Chart Wrapper */
+.incident-kpi-horizontal-chart-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Horizontal Chart Title */
+.incident-kpi-horizontal-chart-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+/* Horizontal Chart Bars Container */
+.incident-kpi-horizontal-chart-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+/* Horizontal Bar Item */
+.incident-kpi-horizontal-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 0;
+  min-height: 20px;
+}
+
+/* Horizontal Bar Label */
+.incident-kpi-horizontal-bar-label {
+  font-size: 0.65rem;
+  color: #374151;
+  min-width: 80px;
+  max-width: 100px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Horizontal Bar Container */
+.incident-kpi-horizontal-bar-container {
+  flex: 1;
+  height: 16px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  min-width: 0;
+}
+
+/* Horizontal Bar */
+.incident-kpi-horizontal-bar {
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4px;
+  transition: all 0.3s ease;
+  min-width: 16px;
+  position: relative;
+}
+
+/* Horizontal Bar Text */
+.incident-kpi-horizontal-bar-text {
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+/* Horizontal Bar Count */
+.incident-kpi-horizontal-bar-count {
+  font-size: 0.55rem;
+  color: #6b7280;
+  min-width: 25px;
+  text-align: left;
+}
+
+/* Horizontal Chart Footer */
+.incident-kpi-horizontal-chart-footer {
+  font-size: 0.55rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 3px;
+  padding-top: 3px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.incident-kpi-donut-chart-svg {
+  width: 70px;
+  height: 70px;
+}
+
+.incident-kpi-donut-segment-path {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.incident-kpi-donut-segment-path:hover {
+  filter: brightness(1.1);
+}
+
+/* Chart Legend */
+.incident-kpi-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.65rem;
+  justify-content: center;
+}
+
+.incident-kpi-legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+.incident-kpi-legend-color {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 2px;
+}
+
+.incident-kpi-legend-color.incident-kpi-high { background-color: #f97316; }
+.incident-kpi-legend-color.incident-kpi-medium { background-color: #facc15; }
+.incident-kpi-legend-color.incident-kpi-low { background-color: #84cc16; }
+.incident-kpi-legend-color.incident-kpi-audit { background: linear-gradient(135deg, #3498db, #2980b9); }
+.incident-kpi-legend-color.incident-kpi-manual { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.incident-kpi-legend-color.incident-kpi-new { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.incident-kpi-legend-color.incident-kpi-repeat { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+
+.incident-kpi-legend-text {
+  font-size: 0.6rem;
+  color: #374151;
+}
+
+/* Mini heatmap (S21) */
+.incident-kpi-mini-heatmap {
+  margin-top: 8px;
+}
+.incident-kpi-mini-heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px;
+}
+.incident-kpi-mini-heatmap-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #0b1020;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.incident-kpi-mini-heatmap-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.incident-kpi-mini-heatmap-value {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Severity chips (S37) */
+.incident-kpi-severity-breakdown {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.severity-chip {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.severity-chip.high { background: rgba(239, 68, 68, 0.12); color: #b91c1c; }
+.severity-chip.med { background: rgba(245, 158, 11, 0.12); color: #b45309; }
+.severity-chip.low { background: rgba(16, 185, 129, 0.12); color: #065f46; }
+
+/* Horizontal Bar Chart Styles */
+.incident-kpi-bar-chart-container {
+  height: 80px;
+  margin-top: 8px;
+  border: 1px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.incident-kpi-horizontal-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 6px 0;
+}
+
+.incident-kpi-h-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.incident-kpi-h-bar-item:hover {
+  background: rgba(52, 152, 219, 0.05);
+  transform: translateX(3px);
+}
+
+.incident-kpi-h-bar-label {
+  width: 80px;
+  font-size: 0.7rem;
+  text-align: right;
+  font-weight: 500;
+  color: #374151;
+  flex-shrink: 0;
+}
+
+.incident-kpi-h-bar-track {
+  flex: 1;
+  height: 10px;
+  background: #f1f5f9;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+  border: 1px solid #e2e8f0;
+}
+
+.incident-kpi-h-bar-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(52, 152, 219, 0.3);
+  min-width: 6px;
+}
+
+.incident-kpi-h-bar-progress:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.4);
+}
+
+.incident-kpi-h-bar-value {
+  width: 35px;
+  font-size: 0.7rem;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  flex-shrink: 0;
+}
+
+/* Vertical Bar Chart Styles */
+.incident-kpi-vertical-bar-chart {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  gap: 3px;
+  border: 1px solid #ddd;
+  background: #fff;
+  min-height: 50px;
+}
+
+.incident-kpi-v-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16%;
+  position: relative;
+  min-width: 40px;
+}
+
+.incident-kpi-v-bar-progress {
+  width: 100%;
+  background: #3498db;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.5s ease;
+  min-height: 6px;
+  border: 1px solid #2980b9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.incident-kpi-v-bar-progress:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.incident-kpi-v-bar-label {
+  position: absolute;
+  bottom: -22px;
+  font-size: 0.55rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 500;
+  color: #374151;
+}
+
+.incident-kpi-v-bar-value {
+  margin-bottom: 4px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Bar colors for different types */
+.incident-kpi-type-color-0 { background-color: #3498db; }
+.incident-kpi-type-color-1 { background-color: #e74c3c; }
+.incident-kpi-type-color-2 { background-color: #f39c12; }
+.incident-kpi-type-color-3 { background-color: #27ae60; }
+.incident-kpi-type-color-4 { background-color: #9b59b6; }
+
+/* Stacked Bar Chart */
+.incident-kpi-stacked-bar-container {
+  height: 35px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.incident-kpi-stacked-bar {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-stacked-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 20px;
+}
+
+.incident-kpi-stacked-segment:hover {
+  transform: scaleY(1.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.incident-kpi-stacked-segment-text {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.incident-kpi-stacked-segment.incident-kpi-audit {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.incident-kpi-stacked-segment.incident-kpi-manual {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.incident-kpi-stacked-bar-legend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6px;
+  font-size: 0.65rem;
+}
+
+.incident-kpi-legend-label {
+  font-size: 0.6rem;
+  color: #374151;
+}
+
+/* Donut Chart Container */
+.incident-kpi-donut-chart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-top: 8px;
+  gap: 10px;
+}
+
+.incident-kpi-repeat-donut {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.incident-kpi-repeat-donut svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.incident-kpi-donut-hole {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.incident-kpi-donut-hole-text {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* SLA Compliance Chart */
+.incident-kpi-sla-compliance-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.incident-kpi-sla-gauge {
+  position: relative;
+  width: 55px;
+  height: 35px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.incident-kpi-sla-gauge:hover {
+  transform: scale(1.05);
+}
+
+.incident-kpi-sla-svg {
+  width: 100%;
+  height: 100%;
+  animation: incident-kpi-drawGauge 1.5s ease-out;
+}
+
+@keyframes incident-kpi-drawGauge {
+  from { stroke-dasharray: 0 251.2; }
+  to { stroke-dasharray: 251.2; }
+}
+
+.incident-kpi-sla-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Chart Footer */
+.incident-kpi-chart-footer {
+  display: flex;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  margin-top: 6px;
+}
+
+/* Tooltip Styles */
+.incident-kpi-chart-tooltip,
+.incident-kpi-pie-tooltip,
+.incident-kpi-origin-tooltip,
+.incident-kpi-root-cause-tooltip,
+.incident-kpi-bar-tooltip,
+.incident-kpi-stacked-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 180px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.incident-kpi-tooltip-content,
+.incident-kpi-pie-tooltip-content,
+.incident-kpi-origin-tooltip-content,
+.incident-kpi-root-cause-tooltip-content,
+.incident-kpi-bar-tooltip-content,
+.incident-kpi-stacked-tooltip-content {
+  white-space: nowrap;
+}
+
+.incident-kpi-tooltip-header,
+.incident-kpi-pie-tooltip-header,
+.incident-kpi-origin-tooltip-header,
+.incident-kpi-root-cause-tooltip-header {
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #3498db;
+}
+
+.incident-kpi-tooltip-value,
+.incident-kpi-pie-tooltip-value,
+.incident-kpi-origin-tooltip-value,
+.incident-kpi-root-cause-tooltip-value,
+.incident-kpi-bar-tooltip-content .incident-kpi-tooltip-value {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.incident-kpi-tooltip-details {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.incident-kpi-tooltip-count,
+.incident-kpi-pie-tooltip-count,
+.incident-kpi-origin-tooltip-count,
+.incident-kpi-root-cause-tooltip-count {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.incident-kpi-tooltip-incidents {
+  margin-top: 4px;
+  font-size: 0.65rem;
+  opacity: 0.9;
+}
+
+.incident-kpi-tooltip-incident {
+  margin-bottom: 2px;
+  padding: 1px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.incident-kpi-tooltip-incident:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .incident-kpi-incident-dashboard-wrapper {
+    padding-left: 260px;
+  }
+  
+  .incident-kpi-kpi-row {
+    max-width: calc(100vw - 300px);
+  }
+  
+  .incident-kpi-kpi-card {
+    min-width: 260px;
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 992px) {
+  .incident-kpi-incident-dashboard-wrapper {
+    padding-left: 240px;
+  }
+  
+  .incident-kpi-kpi-row {
+    max-width: calc(100vw - 280px);
+  }
+  
+  .incident-kpi-kpi-card {
+    min-width: 240px;
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .incident-kpi-incident-dashboard-wrapper {
+    padding-left: 220px;
+  }
+  
+  .incident-kpi-dashboard-title h1 {
+    font-size: 1.8rem;
+  }
+  
+  .incident-kpi-kpi-row {
+    max-width: calc(100vw - 260px);
+    justify-content: center;
+  }
+  
+  .incident-kpi-kpi-card {
+    min-width: 220px;
+    max-width: 100%;
+  }
+  
+  .incident-kpi-kpi-value {
+    font-size: 1.4rem;
+  }
+  
+  .incident-kpi-chart-months {
+    font-size: 0.6rem;
+  }
+  
+  .incident-kpi-chart-months span {
+    font-size: 0.6rem;
+  }
+
+  /* Enhanced chart responsive adjustments */
+  .incident-kpi-y-axis-labels {
+    width: 30px;
+    font-size: 0.6rem;
+    padding-right: 6px;
+  }
+
+  .enhanced-months {
+    margin-left: 30px;
+  }
+
+  .incident-kpi-month-label {
+    font-size: 0.6rem;
+  }
+
+  .incident-kpi-chart-stats {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .incident-kpi-stat-item {
+    font-size: 0.65rem;
+    justify-content: center;
+  }
+
+  .enhanced-mttr-chart {
+    min-height: 160px !important;
+  }
+
+  .incident-kpi-enhanced-chart-container {
+    height: 70px;
+  }
+
+  .enhanced-line-chart {
+    height: 70px;
+  }
+
+  /* Time filter responsive adjustments */
+  .incident-kpi-time-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .incident-kpi-filter-select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .incident-kpi-h-bar-label {
+    width: 70px;
+    font-size: 0.65rem;
+  }
+  
+  .incident-kpi-h-bar-track {
+    height: 8px;
+  }
+  
+  .incident-kpi-h-bar-value {
+    width: 30px;
+    font-size: 0.65rem;
+  }
+  
+  .incident-kpi-bar-chart-container {
+    height: 70px;
+  }
+  
+  .incident-kpi-vertical-bar-chart {
+    padding-bottom: 15px;
+  }
+  
+  .incident-kpi-v-bar-label {
+    font-size: 0.5rem;
+    bottom: -18px;
+  }
+  
+  .incident-kpi-cost-severity-label {
+    width: 50px;
+    font-size: 0.7rem;
+  }
+  
+  .incident-kpi-cost-bar-wrapper {
+    height: 20px;
+  }
+  
+  .incident-kpi-cost-bar-chart {
+    padding-right: 5px;
+    padding-left: 5px;
+    min-width: 45px;
+  }
+  
+  .incident-kpi-cost-bar-value {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .incident-kpi-incident-dashboard-wrapper {
+    padding: 10px;
+    padding-left: 200px;
+  }
+  
+  .incident-kpi-dashboard-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .incident-kpi-kpi-row {
+    max-width: calc(100vw - 240px);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .incident-kpi-kpi-card {
+    min-width: 200px;
+    padding: 12px;
+    min-height: 140px;
+  }
+  
+  .incident-kpi-kpi-value {
+    font-size: 1.3rem;
+  }
+  
+  .incident-kpi-kpi-value .incident-kpi-unit {
+    font-size: 0.8rem;
+  }
+  
+  .incident-kpi-chart-legend {
+    font-size: 0.6rem;
+    gap: 4px;
+  }
+  
+  .incident-kpi-legend-item {
+    margin-right: 4px;
+  }
+  
+  .incident-kpi-legend-color {
+    width: 6px;
+    height: 6px;
+    margin-right: 2px;
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "name": "Page 2",
+  "level": 1,
+  "start_page": 2,
+  "end_page": 2,
+  "total_pages": 1,
+  "content": " \nAugust 27, 2025 \n2 \nSA-04 \nUpdated discussion to address customer agreements and \nnotification, and coordination of updates. \nSA-05 \nUpdated discussion to address additional considerations \nto include in developer artifacts and documentation.  \nSA-08(14) \nUpdated discussion to address limiting the functions that \nhave access to operate with elevated privileges \nSI-02 \nUpdated discussion to address flaw remediation testing \nSI-02(05) \nUpdated discussion to provide an implementation \nexample. \nUpdate to Related Controls or References \nAll -01 Controls: Policy & Procedure \nAdded as related control to newly added SI-02(07) \nAU-02 \nAdded as related control to newly added SA-15(13), SI-\n02(07) \nAU-03 \nAdded as related control to newly added SA-15(13) \nCA-07 \nAdded as related control to newly added SI-02(07) \nIR-04 \nAdded as related control to newly added SA-15(13) \nIR-06 \nAdded as related control to newly added SI-02(07) \nIR-08 \nAdded as related control to newly added SI-02(07) \nMA-03 \nAdded as related control to newly added SI-02(07) \nSA-08 \nAdded new references \nSA-15 \nAdded as related control to newly added SI-02(07) \nSI-02 \nAdded new reference  \nSR-08 \nAdded as related control to newly added SI-02(07) \n \n",
+  "extraction_method": "per_page_fallback"
+}

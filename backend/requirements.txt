@@ -1,0 +1,33 @@
+Django
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+PyJWT
+python-dotenv
+openpyxl>=3.1.2  # For Excel file handling (reading and writing)
+xlsxwriter>=3.1.0  # For Excel file handling with advanced formatting
+mysqlclient
+pymysql
+boto3
+mysql-connector-python
+pandas
+xmltodict
+reportlab
+requests
+celery
+python-docx
+langchain_openai
+langchain
+langchain-core
+langchain-community
+openai
+langchain_ollama
+werkzeug
+pdfplumber
+PyPDF2
+PyMuPDF>=1.23.0
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+google-api-python-client
+gunicorn==22.0.0

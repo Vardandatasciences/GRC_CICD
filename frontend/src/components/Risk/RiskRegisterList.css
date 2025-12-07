@@ -1,0 +1,695 @@
+/* Modern UI Variables for Risk Register Table - ISOLATED TO THIS PAGE ONLY */
+/* All styles scoped to .risk-register-container to prevent affecting other pages */
+
+/* Container for the risk register with isolated CSS variables */
+.risk-register-container {
+  /* CSS Variables - scoped to this container only */
+  --risk-register-primary: #7B6FDD;
+  --risk-register-primary-light: #8F84E8;
+  --risk-register-primary-dark: #6A5ED4;
+  --risk-register-secondary: #f72585;
+  --risk-register-success: #4cc9f0;
+  --risk-register-warning: #f8961e;
+  --risk-register-danger: #e63946;
+  --risk-register-light: #f8f9fa;
+  --risk-register-dark: #212529;
+  --risk-register-gray-100: #f8f9fa;
+  --risk-register-gray-200: #e9ecef;
+  --risk-register-gray-300: #dee2e6;
+  --risk-register-gray-400: #ced4da;
+  --risk-register-gray-500: #adb5bd;
+  --risk-register-gray-600: #6c757d;
+  --risk-register-gray-700: #495057;
+  --risk-register-gray-800: #343a40;
+  --risk-register-gray-900: #212529;
+  --risk-register-border-radius: 8px;
+  --risk-register-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --risk-register-transition: all 0.3s ease;
+  
+  /* Container Styles */
+  padding: 70px 46px 2px 310px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--risk-register-gray-800);
+  display: flex;
+  flex-direction: column;
+  width: 105%;
+  margin-top: -29px;
+  margin-right:-10px ;
+  margin-bottom:-20px ;
+  margin-left: -30px;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: #ffffff;
+}
+
+/* Header Styles */
+.risk-register-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.risk-register-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary)));
+  margin-bottom: 28px;
+  margin-top: -45px;
+  margin-left: 20px;
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  background: transparent;
+  font-family: var(--font-family-primary);
+}
+.risk-register-title::after { content: none; display: none; }
+
+/* New Risk Highlighting Styles */
+.risk-register-id-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-register-id-value {
+  font-weight: 600;
+  color: var(--risk-register-primary);
+}
+
+.risk-register-new-badge {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+  animation: newBadgePulse 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.risk-register-new-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes newBadgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.risk-register-title-cell {
+  font-weight: 500;
+  color: var(--risk-register-gray-800);
+  transition: all 0.3s ease;
+}
+
+.risk-register-new-row {
+  background: linear-gradient(90deg, 
+    rgba(123, 111, 221, 0.08) 0%, 
+    rgba(123, 111, 221, 0.04) 50%, 
+    transparent 100%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-left: none;
+  font-weight: 600;
+  color: var(--risk-register-primary-dark);
+  animation: newRowGlow 3s ease-in-out infinite;
+}
+
+@keyframes newRowGlow {
+  0%, 100% {
+    background: linear-gradient(90deg, 
+      rgba(123, 111, 221, 0.08) 0%, 
+      rgba(123, 111, 221, 0.04) 50%, 
+      transparent 100%);
+    border-left-color: var(--risk-register-primary);
+  }
+  50% {
+    background: linear-gradient(90deg, 
+      rgba(123, 111, 221, 0.15) 0%, 
+      rgba(123, 111, 221, 0.08) 50%, 
+      transparent 100%);
+    border-left-color: var(--risk-register-primary-light);
+  }
+}
+
+.risk-register-icon {
+  margin-right: 8px;
+  color: #7B6FDD;
+}
+
+/* Filter Controls Styles - Updated for search bar on top, dropdowns below */
+.risk-register-filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: -10px 24px 16px 24px;
+  border-bottom: none;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.risk-register-search-row {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.risk-register-search-row .dynamic-search-bar {
+  min-width: 200px;
+  max-width: 300px;
+  margin-left: 18px;
+  flex: 0 0 auto;
+}
+
+.risk-register-dropdowns-row {
+  /* Use responsive grid for clean alignment */
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 3px !important;
+  align-items: center !important;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  padding-right: 0;
+}
+
+/* Style overrides for dynamic components - Using high specificity to override CustomDropdown scoped styles */
+.risk-register-dropdowns-row .dropdown-container.dropdown-container {
+  min-width: 0;
+  width: 85% ;
+  max-width: 85% ;
+  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  padding-right: 0 !important;
+  display: inline-block !important;
+}
+
+.risk-register-dropdowns-row .filter-btn.filter-btn {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: 40px !important;
+  padding: 2px 0px 2px 5px !important;
+  font-size: 12px !important;
+  border: 1px solid var(--risk-register-gray-300) !important;
+  border-radius: 6px !important;
+  background-color: white !important;
+  transition: all 0.3s !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.risk-register-dropdowns-row .filter-btn:hover {
+  border-color: var(--risk-register-primary);
+  box-shadow: 0 0 0 2px rgba(123, 111, 221, 0.1);
+}
+
+/* Risk ID styling - adjusted for tighter layout */
+.risk-register-id {
+  color: #7B6FDD;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Risk Register Row Styling with Criticality Colors */
+.risk-register-container .dynamic-table-row {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Criticality-based row colors */
+.risk-register-container .dynamic-table-row.criticality-critical {
+  background: linear-gradient(90deg, 
+    rgba(239, 68, 68, 0.08) 0%, 
+    rgba(239, 68, 68, 0.04) 50%, 
+    rgba(239, 68, 68, 0.02) 100%);
+  border-left: none;
+}
+
+.risk-register-container .dynamic-table-row.criticality-high {
+  background: linear-gradient(90deg, 
+    rgba(245, 158, 11, 0.08) 0%, 
+    rgba(245, 158, 11, 0.04) 50%, 
+    rgba(245, 158, 11, 0.02) 100%);
+  border-left: none;
+}
+
+.risk-register-container .dynamic-table-row.criticality-medium {
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.08) 0%, 
+    rgba(59, 130, 246, 0.04) 50%, 
+    rgba(59, 130, 246, 0.02) 100%);
+  border-left: none;
+}
+
+.risk-register-container .dynamic-table-row.criticality-low {
+  background: linear-gradient(90deg, 
+    rgba(34, 197, 94, 0.08) 0%, 
+    rgba(34, 197, 94, 0.04) 50%, 
+    rgba(34, 197, 94, 0.02) 100%);
+  border-left: none;
+}
+
+/* Hover effects for criticality-colored rows */
+.risk-register-container .dynamic-table-row.criticality-critical:hover {
+  background: linear-gradient(90deg, 
+    rgba(239, 68, 68, 0.15) 0%, 
+    rgba(239, 68, 68, 0.08) 50%, 
+    rgba(239, 68, 68, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.risk-register-container .dynamic-table-row.criticality-high:hover {
+  background: linear-gradient(90deg, 
+    rgba(245, 158, 11, 0.15) 0%, 
+    rgba(245, 158, 11, 0.08) 50%, 
+    rgba(245, 158, 11, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.risk-register-container .dynamic-table-row.criticality-medium:hover {
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.15) 0%, 
+    rgba(59, 130, 246, 0.08) 50%, 
+    rgba(59, 130, 246, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.risk-register-container .dynamic-table-row.criticality-low:hover {
+  background: linear-gradient(90deg, 
+    rgba(34, 197, 94, 0.15) 0%, 
+    rgba(34, 197, 94, 0.08) 50%, 
+    rgba(34, 197, 94, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+/* Active state for criticality-colored rows */
+.risk-register-container .dynamic-table-row.criticality-critical:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15);
+}
+
+.risk-register-container .dynamic-table-row.criticality-high:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);
+}
+
+.risk-register-container .dynamic-table-row.criticality-medium:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
+}
+
+.risk-register-container .dynamic-table-row.criticality-low:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(34, 197, 94, 0.15);
+}
+
+/* Default hover for rows without criticality class */
+.risk-register-container .dynamic-table-row:hover:not([class*="criticality-"]) {
+  background: linear-gradient(90deg, 
+    rgba(123, 111, 221, 0.08) 0%, 
+    rgba(123, 111, 221, 0.04) 50%, 
+    transparent 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 111, 221, 0.15);
+}
+
+.risk-register-container .dynamic-table-row:active:not([class*="criticality-"]) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(123, 111, 221, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .risk-register-container {
+    padding: 16px 16px 16px 210px;
+  }
+  
+  .risk-register-dropdowns-row {
+    gap: 12px !important;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  
+  .risk-register-search-row .dynamic-search-bar {
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .risk-register-dropdowns-row :deep(.dropdown-container) {
+    min-width: 0 !important;
+    max-width: 85% !important;
+    width: 85% !important;
+  }
+  
+  .risk-register-dropdowns-row :deep(.filter-btn) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-register-container {
+    padding: 16px;
+  }
+  
+  .risk-register-search-row {
+    justify-content: center;
+  }
+  
+  .risk-register-search-row .dynamic-search-bar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .risk-register-dropdowns-row {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 12px !important;
+    width: 100%;
+  }
+  
+  .risk-register-dropdowns-row :deep(.dropdown-container) {
+    min-width: 0 !important;
+    max-width: 85% !important;
+    width: 85% !important;
+  }
+  
+  .risk-register-dropdowns-row :deep(.filter-btn) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Additional responsive adjustments for 4 dropdowns */
+@media (max-width: 1200px) {
+  .risk-register-dropdowns-row {
+    gap: 3px !important;
+  }
+  
+  .risk-register-dropdowns-row :deep(.dropdown-container) {
+    min-width: 0 !important;
+    width: 85% !important;
+    max-width: 85% !important;
+    margin: 0 !important;
+  }
+  
+  .risk-register-dropdowns-row :deep(.filter-btn) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Ensure the risk title has enough space */
+.risk-register-container .dynamic-table td:nth-child(1) {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* Ensure the department column has enough space */
+.risk-register-container .dynamic-table td:nth-child(5) {
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Ensure the business unit column has enough space */
+.risk-register-container .dynamic-table td:nth-child(6) {
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+/* Risk Register specific styling for DynamicTable */
+.risk-register-container .dynamic-table tbody tr:nth-child(even) {
+  background-color: #fafafa !important;
+}
+
+.risk-register-container .dynamic-table tbody tr:hover {
+  background-color: #f8f9ff !important;
+}
+
+/* Status cell styling for DynamicTable */
+.risk-register-container .status-cell .status {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Override DynamicTable pagination styling */
+.risk-register-container .pagination-container {
+  padding: 12px 0;
+  margin-top: 12px;
+  border-top: 1px solid var(--risk-register-gray-200);
+  background-color: transparent;
+}
+
+.risk-register-container .pagination-controls button {
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid var(--risk-register-gray-300);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--risk-register-gray-700);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.risk-register-container .pagination-controls button:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.risk-register-container .pagination-controls button.active {
+  background-color: var(--risk-register-primary);
+  color: white;
+  border-color: var(--risk-register-primary);
+}
+
+.risk-register-container .pagination-controls button:disabled {
+  color: var(--risk-register-gray-400);
+  cursor: not-allowed;
+}
+
+/* ===== Remove outer box/card around DynamicTable (border, radius, shadow) ===== */
+.risk-register-container .dynamic-table,
+.risk-register-container .dynamic-table-container,
+.risk-register-container .dynamic-table-wrapper,
+.risk-register-container .table-container,
+.risk-register-container .table-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+}
+
+/* Ensure the table itself does not render an outer border */
+.risk-register-container .dynamic-table table {
+  background: transparent !important;
+  border-collapse: separate !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== DYNAMIC TABLE HEADER OVERRIDES - FORCE VISIBILITY ===== */
+.risk-register-container .dynamic-table th,
+.risk-register-container .dynamic-table thead th,
+.risk-register-container .dynamic-table .column-header {
+  padding: 12px 8px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  color: #2d3748 !important;
+  background: #f7fafc !important;
+  border-right: 1px solid #e2e8f0 !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2 !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  height: auto !important;
+  min-height: 40px !important;
+  max-height: none !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.025em !important;
+}
+
+/* Force override for any nested elements */
+.risk-register-container .dynamic-table th .header-content {
+  padding: 12px 8px !important;
+  gap: 8px !important;
+}
+
+.risk-register-container .dynamic-table th .header-label {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+.risk-register-container .dynamic-table .header-icons {
+  gap: 6px !important;
+  border-left: 1px solid #e2e8f0 !important;
+  padding-left: 8px !important;
+  margin-left: 8px !important;
+}
+
+.risk-register-container .dynamic-table .header-icon-btn {
+  padding: 4px !important;
+  margin: 0 !important;
+  border-radius: 4px !important;
+  color: #4a5568 !important;
+}
+
+.risk-register-container .dynamic-table .header-icon-btn:hover {
+  color: #1f2937 !important;
+  background-color: rgba(79, 140, 255, 0.12) !important;
+}
+
+.risk-register-container .dynamic-table .remove-column-btn {
+  margin-left: 4px !important;
+  padding: 0 !important;
+}
+
+.risk-register-container .dynamic-table .header-icon-svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Sort arrow size override */
+.risk-register-container .dynamic-table .sort-btn {
+  font-size: 10px !important;
+  padding: 2px !important;
+  margin: 0 !important;
+}
+
+/* Export Controls Styling */
+.risk-register-export-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-right: 40px;
+}
+
+.risk-register-export-dropdown {
+  min-width: 100px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  border: 2px solid #e2e8f0 !important;
+  font-size: 0.8rem !important;
+  padding: 0 28px 0 8px !important;
+  background: #fff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 8px center !important;
+  background-size: 12px !important;
+  color: #222 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  cursor: pointer !important;
+}
+
+/* Export Button - Highest specificity to override any global styles */
+.risk-register-container .risk-register-export-controls .risk-register-export-btn,
+.risk-register-container .risk-register-export-btn,
+.risk-register-export-controls .risk-register-export-btn,
+.risk-register-export-btn {
+  background-color: #4f8cff !important;
+  background: #4f8cff !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  box-shadow: 0 2px 4px rgba(79, 140, 255, 0.2) !important;
+}
+
+.risk-register-container .risk-register-export-controls .risk-register-export-btn:not(:disabled),
+.risk-register-container .risk-register-export-btn:not(:disabled),
+.risk-register-export-controls .risk-register-export-btn:not(:disabled),
+.risk-register-export-btn:not(:disabled) {
+  background-color: #4f8cff !important;
+  background: #4f8cff !important;
+  color: white !important;
+}
+
+.risk-register-container .risk-register-export-controls .risk-register-export-btn:hover:not(:disabled),
+.risk-register-container .risk-register-export-btn:hover:not(:disabled),
+.risk-register-export-controls .risk-register-export-btn:hover:not(:disabled),
+.risk-register-export-btn:hover:not(:disabled) {
+  background-color: #3d7aff !important;
+  background: #3d7aff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(79, 140, 255, 0.3) !important;
+}
+
+.risk-register-container .risk-register-export-controls .risk-register-export-btn:disabled,
+.risk-register-container .risk-register-export-btn:disabled,
+.risk-register-export-controls .risk-register-export-btn:disabled,
+.risk-register-export-btn:disabled {
+  background-color: #4f8cff !important;
+  background: #4f8cff !important;
+  color: white !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: 0 2px 4px rgba(79, 140, 255, 0.2) !important;
+  opacity: 1 !important;
+}

@@ -1,0 +1,624 @@
+/* ============================================
+   POLICY DETAILS - CLEAN THEME
+   ============================================ */
+
+/* Main Container */
+.policy_details_page {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 24px;
+  margin: 0;
+  max-width: 100%;
+  /* Start content after the left sidebar */
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* Header Section */
+.policy_header {
+  background: transparent;
+  padding: 0 0 24px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.policy_header_left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policy_back_btn {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.policy_back_btn:hover {
+  background: #f8f9fa;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.policy_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.version-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c757d;
+}
+
+/* Loading State */
+.policy_loading_container {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.policy_loading_spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.policy_loading_container p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Error State */
+.policy_error_container {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.policy_error_message {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.policy_error_message i {
+  font-size: 48px;
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.policy_error_message h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 8px 0;
+}
+
+.policy_error_message p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0 0 24px 0;
+}
+
+.policy_retry_btn {
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy_retry_btn:hover {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Content Container */
+.policy_details_container {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Approval Section */
+.policy_approval_section {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.policy_approval_section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 16px 0;
+}
+
+.policy_status_indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.status-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.status-value {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-approved {
+  background: rgba(34, 197, 94, 0.1);
+  color: #15803d;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-pending {
+  background: rgba(251, 191, 36, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.policy_actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.final-approve-btn,
+.submit-btn,
+.reject-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.final-approve-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.final-approve-btn:hover {
+  background: #16a34a;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.submit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #2563eb;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reject-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #dc2626;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Info Messages */
+.processed-policy-message,
+.creator-message,
+.admin-message {
+  padding: 16px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.processed-policy-message i,
+.creator-message i,
+.admin-message i {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Info Section */
+.policy_info_section {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.policy_info_section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 20px 0;
+}
+
+.policy_detail_row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f5;
+  font-size: 14px;
+}
+
+.policy_detail_row:last-child {
+  border-bottom: none;
+}
+
+.policy_detail_row strong {
+  color: #495057;
+  font-weight: 600;
+}
+
+.policy_detail_row span {
+  color: #212529;
+}
+
+/* Subpolicies Section */
+.subpolicies-section {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.subpolicies-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 20px 0;
+}
+
+.subpolicy-item {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.subpolicy-item:last-child {
+  margin-bottom: 0;
+}
+
+.subpolicy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subpolicy-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.subpolicy-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subpolicy-status {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.subpolicy-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-subpolicy-btn,
+.reject-subpolicy-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.approve-subpolicy-btn {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.approve-subpolicy-btn:hover:not(:disabled) {
+  background: #22c55e;
+  color: white;
+}
+
+.approve-subpolicy-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reject-subpolicy-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.reject-subpolicy-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.subpolicy-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subpolicy-detail-item {
+  font-size: 14px;
+  color: #495057;
+}
+
+.subpolicy-detail-item strong {
+  color: #212529;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Rejection Note */
+.rejected-policy-message {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.rejection-note {
+  padding: 16px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #dc3545;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.rejection-note i {
+  font-size: 18px;
+  color: #dc3545;
+  flex-shrink: 0;
+}
+
+/* Rejection Modal */
+.policy_reject_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.policy_reject_modal_content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.policy_reject_modal_content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 12px 0;
+}
+
+.policy_reject_modal_content p {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0 0 20px 0;
+}
+
+.policy_rejection_comment {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.policy_rejection_comment:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.policy_reject_modal_actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.policy_cancel_btn,
+.policy_confirm_btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.policy_cancel_btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.policy_cancel_btn:hover:not(:disabled) {
+  background: #e9ecef;
+  border-color: #ced4da;
+}
+
+.policy_confirm_btn {
+  background: #ef4444;
+  color: white;
+}
+
+.policy_confirm_btn:hover:not(:disabled) {
+  background: #dc2626;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.policy_cancel_btn:disabled,
+.policy_confirm_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policy_details_page {
+    padding: 16px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .policy_title {
+    font-size: 20px;
+  }
+  
+  .policy_detail_row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .subpolicy-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .policy_actions {
+    flex-direction: column;
+  }
+  
+  .policy_actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy_details_page {
+    padding: 12px;
+  }
+  
+  .policy_approval_section,
+  .policy_info_section,
+  .subpolicies-section {
+    padding: 16px;
+  }
+  
+  .policy_reject_modal_content {
+    padding: 24px;
+  }
+}
+

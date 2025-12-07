@@ -1,0 +1,1885 @@
+/* Modern UI Variables for Risk Form */
+:root {
+  --form-primary: #2563eb;
+  --form-primary-light: #4f7cff;
+  --form-primary-dark: #2557ee;
+  --form-secondary: #4f7cff;
+  --form-success: #4cc9f0;
+  --form-warning: #f8961e;
+  --form-danger: #dc2626;
+  --form-light: #f8f9fa;
+  --form-dark: #212529;
+  --form-gray-100: #f9fafb;
+  --form-gray-200: #e9ecef;
+  --form-gray-300: #e5e7eb;
+  --form-gray-400: #ced4da;
+  --form-gray-500: #adb5bd;
+  --form-gray-600: #6c757d;
+  --form-gray-700: #374151;
+  --form-gray-800: #343a40;
+  --form-gray-900: #111827;
+  --form-border-radius: 8px;
+  --form-box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1), 0 1px 3px rgba(106, 90, 205, 0.08);
+  --form-transition: all 0.3s ease;
+  --sidebar-width: 280px;
+}
+
+/* Global Styles */
+.risk-instance-container {
+  padding: 16px 16px 16px 320px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--form-gray-800);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.risk-instance-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary)));
+  margin-bottom: 40px;
+  margin-top: 40px;
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  background: transparent;
+  font-family: var(--font-family-primary);
+}
+
+/* Success Modal and Popup Styles - Higher z-index to prevent dropdown interference */
+.form-success-message {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--form-primary);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(106, 90, 205, 0.15);
+  z-index: 10000 !important;
+  animation: slideInRight 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+  font-weight: 500;
+}
+
+/* Success Modal Overlay - Highest z-index */
+.success-modal-overlay,
+.modal-overlay,
+.popup-modal-overlay,
+.risk-instance-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 15000 !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* Success Modal Content */
+.success-modal-content,
+.modal-content,
+.popup-modal-content {
+  background: white !important;
+  padding: 32px !important;
+  border-radius: 12px !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  z-index: 15001 !important;
+  position: relative !important;
+  margin: 20px !important;
+}
+
+/* Hide all dropdowns when modal is open */
+.modal-open .risk-instance-dropdown,
+.modal-open .risk-instance-user-dropdown,
+.modal-open .risk-instance-compliance-dropdown,
+.modal-open .risk-instance-business-impact-options,
+.modal-open .risk-instance-category-options {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Risk Dropdown Styles */
+.risk-instance-dropdown-container {
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  overflow: visible;
+  contain: layout;
+  align-items: center;
+  z-index: 2000 !important;
+  max-width: 100% !important;
+  border: 2px solid #43aa8b !important;
+  border-radius: 8px !important;
+  background: white !important;
+  padding: 2px 0 2px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.risk-instance-dropdown-container input[type="text"] {
+  flex: 1 1 0% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  height: 48px !important;
+  border: none !important;
+  background: transparent !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  color: var(--form-gray-700) !important;
+  outline: none !important;
+  margin: 0 !important;
+  padding-right: 32px !important; /* Reserve space for the smaller button */
+}
+
+.risk-instance-dropdown-toggle {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--form-primary);
+  transition: var(--form-transition);
+  z-index: 2;
+  pointer-events: auto;
+  font-size: 0.8rem !important;
+}
+
+/* Ensure dropdown toggles are properly contained within their form groups */
+.form-group .risk-instance-dropdown-toggle,
+.form-group .risk-instance-dropdown-container .risk-instance-dropdown-toggle,
+.form-group .risk-instance-user-dropdown-container .risk-instance-dropdown-toggle,
+.form-group .risk-instance-compliance-dropdown-container .risk-instance-dropdown-toggle {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  z-index: 2;
+  font-size: 0.7rem !important;
+}
+
+.risk-instance-dropdown-toggle:hover {
+  color: var(--form-primary-dark);
+}
+
+.risk-instance-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 400px !important;
+  background: white !important;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 3000 !important;
+  margin-top: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+  left: 0 !important;
+  transform: none !important;
+  max-height: 300px !important;
+}
+
+.risk-instance-dropdown-search {
+  padding: 6px 8px !important;
+  border-bottom: 1px solid var(--form-gray-200);
+  position: sticky;
+  top: 0;
+  background: white !important;
+  z-index: 10;
+}
+
+.risk-instance-dropdown-search input {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 6px 8px !important;
+  font-size: 0.8rem !important;
+}
+
+.risk-instance-dropdown-search input:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+  background: white !important;
+}
+
+.risk-instance-dropdown-list {
+  overflow-y: auto;
+  max-height: 350px;
+  background: white !important;
+}
+
+/* Enhanced Risk ID Dropdown Data Display */
+.risk-instance-item {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid var(--form-gray-200);
+  cursor: pointer;
+  transition: var(--form-transition);
+  display: flex;
+  align-items: flex-start;
+  background: white !important;
+  font-size: 0.85rem !important;
+  gap: 12px !important;
+  min-height: 80px !important;
+}
+
+.risk-instance-item:hover {
+  background-color: rgba(106, 90, 205, 0.05) !important;
+  border-left: 3px solid var(--form-primary) !important;
+}
+
+.risk-item-checkbox {
+  margin-right: 0;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.risk-item-checkbox input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative !important;
+  background-color: white !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.risk-item-checkbox input[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+}
+
+.risk-item-checkbox input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+}
+
+.risk-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-item-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.risk-id {
+  font-weight: 700;
+  color: var(--form-primary);
+  font-size: 0.9rem;
+  background: rgba(37, 99, 235, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.risk-criticality {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.risk-criticality.critical {
+  background-color: rgba(230, 57, 70, 0.15);
+  color: #e63946;
+  border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.risk-criticality.high {
+  background-color: rgba(248, 150, 30, 0.15);
+  color: #f8961e;
+  border: 1px solid rgba(248, 150, 30, 0.3);
+}
+
+.risk-criticality.medium {
+  background-color: rgba(76, 201, 240, 0.15);
+  color: #4cc9f0;
+  border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.risk-criticality.low {
+  background-color: rgba(67, 170, 139, 0.15);
+  color: #43aa8b;
+  border: 1px solid rgba(67, 170, 139, 0.3);
+}
+
+.risk-category {
+  padding: 3px 8px;
+  background-color: rgba(106, 90, 205, 0.12);
+  color: var(--form-primary);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(106, 90, 205, 0.25);
+}
+
+.risk-item-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--form-gray-900);
+  line-height: 1.3;
+}
+
+.risk-item-description {
+  font-size: 0.85rem;
+  color: var(--form-gray-700);
+  margin-bottom: 6px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.risk-item-damage {
+  font-size: 0.8rem;
+  color: var(--form-gray-600);
+  line-height: 1.4;
+  font-style: italic;
+  background: rgba(248, 150, 30, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border-left: 3px solid #f8961e;
+}
+
+.loading-spinner {
+  padding: 20px;
+  text-align: center;
+  color: var(--form-gray-600);
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: var(--form-gray-600);
+  font-style: italic;
+}
+
+/* Remove blue user icons */
+.risk-instance-container i.fas.fa-user-alt,
+.risk-instance-container i.fas.fa-user,
+.risk-instance-form i.fas.fa-user-alt,
+.risk-instance-form i.fas.fa-user {
+  display: none !important;
+}
+
+/* Hide any blue user icon elements that might be added by external styling */
+.risk-instance-form > .form-group::before,
+.risk-instance-form .form-group label::before {
+  display: none !important;
+}
+
+/* Form Container Styles */
+.risk-instance-card {
+  background: white;
+  border-radius: var(--form-border-radius);
+  box-shadow: var(--form-box-shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Form Layout */
+.risk-instance-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1), 0 1px 3px rgba(106, 90, 205, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Force all labels to be left-aligned */
+.risk-instance-form label,
+.risk-instance-form .form-group label,
+.risk-instance-container label {
+  text-align: left !important;
+  align-self: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* Form Sections */
+.form-section {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove borders from text areas section */
+.text-areas-section {
+  border-top: none !important;
+  border-bottom: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  margin-bottom: 20px !important;
+  position: relative;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 4px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  color: var(--form-gray-700);
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.form-group label i {
+  color: var(--form-primary);
+  font-size: 0.8rem;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 6px 8px !important;
+  border-left: 2px solid var(--form-primary) !important;
+  border-radius: 6px;
+  font-size: 0.75rem !important;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  height: 32px !important;
+  transition: var(--form-transition);
+}
+
+/* Reduce spinner arrow size for number inputs */
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+  height: 14px !important;
+  width: 12px !important;
+  opacity: 0.6 !important;
+  cursor: pointer !important;
+}
+
+/* Firefox: Reduce spinner arrow size */
+.form-group input[type="number"] {
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button:hover,
+.form-group input[type="number"]::-webkit-outer-spin-button:hover {
+  opacity: 1 !important;
+}
+
+.form-group textarea {
+  min-height: 60px !important;
+  height: auto;
+  resize: vertical;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px !important;
+  margin-top: 16px !important;
+  padding-top: 24px;
+  border-top: none;
+}
+
+/* Buttons */
+.risk-instance-btn-submit,
+.risk-instance-btn-cancel {
+  padding: 6px 20px !important;
+  border-radius: 6px;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--form-transition);
+}
+
+.risk-instance-btn-submit {
+  background: var(--form-primary);
+  color: white;
+  border: none;
+}
+
+.risk-instance-btn-cancel {
+  background: transparent;
+  color: var(--form-gray-700);
+  border: 1px solid var(--form-gray-300);
+}
+
+/* Status Indicators for Priority Form */
+.priority-critical {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: #e63946;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.priority-high {
+  background-color: rgba(248, 150, 30, 0.1);
+  color: #f8961e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.priority-medium {
+  background-color: rgba(76, 201, 240, 0.1);
+  color: #4cc9f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.priority-low {
+  background-color: rgba(76, 201, 240, 0.1);
+  color: #4cc9f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* Enhanced modern dropdown styling */
+.risk-instance-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%236a5acd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 10px 10px;
+  cursor: pointer;
+  padding-right: 24px;
+  background-color: white;
+  border: 1px solid rgba(106, 90, 205, 0.15);
+  border-left: 3px solid var(--form-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  color: #495057;
+  font-size: 0.85rem;
+}
+
+.risk-instance-form select:hover {
+  border-color: var(--form-primary);
+  border-left: 3px solid var(--form-primary);
+}
+
+.risk-instance-form select:focus {
+  border-color: var(--form-primary);
+  border-left: 3px solid var(--form-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.15);
+  outline: none;
+}
+
+/* Update specific select styling */
+.risk-instance-form select#criticality,
+.risk-instance-form select#riskPriority {
+  border-left: 3px solid var(--form-danger);
+}
+
+.risk-instance-form select#category {
+  border-left: 3px solid var(--form-primary-light);
+}
+
+.risk-instance-form select#appetite {
+  border-left: 3px solid var(--form-success);
+}
+
+.risk-instance-form select#riskResponseType {
+  border-left: 3px solid var(--form-warning);
+}
+
+.risk-instance-form select#riskStatus {
+  border-left: 3px solid var(--form-secondary);
+}
+
+/* Priority select styling - Remove colors, make white */
+.risk-instance-form .priority-select {
+  border-left: 3px solid var(--form-primary);
+  background-color: white !important;
+}
+
+.risk-instance-form .priority-select option {
+  color: #495057 !important;
+  background-color: white !important;
+}
+
+.risk-instance-form .priority-select option[value="Critical"],
+.risk-instance-form .priority-select option[value="High"],
+.risk-instance-form .priority-select option[value="Medium"],
+.risk-instance-form .priority-select option[value="Low"] {
+  color: #495057 !important;
+  background-color: white !important;
+}
+
+/* Category select styling - Remove colors, make white */
+.risk-instance-form .category-select {
+  border-left: 3px solid var(--form-primary-light);
+  background-color: white !important;
+}
+
+.risk-instance-form .category-select option {
+  color: #495057 !important;
+  background-color: white !important;
+}
+
+.risk-instance-form .category-select option[value="IT Security"],
+.risk-instance-form .category-select option[value="IT Security, Compliance"],
+.risk-instance-form .category-select option[value="Compliance"],
+.risk-instance-form .category-select option[value="Operational"],
+.risk-instance-form .category-select option[value="Financial"],
+.risk-instance-form .category-select option[value="Strategic"] {
+  color: #495057 !important;
+  background-color: white !important;
+}
+
+/* Rejected Appetite Styling */
+.rejected-appetite {
+  background-color: #ffebee !important;
+  border-color: #e57373 !important;
+  color: #c62828 !important;
+  font-weight: bold !important;
+}
+
+.rejected-appetite:focus {
+  box-shadow: 0 0 0 2px rgba(229, 115, 115, 0.3) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .form-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .risk-instance-container {
+    width: calc(100% - 240px) !important;
+    margin-left: 240px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-instance-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 10px !important;
+  }
+  
+  .form-section {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .risk-instance-form .form-group.field-full .risk-instance-dropdown-container,
+  .risk-instance-dropdown {
+    max-width: 98vw !important;
+    width: 98vw !important;
+    min-width: 0 !important;
+    left: 1vw !important;
+    transform: none !important;
+  }
+}
+
+/* Adjust border-radius for left border to avoid sharp corners */
+.risk-instance-form input,
+.risk-instance-form select,
+.risk-instance-form textarea {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Input field specific styling */
+.risk-instance-form input#riskId {
+  border-left: 3px solid #6A5ACD; /* Purple */
+}
+
+.risk-instance-form input#riskLikelihood {
+  border-left: 3px solid #4361EE; /* Blue */
+}
+
+.risk-instance-form input#riskImpact {
+  border-left: 3px solid #F72585; /* Pink */
+}
+
+.risk-instance-form input#riskExposureRating {
+  border-left: 3px solid #4CC9F0; /* Light blue */
+}
+
+.risk-instance-form input#riskOwner {
+  border-left: 3px solid #4361EE; /* Blue */
+}
+
+.risk-instance-form input#userId {
+  border-left: 3px solid #3A0CA3; /* Dark purple */
+}
+
+/* Textarea specific styling */
+.risk-instance-form textarea#riskDescription {
+  border-left: 3px solid #4361EE; /* Blue */
+}
+
+.risk-instance-form textarea#possibleDamage {
+  border-left: 3px solid #F72585; /* Pink */
+}
+
+.risk-instance-form textarea#riskResponseDescription {
+  border-left: 3px solid #4CC9F0; /* Light blue */
+}
+
+.risk-instance-form textarea#riskMitigation {
+  border-left: 3px solid #7209B7; /* Purple */
+}
+
+/* Make the select borders more visible */
+.risk-instance-form select {
+  border-width: 1px;
+  border-left-width: 3px;
+}
+
+/* Placeholder styling */
+.risk-instance-form input::placeholder,
+.risk-instance-form textarea::placeholder {
+  color: var(--form-gray-500);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Add/ensure styles for new fields (JSON textarea, date, etc.) */
+.risk-instance-form input[type="date"] {
+  border: 1px solid var(--form-gray-300);
+  border-left: 3px solid var(--form-primary);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  background-color: var(--form-gray-100);
+  width: 100%;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 8px 10px;
+  transition: var(--form-transition);
+}
+
+.risk-instance-form input[type="date"]:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+  background-color: white;
+}
+
+.risk-instance-form textarea#riskFormDetails,
+.risk-instance-form textarea#modifiedMitigations {
+  min-height: 60px;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.85rem;
+  background: var(--form-gray-100);
+  border-left: 3px solid var(--form-primary-dark);
+}
+
+.risk-instance-form textarea#riskFormDetails:focus,
+.risk-instance-form textarea#modifiedMitigations:focus {
+  border-color: var(--form-primary-dark);
+  background: white;
+}
+
+/* Risk ID Field Specific Styling */
+.risk-instance-form .form-group:first-child {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.risk-instance-form .form-group:first-child input {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 42px;
+  background-color: var(--form-gray-100);
+  border: 2px solid var(--form-primary);
+  border-radius: 8px;
+}
+
+.risk-instance-form .form-group:first-child label {
+  text-align: left !important;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--form-gray-700);
+  align-self: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+.risk-instance-form .form-group:first-child label i {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+
+/* User Dropdown Styles - Enhanced z-index and checkbox styling */
+.risk-instance-user-dropdown-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: visible;
+  contain: layout;
+  z-index: 5000 !important;
+}
+
+.risk-instance-user-dropdown-container input[type="text"] {
+  flex: 1;
+  padding-right: 32px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.risk-instance-user-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  background: white !important;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 5000 !important;
+  margin-top: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+}
+
+.risk-instance-user-dropdown-search {
+  padding: 10px;
+  border-bottom: 1px solid var(--form-gray-200);
+  position: sticky;
+  top: 0;
+  background: white !important;
+  z-index: 10;
+}
+
+.risk-instance-user-dropdown-search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  font-size: 0.85rem;
+  background-color: white !important;
+}
+
+.risk-instance-user-dropdown-search input:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.1);
+}
+
+.risk-instance-user-dropdown-list {
+  overflow-y: auto;
+  max-height: 250px;
+  background: white !important;
+}
+
+.risk-instance-user-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--form-gray-200);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  background: white !important;
+}
+
+.risk-instance-user-item:hover {
+  background-color: rgba(106, 90, 205, 0.05) !important;
+}
+
+.risk-instance-user-item-checkbox {
+  margin-right: 12px;
+}
+
+.risk-instance-user-item-content {
+  flex: 1;
+}
+
+.risk-instance-user-item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--form-gray-900);
+}
+
+/* Compliance Dropdown Styles - Enhanced z-index and checkbox styling */
+.risk-instance-compliance-dropdown-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  overflow: visible;
+  contain: layout;
+  z-index: 4000 !important;
+}
+
+.risk-instance-compliance-dropdown-container input[type="text"] {
+  flex: 1;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.risk-instance-compliance-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 400px;
+  background: white !important;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 4000 !important;
+  margin-top: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(8px);
+}
+
+.risk-instance-compliance-dropdown-search {
+  padding: 8px;
+  border-bottom: 1px solid var(--form-gray-200);
+  position: sticky;
+  top: 0;
+  background: white !important;
+  z-index: 10;
+}
+
+.risk-instance-compliance-dropdown-search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  font-size: 0.85rem;
+  background: white !important;
+}
+
+.risk-instance-compliance-dropdown-search input:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+}
+
+.risk-instance-compliance-dropdown-list {
+  overflow-y: auto;
+  max-height: 350px;
+  background: white !important;
+}
+
+.risk-instance-compliance-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--form-gray-200);
+  cursor: pointer;
+  transition: var(--form-transition);
+  display: flex;
+  align-items: flex-start;
+  background: white !important;
+}
+
+.risk-instance-compliance-item:hover {
+  background-color: rgba(106, 90, 205, 0.05) !important;
+}
+
+.risk-instance-compliance-item-checkbox {
+  margin-right: 10px;
+  padding-top: 2px;
+}
+
+.risk-instance-compliance-item-content {
+  flex: 1;
+}
+
+.risk-instance-compliance-item-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.risk-instance-compliance-id {
+  font-weight: 600;
+  color: var(--form-primary);
+  font-size: 0.85rem;
+}
+
+.risk-instance-compliance-criticality {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-instance-compliance-criticality.critical {
+  background-color: rgba(230, 57, 70, 0.1);
+  color: #e63946;
+}
+
+.risk-instance-compliance-criticality.high {
+  background-color: rgba(248, 150, 30, 0.1);
+  color: #f8961e;
+}
+
+.risk-instance-compliance-criticality.medium {
+  background-color: rgba(76, 201, 240, 0.1);
+  color: #4cc9f0;
+}
+
+.risk-instance-compliance-criticality.low {
+  background-color: rgba(67, 170, 139, 0.1);
+  color: #43aa8b;
+}
+
+.risk-instance-compliance-item-description {
+  font-size: 0.8rem;
+  color: var(--form-gray-700);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.risk-instance-compliance-item-damage {
+  font-size: 0.8rem;
+  color: var(--form-gray-700);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Business Impact container and dropdown enhancements */
+.risk-instance-business-impact-container {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  position: relative !important;
+  z-index: 2000 !important;
+}
+
+.risk-instance-business-impact-dropdown {
+  position: relative !important;
+  width: 100% !important;
+  z-index: 2000 !important;
+}
+
+.risk-instance-selected-impacts {
+  padding: 8px 12px !important;
+  border: 1px solid var(--form-gray-300) !important;
+  border-left: 3px solid var(--form-primary) !important;
+  border-radius: var(--form-border-radius) !important;
+  background-color: white !important;
+  cursor: pointer !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  min-height: 34px !important;
+  box-sizing: border-box !important;
+  font-size: 0.85rem !important;
+  color: #212529 !important;
+  transition: all 0.3s ease !important;
+}
+
+.risk-instance-selected-impacts:hover {
+  border-color: var(--form-primary) !important;
+  border-left-color: var(--form-primary) !important;
+}
+
+.risk-instance-business-impact-options {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: white !important;
+  border: 1px solid var(--form-gray-300) !important;
+  border-radius: var(--form-border-radius) !important;
+  margin-top: 4px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  z-index: 2000 !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(8px) !important;
+  max-height: 400px !important;
+}
+
+.risk-instance-business-impact-list {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+  padding: 4px 0 !important;
+  background-color: white !important;
+}
+
+/* Selected impact tags styling */
+.risk-instance-selected-impacts-display {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  padding: 4px 0 !important;
+  min-height: 32px !important;
+}
+
+.risk-instance-selected-impact-tag {
+  background: #f0f0f7 !important;
+  color: #495057 !important;
+  padding: 4px 10px !important;
+  border-radius: 16px !important;
+  font-size: 0.85rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  border: 1px solid #e9ecef !important;
+}
+
+.risk-instance-selected-impact-tag i {
+  cursor: pointer !important;
+  font-size: 0.8rem !important;
+  color: #adb5bd !important;
+}
+
+.risk-instance-selected-impact-tag i:hover {
+  color: #495057 !important;
+}
+
+/* Business Impact header and search styling */
+.risk-instance-business-impact-header {
+  background-color: white !important;
+  border-bottom: 1px solid #eee !important;
+  padding: 10px !important;
+}
+
+.risk-instance-business-impact-search {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.risk-instance-business-impact-search input {
+  flex: 1 !important;
+  padding: 8px 12px !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 4px !important;
+  font-size: 0.9rem !important;
+  height: 36px !important;
+  background-color: white !important;
+  color: #6c757d !important;
+  box-sizing: border-box !important;
+}
+
+.risk-instance-business-impact-search input:focus {
+  outline: none !important;
+  border-color: var(--form-primary) !important;
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.1) !important;
+}
+
+.risk-instance-add-impact-btn {
+  padding: 8px 12px !important;
+  background: var(--form-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  height: 36px !important;
+  min-width: 100px !important;
+  transition: all 0.2s ease !important;
+}
+
+.risk-instance-add-impact-btn:hover {
+  background: var(--form-primary-dark) !important;
+}
+
+/* Universal Checkbox Styling - Enhanced Color Fill When Selected */
+
+/* Business Impact Checkboxes - Enhanced */
+.risk-instance-business-impact-item input[type="checkbox"],
+.risk-instance-business-impact-dropdown .risk-instance-business-impact-item input[type="checkbox"],
+.risk-instance-container .risk-instance-business-impact-item input[type="checkbox"],
+div.risk-instance-business-impact-item input[type="checkbox"],
+* .risk-instance-business-impact-item input[type="checkbox"],
+html .risk-instance-business-impact-item input[type="checkbox"],
+body .risk-instance-business-impact-item input[type="checkbox"] {
+  /* Force reset all possible conflicting styles */
+  all: revert !important;
+  
+  /* Apply custom checkbox styles */
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative !important;
+  background-color: white !important;
+  background-image: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  z-index: 2 !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.risk-instance-business-impact-item input[type="checkbox"]:checked,
+.risk-instance-business-impact-dropdown .risk-instance-business-impact-item input[type="checkbox"]:checked,
+.risk-instance-container .risk-instance-business-impact-item input[type="checkbox"]:checked,
+div.risk-instance-business-impact-item input[type="checkbox"]:checked,
+* .risk-instance-business-impact-item input[type="checkbox"]:checked,
+html .risk-instance-business-impact-item input[type="checkbox"]:checked,
+body .risk-instance-business-impact-item input[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+  background-image: none !important;
+}
+
+.risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+.risk-instance-business-impact-dropdown .risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+.risk-instance-container .risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+div.risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+* .risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+html .risk-instance-business-impact-item input[type="checkbox"]:checked::after,
+body .risk-instance-business-impact-item input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* User Dropdown Checkboxes - Enhanced */
+.risk-instance-user-item-checkbox input[type="checkbox"],
+.risk-instance-user-dropdown .risk-instance-user-item-checkbox input[type="checkbox"],
+.risk-instance-container .risk-instance-user-item-checkbox input[type="checkbox"],
+* .risk-instance-user-item input[type="checkbox"],
+html .risk-instance-user-item input[type="checkbox"],
+body .risk-instance-user-item input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative !important;
+  background-color: white !important;
+  background-image: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.risk-instance-user-item-checkbox input[type="checkbox"]:checked,
+.risk-instance-user-dropdown .risk-instance-user-item-checkbox input[type="checkbox"]:checked,
+.risk-instance-container .risk-instance-user-item-checkbox input[type="checkbox"]:checked,
+* .risk-instance-user-item input[type="checkbox"]:checked,
+html .risk-instance-user-item input[type="checkbox"]:checked,
+body .risk-instance-user-item input[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+  background-image: none !important;
+}
+
+.risk-instance-user-item-checkbox input[type="checkbox"]:checked::after,
+.risk-instance-user-dropdown .risk-instance-user-item-checkbox input[type="checkbox"]:checked::after,
+.risk-instance-container .risk-instance-user-item-checkbox input[type="checkbox"]:checked::after,
+* .risk-instance-user-item input[type="checkbox"]:checked::after,
+html .risk-instance-user-item input[type="checkbox"]:checked::after,
+body .risk-instance-user-item input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Compliance Dropdown Checkboxes - Enhanced */
+.risk-instance-compliance-item-checkbox input[type="checkbox"],
+.risk-instance-compliance-dropdown .risk-instance-compliance-item-checkbox input[type="checkbox"],
+.risk-instance-container .risk-instance-compliance-item-checkbox input[type="checkbox"],
+* .risk-instance-compliance-item input[type="checkbox"],
+html .risk-instance-compliance-item input[type="checkbox"],
+body .risk-instance-compliance-item input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative !important;
+  background-color: white !important;
+  background-image: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+  transition: all 0.2s ease !important;
+}
+
+.risk-instance-compliance-item-checkbox input[type="checkbox"]:checked,
+.risk-instance-compliance-dropdown .risk-instance-compliance-item-checkbox input[type="checkbox"]:checked,
+.risk-instance-container .risk-instance-compliance-item-checkbox input[type="checkbox"]:checked,
+* .risk-instance-compliance-item input[type="checkbox"]:checked,
+html .risk-instance-compliance-item input[type="checkbox"]:checked,
+body .risk-instance-compliance-item input[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+  background-image: none !important;
+}
+
+.risk-instance-compliance-item-checkbox input[type="checkbox"]:checked::after,
+.risk-instance-compliance-dropdown .risk-instance-compliance-item-checkbox input[type="checkbox"]:checked::after,
+.risk-instance-container .risk-instance-compliance-item-checkbox input[type="checkbox"]:checked::after,
+* .risk-instance-compliance-item input[type="checkbox"]:checked::after,
+html .risk-instance-compliance-item input[type="checkbox"]:checked::after,
+body .risk-instance-compliance-item input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Category Dropdown Checkboxes - Enhanced */
+.risk-instance-category-item input[type="checkbox"],
+.risk-instance-category-dropdown .risk-instance-category-item input[type="checkbox"],
+.risk-instance-container .risk-instance-category-item input[type="checkbox"],
+* .risk-instance-category-item input[type="checkbox"],
+html .risk-instance-category-item input[type="checkbox"],
+body .risk-instance-category-item input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative !important;
+  background-color: white !important;
+  background-image: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0 !important;
+  accent-color: var(--form-primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+.risk-instance-category-item input[type="checkbox"]:checked,
+.risk-instance-category-dropdown .risk-instance-category-item input[type="checkbox"]:checked,
+.risk-instance-container .risk-instance-category-item input[type="checkbox"]:checked,
+* .risk-instance-category-item input[type="checkbox"]:checked,
+html .risk-instance-category-item input[type="checkbox"]:checked,
+body .risk-instance-category-item input[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+  background-image: none !important;
+}
+
+.risk-instance-category-item input[type="checkbox"]:checked::after,
+.risk-instance-category-dropdown .risk-instance-category-item input[type="checkbox"]:checked::after,
+.risk-instance-container .risk-instance-category-item input[type="checkbox"]:checked::after,
+* .risk-instance-category-item input[type="checkbox"]:checked::after,
+html .risk-instance-category-item input[type="checkbox"]:checked::after,
+body .risk-instance-category-item input[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+  background: transparent !important;
+}
+
+/* Universal Checkbox Hover and Focus States */
+.risk-instance-business-impact-item input[type="checkbox"]:hover,
+.risk-instance-user-item input[type="checkbox"]:hover,
+.risk-instance-compliance-item input[type="checkbox"]:hover,
+.risk-instance-category-item input[type="checkbox"]:hover,
+.risk-item-checkbox input[type="checkbox"]:hover {
+  border-color: var(--form-primary-dark) !important;
+  background-color: rgba(37, 99, 235, 0.05) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15) !important;
+}
+
+.risk-instance-business-impact-item input[type="checkbox"]:focus,
+.risk-instance-user-item input[type="checkbox"]:focus,
+.risk-instance-compliance-item input[type="checkbox"]:focus,
+.risk-instance-category-item input[type="checkbox"]:focus,
+.risk-item-checkbox input[type="checkbox"]:focus {
+  outline: 2px solid var(--form-primary) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Enhanced Selected State Visual Feedback */
+.risk-instance-business-impact-item:has(input[type="checkbox"]:checked),
+.risk-instance-user-item:has(input[type="checkbox"]:checked),
+.risk-instance-compliance-item:has(input[type="checkbox"]:checked),
+.risk-instance-category-item:has(input[type="checkbox"]:checked),
+.risk-instance-item:has(input[type="checkbox"]:checked) {
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  border-left: 3px solid var(--form-primary) !important;
+  box-shadow: inset 3px 0 0 var(--form-primary) !important;
+}
+
+/* Dropdown Item Selection Animation */
+.risk-instance-business-impact-item,
+.risk-instance-user-item,
+.risk-instance-compliance-item,
+.risk-instance-category-item,
+.risk-instance-item {
+  transition: all 0.2s ease !important;
+  border-left: 3px solid transparent !important;
+}
+
+/* Additional Framework Override Protection */
+input[type="checkbox"].form-check-input,
+input[type="checkbox"].checkbox,
+input[type="checkbox"].form-control,
+.form-check-input[type="checkbox"],
+.checkbox[type="checkbox"],
+.form-control[type="checkbox"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid var(--form-primary) !important;
+  border-radius: 4px !important;
+  background-color: white !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+input[type="checkbox"].form-check-input:checked,
+input[type="checkbox"].checkbox:checked,
+input[type="checkbox"].form-control:checked,
+.form-check-input[type="checkbox"]:checked,
+.checkbox[type="checkbox"]:checked,
+.form-control[type="checkbox"]:checked {
+  background-color: var(--form-primary) !important;
+  border-color: var(--form-primary) !important;
+}
+
+input[type="checkbox"].form-check-input:checked::after,
+input[type="checkbox"].checkbox:checked::after,
+input[type="checkbox"].form-control:checked::after,
+.form-check-input[type="checkbox"]:checked::after,
+.checkbox[type="checkbox"]:checked::after,
+.form-control[type="checkbox"]:checked::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 6px !important;
+  height: 12px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+  display: block !important;
+}
+
+/* Ensure proper stacking and visibility */
+.risk-instance-dropdown,
+.risk-instance-user-dropdown,
+.risk-instance-compliance-dropdown,
+.risk-instance-business-impact-options,
+.risk-instance-dropdown-list,
+.risk-instance-compliance-dropdown-list,
+.risk-instance-user-dropdown-list,
+.risk-instance-business-impact-list,
+.risk-instance-item,
+.risk-instance-compliance-item,
+.risk-instance-user-item,
+.risk-instance-business-impact-item {
+  background: white !important;
+}
+
+/* Loading and no results states */
+.loading-spinner,
+.no-results {
+  background: white !important;
+  padding: 20px;
+  text-align: center;
+  color: var(--form-gray-600);
+}
+
+/* Category Styles - Updated to use checkboxes */
+.risk-instance-category-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-instance-category-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.risk-instance-selected-category {
+  padding: 8px 12px;
+  border: 1px solid var(--form-gray-300);
+  border-left: 3px solid var(--form-primary);
+  border-radius: var(--form-border-radius);
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.risk-instance-selected-category:hover {
+  border-color: var(--form-primary);
+  border-left-color: var(--form-primary);
+}
+
+.risk-instance-category-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  margin-top: 4px;
+  box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1), 0 1px 3px rgba(106, 90, 205, 0.08);
+  z-index: 3000 !important;
+}
+
+.risk-instance-category-search {
+  padding: 8px;
+  border-bottom: 1px solid var(--form-gray-200);
+  display: flex;
+  gap: 8px;
+}
+
+.risk-instance-category-search input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--form-gray-300);
+  border-radius: var(--form-border-radius);
+  font-size: 0.9rem;
+}
+
+.risk-instance-add-category-btn {
+  padding: 6px 12px;
+  background: var(--form-primary);
+  color: white;
+  border: none;
+  border-radius: var(--form-border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.risk-instance-add-category-btn:hover {
+  background: var(--form-primary-dark);
+}
+
+.risk-instance-category-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.risk-instance-category-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid var(--form-gray-100);
+}
+
+.risk-instance-category-item:last-child {
+  border-bottom: none;
+}
+
+.risk-instance-category-item:hover {
+  background-color: rgba(106, 90, 205, 0.05);
+}
+
+.risk-instance-category-item span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--form-gray-800);
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Remove old radio button styling */
+.risk-instance-category-item input[type="radio"] {
+  display: none !important;
+}
+
+/* Validation Error Styles */
+.validation-error-message {
+  color: var(--form-danger);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: var(--form-danger) !important;
+  border-left: 3px solid var(--form-danger) !important;
+  background-color: rgba(230, 57, 70, 0.02) !important;
+}
+
+.form-group input.invalid:focus,
+.form-group select.invalid:focus,
+.form-group textarea.invalid:focus {
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.1) !important;
+}
+
+.form-group.has-error label {
+  color: var(--form-danger);
+}
+
+.form-group.has-error i {
+  color: var(--form-danger);
+}
+
+/* Error summary at the top of the form */
+.validation-error-summary {
+  background-color: rgba(230, 57, 70, 0.05);
+  border: 1px solid var(--form-danger);
+  border-radius: var(--form-border-radius);
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  color: var(--form-danger);
+}
+
+.validation-error-summary h4 {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.validation-error-summary ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.85rem;
+}
+
+.validation-error-summary li {
+  margin-bottom: 4px;
+}
+
+.validation-error-summary li:last-child {
+  margin-bottom: 0;
+}
+
+/* Helper Text Styles */
+.risk-instance-helper-text {
+  font-size: 0.75rem;
+  color: var(--form-gray-600);
+  margin-top: 2px;
+  line-height: 1.3;
+  font-style: italic;
+  padding-left: 2px;
+}
+
+/* Ensure helper text appears below all form elements */
+.form-group .risk-instance-helper-text {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* Specific styling for Business Impact helper text - reduce spacing more */
+.form-group:has(label[for="businessImpact"]) .risk-instance-helper-text {
+  margin-top: -40px !important;
+}
+
+/* Ensure helper text doesn't interfere with validation errors */
+.form-group .risk-instance-helper-text + .validation-error-message {
+  margin-top: 2px;
+}

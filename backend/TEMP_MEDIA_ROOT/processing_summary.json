@@ -1,0 +1,24 @@
+{
+  "success": false,
+  "user_folder": "upload_john_doe",
+  "index_json": "upload_john_doe\\PCI_DSS_2_index.json",
+  "sections_dir": "upload_john_doe\\sections_PCI_DSS_2",
+  "policies_dir": "upload_john_doe\\policies_PCI_DSS_2",
+  "subpolicies_excel": "upload_john_doe\\PCI_DSS_2_subpolicies.xlsx",
+  "compliance_file": "upload_john_doe\\compliance_risk_PCI_DSS_2\\PCI_DSS_2_Compliance.xlsx",
+  "risk_file": "upload_john_doe\\compliance_risk_PCI_DSS_2\\PCI_DSS_2_Risk.xlsx",
+  "summary": {
+    "pdf_name": "PCI_DSS_2",
+    "username": "john_doe",
+    "start_time": "2025-10-10T22:19:08.541280",
+    "end_time": "2025-10-10T22:34:27.189229",
+    "duration_seconds": 918.647949,
+    "index_items": 21,
+    "sections_extracted": 21,
+    "policies_extracted": 26,
+    "subpolicies_extracted": 60,
+    "compliance_records": 77,
+    "risk_records": 77
+  },
+  "errors": []
+}

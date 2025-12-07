@@ -1,0 +1,714 @@
+/* AssignAudit.css */
+.assign-audit-page {
+  max-width: calc(100vw - 180px);
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-left: 280px;
+   /* remove left padding, keep top/right/bottom */
+  font-family: var(--font-family, inherit);
+  color: var(--text-primary);
+
+}
+
+.audit-content {
+  width: 100%;
+  max-width: var(--form-container-max-width, 1400px);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.audit-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary)));
+  margin-bottom: 28px;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  background: transparent;
+  font-family: var(--font-family, inherit);
+}
+.audit-title::after {
+  content: '';
+  display: block;
+  margin-top: 4px;
+  margin-left: 0;
+  height: 4px;
+  width: 25%;
+  background: var(--primary-color, #4f7cff);
+  border-radius: 2px;
+}
+
+
+/* Tab Navigation */
+.audit-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.tab-button.active {
+  color: var(--primary-color);
+  background: #f0f5ff;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+}
+
+.tab-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+}
+
+.tab-button.active .tab-number {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Tab Content */
+.tab-content {
+  width: 100%;
+  padding: 2rem;
+  background: var(--form-content-bg, #f9fafb);
+  border-radius: var(--form-content-border-radius, 12px);
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.tab-content h2 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Form Fields */
+.dynamic-fields-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.dynamic-field-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 200px;
+  flex: 1 1 300px;
+  gap: 0.5rem;
+}
+
+.dynamic-label {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--label-text, #374151);
+  margin-bottom: 0;
+  font-family: var(--font-family, inherit);
+}
+
+.dynamic-desc {
+  font-size: 0.92rem;
+  color: var(--helper-text, #6b7280);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.dynamic-input {
+  padding: 2rem 1rem;
+  border: 1.5px solid var(--input-border, #d1d5db);
+  border-radius: 6px;
+  font-size: 0.98rem;
+  width: 100%;
+  background: var(--input-bg, #fff);
+  transition: all 0.2s;
+  box-sizing: border-box;
+  color: var(--input-text, #374151);
+  font-family: var(--font-family, inherit);
+}
+
+.dynamic-input:focus {
+  border-color: var(--input-border-focus, #2563eb);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--input-shadow-focus, rgba(37,99,235,0.1));
+}
+
+.dynamic-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Navigation Buttons */
+.tab-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  background: transparent;
+}
+
+.tab-navigation .nav-button.prev {
+  margin-right: auto;
+}
+
+.tab-navigation .nav-button.next,
+.tab-navigation .nav-button.assign {
+  margin-left: auto;
+}
+
+.nav-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-button.prev {
+  background: var(--btn-secondary-bg, #d1d5db);
+  color: var(--btn-secondary-text, #374151);
+}
+
+.nav-button.next {
+  background: var(--btn-primary-bg, #2563eb);
+  color: var(--btn-primary-text, #fff);
+}
+
+.nav-button.assign {
+  background: var(--btn-primary-bg, #2563eb);
+  color: var(--btn-primary-text, #fff);
+  padding: 0.75rem 2rem;
+}
+
+.nav-button.assign:hover:not(:disabled) {
+  background: var(--btn-primary-hover-bg, #1d4ed8);
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Assignment Sections */
+.assignment-section,
+.audit-details-section {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.assignment-section h5,
+.audit-details-section h5 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.team-assignment-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.member-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.member-header h4 {
+  font-size: 1.2rem;
+  color: #2563eb;
+  margin: 0;
+  font-weight: 600;
+}
+
+.compliance-preview {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #797979;
+  border: 1px solid #747474;
+  border-radius: 6px;
+}
+
+.preview-header {
+  font-weight: 500;
+  color: #0369a1;
+  margin-bottom: 0.5rem;
+}
+
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.compliance-count {
+  font-size: 1.1rem;
+  color: #0284c7;
+  font-weight: 500;
+}
+
+.compliance-scope-desc {
+  color: #0369a1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  background: #f0f9ff;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Review Tab Styles */
+.assignments-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.assignments-summary h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.summary-card {
+  background: #fff !important;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.member-role {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Review Section Styles */
+.review-section {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.review-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.review-section-header:hover {
+  background: #e5e7eb;
+}
+
+.review-section-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.review-section-header i {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.review-section-content {
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  max-height: 2500px;
+  width: 100%;
+}
+
+.review-section-content.collapsed {
+  max-height: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+}
+
+/* Enhanced form layout for Review & Assign section */
+.review-section-content .edit-view {
+  width: 100%;
+}
+
+.review-section-content .dynamic-fields-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.review-section-content .dynamic-field-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 250px;
+  flex: 1 1 350px;
+  gap: 0.5rem;
+}
+
+.review-section-content .dynamic-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0;
+}
+
+.review-section-content .dynamic-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.review-section-content .dynamic-input {
+  padding: 0.875rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  background: white;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.review-section-content .dynamic-input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.review-section-content .dynamic-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.review-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.edit-btn i {
+  color: white;
+  font-size: 0.875rem;
+}
+
+/* Read-only Styles */
+.readonly-view {
+  padding: 0.5rem;
+}
+
+.readonly-fields-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.readonly-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.readonly-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.readonly-value {
+  font-size: 1rem;
+  color: #111827;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  min-height: 24px;
+}
+
+.readonly-text {
+  white-space: pre-line;
+  min-height: 60px;
+}
+
+.readonly-reports {
+  margin-top: 1rem;
+}
+
+.readonly-reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.readonly-report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .audit-content {
+    max-width: 98vw;
+  }
+  
+  .review-section-content .dynamic-field-col {
+    flex: 1 1 300px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .assign-audit-page {
+    padding-left: 80px;
+  }
+  
+  .audit-tabs {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .dynamic-fields-row {
+    flex-direction: column;
+  }
+  
+  .dynamic-field-col {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .review-section-content .dynamic-fields-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .review-section-content .dynamic-field-col {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+  }
+  
+  .audit-title {
+    font-size: 1.8rem;
+  }
+  
+  .assignment-section,
+  .audit-details-section {
+    padding: 1rem;
+  }
+  
+  .team-assignment-card {
+    padding: 1rem;
+  }
+  
+  .member-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .assignment-section h5,
+  .audit-details-section h5 {
+    font-size: 1rem;
+  }
+  
+  .summary-card {
+    padding: 1rem;
+  }
+  
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Team Creation Styles */
+.add-member-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.add-member-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.plus-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.team-member-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.remove-member-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.remove-member-btn:hover {
+  background: #dc2626;
+}
+
+/* Style for multiple select */
+select[multiple] {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: white;
+}
+
+select[multiple] option {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+select[multiple] option:last-child {
+  border-bottom: none;
+}
+
+select[multiple] option:hover {
+  background: #e5e7eb;
+}

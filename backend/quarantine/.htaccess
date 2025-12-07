@@ -1,0 +1,12 @@
+
+# Disable script execution
+Options -ExecCGI
+AddHandler cgi-script .php .pl .py .jsp .asp .sh
+RemoveHandler .php .phtml .php3 .php4 .php5 .phps .shtml .cgi .pl .py
+php_flag engine off
+
+# Prevent access to sensitive files
+<Files ~ "\.(htaccess|htpasswd|ini|log|sh|sql|conf)$">
+    Order allow,deny
+    Deny from all
+</Files>

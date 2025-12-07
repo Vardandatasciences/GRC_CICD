@@ -1,0 +1,1838 @@
+/* Modern Risk Resolution Styles */
+:root {
+  --primary-color: #6a5acd;
+  --primary-hover: #7b68ee;
+  --success-color: #52c41a;
+  --warning-color: #fa8c16;
+  --danger-color: #ff4d4f;
+  --text-primary: #2c3e50;
+  --text-secondary: #606266;
+  --border-color: #eaecef;
+  --bg-light: #f6f7fb;
+  --purple-bg: #6a5acd;
+  --purple-light: rgba(106, 90, 205, 0.1);
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 24px rgba(106, 90, 205, 0.10);
+  
+  /* CustomDropdown variables */
+  --dropdown-border: #eaecef;
+  --dropdown-hover-bg: #f6f7fb;
+  --dropdown-hover-border: #6a5acd;
+  --dropdown-label-text: #2c3e50;
+  --dropdown-value-text: #6a5acd;
+  --dropdown-menu-bg: white;
+  --dropdown-menu-shadow: rgba(106, 90, 205, 0.1);
+  --dropdown-item-text: #2c3e50;
+  --dropdown-item-hover-bg: #f6f7fb;
+
+  /* Collapsible Table variables */
+  --table-section-border: #e9ecef;
+  --table-section-bg: #ffffff;
+  --table-header-text: #495057;
+  --table-header-dots: #6c757d;
+  --table-row-text: #212529;
+  --table-subheader-text: #6c757d;
+  --incident-primary: #6a5acd;
+  
+  /* Status chip colors */
+  --chip-pending-text: #856404;
+  --chip-pending-bg: #fff3cd;
+  --chip-pending-border: #ffeaa7;
+  --chip-pending-icon: #f39c12;
+  
+  --chip-inprogress-text: #0c5460;
+  --chip-inprogress-bg: #d1ecf1;
+  --chip-inprogress-border: #bee5eb;
+  --chip-inprogress-icon: #17a2b8;
+  
+  --chip-completed-text: #155724;
+  --chip-completed-bg: #d4edda;
+  --chip-completed-border: #c3e6cb;
+  --chip-completed-icon: #28a745;
+  
+  --chip-rejected-text: #721c24;
+  --chip-rejected-bg: #f8d7da;
+  --chip-rejected-border: #f5c6cb;
+  --chip-rejected-icon: #dc3545;
+  
+  /* Priority colors */
+  --priority-high-text: #dc3545;
+  --priority-normal-text: #fd7e14;
+  --priority-low-text: #28a745;
+  --priority-none-text: #6c757d;
+}
+
+body {
+  background: white;
+}
+
+/* Main Container */
+.risk-resolution-container {
+  padding: 20px !important;
+  padding-top: 50px !important;
+  margin-left: 260px !important;
+  width: calc(100% - 250px) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow-x: hidden !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  background-color: white !important;
+}
+
+.risk-resolution-container h1 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: #181818;
+  font-weight: bold;
+  font-size: 2.1rem;
+  position: relative;
+  padding-bottom: 0.25rem;
+  border-bottom: none;
+  letter-spacing: 0.01em;
+}
+
+.risk-resolution-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 90px;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+/* Filters Wrapper */
+.risk-resolution-filters-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: flex-start;
+}
+
+.risk-resolution-search-row {
+  margin-bottom: 15px;
+}
+
+.risk-resolution-search-row .dynamic-search-bar {
+  width: 100%;
+  max-width: 400px;
+}
+
+.risk-resolution-filter-dropdowns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+  width:80px;
+  margin-top: 5px !important;
+  padding-top: 0px !important;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-container {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Dynamicalsearch component styling */
+.risk-resolution-filters-wrapper .dynamic-search-bar {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #f0f2f5;
+  border-radius: 50px;
+  box-shadow: none;
+  transition: all 0.3s;
+  margin-bottom: 10px !important;
+}
+
+.risk-resolution-filters-wrapper .dynamic-search-bar:hover {
+  background-color: #e8eaed;
+}
+
+.risk-resolution-filters-wrapper .dynamic-search-bar:focus-within {
+  background-color: #e8eaed;
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.1);
+}
+
+.risk-resolution-filters-wrapper .dynamic-search-input {
+  background-color: transparent;
+  color: #333;
+}
+
+.risk-resolution-filters-wrapper .dynamic-search-input::placeholder {
+  color: #999;
+}
+
+.risk-resolution-filter-dropdowns {
+  /* Responsive grid: auto-fit to avoid overlap and wrap neatly */
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  overflow: visible;
+  padding-right: 0;
+}
+
+/* Style overrides for dynamic components - same as RiskRegisterList */
+.risk-resolution-filter-dropdowns .dropdown-container {
+  min-width: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.risk-resolution-filter-dropdowns .filter-btn {
+  width: 100% !important;
+  height: 36px !important;
+  padding: 0 10px !important;
+  font-size: 12px !important;
+  border: 1px solid var(--risk-register-gray-300, #ddd) !important;
+  border-radius: 6px !important;
+  background-color: white !important;
+  transition: all 0.3s !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+.risk-resolution-filter-dropdowns .filter-btn:hover {
+  border-color: var(--risk-register-primary, #7B6FDD);
+  box-shadow: 0 0 0 2px rgba(123, 111, 221, 0.1);
+}
+
+.risk-resolution-filter-dropdowns .text-content {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-label {
+  color: var(--dropdown-label-text, #333);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-value {
+  font-weight: 500;
+  color: var(--dropdown-value-text, #7B6FDD);
+  font-size: 11px;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--risk-register-gray-300, #ddd);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 99999 !important;
+  margin-top: 4px;
+  width: 100%;
+  min-width: 180px;
+  max-width: 200px;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--dropdown-item-text, #333);
+  transition: background-color 0.2s;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-item:hover {
+  background: var(--dropdown-item-hover-bg, #f8f9fa);
+}
+
+.risk-resolution-filter-dropdowns .dropdown-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.risk-resolution-filter-dropdowns .dropdown-item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 1200px) {
+  .risk-resolution-container {
+    padding: 16px;
+  }
+  
+  .risk-resolution-filter-dropdowns {
+    gap: 12px !important;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  
+  .risk-resolution-search-row .dynamic-search-bar {
+    min-width: 200px;
+    max-width: 400px;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-container {
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .risk-resolution-filters-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .risk-resolution-filter-dropdowns {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 12px !important;
+    width: 100%;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-container {
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-resolution-container {
+    padding: 12px;
+  }
+  
+  .risk-resolution-search-row {
+    margin-bottom: 12px;
+    justify-content: center;
+  }
+  
+  .risk-resolution-search-row .dynamic-search-bar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .risk-resolution-filter-dropdowns {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 12px !important;
+    width: 100%;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-container {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-label {
+    font-size: 12px;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-value {
+    font-size: 12px;
+  }
+}
+
+/* Additional responsive adjustments for 4 dropdowns - same as RiskRegisterList */
+@media (max-width: 1200px) {
+  .risk-resolution-filter-dropdowns {
+    gap: 8px !important;
+  }
+  
+  .risk-resolution-filter-dropdowns .dropdown-container {
+    min-width: 180px;
+    max-width: 200px;
+  }
+}
+
+/* Table Styles */
+.risk-resolution-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.97rem;
+  background: white;
+  overflow-x: auto;
+  box-shadow: var(--box-shadow);
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.risk-resolution-table th {
+  padding: 1rem 0.5rem;
+  color: #fff;
+  font-weight: 600;
+  background: var(--purple-bg) !important;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-align: left;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.risk-resolution-table td {
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition-speed);
+  background: white;
+  vertical-align: middle;
+}
+
+.risk-resolution-table tr:hover td {
+  background: var(--purple-light);
+}
+
+.risk-resolution-table tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Row Styles */
+.risk-resolution-row-approved {
+  background-color: rgba(82, 196, 26, 0.05);
+}
+
+.risk-resolution-row-review {
+  background-color: rgba(250, 140, 22, 0.05);
+}
+
+/* Criticality & Priority Badges */
+.risk-resolution-criticality-badge,
+.risk-resolution-priority-badge {
+  padding: 0.18rem 0.85rem;
+  border-radius: 16px;
+  font-size: 0.89rem;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  min-width: 64px;
+  border: 1.5px solid;
+  background: #fff;
+  margin-right: 2px;
+}
+
+.risk-resolution-criticality-badge.critical,
+.risk-resolution-priority-badge.critical {
+  color: #990000;
+  background: #fff;
+  border-color: #990000;
+}
+.risk-resolution-criticality-badge.high,
+.risk-resolution-priority-badge.high {
+  color: #FF5252;
+  background: #fff;
+  border-color: #FF5252;
+}
+.risk-resolution-criticality-badge.medium,
+.risk-resolution-priority-badge.medium {
+  color: #F9A825;
+  background: #fff;
+  border-color: #F9A825;
+}
+.risk-resolution-criticality-badge.low,
+.risk-resolution-priority-badge.low {
+  color: #0288D1;
+  background: #fff;
+  border-color: #0288D1;
+}
+
+/* Status Badges (hidden) */
+.status-badge {
+  display: none;
+}
+
+/* Assignment Section */
+.assign-section {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.user-dropdown {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+  background: white;
+  min-width: 150px;
+}
+
+.user-dropdown:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.2);
+  outline: none;
+}
+
+.assign-btn {
+  background: #a29ded !important;
+  color: white !important;
+  border-radius: 4px;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.assign-btn:hover {
+  background: #8a7fe0 !important;
+}
+
+.assign-btn:disabled {
+  background: #a59be6 !important;
+  color: #fff !important;
+  cursor: not-allowed;
+  opacity: 0.85 !important;
+  box-shadow: 0 2px 8px rgba(106, 90, 205, 0.10);
+}
+
+/* Eye Icon Styling */
+.eye-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--primary-color);
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgba(106, 90, 205, 0.1);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+  background-color: rgba(106, 90, 205, 0.2);
+  transform: scale(1.1);
+}
+
+.eye-icon i {
+  font-size: 1.1rem;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error & Empty States */
+.error-message,
+.no-data {
+  padding: 1rem;
+  text-align: left;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.error-message {
+  background: #fff1f0;
+  color: var(--danger-color);
+  border: 1px solid rgba(255, 77, 79, 0.2);
+}
+
+.no-data {
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  border: 1px dashed var(--border-color);
+  padding: 1.5rem;
+}
+
+.no-data-subtitle {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10001;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  width: 85%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-header {
+  background: var(--purple-bg);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(30px);
+    opacity: 0.8;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Checkbox styling like in second image */
+.risk-resolution-table input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--purple-bg);
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.risk-resolution-table input[type="checkbox"]:checked {
+  background-color: var(--purple-bg);
+}
+
+.risk-resolution-table input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  font-size: 0.875rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .risk-resolution-table {
+    min-width: 800px;
+    font-size: 0.93rem;
+  }
+}
+@media (max-width: 900px) {
+  .risk-resolution-table {
+    min-width: 700px;
+    font-size: 0.89rem;
+  }
+  .risk-resolution-container h1 {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .risk-resolution-table {
+    min-width: 600px;
+    font-size: 0.85rem;
+  }
+  .risk-resolution-container h1 {
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Custom Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Status column text style */
+.risk-resolution-table td:nth-child(6) {
+  color: black;
+  font-weight: normal;
+}
+
+/* --- Mitigation Workflow Section Styling --- */
+.risk-resolution-mitigation-workflow-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(106, 90, 205, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2rem 0 !important;
+  width: calc(100% - 40px) !important;
+}
+
+.risk-resolution-mitigation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.risk-resolution-mitigation-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a73e8;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.risk-resolution-back-btn {
+  background: white;
+  border: 1px solid #dadce0;
+  color: #1a73e8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.risk-resolution-back-btn:hover {
+  background: #f1f3f4;
+  border-color: #d2e3fc;
+  color: #1967d2;
+}
+
+.risk-resolution-risk-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(106, 90, 205, 0.06);
+  border: 1px solid #e9ecef;
+}
+
+.risk-resolution-risk-summary h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.risk-resolution-risk-details {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+.risk-resolution-risk-details p {
+  margin: 0;
+}
+
+.risk-resolution-reviewer-info {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.risk-resolution-mitigation-workflow h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #232323;
+  margin-bottom: 1.2rem;
+}
+
+.risk-resolution-workflow-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(106, 90, 205, 0.07);
+  padding: 1.2rem 1.5rem;
+  position: relative;
+  border: 1px solid #e9ecef;
+}
+
+.step-number {
+  min-width: 38px;
+  min-height: 38px;
+  background: #52c41a !important;
+  color: #fff !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 8px rgba(106, 90, 205, 0.13);
+  border: 3px solid #fff;
+  position: relative;
+  top: 0.2rem
+}
+
+.step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.risk-resolution-mitigation-textarea {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border-color);
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background: #fff;
+  resize: vertical;
+  transition: border 0.2s;
+}
+
+.risk-resolution-mitigation-textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.step-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.remove-step-btn {
+  background: #fff;
+  color: #232323;
+  border: 1.5px solid #eaecef;
+  border-radius: 5px;
+  padding: 0.3rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.remove-step-btn:hover {
+  background: #fff0f0;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.add-mitigation {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.risk-resolution-add-step-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #6C757D, #8A8A8A);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  width: auto;
+  min-width: 180px;
+}
+
+.risk-resolution-add-step-btn i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.risk-resolution-add-step-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.risk-resolution-add-step-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.risk-resolution-add-step-btn:disabled {
+  background: linear-gradient(135deg, #A9A9A9, #C0C0C0);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.risk-resolution-due-date-section {
+  display: none;
+}
+
+.risk-resolution-form-section {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(106, 90, 205, 0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 900px;
+}
+
+.risk-resolution-form-section h4 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #232323;
+  margin-bottom: 0.7rem;
+}
+
+.risk-resolution-form-note {
+  color: #606266;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.risk-resolution-form-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.risk-resolution-form-field label {
+  min-width: 270px;
+  font-weight: 600;
+  color: #232323;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.risk-resolution-form-field.horizontal {
+  flex-direction: row;
+}
+
+.risk-resolution-form-field.vertical {
+  flex-direction: column;
+}
+
+.risk-resolution-form-textarea,
+.risk-resolution-form-section input[type="number"],
+.risk-resolution-form-section input[type="text"],
+.risk-resolution-form-section select {
+  flex: 1;
+  border: 1.5px solid var(--border-color);
+  border-radius: 7px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background: #fafaff;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  resize: vertical;
+}
+
+.risk-resolution-form-textarea:focus,
+.risk-resolution-form-section input[type="number"]:focus,
+.risk-resolution-form-section input[type="text"]:focus,
+.risk-resolution-form-section select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.10);
+}
+
+.risk-resolution-form-section select {
+  min-width: 120px;
+  max-width: 220px;
+}
+
+.risk-resolution-mitigation-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px 0;
+}
+
+.risk-resolution-submit-mitigations-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.risk-resolution-submit-mitigations-btn i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.risk-resolution-submit-mitigations-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.risk-resolution-submit-mitigations-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.risk-resolution-submit-mitigations-btn:disabled {
+  background: linear-gradient(135deg, #A9A9A9, #C0C0C0);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.risk-resolution-form-warning {
+  color: var(--danger-color);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .risk-resolution-form-section {
+    padding: 1.2rem 0.5rem;
+  }
+  .risk-resolution-form-field label {
+    min-width: 120px;
+    font-size: 0.97rem;
+  }
+  .risk-resolution-form-field {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-resolution-container {
+    margin-left: 80px !important;
+    width: calc(100% - 80px) !important;
+  }
+}
+
+/* Toggle Button Styles */
+.risk-resolution-toggle-buttons {
+  width: calc(100% - 40px) !important;
+  max-width: 400px !important;
+  margin: 10px 0 20px 0 !important;
+  justify-content: flex-start !important;
+  display: flex !important;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  align-self: flex-start !important; /* anchor to left within flex parents */
+  margin-left: 0 !important;        /* ensure no unintended centering */
+  text-align: left !important;      /* left-align contents */
+}
+
+.risk-resolution-toggle-button {
+  padding: 8px 35px !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px !important;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  min-width: 180px !important;
+  text-align: left;
+  flex: 1 !important;
+  line-height: 1.5 !important;
+}
+
+.risk-resolution-toggle-button:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+.risk-resolution-toggle-button:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.risk-resolution-toggle-button.active {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsive adjustments for toggle buttons */
+@media (max-width: 768px) {
+  .risk-resolution-toggle-buttons {
+    width: calc(100% - 40px) !important;
+    max-width: 350px !important;
+  }
+  
+  .risk-resolution-toggle-button {
+    padding: 6px 20px !important;
+    font-size: 14px !important;
+    min-width: 140px !important;
+  }
+}
+
+/* Additional Styles */
+.risk-resolution-review-count {
+  text-align: center;
+  font-weight: normal;
+}
+
+.risk-resolution-assign-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-resolution-assigned-to-cell {
+  display: flex;
+  align-items: center;
+}
+
+.risk-resolution-status-column {
+  font-weight: normal;
+}
+
+.risk-resolution-action-column {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  z-index: 1; /* Ensure action column stays below the header (z-index: 1000) */
+}
+
+.risk-resolution-reviewer-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.risk-resolution-reviewer-badge {
+  background-color: rgba(106, 90, 205, 0.12);
+  color: var(--primary-color);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  border: 1px solid rgba(106, 90, 205, 0.25);
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.risk-resolution-yet-to-start {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Remove validation-related classes */
+.risk-resolution-validation-error,
+.risk-resolution-error-message,
+.risk-resolution-form-error,
+.risk-resolution-input-error,
+.risk-resolution-field-error,
+.has-error,
+.validation-error {
+  display: none;
+}
+
+/* Collapsible Table Container */
+.risk-resolution-collapsible-container {
+  width: calc(100% - 40px) !important;
+  max-width: 1200px !important;
+  margin-left: -24px !important;
+  overflow-x: auto !important;
+  align-self: center !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.risk-resolution-collapsible-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+.risk-resolution-collapsible-container {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Status Badge Styles for CollapsibleTable */
+.risk-resolution-status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 80px;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+/* Criticality Badge Styles for CollapsibleTable */
+.risk-resolution-criticality-badge {
+  padding: 0.18rem 0.85rem;
+  border-radius: 16px;
+  font-size: 0.89rem;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  min-width: 64px;
+  border: 1.5px solid;
+  background: #fff;
+  margin-right: 2px;
+}
+
+.risk-resolution-criticality-badge.critical {
+  color: #990000;
+  background: #fff;
+  border-color: #990000;
+}
+
+.risk-resolution-criticality-badge.high {
+  color: #FF5252;
+  background: #fff;
+  border-color: #FF5252;
+}
+
+.risk-resolution-criticality-badge.medium {
+  color: #F9A825;
+  background: #fff;
+  border-color: #F9A825;
+}
+
+.risk-resolution-criticality-badge.low {
+  color: #0288D1;
+  background: #fff;
+  border-color: #0288D1;
+}
+
+/* Priority Badge Styles for CollapsibleTable */
+.risk-resolution-priority-badge {
+  padding: 0.18rem 0.85rem;
+  border-radius: 16px;
+  font-size: 0.89rem;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  min-width: 64px;
+  border: 1.5px solid;
+  background: #fff;
+  margin-right: 2px;
+}
+
+.risk-resolution-priority-badge.critical {
+  color: #990000;
+  background: #fff;
+  border-color: #990000;
+}
+
+.risk-resolution-priority-badge.high {
+  color: #FF5252;
+  background: #fff;
+  border-color: #FF5252;
+}
+
+.risk-resolution-priority-badge.medium {
+  color: #F9A825;
+  background: #fff;
+  border-color: #F9A825;
+}
+
+.risk-resolution-priority-badge.low {
+  color: #0288D1;
+  background: #fff;
+  border-color: #0288D1;
+}
+
+/* Override CollapsibleTable styles for Risk Resolution */
+.risk-resolution-collapsible-container .task-section {
+  margin-bottom: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(106, 90, 205, 0.08);
+}
+
+.risk-resolution-collapsible-container .task-section-header {
+  background: white;
+  border-radius: 12px 12px 0 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.risk-resolution-collapsible-container .task-table {
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  table-layout: fixed !important;
+  width: 100% !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.risk-resolution-collapsible-container .task-table::-webkit-scrollbar {
+  display: none !important;
+}
+
+.risk-resolution-collapsible-container .task-table {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.risk-resolution-collapsible-container .task-table th,
+.risk-resolution-collapsible-container .task-table td {
+  resize: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Set fixed column widths */
+.risk-resolution-collapsible-container .task-table th:nth-child(1),
+.risk-resolution-collapsible-container .task-table td:nth-child(1) {
+  width: 10% !important; /* RISK ID */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(2),
+.risk-resolution-collapsible-container .task-table td:nth-child(2) {
+  width: 35% !important; /* RISK TITLE - Increased width for better text wrapping */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  hyphens: auto !important;
+  line-height: 1.4 !important;
+  max-width: 0 !important; /* Force text wrapping */
+  overflow: hidden !important;
+  padding: 10px 8px !important;
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(3),
+.risk-resolution-collapsible-container .task-table td:nth-child(3) {
+  width: 15% !important; /* CATEGORY */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(4),
+.risk-resolution-collapsible-container .task-table td:nth-child(4) {
+  width: 12% !important; /* CRITICALITY */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(5),
+.risk-resolution-collapsible-container .task-table td:nth-child(5) {
+  width: 15% !important; /* ASSIGNED TO */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(6),
+.risk-resolution-collapsible-container .task-table td:nth-child(6) {
+  width: 13% !important; /* REVIEWER */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(7),
+.risk-resolution-collapsible-container .task-table td:nth-child(7) {
+  width: 10% !important; /* REVIEW COUNT */
+}
+
+.risk-resolution-collapsible-container .task-table th:nth-child(8),
+.risk-resolution-collapsible-container .task-table td:nth-child(8) {
+  width: 10% !important; /* ACTION */
+  position: relative;
+  z-index: 1; /* Ensure action column cells stay below the header (z-index: 1000) */
+}
+
+.risk-resolution-collapsible-container .task-table th {
+  background: white !important;
+  background-color: white !important;
+  color: #495057 !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 8px 12px !important;
+  margin: 0px !important;
+  line-height: 1.2 !important;
+  border: none !important;
+  border-right: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Remove right border from last header column */
+.risk-resolution-collapsible-container .task-table th:last-child {
+  border-right: none !important;
+}
+
+/* Force override for CollapsibleTable th elements */
+.risk-resolution-collapsible-container .task-table th,
+.risk-resolution-collapsible-container .task-table th *,
+.risk-resolution-collapsible-container .task-table th div,
+.risk-resolution-collapsible-container .task-table th span {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #495057 !important;
+  background: white !important;
+  background-color: white !important;
+  padding: 8px 12px !important;
+  margin: 0px !important;
+  line-height: 1.2 !important;
+  border: none !important;
+  border-right: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+}
+
+/* Specific styling for Risk Title column to prevent overflow */
+.risk-resolution-collapsible-container .task-table td:nth-child(2) {
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  hyphens: auto !important;
+  line-height: 1.4 !important;
+  max-width: 0 !important;
+  padding: 10px 8px !important;
+}
+
+.risk-resolution-collapsible-container .task-table td:nth-child(2) * {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+  hyphens: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+
+.risk-resolution-collapsible-container .task-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.risk-resolution-collapsible-container .task-table tr:hover td {
+  background-color: rgba(106, 90, 205, 0.05);
+}
+
+/* Status chip styling for Risk Resolution */
+.risk-resolution-collapsible-container .status-chip {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.risk-resolution-collapsible-container .status-chip.pending {
+  color: var(--chip-pending-text);
+  background-color: var(--chip-pending-bg);
+  border-color: var(--chip-pending-border);
+}
+
+.risk-resolution-collapsible-container .status-chip.in-progress {
+  color: var(--chip-inprogress-text);
+  background-color: var(--chip-inprogress-bg);
+  border-color: var(--chip-inprogress-border);
+}
+
+.risk-resolution-collapsible-container .status-chip.completed {
+  color: var(--chip-completed-text);
+  background-color: var(--chip-completed-bg);
+  border-color: var(--chip-completed-border);
+}
+
+.risk-resolution-collapsible-container .status-chip.rejected {
+  color: var(--chip-rejected-text);
+  background-color: var(--chip-rejected-bg);
+  border-color: var(--chip-rejected-border);
+}
+
+/* View Details Button styling for Risk Resolution - Icon Only */
+.risk-resolution-collapsible-container .view-details-btn {
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  transition: all 0.2s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1px !important;
+  white-space: nowrap !important;
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 1 !important; /* Ensure it stays below the header (z-index: 1000) */
+}
+
+.risk-resolution-collapsible-container .view-details-btn i {
+  font-size: 18px !important;
+  color: var(--primary-color) !important;
+  margin-left: -35px; /* move icon further to the right */
+}
+
+.risk-resolution-collapsible-container .view-details-btn:hover {
+  background: rgba(106, 90, 205, 0.1) !important;
+  transform: scale(1.1) !important;
+  box-shadow: none !important;
+}
+
+.risk-resolution-collapsible-container .view-details-btn:hover i {
+  color: var(--primary-hover) !important;
+}
+
+/* Add Task Button styling for Risk Resolution */
+.risk-resolution-collapsible-container .add-task-wrapper {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e9ecef;
+}
+
+.risk-resolution-collapsible-container .add-task-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.risk-resolution-collapsible-container .add-task-btn:hover {
+  background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive design for collapsible table */
+@media (max-width: 1200px) {
+  .risk-resolution-collapsible-container .task-table {
+    font-size: 13px;
+  }
+  
+  .risk-resolution-collapsible-container .task-table th,
+  .risk-resolution-collapsible-container .task-table td {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-resolution-collapsible-container .task-table {
+    font-size: 12px;
+  }
+  
+  .risk-resolution-collapsible-container .task-table th,
+  .risk-resolution-collapsible-container .task-table td {
+    padding: 6px 8px;
+  }
+  
+  .risk-resolution-collapsible-container .status-chip {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .risk-resolution-container {
+    margin-left: 80px !important;
+    width: calc(100% - 80px) !important;
+  }
+  
+  .risk-resolution-toggle-buttons,
+  .risk-resolution-filters-wrapper,
+  .risk-resolution-collapsible-container,
+  .risk-resolution-mitigation-workflow-section {
+    width: calc(100% - 20px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-resolution-mitigation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .risk-resolution-mitigation-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .risk-resolution-back-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Assignment Fields Styling */
+.risk-resolution-assignment-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.risk-resolution-assignment-field {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(33.33% - 14px);
+}
+
+.risk-resolution-assignment-field label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.risk-resolution-assignment-dropdown {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #333;
+  background: white;
+  transition: border-color 0.2s ease;
+  height: 38px;
+}
+
+.risk-resolution-assignment-dropdown:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+}
+
+/* Hide the old due date section since we moved it */
+.risk-resolution-due-date-section {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .risk-resolution-assignment-fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .risk-resolution-assignment-field {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Assignment Fields Styling */
+.risk-resolution-assignment-section {
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.risk-resolution-assignment-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+}
+
+.risk-resolution-assignment-fields {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.risk-resolution-assignment-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.risk-resolution-assignment-field label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.risk-resolution-assignment-dropdown {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #333;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.risk-resolution-assignment-dropdown:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1);
+}
+
+.risk-resolution-selected-user-info {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 4px 8px;
+  background: #e8f0fe;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .risk-resolution-assignment-fields {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .risk-resolution-assignment-field {
+    width: 100%;
+  }
+  
+  .risk-resolution-assignment-section {
+    padding: 1rem;
+  }
+} 

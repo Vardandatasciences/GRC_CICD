@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount MEDIA_ROOT to persist uploaded files
+      - ./MEDIA_ROOT:/app/MEDIA_ROOT
+      - ./TEMP_MEDIA_ROOT:/app/TEMP_MEDIA_ROOT
+      - ./Reports:/app/Reports
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=backend.settings
+    restart: unless-stopped
+    # Ensure the container has proper permissions for file operations
+    user: "1000:1000"  # Adjust this to match your host user ID
+    # DNS configuration to resolve external hostnames (fixes "Name or service not known" errors)
+    dns:
+      - 8.8.8.8      # Google DNS
+      - 8.8.4.4      # Google DNS secondary
+      - 1.1.1.1      # Cloudflare DNS

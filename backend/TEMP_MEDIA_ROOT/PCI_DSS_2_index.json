@@ -1,0 +1,153 @@
+{
+  "source_pdf": "D:\\ai_ipload\\PCI_DSS_2.pdf",
+  "extraction_method": "toc_text_with_positions",
+  "items": [
+    {
+      "level": 1,
+      "title": "Introduction: Protecting Cardholder Data with PCI Security Standards",
+      "page_label": "4",
+      "page_number": 4,
+      "source_page": 3
+    },
+    {
+      "level": 1,
+      "title": "Overview of PCI Requirements",
+      "page_label": "6",
+      "page_number": 6,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "The PCI Data Security Standard",
+      "page_label": "9",
+      "page_number": 9,
+      "source_page": 3
+    },
+    {
+      "level": 1,
+      "title": "Security Controls and Processes for PCI DSS Requirements",
+      "page_label": "11",
+      "page_number": 11,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Build and Maintain a Secure Network and Systems",
+      "page_label": "12",
+      "page_number": 12,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Protect Cardholder Data",
+      "page_label": "14",
+      "page_number": 14,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Maintain a Vulnerability Management Program",
+      "page_label": "16",
+      "page_number": 16,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Implement Strong Access Control Measures",
+      "page_label": "18",
+      "page_number": 18,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Regularly Monitor and Test Networks",
+      "page_label": "21",
+      "page_number": 21,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Maintain an Information Security Policy",
+      "page_label": "24",
+      "page_number": 24,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Compensating Controls for PCI DSS Requirements",
+      "page_label": "26",
+      "page_number": 26,
+      "source_page": 3
+    },
+    {
+      "level": 1,
+      "title": "How to Comply with PCI DSS",
+      "page_label": "27",
+      "page_number": 27,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Choosing a Qualified Security Assessor",
+      "page_label": "28",
+      "page_number": 28,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Choosing an Approved Scanning Vendor",
+      "page_label": "29",
+      "page_number": 29,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Scope of PCI DSS Requirements",
+      "page_label": "30",
+      "page_number": 30,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Using the Self-Assessment Questionnaire",
+      "page_label": "33",
+      "page_number": 33,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Reporting",
+      "page_label": "35",
+      "page_number": 35,
+      "source_page": 3
+    },
+    {
+      "level": 2,
+      "title": "Implementing PCI DSS into Business-as-Usual Processes",
+      "page_label": "36",
+      "page_number": 36,
+      "source_page": 3
+    },
+    {
+      "level": 1,
+      "title": "Web Resources",
+      "page_label": "37",
+      "page_number": 37,
+      "source_page": 3
+    },
+    {
+      "level": 1,
+      "title": "About the PCI Security Standards Council",
+      "page_label": "39",
+      "page_number": 39,
+      "source_page": 3
+    },
+    {
+      "level": 3,
+      "title": "Report, p.",
+      "page_label": "30",
+      "page_number": 30,
+      "source_page": 4
+    }
+  ]
+}

@@ -1,0 +1,740 @@
+/* Incident Details Page Layout */
+.incident-details-page {
+  padding: 20px 20px 20px 20px;
+  margin-left: 220px;
+  margin-top:-30px;
+  margin-right:-20px;
+  margin-bottom: -20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background: white;
+
+}
+
+/* Loading and Error States */
+.incident-loading-state,
+.incident-error-state {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: var(--incident-gray-600);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.incident-error-state {
+  color: var(--incident-danger);
+  border-left: 4px solid var(--incident-danger);
+}
+
+/* Header Styles */
+.incident-details-header {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.incident-back-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(35, 17, 44);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  background-color: rgb(244, 238, 245);
+  padding: 7px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(123, 111, 221, 0.2);
+}
+
+.incident-back-arrow {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.incident-back-link:hover {
+  background: rgba(187, 111, 222, 0.2);
+}
+
+/* Main Content Container */
+.incident-details-content {
+  flex: 1;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Header Section */
+.incident-header-section {
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  border: none;
+  position: relative;
+  overflow: visible;
+  background: transparent;
+}
+
+.incident-header-section::before {
+  display: none;
+}
+
+.incident-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.incident-title-section {
+  flex: 1;
+}
+
+.incident-title {
+  font-size: 1.7rem !important;
+  font-weight: 400;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  word-break: break-word;
+  letter-spacing: -0.01em;
+}
+
+.incident-id {
+  font-size: 1rem;
+  margin-top:-10px;
+  margin-bottom:10px;
+  color: #0b0724;
+  font-weight: 300;
+  background: rgba(125, 111, 226, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid rgba(123, 111, 221, 0.2);
+}
+
+.incident-status-container {
+  flex-shrink: 0;
+}
+
+/* Details Sections */
+.incident-details-section {
+  padding: 20px;
+}
+
+.incident-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 16px 0;
+  padding-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grid Layouts */
+.incident-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Basic Information Grid - 3 items per row on large screens */
+.incident-basic-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Impact Assessment Grid - 3 items per row for regular items */
+.incident-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.incident-response-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.incident-compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Detail Items */
+.incident-detail-item {
+  padding: 12px;
+  background: rgba(243, 244, 245, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(123, 111, 221, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 80px;
+}
+
+.incident-full-width {
+  grid-column: 1 / -1;
+}
+
+.incident-detail-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #0b0a15;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.incident-detail-value {
+  font-size: 0.9rem;
+  color: #2d3748;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Description Content */
+
+.incident-description-value {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2d3748;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 40px;
+}
+
+/* Response Items */
+.incident-response-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(123, 111, 221, 0.1);
+  transition: all 0.3s ease;
+}
+
+.incident-section-header {
+  padding: 16px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgb(173, 211, 236);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.incident-section-content {
+  padding: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #2d3748;
+  background: white !important;
+  min-height: 100px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Force white background for comments section content */
+.comments-section .incident-section-content {
+  background: white !important;
+}
+
+/* Override Risk component CSS that's affecting Incident Details */
+.incident-details-page .comments-section {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Badge Styles */
+
+
+.incident-priority-high {
+  color: #dc2626;
+}
+
+.incident-priority-medium {
+  color: #d97706;
+  
+}
+
+.incident-priority-low {
+  color: #059669;
+}
+
+.incident-category-badge {
+  color: #7B6FDD;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.incident-origin-badge {
+  color: white;
+  font-weight: 600;
+}
+
+.incident-origin-manual {
+  color: rgb(88, 139, 225);
+  font-size: 0.9rem;
+}
+
+.incident-origin-audit {
+  color: rgb(88, 139, 225);
+  font-size: 0.9rem;
+}
+
+.incident-origin-siem {
+  color: rgb(88, 139, 225);
+  font-size: 0.9rem;
+}
+
+.incident-origin-other {
+  color: rgb(88, 139, 225);
+  font-size: 0.9rem;
+}
+
+/* Flag Badges */
+
+.incident-flag-yes {
+  color: #dc2626;
+  font-weight: 400;
+}
+
+.incident-flag-no {
+  color: #059669;
+  font-weight: 400;
+}
+
+/* Status Badges */
+.incident-status-badge {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.incident-scheduled {
+  background: linear-gradient(135deg, #e0f2fe, #b3e5fc);
+  color: #0277bd;
+  border: 1px solid #29b6f6;
+}
+
+.incident-rejected {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  color: #d32f2f;
+  border: 1px solid #f44336;
+}
+
+.incident-open {
+  background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.incident-approved {
+  background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.incident-pending {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  color: #ef6c00;
+  border: 1px solid #ff9800;
+}
+
+.incident-assigned {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #1976d2;
+  border: 1px solid #2196f3;
+}
+
+.incident-active {
+  background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+  color: #7b1fa2;
+  border: 1px solid #9c27b0;
+}
+
+.incident-under-review {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  color: #f57f17;
+  border: 1px solid #ffc107;
+}
+
+.incident-completed {
+  background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+  color: #2e7d32;
+  border: 1px solid #4caf50;
+}
+
+.incident-closed {
+  background: linear-gradient(135deg, #fafafa, #f5f5f5);
+  color: #616161;
+  border: 1px solid #9e9e9e;
+}
+
+/* Action Buttons */
+
+
+.incident-action-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.incident-solve-btn,
+.incident-no-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.incident-solve-btn {
+  background: linear-gradient(135deg, #7B6FDD, #9747FF);
+  color: white;
+  min-width: 180px;
+}
+
+.incident-no-btn {
+  background: linear-gradient(135deg, #e63946, #ff4757);
+  color: white;
+  min-width: 160px;
+}
+
+.incident-solve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123, 111, 221, 0.3);
+  background: linear-gradient(135deg, #6A5ED4, #8B47FF);
+}
+
+.incident-no-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.3);
+  background: linear-gradient(135deg, #d32f2f, #e74c3c);
+}
+
+/* Modal Styles */
+.incident-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.incident-modal-container {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: incident-modalSlideIn 0.3s ease;
+}
+
+@keyframes incident-modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.incident-modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.incident-modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333;
+  transform: rotate(90deg);
+}
+
+.incident-modal-content {
+  text-align: center;
+}
+
+.incident-solve-container,
+.incident-rejected-container {
+  padding: 20px;
+}
+
+.incident-solve-icon,
+.incident-rejected-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: incident-pulse 2s infinite;
+}
+
+@keyframes incident-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.incident-modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.incident-modal-title.incident-solve {
+  color: #7B6FDD;
+}
+
+.incident-modal-title.incident-rejected {
+  color: #e63946;
+}
+
+.incident-modal-subtitle {
+  color: #666;
+  margin-bottom: 28px;
+  font-size: 1.1rem;
+}
+
+.incident-modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.incident-modal-btn {
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.incident-confirm-btn {
+  background: linear-gradient(135deg, #7B6FDD, #9747FF);
+  color: white;
+  box-shadow: 0 4px 16px rgba(123, 111, 221, 0.3);
+}
+
+.incident-confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123, 111, 221, 0.4);
+}
+
+.incident-reject-btn {
+  background: linear-gradient(135deg, #e63946, #ff4757);
+  color: white;
+  box-shadow: 0 4px 16px rgba(230, 57, 70, 0.3);
+}
+
+.incident-reject-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);
+}
+
+.incident-cancel-btn {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #e9ecef;
+}
+
+.incident-cancel-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .incident-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-basic-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-response-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-compliance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .incident-details-page {
+    padding: 16px 16px 16px 200px;
+  }
+  
+  .incident-title-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .incident-title {
+    font-size: 0.9rem !important;
+  }
+  
+  .incident-basic-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .incident-compliance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .incident-details-page {
+    padding: 16px;
+  }
+  
+  .incident-details-section {
+    padding: 20px;
+  }
+  
+  .incident-details-grid,
+  .incident-basic-info-grid,
+  .incident-impact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .incident-response-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .incident-compliance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .incident-title {
+    font-size: 0.9rem !important;
+  }
+  
+  .incident-action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .incident-solve-btn,
+  .incident-no-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .incident-modal-footer {
+    flex-direction: column;
+  }
+  
+  .incident-modal-btn {
+    width: 100%;
+  }
+}
+
+/* RBAC Permission Styles */
+.no-permission-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 8px;
+  text-align: center;
+  justify-content: center;
+}
+
+.no-permission-message i {
+  color: #dc3545;
+}
+
+/* Ultra-specific override for comments header to match other headers */
+div.incident-response-item.comments-section div.incident-section-header {
+  background: rgb(173, 211, 236) !important;
+  background-color: rgb(173, 211, 236) !important;
+} 

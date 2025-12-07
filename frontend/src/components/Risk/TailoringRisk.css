@@ -1,0 +1,803 @@
+/* Modern UI Variables for Tailoring Risk Form */
+:root {
+  --tailoring-risk-primary: #4f7cff;
+  --tailoring-risk-primary-light: #4f7cff;
+  --tailoring-risk-primary-dark: #0040ff;
+  --tailoring-risk-secondary: #4f7cff;
+  --tailoring-risk-success: #4cc9f0;
+  --tailoring-risk-warning: #f8961e;
+  --tailoring-risk-danger: #e63946;
+  --tailoring-risk-light: #f8f9fa;
+  --tailoring-risk-dark: #212529;
+  --tailoring-risk-gray-100: #f8f9fa;
+  --tailoring-risk-gray-200: #e9ecef;
+  --tailoring-risk-gray-300: #dee2e6;
+  --tailoring-risk-gray-400: #ced4da;
+  --tailoring-risk-gray-500: #adb5bd;
+  --tailoring-risk-gray-600: #6c757d;
+  --tailoring-risk-gray-700: #495057;
+  --tailoring-risk-gray-800: #343a40;
+  --tailoring-risk-gray-900: #212529;
+  --tailoring-risk-border-radius: 8px;
+  --tailoring-risk-box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1), 0 1px 3px rgba(106, 90, 205, 0.08);
+  --tailoring-risk-transition: all 0.3s ease;
+}
+
+/* Global Styles */
+.tailoring-risk-container {
+  padding: 16px 16px 16px 280px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--form-gray-800);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.tailoring-risk-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary)));
+  margin-bottom: 28px;
+  margin-top: 8px;
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  background: transparent;
+  font-family: var(--font-family-primary);
+}
+.tailoring-risk-title::after {
+  content: '';
+  display: block;
+  margin-top: 4px;
+  margin-left: 0;
+  height: 4px;
+  width: 60px;
+  background: var(--primary-color, #4f7cff) !important;
+  border-radius: 2px;
+}
+/* Risk ID Container - Centered at the top */
+.tailoring-risk-id-container {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  justify-self: center;
+  width: 100%;
+}
+
+/* Risk Dropdown Container */
+.tailoring-risk-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.tailoring-risk-dropdown-container .tailoring-risk-form-control {
+  width: 100%;
+  background-color: white!important;
+  border: 2px solid var(--tailoring-risk-gray-300);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  transition: var(--tailoring-risk-transition);
+}
+
+.tailoring-risk-dropdown-container .tailoring-risk-form-control:focus {
+  border-color: var(--tailoring-risk-primary);
+  box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.1);
+}
+
+/* Form Container Styles */
+.tailoring-risk-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1), 0 1px 3px rgba(106, 90, 205, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Form Row Styles - New for horizontal layout */
+.tailoring-risk-form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.tailoring-risk-form-row.full-width {
+  flex-direction: column;
+}
+
+.tailoring-risk-form-row .tailoring-risk-form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.tailoring-risk-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 18px;
+}
+
+.tailoring-risk-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--tailoring-risk-gray-700);
+  margin-bottom: 2px;
+}
+
+.tailoring-risk-form-group label i {
+  color: var(--tailoring-risk-primary);
+  font-size: 0.8rem;
+  width: 14px;
+  text-align: center;
+}
+
+.tailoring-risk-form-control {
+  padding: 8px 10px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: none;
+  transition: var(--tailoring-risk-transition);
+  background-color: #ffffff !important;
+  width: 100%;
+  box-sizing: border-box;
+  height: 34px;
+}
+
+select.tailoring-risk-form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236a5acd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+  padding-right: 28px;
+  background-color: white;
+  border-color: rgba(106, 90, 205, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+textarea.tailoring-risk-form-control {
+  min-height: 120px;
+  height: 120px;
+  resize: none;
+}
+
+.tailoring-risk-form-control:focus {
+  outline: none;
+  border-color: var(--tailoring-risk-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+  background-color: white;
+}
+
+.tailoring-risk-form-control:disabled, 
+.tailoring-risk-form-control[readonly] {
+  background-color: var(--tailoring-risk-gray-200);
+  color: var(--tailoring-risk-gray-600);
+  cursor: not-allowed;
+}
+
+/* Form Actions */
+.tailoring-risk-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--tailoring-risk-gray-200);
+}
+
+.tailoring-risk-btn-primary {
+  background: var(--tailoring-risk-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--tailoring-risk-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 90px;
+  width: auto;
+  height: 38px;
+  text-transform: uppercase;
+}
+
+.tailoring-risk-btn-primary:hover {
+  background: var(--tailoring-risk-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(67, 97, 238, 0.25);
+}
+
+.tailoring-risk-btn-primary:disabled {
+  background: var(--tailoring-risk-gray-400);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.tailoring-risk-btn-secondary {
+  background: white;
+  color: var(--tailoring-risk-gray-700);
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: 6px;
+  padding: 6px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--tailoring-risk-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 90px;
+  width: auto;
+  height: 38px;
+}
+
+.tailoring-risk-btn-secondary:hover {
+  background: var(--tailoring-risk-gray-200);
+  color: var(--tailoring-risk-gray-900);
+}
+
+/* Remove validation-related classes */
+.tailoring-risk-form-control.error,
+.tailoring-risk-validation-error,
+.tailoring-risk-error-message,
+.tailoring-risk-form-group.has-error {
+  display: none;
+}
+
+/* Success/Error Messages */
+.tailoring-risk-message {
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.tailoring-risk-success {
+  background-color: var(--tailoring-risk-primary);
+  color: white;
+  box-shadow: 0 4px 20px rgba(106, 90, 205, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tailoring-risk-form-row {
+    flex-wrap: wrap;
+  }
+  
+  .tailoring-risk-form-row .tailoring-risk-form-group {
+    flex: 1 1 45%;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tailoring-risk-container {
+    padding: 12px;
+  }
+  
+  .tailoring-risk-form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .tailoring-risk-form-row .tailoring-risk-form-group {
+    width: 100%;
+  }
+  
+  .tailoring-risk-id-container {
+    max-width: 100%;
+  }
+}
+
+/* Business Impact Styles */
+.tailoring-risk-business-impact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tailoring-risk-business-impact-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.tailoring-risk-selected-impacts {
+  padding: 8px 10px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+  font-size: 0.85rem;
+}
+
+.tailoring-risk-selected-impacts:hover {
+  border-color: var(--tailoring-risk-primary);
+}
+
+.tailoring-risk-business-impact-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  margin-top: 4px;
+  box-shadow: var(--tailoring-risk-box-shadow);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tailoring-risk-business-impact-search {
+  padding: 6px;
+  border-bottom: 1px solid var(--tailoring-risk-gray-200);
+  display: flex;
+  gap: 6px;
+}
+
+.tailoring-risk-business-impact-search input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  font-size: 0.8rem;
+}
+
+.tailoring-risk-add-impact-btn {
+  padding: 4px 8px;
+  background: var(--tailoring-risk-primary);
+  color: white;
+  border: none;
+  border-radius: var(--tailoring-risk-border-radius);
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.tailoring-risk-add-impact-btn:hover {
+  background: var(--tailoring-risk-primary-dark);
+}
+
+.tailoring-risk-business-impact-list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.tailoring-risk-business-impact-item {
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tailoring-risk-business-impact-item:hover {
+  background-color: var(--tailoring-risk-gray-100);
+}
+
+.tailoring-risk-business-impact-item span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.tailoring-risk-business-impact-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.tailoring-risk-selected-impacts-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 2px 0;
+}
+
+.tailoring-risk-selected-impact-tag {
+  background: var(--tailoring-risk-primary-light);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tailoring-risk-selected-impact-tag i {
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tailoring-risk-selected-impact-tag i:hover {
+  opacity: 0.8;
+}
+
+/* Modal Styles */
+.tailoring-risk-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.tailoring-risk-modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tailoring-risk-modal-content h3 {
+  margin: 0 0 20px;
+  color: var(--tailoring-risk-gray-900);
+  font-size: 1.3rem;
+}
+
+.tailoring-risk-modal-form-group {
+  margin-bottom: 20px;
+}
+
+.tailoring-risk-modal-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--tailoring-risk-gray-700);
+}
+
+.tailoring-risk-modal-form-group input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  font-size: 1rem;
+}
+
+.tailoring-risk-modal-form-group input:focus {
+  outline: none;
+  border-color: var(--tailoring-risk-primary);
+  box-shadow: 0 0 0 2px rgba(106, 90, 205, 0.1);
+}
+
+.tailoring-risk-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.tailoring-risk-cancel-btn {
+  background: var(--tailoring-risk-gray-200);
+  color: var(--tailoring-risk-gray-700);
+  border: none;
+}
+
+.tailoring-risk-cancel-btn:hover {
+  background: var(--tailoring-risk-gray-300);
+}
+
+.tailoring-risk-add-btn {
+  background: var(--tailoring-risk-primary);
+  color: white;
+  border: none;
+}
+
+.tailoring-risk-add-btn:hover {
+  background: var(--tailoring-risk-primary-dark);
+}
+
+.tailoring-risk-add-btn:disabled {
+  background: var(--tailoring-risk-gray-400);
+  cursor: not-allowed;
+}
+
+/* Category Styles */
+.tailoring-risk-category-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tailoring-risk-category-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.tailoring-risk-selected-category {
+  padding: 8px 12px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  transition: var(--tailoring-risk-transition);
+}
+
+.tailoring-risk-selected-category:hover {
+  border-color: var(--tailoring-risk-primary);
+}
+
+.tailoring-risk-category-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  margin-top: 4px;
+  box-shadow: var(--tailoring-risk-box-shadow);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tailoring-risk-category-search {
+  padding: 8px;
+  border-bottom: 1px solid var(--tailoring-risk-gray-200);
+  display: flex;
+  gap: 8px;
+}
+
+.tailoring-risk-category-search input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: var(--tailoring-risk-border-radius);
+  font-size: 0.9rem;
+}
+
+.tailoring-risk-add-category-btn {
+  padding: 6px 12px;
+  background: var(--tailoring-risk-primary);
+  color: white;
+  border: none;
+  border-radius: var(--tailoring-risk-border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.tailoring-risk-add-category-btn:hover {
+  background: var(--tailoring-risk-primary-dark);
+}
+
+.tailoring-risk-category-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tailoring-risk-category-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid var(--tailoring-risk-gray-100);
+}
+
+.tailoring-risk-category-item:last-child {
+  border-bottom: none;
+}
+
+.tailoring-risk-category-item:hover {
+  background-color: rgba(106, 90, 205, 0.05);
+}
+
+.tailoring-risk-category-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+  accent-color: var(--tailoring-risk-primary);
+}
+
+.tailoring-risk-category-item span {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--tailoring-risk-gray-800);
+}
+
+/* Validation Error Styles */
+.tailoring-risk-form-group input.error,
+.tailoring-risk-form-group select.error,
+.tailoring-risk-form-group textarea.error {
+  border-color: var(--tailoring-risk-danger);
+  background-color: rgba(230, 57, 70, 0.05);
+}
+
+.tailoring-risk-form-group input.error:focus,
+.tailoring-risk-form-group select.error:focus,
+.tailoring-risk-form-group textarea.error:focus {
+  box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.1);
+}
+
+.tailoring-risk-validation-error {
+  color: var(--tailoring-risk-danger);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tailoring-risk-validation-error i {
+  font-size: 0.9rem;
+}
+
+/* Error Message Animation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+.tailoring-risk-form-group.has-error {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* Helper Text Styles */
+.tailoring-risk-helper-text {
+  font-size: 0.75rem;
+  color: var(--tailoring-risk-gray-600);
+  margin-top: 4px;
+  line-height: 1.3;
+  font-style: italic;
+  padding-left: 2px;
+}
+
+/* Ensure helper text appears below all form elements */
+.tailoring-risk-form-group .tailoring-risk-helper-text {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* Ensure helper text doesn't interfere with validation errors */
+.tailoring-risk-form-group .tailoring-risk-helper-text + .validation-error-message {
+  margin-top: 2px;
+}
+
+/* Validation Error Styles */
+.validation-error-message {
+  color: var(--tailoring-risk-danger);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+  font-weight: 500;
+} 
+
+/* Risk Mitigation Styles */
+.tailoring-risk-mitigation-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tailoring-risk-mitigation-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tailoring-risk-mitigation-input-group > label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tailoring-risk-gray-700);
+}
+
+.tailoring-risk-mitigation-action-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tailoring-risk-mitigation-action-item .tailoring-risk-form-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid var(--tailoring-risk-gray-300);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  height: 34px;
+}
+
+.tailoring-risk-mitigation-action-item .tailoring-risk-form-input:focus {
+  outline: none;
+  border-color: var(--tailoring-risk-primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+}
+
+.tailoring-risk-remove-action {
+  background: transparent;
+  border: none;
+  color: var(--tailoring-risk-danger);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.tailoring-risk-remove-action:hover {
+  background-color: rgba(230, 57, 70, 0.1);
+}
+
+.tailoring-risk-remove-action i {
+  font-size: 0.75rem;
+}
+
+.tailoring-risk-add-action {
+  background: transparent;
+  border: 1px dashed var(--tailoring-risk-primary);
+  color: var(--tailoring-risk-primary);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  transition: all 0.2s;
+}
+
+.tailoring-risk-add-action:hover {
+  background-color: rgba(79, 124, 255, 0.05);
+}
+
+.tailoring-risk-add-action i {
+  font-size: 0.9rem;
+}
+
+/* Make sure the plus icon is visible */
+.tailoring-risk-add-action .fa-plus {
+  display: inline-block !important;
+} 

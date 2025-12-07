@@ -1,0 +1,116 @@
+{
+    "framework": {
+      "title": "Sample Framework",
+      "description": "This is a sample framework description."
+    },
+    "policies": [
+      {
+        "title": "Policy 1",
+        "description": "Description for Policy 1",
+        "objective": "Objective for Policy 1",
+        "scope": "Scope for Policy 1",
+        "subPolicies": [
+          {
+            "title": "Sub Policy 1",
+            "description": "Description for Sub Policy 1"
+          },
+          {
+            "title": "Sub Policy 2",
+            "description": "Description for Sub Policy 2"
+          },
+          {
+            "title": "Sub Policy 3",
+            "description": "Description for Sub Policy 3"
+          }
+        ]
+      },
+      {
+        "title": "Policy 2",
+        "description": "Description for Policy 2",
+        "objective": "Objective for Policy 2",
+        "scope": "Scope for Policy 2",
+        "subPolicies": [
+          {
+            "title": "Sub Policy 1",
+            "description": "Description for Sub Policy 1"
+          },
+          {
+            "title": "Sub Policy 2",
+            "description": "Description for Sub Policy 2"
+          },
+          {
+            "title": "Sub Policy 3",
+            "description": "Description for Sub Policy 3"
+          }
+        ]
+      },
+      {
+        "title": "Policy 3",
+        "description": "Description for Policy 2",
+        "objective": "Objective for Policy 2",
+        "scope": "Scope for Policy 2",
+        "subPolicies": [
+          {
+            "title": "Sub Policy 1",
+            "description": "Description for Sub Policy 1"
+          },
+          {
+            "title": "Sub Policy 2",
+            "description": "Description for Sub Policy 2"
+          },
+          {
+            "title": "Sub Policy 3",
+            "description": "Description for Sub Policy 3"
+          }
+        ]
+      },
+      {
+        "title": "Policy 4",
+        "description": "Description for Policy 2",
+        "objective": "Objective for Policy 2",
+        "scope": "Scope for Policy 2",
+        "subPolicies": [
+          {
+            "title": "Sub Policy 1",
+            "description": "Description for Sub Policy 1"
+          },
+          {
+            "title": "Sub Policy 2",
+            "description": "Description for Sub Policy 2"
+          },
+          {
+            "title": "Sub Policy 3",
+            "description": "Description for Sub Policy 3"
+          }
+        ]
+      },
+      {
+        "title": "Policy 5",
+        "description": "Description for Policy 2",
+        "objective": "Objective for Policy 2",
+        "scope": "Scope for Policy 2",
+        "subPolicies": [
+          {
+            "title": "Sub Policy 1",
+            "description": "Description for Sub Policy 1"
+          },
+          {
+            "title": "Sub Policy 2",
+            "description": "Description for Sub Policy 2"
+          },
+          {
+            "title": "Sub Policy 3",
+            "description": "Description for Sub Policy 3"
+          }
+        ]
+      }
+    ],
+    "authorizer": {
+      "title": "Authorization Title",
+      "description": "Authorization Description",
+      "createdBy": "User Name",
+      "createdDate": "2024-06-01",
+      "authorizedBy": "Authorizer Name",
+      "assignTask": "Task Name"
+    }
+  }

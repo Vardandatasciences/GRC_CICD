@@ -1,0 +1,285 @@
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+:root {
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 217 19% 27%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 217 19% 27%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 217 19% 27%;
+
+  /* Brand colors - Professional Blue */
+  --primary: 212 95% 68%;
+  --primary-foreground: 0 0% 100%;
+  --primary-dark: 213 96% 55%;
+  --primary-light: 213 94% 85%;
+
+  /* Enterprise grays */
+  --secondary: 210 11% 96%;
+  --secondary-foreground: 217 19% 35%;
+
+  --muted: 210 11% 96%;
+  --muted-foreground: 217 13% 54%;
+
+  --accent: 210 11% 96%;
+  --accent-foreground: 217 19% 35%;
+
+  /* Status colors for compliance - Enhanced for better visibility */
+  --status-compliant: 142 76% 36%;
+  --status-compliant-bg: 142 76% 95%;
+  --status-non-compliant: 0 84% 60%;
+  --status-non-compliant-bg: 0 84% 95%;
+  --status-partial: 38 92% 50%;
+  --status-partial-bg: 38 92% 95%;
+  --status-gap: 215 20% 65%;
+  --status-gap-bg: 215 20% 95%;
+  --status-audit: 212 95% 68%;
+  --status-audit-bg: 212 95% 95%;
+
+  /* Change indicators - Enhanced for better distinction */
+  --change-new: 142 76% 36%;
+  --change-new-bg: 142 76% 95%;
+  --change-modified: 217 19% 27%;
+  --change-modified-bg: 0 0% 100%;
+  --change-removed: 0 84% 60%;
+  --change-removed-bg: 0 84% 95%;
+  --change-unchanged: 215 20% 65%;
+  --change-unchanged-bg: 215 20% 95%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 212 95% 68%;
+
+  --radius: 0.75rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Utility classes for the design system */
+.bg-background { background-color: hsl(var(--background)); }
+.bg-card { background-color: hsl(var(--card)); }
+.bg-primary { background-color: hsl(var(--primary)); }
+.bg-secondary { background-color: hsl(var(--secondary)); }
+.bg-muted { background-color: hsl(var(--muted)); }
+.bg-accent { background-color: hsl(var(--accent)); }
+.bg-destructive { background-color: hsl(var(--destructive)); }
+
+.text-foreground { color: hsl(var(--foreground)); }
+.text-card-foreground { color: hsl(var(--card-foreground)); }
+.text-primary { color: hsl(var(--primary)); }
+.text-primary-foreground { color: hsl(var(--primary-foreground)); }
+.text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+.text-muted-foreground { color: hsl(var(--muted-foreground)); }
+.text-accent-foreground { color: hsl(var(--accent-foreground)); }
+.text-destructive { color: hsl(var(--destructive)); }
+.text-destructive-foreground { color: hsl(var(--destructive-foreground)); }
+
+.border-border { border-color: hsl(var(--border)); }
+.border-input { border-color: hsl(var(--input)); }
+.border-ring { border-color: hsl(var(--ring)); }
+
+/* Status colors - Enhanced for better visibility */
+.bg-status-compliant-bg { background-color: hsl(var(--status-compliant-bg)); }
+.bg-status-non-compliant-bg { background-color: hsl(var(--status-non-compliant-bg)); }
+.bg-status-partial-bg { background-color: hsl(var(--status-partial-bg)); }
+.bg-status-gap-bg { background-color: hsl(var(--status-gap-bg)); }
+.bg-status-audit-bg { background-color: hsl(var(--status-audit-bg)); }
+
+.text-status-compliant { color: hsl(var(--status-compliant)); }
+.text-status-non-compliant { color: hsl(var(--status-non-compliant)); }
+.text-status-partial { color: hsl(var(--status-partial)); }
+.text-status-gap { color: hsl(var(--status-gap)); }
+.text-status-audit { color: hsl(var(--status-audit)); }
+
+.border-status-compliant { border-color: hsl(var(--status-compliant)); }
+.border-status-non-compliant { border-color: hsl(var(--status-non-compliant)); }
+.border-status-partial { border-color: hsl(var(--status-partial)); }
+.border-status-gap { border-color: hsl(var(--status-gap)); }
+.border-status-audit { border-color: hsl(var(--status-audit)); }
+
+/* Change colors - Enhanced for better distinction */
+.bg-change-new-bg { background-color: hsl(var(--change-new-bg)); }
+.bg-change-modified-bg { background-color: hsl(var(--change-modified-bg)); }
+.bg-change-removed-bg { background-color: hsl(var(--change-removed-bg)); }
+.bg-change-unchanged-bg { background-color: hsl(var(--change-unchanged-bg)); }
+
+.text-change-new { color: hsl(var(--change-new)); }
+.text-change-modified { color: hsl(var(--change-modified)); }
+.text-change-removed { color: hsl(var(--change-removed)); }
+.text-change-unchanged { color: hsl(var(--change-unchanged)); }
+
+.border-change-new { border-color: hsl(var(--change-new)); }
+.border-change-modified { border-color: hsl(var(--change-modified)); }
+.border-change-removed { border-color: hsl(var(--change-removed)); }
+.border-change-unchanged { border-color: hsl(var(--change-unchanged)); }
+
+/* Additional utility classes for framework comparison */
+.framework-badge-origin {
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.framework-badge-target {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Enhanced status indicators for better visibility */
+.status-indicator-compliant {
+  background: linear-gradient(135deg, hsl(var(--status-compliant)), hsl(var(--status-compliant-bg)));
+  color: white;
+  font-weight: 600;
+}
+
+.status-indicator-non-compliant {
+  background: linear-gradient(135deg, hsl(var(--status-non-compliant)), hsl(var(--status-non-compliant-bg)));
+  color: white;
+  font-weight: 600;
+}
+
+.status-indicator-partial {
+  background: linear-gradient(135deg, hsl(var(--status-partial)), hsl(var(--status-partial-bg)));
+  color: white;
+  font-weight: 600;
+}
+
+.status-indicator-gap {
+  background: linear-gradient(135deg, hsl(var(--status-gap)), hsl(var(--status-gap-bg)));
+  color: white;
+  font-weight: 600;
+}
+
+.status-indicator-audit {
+  background: linear-gradient(135deg, hsl(var(--status-audit)), hsl(var(--status-audit-bg)));
+  color: white;
+  font-weight: 600;
+}
+
+/* Enhanced badge styling for modern UI */
+.change-badge, .status-badge {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-200;
+  min-height: 28px;
+}
+
+.change-badge:hover, .status-badge:hover {
+  @apply shadow-md transform scale-105;
+}
+
+/* Status colors with enhanced styling for legend */
+.status-badge-compliant {
+  background: hsl(var(--status-compliant-bg));
+  color: hsl(var(--status-compliant));
+  border: 1px solid hsl(var(--status-compliant) / 0.3);
+}
+
+.status-badge-partial {
+  background: hsl(var(--status-partial-bg));
+  color: hsl(var(--status-partial));
+  border: 1px solid hsl(var(--status-partial) / 0.3);
+}
+
+.status-badge-non-compliant {
+  background: hsl(var(--status-non-compliant-bg));
+  color: hsl(var(--status-non-compliant));
+  border: 1px solid hsl(var(--status-non-compliant) / 0.3);
+}
+
+.status-badge-gap {
+  background: hsl(var(--status-gap-bg));
+  color: hsl(var(--status-gap));
+  border: 1px solid hsl(var(--status-gap) / 0.3);
+}
+
+.status-badge-audit {
+  background: hsl(var(--status-audit-bg));
+  color: hsl(var(--status-audit));
+  border: 1px solid hsl(var(--status-audit) / 0.3);
+}
+
+/* Change type colors with enhanced styling */
+.change-badge-new {
+  background: hsl(var(--change-new-bg));
+  color: hsl(var(--change-new));
+  border: 1px solid hsl(var(--change-new) / 0.3);
+}
+
+.change-badge-modified {
+  background: hsl(var(--change-modified-bg));
+  color: hsl(var(--change-modified));
+  border: 1px solid hsl(var(--change-modified) / 0.3);
+}
+
+.change-badge-removed {
+  background: hsl(var(--change-removed-bg));
+  color: hsl(var(--change-removed));
+  border: 1px solid hsl(var(--change-removed) / 0.3);
+}
+
+.change-badge-unchanged {
+  background: hsl(var(--change-unchanged-bg));
+  color: hsl(var(--change-unchanged));
+  border: 1px solid hsl(var(--change-unchanged) / 0.3);
+}

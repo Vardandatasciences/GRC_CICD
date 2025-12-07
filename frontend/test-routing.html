@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Routing Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #2196F3;
+            background: #f9f9f9;
+        }
+        .test-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.pending {
+            background: #FFC107;
+            color: white;
+        }
+        .status.success {
+            background: #4CAF50;
+            color: white;
+        }
+        .status.failed {
+            background: #f44336;
+            color: white;
+        }
+        button {
+            background: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1976D2;
+        }
+        .url-box {
+            padding: 10px;
+            background: #263238;
+            color: #4CAF50;
+            font-family: 'Courier New', monospace;
+            border-radius: 5px;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        .instructions {
+            background: #E3F2FD;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+        }
+        .instructions li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 SPA Routing Test Page</h1>
+        
+        <div class="instructions">
+            <h3>📋 How to Test:</h3>
+            <ol>
+                <li>Click on each test URL below</li>
+                <li>When the page loads, copy the URL from the address bar</li>
+                <li>Open a <strong>NEW TAB</strong></li>
+                <li>Paste the URL and press Enter</li>
+                <li>If it loads correctly ✅, SPA routing is working!</li>
+                <li>If you get a 404 error ❌, routing needs fixing</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3>🌐 Test Routes</h3>
+            
+            <div class="test-item">
+                <strong>1. Login Page</strong>
+                <div class="url-box">/login</div>
+                <button onclick="testRoute('/login')">Test Now</button>
+                <span class="status pending" id="status-login">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>2. Home Page</strong>
+                <div class="url-box">/home</div>
+                <button onclick="testRoute('/home')">Test Now</button>
+                <span class="status pending" id="status-home">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>3. Policy Dashboard</strong>
+                <div class="url-box">/policy/dashboard</div>
+                <button onclick="testRoute('/policy/dashboard')">Test Now</button>
+                <span class="status pending" id="status-policy">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>4. Framework Explorer</strong>
+                <div class="url-box">/framework-explorer</div>
+                <button onclick="testRoute('/framework-explorer')">Test Now</button>
+                <span class="status pending" id="status-framework">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>5. Compliance List</strong>
+                <div class="url-box">/compliance/list</div>
+                <button onclick="testRoute('/compliance/list')">Test Now</button>
+                <span class="status pending" id="status-compliance">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>6. Risk Dashboard</strong>
+                <div class="url-box">/risk/riskdashboard</div>
+                <button onclick="testRoute('/risk/riskdashboard')">Test Now</button>
+                <span class="status pending" id="status-risk">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>7. Incident Management</strong>
+                <div class="url-box">/incident/incident</div>
+                <button onclick="testRoute('/incident/incident')">Test Now</button>
+                <span class="status pending" id="status-incident">Pending</span>
+            </div>
+
+            <div class="test-item">
+                <strong>8. User Profile</strong>
+                <div class="url-box">/user-profile</div>
+                <button onclick="testRoute('/user-profile')">Test Now</button>
+                <span class="status pending" id="status-user">Pending</span>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>🔍 Manual Test Instructions</h3>
+            <ol>
+                <li>Click any "Test Now" button above</li>
+                <li>The route will open in a new tab</li>
+                <li>Copy the full URL from the browser address bar</li>
+                <li>Open another new tab</li>
+                <li>Paste the URL and press Enter</li>
+                <li>
+                    Expected Results:
+                    <ul>
+                        <li>✅ Page loads correctly = SPA routing is working</li>
+                        <li>❌ 404 Error = SPA routing needs configuration</li>
+                        <li>🔄 Redirects to login = Normal (authentication required)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3>📊 API Test</h3>
+            <button onclick="testAPI()">Test API Connection</button>
+            <div id="api-result" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="instructions">
+            <h3>✅ Success Criteria</h3>
+            <p>Your SPA routing is working correctly if:</p>
+            <ul>
+                <li>✅ Clicking "Test Now" opens the page</li>
+                <li>✅ Copying the URL and pasting in a new tab loads the page</li>
+                <li>✅ Refreshing the page (F5) doesn't give 404 error</li>
+                <li>✅ Browser back/forward buttons work correctly</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 5px;">
+            <strong>⚠️ Note:</strong> If you get redirected to the login page, that's normal - it means authentication is required. The important thing is that you DON'T get a 404 error.
+        </div>
+    </div>
+
+    <script>
+        function testRoute(route) {
+            const baseUrl = window.location.origin;
+            const fullUrl = baseUrl + route;
+            
+            // Open in new tab
+            window.open(fullUrl, '_blank');
+            
+            // Update status
+            const routeId = route.split('/')[1] || 'login';
+            const statusEl = document.getElementById('status-' + routeId);
+            if (statusEl) {
+                statusEl.textContent = 'Testing...';
+                statusEl.className = 'status pending';
+                
+                // Remind user what to do
+                setTimeout(() => {
+                    alert('Now:\n1. Copy the URL from the new tab\n2. Open another new tab\n3. Paste the URL\n4. Check if it loads without 404 error');
+                }, 1000);
+            }
+        }
+
+        async function testAPI() {
+            const resultDiv = document.getElementById('api-result');
+            resultDiv.innerHTML = '<p>Testing API connection...</p>';
+            
+            try {
+                // Get base URL from api.js configuration
+                const baseUrl = window.location.origin;
+                const apiUrl = baseUrl.includes('localhost') 
+                    ? 'http://localhost:8000/api/' 
+                    : 'http://15.207.108.158:8000/api/';
+                
+                // Test a simple endpoint
+                const response = await fetch(apiUrl + 'test-connection/', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                    }
+                });
+                
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <div style="padding: 10px; background: #d4edda; border-radius: 5px; color: #155724;">
+                            ✅ API Connection Successful!<br>
+                            <small>Endpoint: ${apiUrl}</small>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <div style="padding: 10px; background: #f8d7da; border-radius: 5px; color: #721c24;">
+                            ⚠️ API Response: ${response.status}<br>
+                            <small>This might be normal if authentication is required</small>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div style="padding: 10px; background: #f8d7da; border-radius: 5px; color: #721c24;">
+                        ❌ API Connection Failed<br>
+                        <small>Error: ${error.message}</small><br>
+                        <small>Make sure backend is running on port 8000</small>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
+

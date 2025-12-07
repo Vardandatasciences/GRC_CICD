@@ -1,0 +1,496 @@
+/* ComplianceDetails.css */
+/* Matches the styling from ComplianceApprover.css */
+
+/* Main Container */
+.compliance_details_page {
+  min-height: 100vh;
+  background-color: transparent !important;
+  padding: 24px 32px !important;
+  margin-left: 230px !important;
+  max-width: 1400px;
+  margin-right: auto;
+  position: relative;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  letter-spacing: 0.015em;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Header Section */
+.compliance_header {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 24px;
+  box-shadow: none;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.compliance_header_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.compliance_back_btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+}
+
+.compliance_back_btn:hover {
+  background: rgba(79, 108, 255, 0.1);
+  color: #4f6cff;
+}
+
+.compliance_title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.version-text {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #6c757d;
+}
+
+/* Content Container */
+.compliance_details_container {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  font-size: 0.92rem;
+}
+
+/* Info Section */
+.compliance_info_section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.compliance_info_section h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.compliance_detail_row {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.compliance_detail_row strong {
+  width: 180px;
+  color: #4a5568;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+}
+
+.compliance_detail_row span {
+  flex: 1;
+  color: #2d3748;
+  font-size: 0.92rem;
+}
+
+/* Loading and Error States */
+.compliance_loading_container, .compliance_error_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.compliance_loading_spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.compliance_error_message {
+  text-align: center;
+  color: #e74c3c;
+}
+
+.compliance_error_message i {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: #e74c3c;
+}
+
+.compliance_error_message h3 {
+  margin-bottom: 12px;
+  color: #e74c3c;
+}
+
+.compliance_error_message p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.compliance_retry_btn {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.compliance_retry_btn:hover {
+  background-color: #2980b9;
+}
+
+/* Status Indicators */
+.compliance_status_indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.status-label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.status-value {
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.status-approved {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.status-rejected {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.status-pending {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+/* Action Buttons */
+.compliance_actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.final-approve-btn, .submit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.final-approve-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.final-approve-btn:hover {
+  background-color: #218838;
+}
+
+.reject-btn {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Approval Section */
+.compliance_approval_section {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.compliance_approval_section h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Info Messages */
+.creator-message, .admin-message, .processed-compliance-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.creator-message {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.admin-message {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.processed-compliance-message {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+/* Resubmission Indicator */
+.resubmission-indicator {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.resubmission-indicator i {
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+/* Rejection Modal */
+.compliance_reject_modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.compliance_reject_modal_content {
+  background: white !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  max-width: 500px !important;
+  width: 90% !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  z-index: 10000 !important;
+  position: relative !important;
+}
+
+.compliance_reject_modal_content h4 {
+  margin: 0 0 16px 0 !important;
+  color: #dc3545 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+}
+
+.compliance_reject_modal_content p {
+  margin: 0 0 16px 0 !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
+}
+
+.compliance_rejection_comment {
+  width: 100% !important;
+  min-height: 120px !important;
+  padding: 12px !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  resize: vertical !important;
+  margin-bottom: 20px !important;
+  font-family: inherit !important;
+}
+
+.compliance_rejection_comment:focus {
+  outline: none !important;
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+}
+
+.compliance_reject_modal_actions {
+  display: flex !important;
+  gap: 12px !important;
+  justify-content: flex-end !important;
+}
+
+.compliance_cancel_btn, .compliance_confirm_btn {
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.compliance_cancel_btn {
+  background: #6c757d !important;
+  color: white !important;
+}
+
+.compliance_cancel_btn:hover {
+  background: #5a6268 !important;
+}
+
+.compliance_confirm_btn {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+.compliance_confirm_btn:hover {
+  background: #c82333 !important;
+}
+
+.compliance_confirm_btn:disabled, .compliance_cancel_btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* Rejected Compliance Message */
+.rejected-compliance-message {
+  margin-top: 24px;
+}
+
+.rejection-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .compliance_details_page {
+    padding: 16px;
+    margin-left: 0; /* Remove sidebar margin on mobile */
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .compliance_title {
+    font-size: 1.4rem;
+  }
+  
+  .compliance_approval_section,
+  .compliance_info_section {
+    padding: 16px;
+  }
+  
+  .compliance_detail_row strong {
+    width: 120px;
+  }
+}
+
+/* Sidebar responsive adjustments */
+@media (max-width: 1024px) {
+  .compliance_details_page {
+    margin-left: 0; /* Remove sidebar margin on tablet */
+    width: 100%; /* Full width on tablet */
+  }
+}

@@ -1,0 +1,1264 @@
+[
+  {
+    "section_info": {
+      "title": "Introduction: Protecting Cardholder Data with PCI Security Standards",
+      "level": 1,
+      "start_page": 3,
+      "end_page": 4,
+      "folder_path": "001-Introduction_Protecting_Cardholder_Data"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-001",
+          "policy_title": "Cardholder Data Protection Policy",
+          "policy_description": "This policy establishes the requirements for protecting cardholder data throughout its lifecycle. It aims to mitigate risks associated with data breaches and ensure compliance with PCI DSS standards. The policy applies to all personnel involved in payment card transactions and outlines the necessary security measures to safeguard sensitive information.",
+          "policy_text": "All personnel must adhere to the guidelines set forth in this policy to protect cardholder data. This includes implementing security measures at all points of cardholder data processing, including point-of-sale devices, mobile devices, and web applications. Regular assessments must be conducted to identify vulnerabilities, and any identified risks must be remediated promptly. Compliance with PCI DSS is mandatory for all entities involved in the processing of cardholder data.",
+          "scope": "This policy applies to all organizational units and personnel involved in payment card processing, including merchants, service providers, and acquirers. It covers all systems, applications, and infrastructure that store, process, or transmit cardholder data, including on-premises, cloud, and remote environments. The policy also encompasses third-party vendors and service providers that handle cardholder data.",
+          "objective": "The objective of this policy is to ensure the protection of cardholder data by implementing robust security measures, achieving compliance with PCI DSS, and minimizing the risk of data breaches. Specific goals include conducting regular assessments, remediating vulnerabilities, and maintaining documentation for compliance reporting.",
+          "policy_type": "Security",
+          "policy_category": "Data Protection",
+          "policy_subcategory": "Cardholder Data Security",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-001.01",
+              "subpolicy_title": "Cardholder Data Assessment and Inventory",
+              "subpolicy_description": "This subpolicy outlines the requirements for assessing and inventorying all locations where cardholder data is stored, processed, or transmitted. It mandates regular reviews to ensure that all assets are accounted for and that vulnerabilities are identified.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct a comprehensive assessment of all systems that handle cardholder data. WHO: The IT Security Team is responsible for conducting the assessment. WHEN: Assessments must be conducted annually and whenever significant changes occur in the IT environment. HOW: Utilize automated tools and manual reviews to identify all locations of cardholder data. WHERE: This applies to all organizational units and systems that process payment card transactions."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-001.02",
+              "subpolicy_title": "Vulnerability Remediation Procedures",
+              "subpolicy_description": "This subpolicy specifies the procedures for remediating identified vulnerabilities in systems that handle cardholder data. It includes guidelines for securely removing unnecessary data and implementing secure business processes.",
+              "subpolicy_text": "",
+              "control": "WHAT: Remediate identified vulnerabilities by applying security patches and removing unnecessary cardholder data. WHO: The IT Security Team and relevant department heads are responsible for remediation efforts. WHEN: Remediation must occur within 30 days of identifying a vulnerability. HOW: Follow established remediation protocols and document all actions taken. WHERE: This applies to all systems and applications that store or process cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-001.03",
+              "subpolicy_title": "Compliance Reporting and Documentation",
+              "subpolicy_description": "This subpolicy outlines the requirements for documenting assessment and remediation activities, as well as submitting compliance reports to relevant stakeholders.",
+              "subpolicy_text": "",
+              "control": "WHAT: Document all assessment findings and remediation actions, and prepare compliance reports for submission. WHO: The Compliance Officer is responsible for overseeing documentation and reporting. WHEN: Documentation must be completed within 10 days of assessment and remediation activities. HOW: Use standardized reporting templates and maintain records in a secure location. WHERE: This applies to all departments involved in payment card processing."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Overview of PCI Requirements",
+      "level": 1,
+      "start_page": 5,
+      "end_page": 8,
+      "folder_path": "002-Overview_of_PCI_Requirements"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-002",
+          "policy_title": "PCI Data Security Standard Compliance Policy",
+          "policy_description": "This policy outlines the requirements for compliance with the PCI Data Security Standard (PCI DSS) to protect cardholder data. It is essential for all entities that store, process, or transmit cardholder data to adhere to these standards to mitigate risks associated with data breaches and ensure the security of payment transactions. The policy applies to all personnel involved in payment processing and covers all systems and applications that handle cardholder data.",
+          "policy_text": "All entities that store, process, or transmit cardholder data must comply with the PCI DSS requirements. This includes implementing security measures to protect cardholder data, conducting regular security assessments, and ensuring that all personnel are trained on PCI compliance. Compliance must be maintained continuously, and any non-compliance must be reported immediately to the compliance officer.",
+          "scope": "This policy applies to all organizational units, personnel, systems, applications, and infrastructure involved in the storage, processing, or transmission of cardholder data. It covers on-premises, cloud, and remote environments, as well as third-party vendors and service providers that handle cardholder data.",
+          "objective": "The objective of this policy is to ensure that all entities comply with PCI DSS requirements to protect cardholder data, reduce the risk of data breaches, and maintain the trust of customers and stakeholders. Specific goals include achieving full compliance with PCI DSS, conducting regular training for all relevant personnel, and implementing necessary security measures to safeguard cardholder information.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Standards compliance",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-002.01",
+              "subpolicy_title": "Cardholder Data Protection Measures",
+              "subpolicy_description": "This subpolicy outlines the specific measures that must be implemented to protect cardholder data, including encryption, access controls, and secure storage practices.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement encryption for all cardholder data at rest and in transit. WHO: IT Security Team is responsible for encryption implementation. WHEN: Encryption must be applied immediately upon data storage or transmission. HOW: Utilize industry-standard encryption protocols (e.g., AES-256) and ensure regular updates. WHERE: Applies to all systems and applications that store or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-002.02",
+              "subpolicy_title": "Regular Security Assessments",
+              "subpolicy_description": "This subpolicy mandates regular security assessments to identify vulnerabilities and ensure compliance with PCI DSS.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct quarterly security assessments and annual penetration testing. WHO: Compliance Officer and IT Security Team will oversee assessments. WHEN: Assessments must be conducted quarterly, with a comprehensive report submitted annually. HOW: Utilize third-party security firms for penetration testing and internal teams for vulnerability assessments. WHERE: Applies to all systems that handle cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-002.03",
+              "subpolicy_title": "Personnel Training and Awareness",
+              "subpolicy_description": "This subpolicy requires training for all personnel involved in payment processing to ensure awareness of PCI DSS requirements and security practices.",
+              "subpolicy_text": "",
+              "control": "WHAT: Provide PCI DSS training to all relevant personnel. WHO: HR Department will coordinate training sessions. WHEN: Training must be conducted annually and upon onboarding of new employees. HOW: Utilize online training modules and in-person workshops. WHERE: Applies to all employees and contractors involved in payment processing."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "The PCI Data Security Standard",
+      "level": 2,
+      "start_page": 8,
+      "end_page": 8,
+      "folder_path": "002-Overview_of_PCI_Requirements\\001-The_PCI_Data_Security_Standard"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-003",
+          "policy_title": "Network Security Policy",
+          "policy_description": "This policy establishes the requirements for building and maintaining a secure network and systems to protect cardholder data. It is essential for all entities that process, store, or transmit cardholder data to implement these security measures to mitigate risks associated with unauthorized access and data breaches.",
+          "policy_text": "All entities must install and maintain a firewall configuration to protect cardholder data and must not use vendor-supplied defaults for system passwords and other security parameters. This policy applies to all systems that handle cardholder data and must be reviewed and updated regularly to ensure compliance with PCI DSS requirements.",
+          "scope": "This policy applies to all organizational units and personnel involved in the processing, storage, or transmission of cardholder data. It covers all systems, applications, and infrastructure that interact with cardholder data, including on-premises, cloud, and remote environments. Third-party vendors and service providers must also adhere to this policy.",
+          "objective": "The objective of this policy is to establish a secure network environment that protects cardholder data from unauthorized access and breaches. Specific goals include ensuring the implementation of firewalls, restricting default settings, and maintaining compliance with PCI DSS requirements. Measurable outcomes include regular audits and assessments of network security controls.",
+          "policy_type": "Security",
+          "policy_category": "Network Security",
+          "policy_subcategory": "Firewall Management",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-003.01",
+              "subpolicy_title": "Firewall Configuration Management",
+              "subpolicy_description": "This subpolicy outlines the requirements for configuring and maintaining firewalls to protect cardholder data. It includes guidelines for firewall rules, access controls, and regular reviews.",
+              "subpolicy_text": "",
+              "control": "WHAT: Configure firewalls to restrict unauthorized access to cardholder data. WHO: Network security team is responsible for implementation. WHEN: Firewalls must be configured upon installation and reviewed quarterly. HOW: Use industry-standard configurations and conduct penetration testing. WHERE: Applies to all network segments that handle cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-003.02",
+              "subpolicy_title": "Default Password Management",
+              "subpolicy_description": "This subpolicy mandates the prohibition of vendor-supplied defaults for system passwords and other security parameters. It includes guidelines for creating strong passwords and regular updates.",
+              "subpolicy_text": "",
+              "control": "WHAT: Change all vendor-supplied default passwords and security parameters. WHO: IT security team is responsible for implementation. WHEN: Default settings must be changed before systems are deployed and reviewed annually. HOW: Implement a password policy that requires complex passwords and regular updates. WHERE: Applies to all systems and applications that process cardholder data."
+            }
+          ]
+        },
+        {
+          "policy_id": "PCI-DSS-SEC-004",
+          "policy_title": "Data Protection Policy",
+          "policy_description": "This policy outlines the requirements for protecting cardholder data throughout its lifecycle. It is crucial for ensuring that sensitive information is secured against unauthorized access and breaches.",
+          "policy_text": "All entities must protect stored cardholder data and encrypt the transmission of cardholder data across open, public networks. This policy applies to all personnel and systems that handle cardholder data and must be enforced to maintain compliance with PCI DSS.",
+          "scope": "This policy applies to all organizational units and personnel involved in the handling of cardholder data. It encompasses all systems, applications, and infrastructure that store or transmit cardholder data, including third-party vendors and service providers.",
+          "objective": "The objective of this policy is to ensure the confidentiality and integrity of cardholder data by implementing strong data protection measures. Specific goals include the encryption of data in transit and at rest, as well as regular assessments of data protection controls. Measurable outcomes include compliance audits and incident response readiness.",
+          "policy_type": "Security",
+          "policy_category": "Data Protection",
+          "policy_subcategory": "Encryption Management",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-004.01",
+              "subpolicy_title": "Data Encryption Standards",
+              "subpolicy_description": "This subpolicy specifies the requirements for encrypting cardholder data during transmission and storage. It includes guidelines for encryption algorithms and key management.",
+              "subpolicy_text": "",
+              "control": "WHAT: Encrypt cardholder data during transmission across open, public networks and when stored. WHO: IT security team is responsible for implementation. WHEN: Encryption must be applied before data is transmitted or stored and reviewed annually. HOW: Use strong encryption algorithms as per industry standards (e.g., AES-256). WHERE: Applies to all systems that process, store, or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-004.02",
+              "subpolicy_title": "Stored Data Protection",
+              "subpolicy_description": "This subpolicy outlines the requirements for protecting stored cardholder data, including access controls and data retention policies.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement access controls to restrict access to stored cardholder data. WHO: Data protection officer is responsible for implementation. WHEN: Access controls must be established upon data storage and reviewed quarterly. HOW: Use role-based access controls and regularly audit access logs. WHERE: Applies to all databases and storage systems containing cardholder data."
+            }
+          ]
+        },
+        {
+          "policy_id": "PCI-DSS-SEC-005",
+          "policy_title": "Vulnerability Management Policy",
+          "policy_description": "This policy establishes the requirements for maintaining a vulnerability management program to protect systems against malware and other threats. It is essential for ensuring the security of systems that handle cardholder data.",
+          "policy_text": "All entities must protect all systems against malware and regularly update anti-virus software or programs. Additionally, secure systems and applications must be developed and maintained to mitigate vulnerabilities.",
+          "scope": "This policy applies to all organizational units and personnel responsible for system security and maintenance. It covers all systems, applications, and infrastructure that process cardholder data, including third-party vendors and service providers.",
+          "objective": "The objective of this policy is to establish a proactive approach to vulnerability management that protects systems from malware and other threats. Specific goals include the regular updating of anti-virus software and the development of secure applications. Measurable outcomes include vulnerability assessments and incident response effectiveness.",
+          "policy_type": "Security",
+          "policy_category": "Vulnerability Management",
+          "policy_subcategory": "Malware Protection",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-005.01",
+              "subpolicy_title": "Malware Protection Measures",
+              "subpolicy_description": "This subpolicy outlines the requirements for protecting systems against malware, including the use of anti-virus software and regular updates.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement and maintain anti-virus software on all systems. WHO: IT security team is responsible for implementation. WHEN: Anti-virus software must be installed before systems are deployed and updated weekly. HOW: Use automated tools for updates and conduct regular scans. WHERE: Applies to all systems that process or store cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-005.02",
+              "subpolicy_title": "Secure Application Development",
+              "subpolicy_description": "This subpolicy mandates the development and maintenance of secure systems and applications to mitigate vulnerabilities.",
+              "subpolicy_text": "",
+              "control": "WHAT: Follow secure coding practices and conduct regular security testing. WHO: Development team is responsible for implementation. WHEN: Security practices must be integrated into the development lifecycle and reviewed after each release. HOW: Use automated security testing tools and conduct code reviews. WHERE: Applies to all applications that process cardholder data."
+            }
+          ]
+        },
+        {
+          "policy_id": "PCI-DSS-SEC-006",
+          "policy_title": "Access Control Policy",
+          "policy_description": "This policy establishes the requirements for implementing strong access control measures to protect cardholder data. It is critical for ensuring that only authorized personnel have access to sensitive information.",
+          "policy_text": "All entities must restrict access to cardholder data by business need to know, identify and authenticate access to system components, and restrict physical access to cardholder data.",
+          "scope": "This policy applies to all organizational units and personnel with access to cardholder data. It encompasses all systems, applications, and infrastructure that handle cardholder data, including third-party vendors and service providers.",
+          "objective": "The objective of this policy is to ensure that access to cardholder data is strictly controlled and monitored. Specific goals include implementing role-based access controls and regular audits of access logs. Measurable outcomes include reduced unauthorized access incidents and improved access control compliance.",
+          "policy_type": "Security",
+          "policy_category": "Access Control",
+          "policy_subcategory": "User Authentication",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-006.01",
+              "subpolicy_title": "Access Control Measures",
+              "subpolicy_description": "This subpolicy outlines the requirements for restricting access to cardholder data based on business need to know.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement role-based access controls to restrict access to cardholder data. WHO: Access control administrator is responsible for implementation. WHEN: Access controls must be established upon user onboarding and reviewed quarterly. HOW: Use access control lists and regularly audit access permissions. WHERE: Applies to all systems that process or store cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-006.02",
+              "subpolicy_title": "User Authentication Procedures",
+              "subpolicy_description": "This subpolicy mandates the identification and authentication of access to system components.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement multi-factor authentication for all users accessing cardholder data. WHO: IT security team is responsible for implementation. WHEN: Multi-factor authentication must be enforced upon user access and reviewed annually. HOW: Use authentication tokens and biometric verification. WHERE: Applies to all systems that process or store cardholder data."
+            }
+          ]
+        },
+        {
+          "policy_id": "PCI-DSS-SEC-007",
+          "policy_title": "Monitoring and Testing Policy",
+          "policy_description": "This policy establishes the requirements for regularly monitoring and testing networks to ensure the security of cardholder data. It is essential for identifying vulnerabilities and ensuring compliance with PCI DSS.",
+          "policy_text": "All entities must track and monitor all access to network resources and cardholder data, and regularly test security systems and processes.",
+          "scope": "This policy applies to all organizational units and personnel responsible for monitoring and testing network security. It covers all systems, applications, and infrastructure that handle cardholder data, including third-party vendors and service providers.",
+          "objective": "The objective of this policy is to ensure continuous monitoring and testing of network security to identify vulnerabilities and ensure compliance with PCI DSS. Specific goals include regular security assessments and incident response readiness. Measurable outcomes include timely detection of security incidents and improved security posture.",
+          "policy_type": "Security",
+          "policy_category": "Network Monitoring",
+          "policy_subcategory": "Security Testing",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-007.01",
+              "subpolicy_title": "Access Monitoring Procedures",
+              "subpolicy_description": "This subpolicy outlines the requirements for tracking and monitoring access to network resources and cardholder data.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement logging and monitoring of all access to cardholder data. WHO: IT security team is responsible for implementation. WHEN: Logging must be enabled upon system deployment and reviewed daily. HOW: Use centralized logging solutions and conduct regular log reviews. WHERE: Applies to all systems that process or store cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-007.02",
+              "subpolicy_title": "Security Testing Procedures",
+              "subpolicy_description": "This subpolicy mandates the regular testing of security systems and processes to identify vulnerabilities.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct regular security testing, including vulnerability scans and penetration testing. WHO: Security testing team is responsible for implementation. WHEN: Security testing must be conducted quarterly and after significant changes. HOW: Use automated testing tools and manual assessments. WHERE: Applies to all systems that process or store cardholder data."
+            }
+          ]
+        },
+        {
+          "policy_id": "PCI-DSS-GOV-008",
+          "policy_title": "Information Security Policy",
+          "policy_description": "This policy establishes the requirements for maintaining an information security policy that addresses information security for all personnel. It is essential for fostering a culture of security awareness and compliance.",
+          "policy_text": "All entities must maintain a policy that addresses information security for all personnel, ensuring that security practices are understood and followed throughout the organization.",
+          "scope": "This policy applies to all organizational units and personnel within the organization. It encompasses all systems, applications, and infrastructure that handle cardholder data, including third-party vendors and service providers.",
+          "objective": "The objective of this policy is to promote a culture of security awareness and compliance among all personnel. Specific goals include regular training and awareness programs. Measurable outcomes include improved security practices and reduced incidents of non-compliance.",
+          "policy_type": "Governance",
+          "policy_category": "Information Security",
+          "policy_subcategory": "Security Awareness",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-GOV-008.01",
+              "subpolicy_title": "Security Awareness Training",
+              "subpolicy_description": "This subpolicy outlines the requirements for conducting security awareness training for all personnel.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement security awareness training programs for all employees. WHO: HR and IT security teams are responsible for implementation. WHEN: Training must be conducted upon onboarding and annually thereafter. HOW: Use interactive training modules and assessments. WHERE: Applies to all personnel within the organization."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-GOV-008.02",
+              "subpolicy_title": "Policy Review and Update Procedures",
+              "subpolicy_description": "This subpolicy mandates the regular review and update of the information security policy to ensure its relevance and effectiveness.",
+              "subpolicy_text": "",
+              "control": "WHAT: Review and update the information security policy annually. WHO: Information security officer is responsible for implementation. WHEN: Reviews must be conducted annually and after significant incidents. HOW: Use feedback from audits and assessments to inform updates. WHERE: Applies to all organizational units."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Security Controls and Processes for PCI DSS Requirements",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-009",
+          "policy_title": "Security Controls and Compliance Assessment",
+          "policy_description": "This policy outlines the security controls and processes necessary for compliance with PCI DSS requirements. It establishes the framework for assessing compliance through qualified assessors and self-assessment tools, ensuring that all entities involved in payment card processing maintain a secure environment. The policy aims to facilitate adherence to PCI DSS standards while providing guidance on compliance validation.",
+          "policy_text": "All entities that accept, process, store, or transmit credit card information must implement security controls as defined by PCI DSS. Compliance assessments must be conducted by Qualified Security Assessors (QSAs) or through Self-Assessment Questionnaires (SAQs) as applicable. Organizations must ensure that vulnerability scans are performed by Approved Scanning Vendors (ASVs) for Internet-facing environments. Training for Internal Security Assessors (ISAs) must be provided to enhance internal compliance capabilities.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and financial institutions. It covers all systems, applications, and infrastructure that handle credit card information, including on-premises, cloud, and mobile environments. The policy also encompasses third-party vendors and partners involved in payment processing and is applicable across all geographic locations where the organization operates.",
+          "objective": "The objective of this policy is to ensure that all entities comply with PCI DSS requirements through effective security controls and assessment processes. Specific goals include achieving 100% compliance with PCI DSS standards, reducing vulnerabilities in payment processing systems, and enhancing the overall security posture of the organization. The policy aims to protect stakeholders by ensuring that sensitive payment card information is handled securely and in accordance with regulatory requirements.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance assessment",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-009.01",
+              "subpolicy_title": "Qualified Security Assessor Engagement",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to conduct compliance assessments. It specifies the criteria for selecting QSAs and the process for assessment engagement.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage a Qualified Security Assessor (QSA) to conduct compliance assessments annually. The QSA must be selected based on their PCI SSC approval status and relevant experience. Assessments should be scheduled at least 30 days in advance, and the organization must provide all necessary documentation and access to systems for the assessment. The assessment results must be documented and reviewed by the organization's compliance team within 14 days of completion."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-009.02",
+              "subpolicy_title": "Self-Assessment Questionnaire Completion",
+              "subpolicy_description": "This subpolicy provides guidelines for completing the Self-Assessment Questionnaire (SAQ) for organizations that are eligible to self-assess their PCI DSS compliance.",
+              "subpolicy_text": "",
+              "control": "Eligible organizations must complete the appropriate Self-Assessment Questionnaire (SAQ) annually. The SAQ must be completed by a designated compliance officer or team within the organization. The completion of the SAQ should occur within 60 days of the end of the fiscal year, and the results must be submitted to the acquiring bank or payment card brand as required. Documentation supporting the SAQ responses must be maintained for a minimum of three years."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-009.03",
+              "subpolicy_title": "Vulnerability Scanning Requirements",
+              "subpolicy_description": "This subpolicy outlines the requirements for conducting vulnerability scans of Internet-facing environments by Approved Scanning Vendors (ASVs).",
+              "subpolicy_text": "",
+              "control": "Organizations must engage an Approved Scanning Vendor (ASV) to perform quarterly vulnerability scans of all Internet-facing systems. Scans must be conducted at least once every three months and after any significant changes to the environment. The ASV must provide a detailed report of the scan results, which must be reviewed by the organization's security team within 7 days of receipt. Any identified vulnerabilities must be remediated within 30 days."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Build and Maintain a Secure Network and Systems",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\001-Build_and_Maintain_a_Secure_Network_and"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-010",
+          "policy_title": "Network Security Policy",
+          "policy_description": "The Network Security Policy outlines the requirements for building and maintaining a secure network and systems to protect cardholder data. This policy is essential for ensuring compliance with PCI DSS and safeguarding sensitive information from unauthorized access and breaches. It applies to all personnel involved in the management and operation of network infrastructure and systems that handle payment card information.",
+          "policy_text": "All organizations must implement and maintain a secure network and systems to protect cardholder data. This includes the installation of firewalls, secure configurations for routers and switches, and the use of encryption for data transmission. Regular vulnerability assessments and penetration testing must be conducted to identify and mitigate security risks. Compliance with PCI DSS must be validated through the use of Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs).",
+          "scope": "This policy applies to all organizational units that manage network infrastructure, including IT departments, security teams, and third-party service providers. It covers all systems, applications, and devices that store, process, or transmit cardholder data, including on-premises, cloud, and mobile environments. The policy also extends to all personnel with access to these systems, including contractors and vendors.",
+          "objective": "The objective of this policy is to establish a secure network environment that protects cardholder data from unauthorized access and breaches. Specific goals include achieving compliance with PCI DSS requirements, reducing the risk of data breaches, and ensuring operational effectiveness in network security management. The policy aims to protect stakeholders by maintaining the confidentiality, integrity, and availability of payment card information.",
+          "policy_type": "Security",
+          "policy_category": "Network Security",
+          "policy_subcategory": "Infrastructure Security",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-010.01",
+              "subpolicy_title": "Firewall Configuration and Management",
+              "subpolicy_description": "This subpolicy outlines the requirements for configuring and managing firewalls to protect cardholder data. It includes guidelines for establishing firewall rules, monitoring traffic, and maintaining firewall security.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement and maintain firewalls to control incoming and outgoing network traffic. WHO: Network security team is responsible for firewall configuration and management. WHEN: Firewalls must be reviewed and updated at least quarterly or whenever there are significant changes to the network. HOW: Use automated tools for monitoring and logging firewall activity, and conduct regular audits to ensure compliance with established rules. WHERE: This control applies to all network segments that handle cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-010.02",
+              "subpolicy_title": "Vulnerability Management Program",
+              "subpolicy_description": "This subpolicy establishes the requirements for conducting vulnerability assessments and penetration testing to identify and remediate security weaknesses in the network and systems.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct regular vulnerability scans and penetration tests on all systems that store, process, or transmit cardholder data. WHO: Qualified Security Assessors (QSAs) and internal security teams are responsible for conducting assessments. WHEN: Vulnerability scans must be performed at least quarterly, and penetration tests must be conducted annually or after significant changes to the network. HOW: Utilize approved scanning tools and methodologies to identify vulnerabilities, and document findings in a report for remediation. WHERE: This control applies to all systems and applications within the organization’s network that handle cardholder data."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Protect Cardholder Data",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\002-Protect_Cardholder_Data"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-011",
+          "policy_title": "Protect Cardholder Data Policy",
+          "policy_description": "This policy outlines the requirements for protecting cardholder data in compliance with the Payment Card Industry Data Security Standard (PCI DSS). It is essential for all entities that handle payment card information to implement robust security measures to safeguard sensitive data against unauthorized access and breaches. The policy applies to all personnel, systems, and processes involved in the handling of cardholder data.",
+          "policy_text": "All entities that accept, process, store, or transmit cardholder data must implement security measures to protect this data in accordance with PCI DSS requirements. This includes encryption of cardholder data during transmission and storage, access controls to limit data access to authorized personnel only, and regular security assessments to identify and mitigate vulnerabilities.",
+          "scope": "This policy applies to all organizational units and personnel involved in payment card processing, including merchants, service providers, and third-party vendors. It covers all systems, applications, and infrastructure that store, process, or transmit cardholder data, including on-premises, cloud, and mobile environments. The policy is applicable across all geographic locations where the organization operates.",
+          "objective": "The objective of this policy is to ensure the protection of cardholder data by implementing effective security measures that comply with PCI DSS requirements. Specific goals include reducing the risk of data breaches, ensuring compliance with regulatory standards, and protecting the organization and its stakeholders from potential financial and reputational damage.",
+          "policy_type": "Security",
+          "policy_category": "Data Protection",
+          "policy_subcategory": "Cardholder Data Security",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-011.01",
+              "subpolicy_title": "Data Encryption and Transmission Security",
+              "subpolicy_description": "This subpolicy outlines the requirements for encrypting cardholder data during transmission and storage to prevent unauthorized access and ensure data integrity.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement encryption protocols (e.g., TLS, AES) for all cardholder data during transmission and storage. WHO: IT Security Team is responsible for implementing and maintaining encryption measures. WHEN: Encryption must be applied at all times when cardholder data is transmitted or stored. HOW: Utilize approved encryption technologies and regularly review encryption effectiveness. WHERE: This control applies to all systems and applications that handle cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-011.02",
+              "subpolicy_title": "Access Control Measures",
+              "subpolicy_description": "This subpolicy establishes access control measures to ensure that only authorized personnel can access cardholder data.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement role-based access controls (RBAC) to restrict access to cardholder data. WHO: System Administrators are responsible for configuring access controls and monitoring access logs. WHEN: Access controls must be reviewed and updated quarterly or whenever personnel changes occur. HOW: Use access control lists and authentication mechanisms to enforce access restrictions. WHERE: This control applies to all systems and applications that store or process cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-011.03",
+              "subpolicy_title": "Regular Security Assessments",
+              "subpolicy_description": "This subpolicy mandates regular security assessments to identify vulnerabilities and ensure compliance with PCI DSS.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct vulnerability scans and penetration testing at least quarterly and after any significant changes to the network. WHO: Qualified Security Assessors (QSAs) or Internal Security Assessors (ISAs) are responsible for conducting assessments. WHEN: Assessments must be performed quarterly and after major system changes. HOW: Utilize approved scanning tools and methodologies to identify vulnerabilities. WHERE: This control applies to all environments where cardholder data is processed or stored."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Maintain a Vulnerability Management Program",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\003-Maintain_a_Vulnerability_Management_Prog"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-012",
+          "policy_title": "Vulnerability Management Program",
+          "policy_description": "The Vulnerability Management Program is designed to identify, assess, and mitigate vulnerabilities within the organization's systems that handle payment card information. This policy ensures compliance with PCI DSS requirements and promotes a proactive approach to security by regularly scanning and addressing vulnerabilities. It applies to all systems, applications, and personnel involved in payment card processing.",
+          "policy_text": "The organization shall maintain a Vulnerability Management Program that includes regular vulnerability scans, timely remediation of identified vulnerabilities, and documentation of all findings and actions taken. The program must be reviewed and updated at least annually or whenever significant changes occur in the environment.",
+          "scope": "This policy applies to all organizational units that process, store, or transmit payment card information, including IT departments, security teams, and third-party service providers. It encompasses all systems, applications, and infrastructure involved in payment card transactions, including on-premises, cloud, and mobile environments. The policy also covers all personnel who have access to these systems and data.",
+          "objective": "The objective of this policy is to establish a comprehensive Vulnerability Management Program that effectively identifies and mitigates security vulnerabilities, ensuring compliance with PCI DSS requirements. The program aims to reduce the risk of data breaches, enhance the security posture of the organization, and protect sensitive payment card information. Success will be measured by the timely identification and remediation of vulnerabilities, as well as adherence to PCI DSS compliance standards.",
+          "policy_type": "Security",
+          "policy_category": "Vulnerability Management",
+          "policy_subcategory": "Vulnerability Assessment",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-012.01",
+              "subpolicy_title": "Vulnerability Scanning Procedures",
+              "subpolicy_description": "This subpolicy outlines the procedures for conducting regular vulnerability scans of all Internet-facing systems and applications to identify potential security weaknesses. It includes guidelines for selecting scanning tools, scheduling scans, and reporting results.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct vulnerability scans on all Internet-facing systems at least quarterly and after any significant changes. WHO: The IT Security Team is responsible for executing the scans. WHEN: Scans must be scheduled quarterly and after major system updates. HOW: Utilize approved scanning tools that comply with PCI DSS requirements to perform the scans. WHERE: Scans must be conducted on all systems that process, store, or transmit payment card information."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-012.02",
+              "subpolicy_title": "Vulnerability Remediation Process",
+              "subpolicy_description": "This subpolicy defines the process for remediating identified vulnerabilities, including prioritization based on risk assessment and documentation of remediation efforts.",
+              "subpolicy_text": "",
+              "control": "WHAT: Remediate identified vulnerabilities within 30 days of detection, prioritizing based on severity. WHO: The IT Security Team will assess and prioritize vulnerabilities, while system owners are responsible for implementing fixes. WHEN: Remediation actions must be initiated within 24 hours of scan completion and completed within 30 days. HOW: Utilize a risk-based approach to prioritize vulnerabilities and document all remediation efforts in the security incident management system. WHERE: This process applies to all systems and applications involved in payment card processing."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Implement Strong Access Control Measures",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\004-Implement_Strong_Access_Control_Measures"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-013",
+          "policy_title": "Access Control Policy",
+          "policy_description": "This policy establishes the requirements for implementing strong access control measures to protect cardholder data and ensure compliance with PCI DSS. It outlines the responsibilities of personnel in managing access to sensitive systems and data, ensuring that only authorized individuals have access to critical information. The policy aims to mitigate risks associated with unauthorized access and enhance the overall security posture of the organization.",
+          "policy_text": "All personnel must adhere to the Access Control Policy, which mandates that access to cardholder data and related systems is restricted to authorized users only. Access rights must be granted based on the principle of least privilege, and regular reviews of access permissions must be conducted to ensure compliance. Any unauthorized access attempts must be reported immediately to the security team.",
+          "scope": "This policy applies to all employees, contractors, and third-party service providers who have access to cardholder data and related systems within the organization. It encompasses all systems, applications, and infrastructure that store, process, or transmit payment card information, including on-premises, cloud, and remote environments.",
+          "objective": "The objective of this policy is to establish a robust framework for access control that protects cardholder data from unauthorized access. Specific goals include ensuring compliance with PCI DSS requirements, reducing the risk of data breaches, and enhancing operational effectiveness through regular access reviews and audits.",
+          "policy_type": "Security",
+          "policy_category": "Access Control",
+          "policy_subcategory": "User Access Management",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-013.01",
+              "subpolicy_title": "User Access Management",
+              "subpolicy_description": "This subpolicy outlines the procedures for granting, modifying, and revoking user access to systems that handle cardholder data. It includes requirements for user authentication, password management, and access reviews.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement user access management procedures to control access to cardholder data. WHO: The IT Security team is responsible for managing user access. WHEN: Access requests must be processed within 24 hours, and access reviews must be conducted quarterly. HOW: Use role-based access control (RBAC) and maintain an access log for auditing purposes. WHERE: This applies to all systems and applications that store, process, or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-013.02",
+              "subpolicy_title": "Authentication and Password Management",
+              "subpolicy_description": "This subpolicy specifies the requirements for user authentication and password management to ensure secure access to sensitive systems.",
+              "subpolicy_text": "",
+              "control": "WHAT: Enforce strong password policies and multi-factor authentication (MFA) for all users accessing cardholder data. WHO: All users with access to sensitive systems must comply with these requirements. WHEN: Passwords must be changed every 90 days, and MFA must be implemented for remote access. HOW: Use automated tools to enforce password complexity and expiration policies. WHERE: This applies to all systems that handle cardholder data."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Regularly Monitor and Test Networks",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\005-Regularly_Monitor_and_Test_Networks"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-SEC-014",
+          "policy_title": "Network Monitoring and Testing Policy",
+          "policy_description": "This policy establishes the requirements for regularly monitoring and testing networks to ensure compliance with PCI DSS. It is essential for identifying vulnerabilities and ensuring the security of cardholder data. The policy applies to all systems and personnel involved in payment card processing within the organization.",
+          "policy_text": "All networks that store, process, or transmit cardholder data must be regularly monitored and tested to identify vulnerabilities and ensure compliance with PCI DSS. This includes conducting vulnerability scans, penetration testing, and continuous monitoring of network traffic. All findings must be documented, and remediation actions must be taken promptly.",
+          "scope": "This policy applies to all organizational units that handle payment card transactions, including IT, security, and compliance teams. It covers all systems, applications, and infrastructure involved in payment processing, including on-premises and cloud environments. The policy also extends to third-party vendors and service providers that interact with cardholder data.",
+          "objective": "The objective of this policy is to ensure the continuous security of cardholder data by implementing regular monitoring and testing of networks. This includes identifying and mitigating vulnerabilities, ensuring compliance with PCI DSS requirements, and protecting the organization from potential data breaches. Success will be measured by the timely completion of vulnerability assessments and the effectiveness of remediation efforts.",
+          "policy_type": "Security",
+          "policy_category": "Network Security",
+          "policy_subcategory": "Vulnerability Management",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-SEC-014.01",
+              "subpolicy_title": "Vulnerability Scanning Procedures",
+              "subpolicy_description": "This subpolicy outlines the procedures for conducting regular vulnerability scans on all Internet-facing systems to identify potential security weaknesses.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct vulnerability scans on all Internet-facing systems. WHO: IT Security Team is responsible for executing scans. WHEN: Scans must be conducted at least quarterly and after any significant changes to the network. HOW: Utilize an Approved Scanning Vendor (ASV) to perform scans and generate reports. WHERE: Applies to all systems that store, process, or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-014.02",
+              "subpolicy_title": "Penetration Testing Procedures",
+              "subpolicy_description": "This subpolicy defines the requirements for conducting penetration testing to evaluate the security of the network and identify vulnerabilities.",
+              "subpolicy_text": "",
+              "control": "WHAT: Perform penetration testing on all critical systems. WHO: Qualified Security Assessors (QSAs) or internal security assessors must conduct the tests. WHEN: Penetration tests must be performed at least annually and after any significant changes to the network. HOW: Follow the guidelines set forth by PCI DSS for penetration testing methodologies. WHERE: Applies to all systems that handle cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-SEC-014.03",
+              "subpolicy_title": "Continuous Monitoring Procedures",
+              "subpolicy_description": "This subpolicy establishes the requirements for continuous monitoring of network traffic to detect and respond to security incidents.",
+              "subpolicy_text": "",
+              "control": "WHAT: Implement continuous monitoring of network traffic for anomalies. WHO: Security Operations Center (SOC) team is responsible for monitoring. WHEN: Monitoring must be conducted 24/7. HOW: Utilize security information and event management (SIEM) tools to analyze logs and alerts. WHERE: Applies to all network segments that process cardholder data."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Maintain an Information Security Policy",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\006-Maintain_an_Information_Security_Policy"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-015",
+          "policy_title": "Information Security Policy Maintenance",
+          "policy_description": "This policy outlines the requirements for maintaining an Information Security Policy that aligns with the Payment Card Industry Data Security Standard (PCI DSS). It is essential for organizations to establish, implement, and maintain a comprehensive security policy to protect cardholder data and ensure compliance with PCI DSS requirements. This policy serves as a framework for security practices and compliance assessments.",
+          "policy_text": "Organizations must develop, implement, and maintain an Information Security Policy that addresses the security requirements outlined in PCI DSS. This policy must be reviewed at least annually and updated as necessary to reflect changes in business operations, technology, and regulatory requirements. All personnel must be trained on the policy and its implications for their roles in protecting cardholder data.",
+          "scope": "This policy applies to all organizational units, personnel, systems, applications, and infrastructure that handle cardholder data. It covers all geographic locations where the organization operates, including on-premises, cloud, and remote environments. Third-party vendors and service providers that process, store, or transmit cardholder data are also included in this scope.",
+          "objective": "The objective of this policy is to establish a robust framework for information security that ensures the protection of cardholder data, compliance with PCI DSS, and the mitigation of risks associated with data breaches. The policy aims to achieve measurable outcomes such as reduced incidents of data breaches, improved compliance scores during assessments, and enhanced awareness of security practices among personnel.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Standards compliance",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-015.01",
+              "subpolicy_title": "Compliance Assessment and Validation",
+              "subpolicy_description": "This subpolicy outlines the requirements for conducting compliance assessments and validations to ensure adherence to PCI DSS. It includes the use of Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs) for external assessments and the Self-Assessment Questionnaire (SAQ) for eligible organizations.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage a Qualified Security Assessor (QSA) to conduct an annual compliance assessment. The assessment must be completed within the first quarter of each fiscal year. Additionally, organizations must utilize an Approved Scanning Vendor (ASV) to perform quarterly vulnerability scans of their Internet-facing environments. The results of these assessments and scans must be documented and reviewed by the Information Security Officer (ISO) to ensure compliance and identify areas for improvement."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-015.02",
+              "subpolicy_title": "Training and Awareness",
+              "subpolicy_description": "This subpolicy mandates the training and awareness programs for all personnel regarding the Information Security Policy and PCI DSS requirements. It ensures that employees understand their roles in protecting cardholder data.",
+              "subpolicy_text": "",
+              "control": "All employees must complete PCI DSS training within 30 days of hire and annually thereafter. The training program must include information on the importance of data security, specific PCI DSS requirements, and the organization's Information Security Policy. The Human Resources department is responsible for tracking training completion and ensuring that records are maintained for audit purposes."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Compensating Controls for PCI DSS Requirements",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "003-Security_Controls_and_Processes_for_PCI\\007-Compensating_Controls_for_PCI_DSS_Requir"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-016",
+          "policy_title": "Compensating Controls for PCI DSS Compliance",
+          "policy_description": "This policy outlines the requirements for implementing compensating controls to meet PCI DSS compliance when standard requirements cannot be fully met. It emphasizes the importance of maintaining a secure environment for payment card data and provides guidance on acceptable alternative measures. The policy applies to all entities involved in payment card processing, including merchants and service providers.",
+          "policy_text": "Organizations must implement compensating controls when they cannot meet specific PCI DSS requirements. These controls must be documented, assessed, and approved by a Qualified Security Assessor (QSA) or an Internal Security Assessor (ISA). The compensating controls must provide equivalent or greater security than the original PCI DSS requirement and must be regularly reviewed for effectiveness.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including IT, compliance, and security teams. It covers all systems, applications, and infrastructure that handle payment card data, including on-premises, cloud, and mobile environments. The policy also extends to third-party vendors and service providers that interact with payment card information.",
+          "objective": "The objective of this policy is to ensure that organizations can maintain PCI DSS compliance through the implementation of effective compensating controls. This includes providing measurable outcomes such as reduced risk of data breaches, maintaining customer trust, and ensuring ongoing compliance with PCI DSS requirements. The policy aims to facilitate a secure environment for payment card transactions while allowing flexibility in compliance approaches.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Standards compliance",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-016.01",
+              "subpolicy_title": "Assessment and Approval of Compensating Controls",
+              "subpolicy_description": "This subpolicy outlines the process for assessing and approving compensating controls that organizations implement to meet PCI DSS requirements. It includes criteria for evaluating the effectiveness of these controls and the roles responsible for the assessment.",
+              "subpolicy_text": "",
+              "control": "Organizations must assess compensating controls by identifying the specific PCI DSS requirement that cannot be met (WHAT), assigning the responsibility to the compliance team (WHO), conducting the assessment annually or upon significant changes (WHEN), using established evaluation criteria and documentation processes (HOW), and ensuring that all assessments are documented and stored in a secure location accessible to relevant stakeholders (WHERE)."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-016.02",
+              "subpolicy_title": "Documentation and Review of Compensating Controls",
+              "subpolicy_description": "This subpolicy mandates the documentation of all compensating controls implemented and the regular review process to ensure their continued effectiveness and compliance with PCI DSS.",
+              "subpolicy_text": "",
+              "control": "Organizations must document all compensating controls implemented (WHAT), assign the responsibility to the security team (WHO), review the documentation bi-annually or after any significant changes (WHEN), utilize a standardized documentation template and review checklist (HOW), and maintain these documents in a secure repository accessible to compliance and audit teams (WHERE)."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "How to Comply with PCI DSS",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-017",
+          "policy_title": "PCI DSS Compliance Policy",
+          "policy_description": "This policy outlines the requirements for compliance with the Payment Card Industry Data Security Standard (PCI DSS). It is essential for all entities that accept, process, store, or transmit credit card information to adhere to these standards to protect cardholder data and maintain a secure environment. The policy establishes the framework for compliance assessment, validation, and ongoing monitoring.",
+          "policy_text": "All entities involved in payment card processing must comply with PCI DSS requirements. This includes conducting regular assessments, utilizing Qualified Security Assessors (QSAs) for compliance validation, and completing the Self-Assessment Questionnaire (SAQ) as applicable. Compliance must be maintained through continuous monitoring and adherence to the standards set forth by the PCI Security Standards Council.",
+          "scope": "This policy applies to all organizational units and personnel involved in payment card processing, including merchants, processors, acquirers, issuers, and service providers. It encompasses all systems, applications, and infrastructure that handle cardholder data, including on-premises, cloud, and mobile environments. The policy also covers third-party vendors and service providers that interact with cardholder data.",
+          "objective": "The objective of this policy is to ensure that all relevant entities achieve and maintain compliance with PCI DSS requirements. This includes measurable outcomes such as successful completion of SAQs, regular assessments by QSAs, and adherence to vulnerability scanning protocols. The policy aims to mitigate risks associated with cardholder data breaches and enhance the overall security posture of the organization.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Standards compliance",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-017.01",
+              "subpolicy_title": "Qualified Security Assessor Engagement",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to validate compliance with PCI DSS. It specifies the process for selecting and working with QSAs to ensure thorough assessments are conducted.",
+              "subpolicy_text": "",
+              "control": "WHAT: Engage a Qualified Security Assessor (QSA) to perform a compliance assessment. WHO: Compliance Officer is responsible for selecting and coordinating with the QSA. WHEN: Annually or as required by changes in business operations. HOW: Utilize the PCI SSC's list of approved QSAs and follow the engagement process outlined in the PCI DSS documentation. WHERE: Applicable to all business units that process, store, or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-017.02",
+              "subpolicy_title": "Self-Assessment Questionnaire Completion",
+              "subpolicy_description": "This subpolicy details the process for completing the Self-Assessment Questionnaire (SAQ) for organizations that are eligible to self-assess their PCI DSS compliance.",
+              "subpolicy_text": "",
+              "control": "WHAT: Complete the appropriate Self-Assessment Questionnaire (SAQ) based on the organization's payment processing environment. WHO: Designated Compliance Team is responsible for completing the SAQ. WHEN: Annually or when there are significant changes to the payment processing environment. HOW: Refer to the PCI SSC website for the latest SAQ versions and guidance on completion. WHERE: This applies to all departments involved in payment card processing."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Choosing a Qualified Security Assessor",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\001-Choosing_a_Qualified_Security_Assessor"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-018",
+          "policy_title": "Qualified Security Assessor Engagement Policy",
+          "policy_description": "This policy outlines the requirements for engaging Qualified Security Assessors (QSAs) to ensure compliance with the Payment Card Industry Data Security Standard (PCI DSS). It is crucial for organizations to select qualified professionals who can accurately assess their compliance status and provide guidance on maintaining security standards. This policy applies to all entities that handle payment card information and are subject to PCI DSS compliance.",
+          "policy_text": "Organizations must engage a Qualified Security Assessor (QSA) approved by the PCI Security Standards Council to conduct compliance assessments. The selection process must include verification of the QSA's credentials, experience, and understanding of the organization's specific environment. Organizations must maintain documentation of the engagement process and ensure that the QSA provides a comprehensive report on compliance status.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including IT, compliance, and finance departments. It covers all systems, applications, and infrastructure that handle payment card data, including on-premises and cloud environments. The policy also extends to third-party vendors and service providers involved in payment processing.",
+          "objective": "The objective of this policy is to ensure that organizations engage qualified professionals to assess their compliance with PCI DSS, thereby enhancing the security of payment card data. Specific goals include achieving compliance with PCI DSS requirements, reducing the risk of data breaches, and ensuring that all assessments are conducted by certified professionals. The policy aims to facilitate effective communication between the organization and the QSA, ensuring a thorough understanding of compliance requirements.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Assessment and validation",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-018.01",
+              "subpolicy_title": "QSA Selection and Engagement Process",
+              "subpolicy_description": "This subpolicy outlines the steps for selecting and engaging a Qualified Security Assessor (QSA) to ensure compliance with PCI DSS. It includes criteria for selection, documentation requirements, and engagement protocols.",
+              "subpolicy_text": "",
+              "control": "Organizations must identify potential QSAs by reviewing the PCI Security Standards Council's approved list. The compliance officer (WHO) is responsible for evaluating QSAs based on their qualifications and experience (WHAT). This evaluation must be completed prior to engaging a QSA (WHEN). The organization will utilize a standardized evaluation form to assess QSAs and document the selection process (HOW). This process applies to all departments involved in payment processing (WHERE)."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-018.02",
+              "subpolicy_title": "Self-Assessment Questionnaire (SAQ) Utilization",
+              "subpolicy_description": "This subpolicy provides guidelines for organizations on how to utilize the Self-Assessment Questionnaire (SAQ) for PCI DSS compliance validation. It includes criteria for determining eligibility and selecting the appropriate SAQ.",
+              "subpolicy_text": "",
+              "control": "The compliance team (WHO) must review the organization's payment processing environment to determine eligibility for the SAQ (WHAT). This review should occur annually or when significant changes to the environment occur (WHEN). The team will consult the PCI Security Standards Council's guidelines to select the appropriate SAQ and document the decision (HOW). This process applies to all business units handling payment card data (WHERE)."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Choosing an Approved Scanning Vendor",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\002-Choosing_an_Approved_Scanning_Vendor"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-019",
+          "policy_title": "Approved Scanning Vendor Selection Policy",
+          "policy_description": "This policy outlines the requirements for selecting and engaging Approved Scanning Vendors (ASVs) to ensure compliance with PCI DSS vulnerability scanning requirements. It is essential for organizations to utilize ASVs that are recognized by the PCI Security Standards Council to validate adherence to security standards and protect cardholder data effectively.",
+          "policy_text": "Organizations must engage only PCI Security Standards Council-approved ASVs to perform vulnerability scans of their Internet-facing environments. The selection process must include verification of the ASV's current approval status and their ability to meet the specific scanning requirements outlined in PCI DSS. Organizations are responsible for maintaining documentation of the ASV selection process and ensuring that the ASV provides timely and accurate scanning reports.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including IT, compliance, and risk management teams. It covers all systems and applications that process, store, or transmit cardholder data, as well as any third-party vendors engaged in these activities. The policy is applicable across all geographic locations where the organization operates.",
+          "objective": "The objective of this policy is to ensure that the organization engages qualified ASVs to conduct vulnerability scans, thereby enhancing the security of cardholder data and ensuring compliance with PCI DSS requirements. The policy aims to establish a standardized process for ASV selection, improve risk management practices, and ensure timely identification and remediation of vulnerabilities.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Vendor management",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-019.01",
+              "subpolicy_title": "ASV Selection Process",
+              "subpolicy_description": "This subpolicy outlines the specific steps and criteria for selecting an Approved Scanning Vendor (ASV) to ensure compliance with PCI DSS scanning requirements.",
+              "subpolicy_text": "",
+              "control": "Organizations must identify potential ASVs by reviewing the list of PCI-approved vendors on the PCI Security Standards Council website (WHAT). The IT compliance team (WHO) must conduct this review annually or whenever a new ASV is needed (WHEN). The selection process should include evaluating the ASV's qualifications, experience, and customer references (HOW). This process applies to all departments involved in payment processing (WHERE)."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-019.02",
+              "subpolicy_title": "ASV Engagement and Reporting",
+              "subpolicy_description": "This subpolicy details the requirements for engaging an ASV and the expectations for reporting vulnerability scan results.",
+              "subpolicy_text": "",
+              "control": "Once an ASV is selected, the organization must formalize the engagement through a contract that specifies the scope of work, deliverables, and timelines (WHAT). The compliance officer (WHO) is responsible for overseeing this engagement (WHEN). The ASV must provide detailed vulnerability scan reports within 5 business days of the scan completion (HOW). This applies to all systems that process cardholder data (WHERE)."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Scope of PCI DSS Requirements",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\003-Scope_of_PCI_DSS_Requirements"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-020",
+          "policy_title": "PCI DSS Compliance Scope Policy",
+          "policy_description": "This policy outlines the scope of PCI DSS compliance requirements for all entities involved in payment card processing. It establishes the framework for assessing compliance, including the roles of Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs). The policy ensures that all applicable systems, personnel, and third-party relationships are included in the compliance assessment process.",
+          "policy_text": "All entities that accept, process, store, or transmit payment card information must adhere to the PCI DSS compliance requirements. This includes engaging with QSAs for compliance assessments and ASVs for vulnerability scans. The scope of compliance must encompass all relevant organizational units, systems, applications, and third-party vendors involved in payment card transactions.",
+          "scope": "This policy applies to all organizational units that handle payment card information, including but not limited to merchants, processors, acquirers, issuers, and service providers. It covers all systems and applications that store, process, or transmit cardholder data, including on-premises, cloud, and mobile environments. The policy also includes third-party vendors and service providers that interact with payment card data.",
+          "objective": "The objective of this policy is to ensure comprehensive compliance with PCI DSS requirements across all relevant organizational units and systems. It aims to facilitate effective assessments of compliance through the engagement of qualified assessors and to ensure that all applicable entities are included in the compliance process. The policy seeks to mitigate risks associated with payment card data handling and to protect stakeholders involved in payment transactions.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance assessment",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-020.01",
+              "subpolicy_title": "Engagement of Qualified Security Assessors (QSAs)",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to assess compliance with PCI DSS. It specifies the process for selecting QSAs and the responsibilities of both the organization and the QSA during the assessment.",
+              "subpolicy_text": "",
+              "control": "WHAT: Engage a Qualified Security Assessor (QSA) to conduct a compliance assessment. WHO: The Compliance Officer is responsible for selecting and engaging the QSA. WHEN: The engagement must occur annually or whenever significant changes to the payment environment occur. HOW: The organization will evaluate potential QSAs based on their qualifications and experience with PCI DSS. WHERE: The assessment will cover all systems and processes that handle payment card data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-020.02",
+              "subpolicy_title": "Utilization of Approved Scanning Vendors (ASVs)",
+              "subpolicy_description": "This subpolicy details the requirements for utilizing Approved Scanning Vendors (ASVs) to perform vulnerability scans of Internet-facing environments. It outlines the process for selecting ASVs and the frequency of scans.",
+              "subpolicy_text": "",
+              "control": "WHAT: Conduct quarterly vulnerability scans using an Approved Scanning Vendor (ASV). WHO: The IT Security Manager is responsible for coordinating with the ASV. WHEN: Scans must be performed quarterly and after any significant changes to the network. HOW: The organization will select an ASV from the PCI SSC approved list and ensure that scans are conducted in accordance with PCI DSS requirements. WHERE: Scans will be conducted on all Internet-facing systems that store, process, or transmit cardholder data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-020.03",
+              "subpolicy_title": "Self-Assessment Questionnaire (SAQ) Completion",
+              "subpolicy_description": "This subpolicy outlines the requirements for completing the Self-Assessment Questionnaire (SAQ) for organizations that are eligible to self-assess their PCI DSS compliance. It specifies the process for determining eligibility and the responsibilities for completing the SAQ.",
+              "subpolicy_text": "",
+              "control": "WHAT: Complete the appropriate Self-Assessment Questionnaire (SAQ) based on the organization's payment card processing environment. WHO: The Compliance Officer is responsible for determining eligibility and overseeing the completion of the SAQ. WHEN: The SAQ must be completed annually or whenever there are significant changes to the payment environment. HOW: The organization will review the SAQ options available on the PCI SSC website and select the appropriate questionnaire based on its business model. WHERE: The SAQ will cover all applicable systems and processes that handle payment card data."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Using the Self-Assessment Questionnaire",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\004-Using_the_Self-Assessment_Questionnaire"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-021",
+          "policy_title": "Self-Assessment Questionnaire Compliance Policy",
+          "policy_description": "This policy outlines the requirements for using the Self-Assessment Questionnaire (SAQ) as a tool for validating PCI DSS compliance. It is essential for organizations that are not required to submit a Report on Compliance (ROC) to ensure they accurately assess their compliance status. The policy aims to provide a structured approach for organizations to follow when completing the SAQ, ensuring consistency and adherence to PCI DSS standards.",
+          "policy_text": "All eligible organizations must utilize the Self-Assessment Questionnaire (SAQ) to self-assess their compliance with PCI DSS. Organizations must determine the appropriate SAQ to complete based on their business environment and consult with their acquiring financial institution or payment card brand for guidance. The SAQ must be completed annually, and the results must be documented and retained for audit purposes.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and any personnel responsible for PCI DSS compliance. It encompasses all systems and applications that handle payment card data, including on-premises, cloud, and mobile environments. The policy also covers third-party vendors that interact with payment card information.",
+          "objective": "The objective of this policy is to ensure that all eligible organizations accurately assess their PCI DSS compliance using the Self-Assessment Questionnaire. This includes achieving measurable outcomes such as timely completion of the SAQ, proper documentation of results, and adherence to PCI DSS standards. The policy aims to mitigate compliance risks and enhance the security posture of the organization.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Self-Assessment Procedures",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-021.01",
+              "subpolicy_title": "SAQ Completion and Documentation Procedures",
+              "subpolicy_description": "This subpolicy outlines the procedures for completing the Self-Assessment Questionnaire, including roles and responsibilities, timelines, and documentation requirements. It ensures that all necessary steps are taken to accurately assess compliance and maintain records for audit purposes.",
+              "subpolicy_text": "",
+              "control": "Organizations must designate a Qualified Security Assessor (QSA) or Internal Security Assessor (ISA) to oversee the SAQ completion process. The SAQ must be completed annually, with a deadline of 30 days after the end of the fiscal year. Documentation of the completed SAQ, including any supporting evidence, must be stored securely for a minimum of three years. The designated assessor must ensure that the SAQ is reviewed and approved by management before submission."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Reporting",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\005-Reporting"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-022",
+          "policy_title": "PCI DSS Compliance Reporting Policy",
+          "policy_description": "This policy outlines the requirements for reporting compliance with the Payment Card Industry Data Security Standard (PCI DSS). It establishes the framework for assessing compliance, utilizing Qualified Security Assessors (QSAs), and implementing Self-Assessment Questionnaires (SAQs) to ensure that all applicable entities maintain adherence to PCI DSS requirements. The policy aims to facilitate a structured approach to compliance reporting and validation.",
+          "policy_text": "All entities that accept, process, store, or transmit credit card information must adhere to the PCI DSS compliance reporting requirements. This includes engaging Qualified Security Assessors (QSAs) for compliance assessments and utilizing Self-Assessment Questionnaires (SAQs) where applicable. Entities must ensure that compliance reports are submitted to their acquiring banks or payment card brands as required, and maintain documentation of all compliance activities.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and third-party vendors. It covers all systems, applications, and infrastructure that handle credit card information, including on-premises, cloud, and mobile environments. The policy is applicable across all geographic locations where the organization operates and includes all data types related to payment card transactions.",
+          "objective": "The objective of this policy is to ensure that all entities involved in payment card processing maintain compliance with PCI DSS requirements through structured reporting mechanisms. Specific goals include achieving 100% compliance reporting accuracy, timely submission of compliance documentation, and effective risk mitigation related to payment card data handling. The policy also aims to enhance stakeholder confidence in the organization's commitment to data security.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Audit requirements",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-022.01",
+              "subpolicy_title": "Engagement of Qualified Security Assessors (QSAs)",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to conduct compliance assessments for PCI DSS. It specifies the process for selecting and utilizing QSAs to ensure that assessments are conducted in accordance with PCI DSS standards.",
+              "subpolicy_text": "",
+              "control": "Entities must engage a Qualified Security Assessor (QSA) who is approved by the PCI Security Standards Council to perform compliance assessments. The engagement should occur annually or whenever significant changes to the payment environment occur. The QSA must conduct a thorough assessment of the entity's compliance with PCI DSS and provide a Report on Compliance (ROC) to the organization. The organization must retain the ROC and any supporting documentation for a minimum of three years."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-022.02",
+              "subpolicy_title": "Utilization of Self-Assessment Questionnaires (SAQs)",
+              "subpolicy_description": "This subpolicy details the requirements for utilizing Self-Assessment Questionnaires (SAQs) for organizations that are eligible to self-assess their PCI DSS compliance. It provides guidance on selecting the appropriate SAQ based on the organization's business environment.",
+              "subpolicy_text": "",
+              "control": "Eligible organizations must complete the appropriate Self-Assessment Questionnaire (SAQ) annually or when there are significant changes to their payment processing environment. The selection of the SAQ must be based on the organization's specific business environment and payment card processing methods. Upon completion, the SAQ must be submitted to the acquiring bank or payment card brand as required, and a copy must be retained for audit purposes for a minimum of three years."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Implementing PCI DSS into Business-as-Usual Processes",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "004-How_to_Comply_with_PCI_DSS\\006-Implementing_PCI_DSS_into_Business-as-Us"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-023",
+          "policy_title": "Integration of PCI DSS into Business Processes",
+          "policy_description": "This policy outlines the requirements for integrating PCI DSS compliance into the daily operations of the organization. It emphasizes the importance of maintaining compliance as a continuous process rather than a one-time effort. The policy applies to all departments involved in payment card processing and aims to ensure that compliance is embedded in business-as-usual processes.",
+          "policy_text": "All departments must integrate PCI DSS compliance into their daily operations and business processes. This includes regular training, assessments, and updates to procedures to ensure ongoing adherence to PCI DSS requirements. Departments must collaborate with Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs) to facilitate compliance assessments and vulnerability scans as necessary.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including finance, IT, and operations. It covers all systems, applications, and infrastructure that handle payment card data, including on-premises and cloud environments. The policy also extends to third-party vendors and service providers that interact with payment card information.",
+          "objective": "The objective of this policy is to ensure that PCI DSS compliance is a fundamental aspect of the organization's operations. This includes achieving measurable outcomes such as maintaining a compliant status, reducing vulnerabilities, and ensuring that all personnel are trained and aware of PCI DSS requirements. The policy aims to mitigate risks associated with payment card data handling and enhance operational effectiveness.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance integration",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-023.01",
+              "subpolicy_title": "Qualified Security Assessor Engagement",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to assess PCI DSS compliance. It details the process for selecting and working with QSAs to ensure thorough evaluations of compliance status.",
+              "subpolicy_text": "",
+              "control": "The organization will engage a Qualified Security Assessor (QSA) to conduct annual assessments of PCI DSS compliance. The IT department is responsible for selecting a QSA from the PCI SSC approved list. Assessments will be scheduled annually, with the QSA providing a report detailing compliance status and recommendations for improvement. The assessment will take place in all environments handling payment card data."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-023.02",
+              "subpolicy_title": "Self-Assessment Questionnaire Completion",
+              "subpolicy_description": "This subpolicy provides guidelines for completing the Self-Assessment Questionnaire (SAQ) for organizations that are eligible to self-assess their PCI DSS compliance.",
+              "subpolicy_text": "",
+              "control": "Eligible departments must complete the Self-Assessment Questionnaire (SAQ) annually. The finance department will be responsible for determining eligibility and selecting the appropriate SAQ version. The SAQ must be completed within 30 days of the assessment period, and results must be submitted to the acquiring bank for validation. The SAQ will cover all relevant business environments and processes."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Web Resources",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "005-Web_Resources"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-024",
+          "policy_title": "Compliance Assessment and Validation Policy",
+          "policy_description": "This policy outlines the requirements for assessing and validating compliance with the Payment Card Industry Data Security Standard (PCI DSS). It is essential for ensuring that all entities involved in payment card processing maintain adherence to security standards, thereby protecting cardholder data and minimizing risks associated with data breaches.",
+          "policy_text": "All organizations that accept, process, store, or transmit credit card information must conduct regular compliance assessments using the appropriate tools and methodologies as defined by the PCI Security Standards Council. Organizations must engage Qualified Security Assessors (QSAs) for formal assessments and utilize Approved Scanning Vendors (ASVs) for vulnerability scanning of their Internet-facing environments. Self-Assessment Questionnaires (SAQs) must be completed by eligible organizations that are not required to submit a Report on Compliance (ROC).",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and third-party vendors. It encompasses all systems, applications, and infrastructure that handle cardholder data, including on-premises, cloud, and mobile environments. The policy is applicable across all geographic locations where the organization operates.",
+          "objective": "The objective of this policy is to ensure that all relevant entities maintain compliance with PCI DSS requirements, thereby safeguarding cardholder data and reducing the risk of data breaches. Specific goals include achieving a minimum compliance score of 95% during assessments, ensuring all vulnerability scans are conducted quarterly, and providing training for all personnel involved in compliance activities.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance assessment and validation",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-024.01",
+              "subpolicy_title": "Engagement of Qualified Security Assessors (QSAs)",
+              "subpolicy_description": "This subpolicy details the requirements for engaging Qualified Security Assessors to conduct formal PCI DSS compliance assessments.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage a Qualified Security Assessor (QSA) approved by the PCI Security Standards Council to perform compliance assessments. The engagement must occur annually, with the QSA providing a detailed report of findings and recommendations. The organization must ensure that the QSA has the necessary expertise and credentials to assess the specific business environment. The assessment must be documented and retained for a minimum of three years."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-024.02",
+              "subpolicy_title": "Utilization of Approved Scanning Vendors (ASVs)",
+              "subpolicy_description": "This subpolicy outlines the requirements for utilizing Approved Scanning Vendors to perform vulnerability scans.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage an Approved Scanning Vendor (ASV) to conduct vulnerability scans of their Internet-facing environments at least quarterly. The ASV must provide a detailed report of vulnerabilities identified, including remediation recommendations. The organization is responsible for addressing all identified vulnerabilities within 30 days of the scan. Documentation of the scans and remediation efforts must be maintained for a minimum of three years."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-024.03",
+              "subpolicy_title": "Self-Assessment Questionnaire (SAQ) Completion",
+              "subpolicy_description": "This subpolicy specifies the requirements for completing the Self-Assessment Questionnaire for eligible organizations.",
+              "subpolicy_text": "",
+              "control": "Eligible organizations must complete the appropriate Self-Assessment Questionnaire (SAQ) annually. The SAQ must be submitted to the acquiring financial institution or payment card brand for validation. Organizations must determine the correct SAQ type based on their business environment and processing methods. Documentation of the completed SAQ must be retained for a minimum of three years."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "About the PCI Security Standards Council",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "006-About_the_PCI_Security_Standards_Council"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-025",
+          "policy_title": "Compliance Assessment and Validation Policy",
+          "policy_description": "This policy outlines the requirements for assessing and validating compliance with the PCI DSS. It is essential for ensuring that all entities involved in payment card processing adhere to the established security standards. The policy provides a framework for utilizing Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs) to facilitate compliance assessments.",
+          "policy_text": "All organizations that accept, process, store, or transmit credit card information must undergo regular compliance assessments with PCI DSS. Organizations must engage QSAs for comprehensive assessments and ASVs for vulnerability scans of their Internet-facing environments. The Self-Assessment Questionnaire (SAQ) must be completed by eligible organizations that are not required to submit a Report on Compliance (ROC).",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and third-party vendors. It covers all systems and applications that handle credit card information, including on-premises, cloud, and mobile environments. The policy is applicable across all geographic locations where the organization operates.",
+          "objective": "The objective of this policy is to ensure that all entities comply with PCI DSS requirements through regular assessments and validations. This includes achieving measurable compliance outcomes, reducing risks associated with payment card data, and ensuring that all personnel involved in payment processing are aware of compliance requirements.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance assessment",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-025.01",
+              "subpolicy_title": "Engagement of Qualified Security Assessors (QSAs)",
+              "subpolicy_description": "This subpolicy details the requirements for engaging QSAs to assess compliance with PCI DSS. It outlines the process for selecting and working with QSAs to ensure thorough evaluations of compliance status.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage a Qualified Security Assessor (QSA) to conduct a comprehensive assessment of PCI DSS compliance. The engagement should occur annually or whenever significant changes to the payment environment occur. The QSA must be selected based on their qualifications and experience in PCI DSS assessments. The assessment results must be documented and reviewed by senior management to ensure compliance status is understood and addressed."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-025.02",
+              "subpolicy_title": "Utilization of Approved Scanning Vendors (ASVs)",
+              "subpolicy_description": "This subpolicy outlines the requirements for utilizing ASVs to perform vulnerability scans on Internet-facing systems. It ensures that organizations maintain a secure environment by regularly identifying and addressing vulnerabilities.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage an Approved Scanning Vendor (ASV) to perform quarterly vulnerability scans of all Internet-facing systems. Scans must be conducted after any significant changes to the environment. The ASV must provide a report detailing the findings, which must be reviewed and remediated by the organization within 30 days of the scan. Documentation of the scans and remediation efforts must be maintained for compliance verification."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-025.03",
+              "subpolicy_title": "Self-Assessment Questionnaire (SAQ) Completion",
+              "subpolicy_description": "This subpolicy specifies the requirements for completing the Self-Assessment Questionnaire (SAQ) for organizations that are eligible to self-assess their PCI DSS compliance.",
+              "subpolicy_text": "",
+              "control": "Eligible organizations must complete the appropriate Self-Assessment Questionnaire (SAQ) annually or whenever there are significant changes to the payment processing environment. The SAQ must be submitted to the organization’s acquiring financial institution or payment card brand for review. Organizations must maintain documentation of the completed SAQ and any supporting evidence of compliance."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  },
+  {
+    "section_info": {
+      "title": "Report, p.",
+      "level": 3,
+      "start_page": 9,
+      "end_page": 9,
+      "folder_path": "006-About_the_PCI_Security_Standards_Council\\001-Report_p"
+    },
+    "analysis": {
+      "has_policies": true,
+      "framework_info": {
+        "framework_name": "Payment Card Industry Data Security Standard (PCI DSS)",
+        "current_version": "4.0",
+        "framework_description": "The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. PCI DSS applies to all entities involved in payment card processing including merchants, processors, acquirers, issuers, and service providers.",
+        "category": "Financial Security and Compliance",
+        "start_date": "2022-03-31",
+        "end_date": null
+      },
+      "policies": [
+        {
+          "policy_id": "PCI-DSS-COMP-026",
+          "policy_title": "PCI DSS Compliance Assessment Policy",
+          "policy_description": "This policy outlines the requirements for assessing compliance with the PCI DSS to ensure that all entities involved in payment card processing maintain a secure environment. It establishes the roles and responsibilities of Qualified Security Assessors (QSAs) and Approved Scanning Vendors (ASVs) in the compliance validation process. The policy also emphasizes the importance of self-assessment for eligible organizations through the Self-Assessment Questionnaire (SAQ).",
+          "policy_text": "All organizations that accept, process, store, or transmit credit card information must undergo regular compliance assessments as per PCI DSS requirements. This includes engaging QSAs for formal assessments and utilizing ASVs for vulnerability scanning. Eligible organizations must complete the appropriate SAQ to self-assess their compliance status. Compliance assessments must be documented and maintained for audit purposes.",
+          "scope": "This policy applies to all organizational units involved in payment card processing, including merchants, service providers, and third-party vendors. It covers all systems, applications, and infrastructure that handle credit card information, including on-premises, cloud, and mobile environments. The policy is applicable across all geographic locations where the organization operates and includes all data types related to payment card transactions.",
+          "objective": "The objective of this policy is to ensure that all entities involved in payment card processing comply with PCI DSS requirements, thereby protecting cardholder data and minimizing the risk of data breaches. The policy aims to establish a clear framework for compliance assessments, enhance the effectiveness of security measures, and ensure that all stakeholders are aware of their responsibilities in maintaining compliance.",
+          "policy_type": "Compliance",
+          "policy_category": "Regulatory adherence",
+          "policy_subcategory": "Compliance assessment",
+          "subpolicies": [
+            {
+              "subpolicy_id": "PCI-DSS-COMP-026.01",
+              "subpolicy_title": "Qualified Security Assessor Engagement",
+              "subpolicy_description": "This subpolicy outlines the requirements for engaging Qualified Security Assessors (QSAs) to perform compliance assessments for organizations that process payment card transactions. It specifies the criteria for selecting QSAs and the process for conducting assessments.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage a QSA who is approved by the PCI Security Standards Council to conduct compliance assessments. The engagement must occur annually or whenever significant changes to the payment environment occur. The QSA will perform a thorough assessment of the organization's compliance with PCI DSS and provide a Report on Compliance (ROC) detailing findings and recommendations. This process must be documented and retained for audit purposes."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-026.02",
+              "subpolicy_title": "Approved Scanning Vendor Utilization",
+              "subpolicy_description": "This subpolicy details the requirements for utilizing Approved Scanning Vendors (ASVs) to perform vulnerability scans of Internet-facing environments. It outlines the frequency and scope of scans required for compliance.",
+              "subpolicy_text": "",
+              "control": "Organizations must engage an ASV approved by the PCI Security Standards Council to conduct quarterly vulnerability scans of all Internet-facing systems. Scans must be performed after any significant changes to the environment and results must be documented. Any vulnerabilities identified must be remediated within 30 days, and evidence of remediation must be maintained for compliance verification."
+            },
+            {
+              "subpolicy_id": "PCI-DSS-COMP-026.03",
+              "subpolicy_title": "Self-Assessment Questionnaire Completion",
+              "subpolicy_description": "This subpolicy provides guidelines for eligible organizations to complete the Self-Assessment Questionnaire (SAQ) as a means of self-assessing their PCI DSS compliance status.",
+              "subpolicy_text": "",
+              "control": "Eligible organizations must determine their SAQ type based on their payment processing environment and complete the SAQ annually. The SAQ must be submitted to the acquiring bank or payment card brand as required. Organizations must maintain documentation of the completed SAQ and any supporting evidence for audit purposes."
+            }
+          ]
+        }
+      ],
+      "document_type": "policy_generated",
+      "confidence": 1.0
+    }
+  }
+]

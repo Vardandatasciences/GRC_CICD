@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: frontend-grc-container
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    image: frontend-grc:latest
+    networks:
+      - grc-network
+
+networks:
+  grc-network:
+    driver: bridge
+

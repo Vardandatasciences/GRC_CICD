@@ -1,0 +1,723 @@
+/* Framework Details Page */
+.framework_details_page {
+  margin-left: 230px;
+  padding: 24px 32px;
+  max-width: 1400px;
+  margin-right: auto;
+  background-color: transparent !important;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Header Section */
+.framework_header {
+  background: transparent;
+  border: none;
+  padding: 0 0 24px 0;
+  margin-bottom: 24px;
+  box-shadow: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.framework_header_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Use global .policy-dashboard-back-btn for the back button style */
+/* Define here to ensure consistent styling on Framework Details page */
+.policy-dashboard-back-btn {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 12px; /* slightly wider */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4f6cff;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 0;
+  width: fit-content;
+  align-self: flex-start;
+  flex: 0 0 auto;
+  height: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 8px;
+}
+
+.policy-dashboard-back-btn:hover {
+  background: #4f6cff;
+  color: white;
+  transform: translateX(-3px);
+  box-shadow: 0 8px 25px rgba(79, 108, 255, 0.3);
+  border-color: #4f6cff;
+}
+
+.policy-dashboard-back-btn:active {
+  transform: translateX(-1px);
+  box-shadow: 0 4px 12px rgba(79, 108, 255, 0.2);
+}
+
+/* Slightly reduce icon size to match smaller button */
+.policy-dashboard-back-btn i {
+  font-size: 14px;
+}
+
+.framework_title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.version-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: normal;
+}
+
+/* Loading State */
+.framework_loading_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.framework_loading_spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #6c757d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.framework_error_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #fff5f5;
+  border-radius: 8px;
+  border: 1px solid #feb2b2;
+}
+
+.framework_error_message {
+  text-align: center;
+  color: #c53030;
+}
+
+.framework_error_message i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #fc8181;
+}
+
+.framework_error_message h3 {
+  color: #c53030;
+  margin: 0 0 8px 0;
+}
+
+.framework_error_message p {
+  color: #742a2a;
+  margin: 0 0 16px 0;
+}
+
+.framework_retry_btn {
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.framework_retry_btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+/* Content Container */
+.framework_details_container {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Framework Approval Section */
+.framework_approval_section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.framework_approval_section h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.framework-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.status-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.status-value {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.status-approved {
+  background-color: #d1f4e0;
+  color: #0c6e3e;
+  border: 1px solid #9ae6b4;
+}
+
+.status-rejected {
+  background-color: #fed7d7;
+  color: #c53030;
+  border: 1px solid #fc8181;
+}
+
+.status-pending {
+  background-color: #fef5e7;
+  color: #c27803;
+  border: 1px solid #f6e05e;
+}
+
+.approval-date {
+  color: #6c757d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.status-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6c757d;
+  font-size: 14px;
+  background: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+/* Action Buttons */
+.framework-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.approve-btn,
+.final-approve-btn,
+.reject-btn,
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.approve-btn {
+  background: #38a169;
+  color: white;
+  border: 1px solid #2f855a;
+}
+
+.approve-btn:hover {
+  background: #2f855a;
+}
+
+.final-approve-btn {
+  background: #22543d;
+  color: white;
+  border: 1px solid #1c4532;
+}
+
+.final-approve-btn:hover {
+  background: #1c4532;
+}
+
+.reject-btn {
+  background: #e53e3e;
+  color: white;
+  border: 1px solid #c53030;
+}
+
+.reject-btn:hover {
+  background: #c53030;
+}
+
+.submit-btn {
+  background: #4299e1;
+  color: white;
+  border: 1px solid #3182ce;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #3182ce;
+}
+
+.submit-btn:disabled {
+  background: #e2e8f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+  opacity: 0.6;
+  border: 1px solid #cbd5e0;
+}
+
+/* Info Messages */
+.creator-message,
+.admin-message,
+.processed-framework-message,
+.resubmission-indicator,
+.rejection-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 16px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  font-size: 14px;
+}
+
+.creator-message i,
+.admin-message i,
+.processed-framework-message i,
+.resubmission-indicator i,
+.rejection-note i {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+/* Framework Information Section */
+.framework_info_section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.framework_info_section h4 {
+  margin: 0 0 16px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.framework_detail_row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.framework_detail_row:last-child {
+  border-bottom: none;
+}
+
+.framework_detail_row strong {
+  color: #495057;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.framework_detail_row span {
+  color: #212529;
+  font-size: 14px;
+}
+
+/* Policies Section */
+.policies-section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.policies-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.policy-item {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.policy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.policy-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  flex: 1;
+}
+
+.policy-badge {
+  background: #e9ecef;
+  color: #495057;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+}
+
+.policy-details {
+  margin: 12px 0;
+}
+
+.policy-details > div {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.policy-details strong {
+  color: #495057;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.policy-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.policy-actions .approve-btn,
+.policy-actions .reject-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+/* Subpolicies Section */
+.subpolicies-section {
+  margin-top: 16px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.subpolicies-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.subpolicy-item {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.subpolicy-item:last-child {
+  margin-bottom: 0;
+}
+
+.subpolicy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subpolicy-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #212529;
+  flex: 1;
+}
+
+.subpolicy-badge {
+  background: #e9ecef;
+  color: #495057;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid #dee2e6;
+}
+
+.subpolicy-details {
+  margin: 8px 0;
+}
+
+.subpolicy-details > div {
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.subpolicy-details strong {
+  color: #495057;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.subpolicy-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.subpolicy-actions .approve-btn,
+.subpolicy-actions .reject-btn {
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-badge.pending {
+  background-color: #fef5e7;
+  color: #c27803;
+  border: 1px solid #f6e05e;
+}
+
+.status-badge.approved {
+  background-color: #d1f4e0;
+  color: #0c6e3e;
+  border: 1px solid #9ae6b4;
+}
+
+.status-badge.rejected {
+  background-color: #fed7d7;
+  color: #c53030;
+  border: 1px solid #fc8181;
+}
+
+/* Rejection Modal */
+.framework_reject_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.framework_reject_modal_content {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e0e0e0;
+}
+
+.framework_reject_modal_content h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  color: #212529;
+  font-weight: 600;
+}
+
+.framework_reject_modal_content p {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.framework_rejection_comment {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  resize: vertical;
+  font-size: 14px;
+}
+
+.framework_rejection_comment:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.framework_reject_modal_actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.framework_cancel_btn {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: #495057;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.framework_cancel_btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.framework_confirm_btn {
+  background: #e53e3e;
+  border: 1px solid #c53030;
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.framework_confirm_btn:hover {
+  background: #c53030;
+}
+
+.framework_confirm_btn:disabled {
+  background: #e2e8f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+  border: 1px solid #cbd5e0;
+}
+
+/* No Policies Message */
+.no-policies-message {
+  text-align: center;
+  padding: 32px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
+  border: 1px solid #e9ecef;
+}
+
+.no-policies-message i {
+  font-size: 48px;
+  color: #dee2e6;
+  margin-bottom: 16px;
+}
+
+.no-policies-message p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .framework_details_page {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .framework_title {
+    font-size: 1.5rem;
+  }
+
+  .framework_detail_row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .framework-actions,
+  .policy-actions,
+  .subpolicy-actions {
+    flex-direction: column;
+  }
+
+  .framework-actions button,
+  .policy-actions button,
+  .subpolicy-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .policy-header,
+  .subpolicy-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

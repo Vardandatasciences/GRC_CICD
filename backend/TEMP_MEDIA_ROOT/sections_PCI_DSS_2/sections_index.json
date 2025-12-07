@@ -1,0 +1,218 @@
+{
+  "source_pdf": "D:\\ai_ipload\\PCI_DSS_2.pdf",
+  "index_json": "D:\\ai_ipload\\upload_john_doe\\PCI_DSS_2_index.json",
+  "structure_type": "hierarchical",
+  "sections_written": [
+    {
+      "folder": "001-Introduction_Protecting_Cardholder_Data",
+      "title": "Introduction: Protecting Cardholder Data with PCI Security Standards",
+      "level": 1,
+      "start_page": 3,
+      "end_page": 4,
+      "printed_page": 4,
+      "has_children": false,
+      "pdf_file": "Introduction_Protecting_Cardholder_Data.pdf"
+    },
+    {
+      "folder": "002-Overview_of_PCI_Requirements",
+      "title": "Overview of PCI Requirements",
+      "level": 1,
+      "start_page": 5,
+      "end_page": 8,
+      "printed_page": 6,
+      "has_children": true,
+      "pdf_file": "Overview_of_PCI_Requirements.pdf"
+    },
+    {
+      "folder": "002-Overview_of_PCI_Requirements/001-The_PCI_Data_Security_Standard",
+      "title": "The PCI Data Security Standard",
+      "level": 2,
+      "start_page": 8,
+      "end_page": 8,
+      "printed_page": 9,
+      "has_children": false,
+      "pdf_file": "The_PCI_Data_Security_Standard.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI",
+      "title": "Security Controls and Processes for PCI DSS Requirements",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 11,
+      "has_children": true,
+      "pdf_file": "Security_Controls_and_Processes_for_PCI.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/001-Build_and_Maintain_a_Secure_Network_and",
+      "title": "Build and Maintain a Secure Network and Systems",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 12,
+      "has_children": false,
+      "pdf_file": "Build_and_Maintain_a_Secure_Network_and.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/002-Protect_Cardholder_Data",
+      "title": "Protect Cardholder Data",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 14,
+      "has_children": false,
+      "pdf_file": "Protect_Cardholder_Data.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/003-Maintain_a_Vulnerability_Management_Prog",
+      "title": "Maintain a Vulnerability Management Program",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 16,
+      "has_children": false,
+      "pdf_file": "Maintain_a_Vulnerability_Management_Prog.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/004-Implement_Strong_Access_Control_Measures",
+      "title": "Implement Strong Access Control Measures",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 18,
+      "has_children": false,
+      "pdf_file": "Implement_Strong_Access_Control_Measures.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/005-Regularly_Monitor_and_Test_Networks",
+      "title": "Regularly Monitor and Test Networks",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 21,
+      "has_children": false,
+      "pdf_file": "Regularly_Monitor_and_Test_Networks.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/006-Maintain_an_Information_Security_Policy",
+      "title": "Maintain an Information Security Policy",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 24,
+      "has_children": false,
+      "pdf_file": "Maintain_an_Information_Security_Policy.pdf"
+    },
+    {
+      "folder": "003-Security_Controls_and_Processes_for_PCI/007-Compensating_Controls_for_PCI_DSS_Requir",
+      "title": "Compensating Controls for PCI DSS Requirements",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 26,
+      "has_children": false,
+      "pdf_file": "Compensating_Controls_for_PCI_DSS_Requir.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS",
+      "title": "How to Comply with PCI DSS",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 27,
+      "has_children": true,
+      "pdf_file": "How_to_Comply_with_PCI_DSS.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/001-Choosing_a_Qualified_Security_Assessor",
+      "title": "Choosing a Qualified Security Assessor",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 28,
+      "has_children": false,
+      "pdf_file": "Choosing_a_Qualified_Security_Assessor.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/002-Choosing_an_Approved_Scanning_Vendor",
+      "title": "Choosing an Approved Scanning Vendor",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 29,
+      "has_children": false,
+      "pdf_file": "Choosing_an_Approved_Scanning_Vendor.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/003-Scope_of_PCI_DSS_Requirements",
+      "title": "Scope of PCI DSS Requirements",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 30,
+      "has_children": false,
+      "pdf_file": "Scope_of_PCI_DSS_Requirements.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/004-Using_the_Self-Assessment_Questionnaire",
+      "title": "Using the Self-Assessment Questionnaire",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 33,
+      "has_children": false,
+      "pdf_file": "Using_the_Self-Assessment_Questionnaire.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/005-Reporting",
+      "title": "Reporting",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 35,
+      "has_children": false,
+      "pdf_file": "Reporting.pdf"
+    },
+    {
+      "folder": "004-How_to_Comply_with_PCI_DSS/006-Implementing_PCI_DSS_into_Business-as-Us",
+      "title": "Implementing PCI DSS into Business-as-Usual Processes",
+      "level": 2,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 36,
+      "has_children": false,
+      "pdf_file": "Implementing_PCI_DSS_into_Business-as-Us.pdf"
+    },
+    {
+      "folder": "005-Web_Resources",
+      "title": "Web Resources",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 37,
+      "has_children": false,
+      "pdf_file": "Web_Resources.pdf"
+    },
+    {
+      "folder": "006-About_the_PCI_Security_Standards_Council",
+      "title": "About the PCI Security Standards Council",
+      "level": 1,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 39,
+      "has_children": true,
+      "pdf_file": "About_the_PCI_Security_Standards_Council.pdf"
+    },
+    {
+      "folder": "006-About_the_PCI_Security_Standards_Council/001-Report_p",
+      "title": "Report, p.",
+      "level": 3,
+      "start_page": 9,
+      "end_page": 9,
+      "printed_page": 30,
+      "has_children": false,
+      "pdf_file": "Report_p.pdf"
+    }
+  ],
+  "unresolved_titles": []
+}

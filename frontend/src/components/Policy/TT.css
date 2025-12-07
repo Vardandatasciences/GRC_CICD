@@ -1,0 +1,1166 @@
+.TT-page-wrapper {
+  margin-left: 280px;
+  margin-top:30px;
+}
+.TT-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 100%;
+}
+.tt-page-header {
+  margin-bottom: 5px;
+}
+
+.TT-toggle-group {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  margin-top: -5px;
+  width: fit-content;
+  margin-left: 0;
+  margin-right: auto;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.TT-toggle {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #555;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+.TT-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.TT-toggle:hover {
+  color: #3d5afe;
+}
+.TT-toggle:hover::after {
+  background: rgba(61, 90, 254, 0.3);
+}
+.TT-toggle.TT-active {
+  background: transparent;
+  color: #3d5afe;
+  font-weight: 700;
+}
+.TT-toggle.TT-active::after {
+  background: #3d5afe;
+}
+.TT-top-dropdowns {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: flex-start;
+}
+
+/* Style dropdown button - reduce padding and white background */
+.TT-top-dropdowns .dropdown-container .filter-btn {
+  background: white !important;
+  padding: 3px 6px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.TT-top-dropdowns .dropdown-container .filter-btn:hover {
+  background: #f8f9fa !important;
+  border-color: #7B6FDD !important;
+  box-shadow: none !important;
+}
+
+/* Dropdown menu container with single border */
+.TT-top-dropdowns .dropdown-container .dropdown-menu {
+  background: white !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  padding: 4px !important;
+}
+
+/* Dropdown items without individual borders */
+.TT-top-dropdowns .dropdown-container .dropdown-item {
+  background: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  margin-bottom: 2px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  font-size: 0.8em !important;
+  font-weight: normal !important;
+  line-height: 1.3 !important;
+  padding: 6px 10px !important;
+  max-width: 100% !important;
+}
+
+.TT-top-dropdowns .dropdown-container .dropdown-item:hover {
+  background: #f8f9fa !important;
+}
+
+.TT-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.TT-info-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #3d5afe;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.TT-info-icon:hover {
+  transform: scale(1.1);
+}
+
+.TT-info-tooltip {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: -250px;
+  background: white;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  animation: fadeIn 0.2s ease-out;
+  border: 1px solid #e2e8f0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.TT-top-dropdowns .TT-select-framework,
+.TT-top-dropdowns .TT-select-policy {
+  width: 260px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.TT-select-framework, .TT-select-policy {
+  padding: 10px 12px;
+  border: 1px solid #bfcfff;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f5f7ff;
+  box-shadow: none;
+  outline: none;
+  color: #2a3a5e;
+}
+
+/* Custom Dropdown styles for framework and policy selection */
+.TT-top-dropdowns .dropdown-container .dropdown-value {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 200px !important;
+  display: inline-block !important;
+  cursor: help !important;
+}
+
+.TT-top-dropdowns .dropdown-container .text-content {
+  overflow: hidden !important;
+  min-width: 0 !important;
+}
+
+.TT-top-dropdowns .dropdown-container .dropdown-menu {
+  min-width: 300px !important;
+  max-width: 500px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.TT-top-dropdowns .dropdown-container .dropdown-item {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: 1.4 !important;
+  max-width: none !important;
+  text-overflow: initial !important;
+  overflow: visible !important;
+  background: white !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.TT-top-dropdowns .dropdown-container .dropdown-item:hover {
+  background: #f8f9fa !important;
+}
+
+/* Tooltip styles for truncated text */
+.TT-top-dropdowns .dropdown-container {
+  position: relative;
+}
+
+.TT-top-dropdowns .dropdown-container .filter-btn:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-top: 4px;
+  max-width: 400px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.TT-top-dropdowns .dropdown-container .filter-btn[title]:hover::after {
+  display: block;
+}
+
+.TT-top-dropdowns .dropdown-container .filter-btn:not([title])::after,
+.TT-top-dropdowns .dropdown-container .filter-btn[title=""]::after {
+  display: none;
+}
+.TT-policy-dropdowns {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.TT-form-container {
+  background: #f8faff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(61,90,254,0.04);
+}
+.TT-form-group {
+  margin-bottom: 18px;
+}
+.TT-label {
+  font-weight: 600;
+  color: #2a3a5e;
+  margin-bottom: 4px;
+  display: block;
+}
+.TT-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bfcfff !important;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff !important;
+  margin-bottom: 4px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.TT-textarea {
+  width: 100%;
+  height: 140px !important;
+  padding: 10px 12px;
+  border: 1px solid #bfcfff !important;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff !important;
+  margin-bottom: 4px;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.TT-input:focus, .TT-textarea:focus {
+  border-color: #3d5afe;
+  box-shadow: 0 0 0 2px rgba(61,90,254,0.08);
+}
+input:required:invalid, textarea:required:invalid, select:required:invalid {
+  border-color: #bfcfff !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+.TT-textarea {
+  resize: vertical;
+}
+.TT-desc {
+  font-size: 0.92rem;
+  color: #7a7a7a;
+  margin-left: 2px;
+}
+
+.TT-error-text {
+  color: #dc3545;
+  font-size: 0.8em;
+  margin-top: 4px;
+  display: block;
+}
+.TT-row {
+  display: flex;
+  gap: 18px;
+}
+.TT-half {
+  flex: 1;
+}
+.TT-container form {
+  display: flex;
+  flex-direction: column;
+}
+.TT-submit {
+  align-self: center;
+  background: #3d5afe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.2s;
+}
+.TT-submit:hover {
+  background: #2a3a5e;
+}
+.TT-policy-tabs-container {
+  margin-top: 32px;
+  background: transparent;
+  box-shadow: none;
+  max-width: 1300px;
+  margin-left: 0;
+  margin-right: auto;
+  position: relative;
+}
+.TT-policy-tabs-row {
+  background: #fff;
+  border-bottom: 1px solid #eaedf3;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+}
+.TT-policy-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bfcfff transparent;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+.TT-policy-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.TT-policy-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.TT-policy-tabs::-webkit-scrollbar-thumb {
+  background: #bfcfff;
+  border-radius: 2px;
+}
+
+.TT-policy-tabs::-webkit-scrollbar-thumb:hover {
+  background: #3d5afe;
+}
+.TT-policy-tab {
+  background: transparent;
+  border: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 16px 24px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+  position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.TT-policy-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.TT-policy-tab:hover {
+  color: #3d5afe;
+}
+.TT-policy-tab:hover::after {
+  background: rgba(61, 90, 254, 0.3);
+}
+.TT-policy-tab-active {
+  background: transparent;
+  color: #3d5afe;
+  font-weight: 700;
+  border-bottom: none;
+}
+.TT-policy-tab-active::after {
+  background: #3d5afe;
+}
+.TT-add-policy-tab {
+  background: transparent;
+  border: none;
+  color: #3d5afe;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 16px 24px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.TT-add-policy-tab::before {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.TT-add-policy-tab:hover {
+  background: rgba(61, 90, 254, 0.08);
+  color: #2540a9;
+}
+.TT-policy-tab-content {
+  margin-top: 12px;
+}
+.TT-policy-form-container {
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 3px 3px 3px 5px rgba(26, 26, 26, 0.04);
+  padding: 32px 32px 24px 32px;
+  margin-top: 0;
+  position: relative;
+}
+.TT-exclude-policy-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  color: #f44336;
+  border: 1px solid #f44336;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  display: block;
+}
+.TT-exclude-policy-btn:hover {
+  background: rgba(244, 67, 54, 0.08);
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+.TT-subpolicy-tabs-container {
+  margin-top: 28px;
+  background: transparent;
+  box-shadow: none;
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: auto;
+  position: relative;
+}
+.TT-subpolicy-tabs-row {
+  background: #fff;
+  border-bottom: 1px solid #eaedf3;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+}
+.TT-subpolicy-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bfcfff transparent;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+.TT-subpolicy-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.TT-subpolicy-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.TT-subpolicy-tabs::-webkit-scrollbar-thumb {
+  background: #bfcfff;
+  border-radius: 2px;
+}
+
+.TT-subpolicy-tabs::-webkit-scrollbar-thumb:hover {
+  background: #3d5afe;
+}
+.TT-subpolicy-tab {
+  background: transparent;
+  border: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-right: 4px;
+  position: relative;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.TT-subpolicy-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.TT-subpolicy-tab:hover {
+  color: #3d5afe;
+}
+.TT-subpolicy-tab:hover::after {
+  background: rgba(61, 90, 254, 0.3);
+}
+.TT-subpolicy-tab-active {
+  background: transparent;
+  color: #3d5afe;
+  font-weight: 700;
+  border-bottom: none;
+}
+.TT-subpolicy-tab-active::after {
+  background: #3d5afe;
+}
+.TT-add-subpolicy-tab {
+  background: transparent;
+  border: none;
+  color: #3d5afe;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.TT-add-subpolicy-tab::before {
+  content: '+';
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.TT-add-subpolicy-tab:hover {
+  background: rgba(61, 90, 254, 0.08);
+  color: #2540a9;
+}
+.TT-subpolicy-form-container {
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 3px 3px 3px 5px rgba(0,0,0,0.04);
+  padding: 24px 32px 18px 32px;
+  margin-top: 0;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+.TT-exclude-subpolicy-btn {
+  position: absolute;
+  top: 14px;
+  right: 34px;
+  background: transparent;
+  color: #f44336;
+  border: 1px solid #f44336;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  display: block;
+}
+.TT-exclude-subpolicy-btn:hover {
+  background: rgba(244, 67, 54, 0.08);
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+.TT-universal-submit-wrapper {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  margin-top: 40px !important;
+  margin-bottom: 32px !important;
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+.TT-universal-submit-btn {
+  background: #3d5afe !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px 24px !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 6px rgba(61,90,254,0.15) !important;
+  width: 100px !important;
+  letter-spacing: 0.5px !important;
+}
+.TT-universal-submit-btn:hover {
+  background: #2540a9 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(61,90,254,0.25) !important;
+}
+
+/* Policy Type Multi-Select Styles */
+.policy-type-multi-select {
+  position: relative;
+  width: 100%;
+}
+
+.policy-type-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.selected-policy-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #805AD5;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  min-height: 36px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-policy-type::before {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  color: #805AD5;
+  font-size: 14px;
+}
+
+.selected-policy-type .policy-type-content {
+  margin-left: 26px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.selected-policy-type:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected-policy-type:focus-within,
+.selected-policy-type.active {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.policy-type-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.placeholder {
+  color: #a0aec0;
+  font-style: italic;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.dropdown-arrow {
+  color: #718096;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  margin-left: 8px;
+}
+
+.selected-policy-type.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.policy-type-options {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideDown 0.15s ease-out;
+}
+
+.policy-type-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f7fafc;
+  position: relative;
+}
+
+.policy-type-option:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.policy-type-option:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.policy-type-option:hover {
+  background: #f7fafc;
+  transform: translateX(1px);
+}
+
+.policy-type-label {
+  flex: 1;
+  font-size: 13px;
+  color: #2d3748;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+/* Policy Category Multi-Select Styles */
+.policy-category-multi-select {
+  position: relative;
+  width: 100%;
+}
+
+.policy-category-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.selected-policy-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #805AD5;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  min-height: 36px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-policy-category::before {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  color: #805AD5;
+  font-size: 14px;
+}
+
+.selected-policy-category .policy-category-content {
+  margin-left: 26px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.selected-policy-category:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected-policy-category:focus-within,
+.selected-policy-category.active {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.policy-category-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.policy-category-options {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideDown 0.15s ease-out;
+}
+
+.policy-category-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f7fafc;
+  position: relative;
+}
+
+.policy-category-option:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.policy-category-option:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.policy-category-option:hover {
+  background: #f7fafc;
+  transform: translateX(1px);
+}
+
+.policy-category-label {
+  flex: 1;
+  font-size: 13px;
+  color: #2d3748;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+/* Policy Sub Category Multi-Select Styles */
+.policy-subcategory-multi-select {
+  position: relative;
+  width: 100%;
+}
+
+.policy-subcategory-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.selected-policy-subcategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #805AD5;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  min-height: 36px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-policy-subcategory::before {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  color: #805AD5;
+  font-size: 14px;
+}
+
+.selected-policy-subcategory .policy-subcategory-content {
+  margin-left: 26px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.selected-policy-subcategory:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected-policy-subcategory:focus-within,
+.selected-policy-subcategory.active {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.policy-subcategory-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.policy-subcategory-options {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: 180px;
+  overflow-y: auto;
+  z-index: 1000;
+  animation: slideDown 0.15s ease-out;
+}
+
+.policy-subcategory-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid #f7fafc;
+  position: relative;
+}
+
+.policy-subcategory-option:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.policy-subcategory-option:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.policy-subcategory-option:hover {
+  background: #f7fafc;
+  transform: translateX(1px);
+}
+
+.policy-subcategory-label {
+  flex: 1;
+  font-size: 13px;
+  color: #2d3748;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+  text-overflow: initial;
+}
+
+/* Search Input Container */
+.search-input-container {
+  padding: 8px 12px;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.search-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
+}
+
+/* Create New Option */
+.create-new-option {
+  background: #f0fff4;
+  border-left: 3px solid #48bb78;
+}
+
+.create-new-option:hover {
+  background: #e6fffa;
+}
+
+.create-new-option i {
+  color: #48bb78;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+/* Custom scrollbar for all policy dropdowns */
+.policy-type-options::-webkit-scrollbar,
+.policy-category-options::-webkit-scrollbar,
+.policy-subcategory-options::-webkit-scrollbar {
+  width: 4px;
+}
+
+.policy-type-options::-webkit-scrollbar-track,
+.policy-category-options::-webkit-scrollbar-track,
+.policy-subcategory-options::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 2px;
+}
+
+.policy-type-options::-webkit-scrollbar-thumb,
+.policy-category-options::-webkit-scrollbar-thumb,
+.policy-subcategory-options::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 2px;
+}
+
+.policy-type-options::-webkit-scrollbar-thumb:hover,
+.policy-category-options::-webkit-scrollbar-thumb:hover,
+.policy-subcategory-options::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Focus states for accessibility */
+.policy-type-option:focus,
+.policy-category-option:focus,
+.policy-subcategory-option:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: -2px;
+  background: #ebf8ff;
+}
+
+.selected-policy-type:focus,
+.selected-policy-category:focus,
+.selected-policy-subcategory:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .policy-type-multi-select,
+  .policy-category-multi-select,
+  .policy-subcategory-multi-select {
+    width: 100%;
+  }
+  
+  .policy-type-options,
+  .policy-category-options,
+  .policy-subcategory-options {
+    max-height: 160px;
+    border-radius: 6px;
+  }
+  
+  .policy-type-option,
+  .policy-category-option,
+  .policy-subcategory-option {
+    padding: 10px 12px;
+  }
+  
+  .selected-policy-type,
+  .selected-policy-category,
+  .selected-policy-subcategory {
+    padding: 10px 12px;
+    min-height: 38px;
+  }
+}
+
+/* Animation for dropdown */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

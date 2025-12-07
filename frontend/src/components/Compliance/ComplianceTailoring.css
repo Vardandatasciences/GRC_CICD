@@ -1,0 +1,1215 @@
+.compliance-versioning-container {
+  padding: 50px 0 0 280px;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.compliance-selection-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 24px;
+  margin-left:-70px;
+}
+
+.compliance-selection-group {
+  flex: 0 0 auto;
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
+}
+
+.compliance-selection-group .compliance-select {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compliance-select {
+  padding: 1rem 1.5rem !important;
+  border: 1.5px solid #e0e3ea !important;
+  border-radius: 16px !important;
+  background: #f9fafb !important;
+  font-size: 1.15rem !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07) !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  outline: none !important;
+  appearance: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  cursor: pointer !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='20' height='20' fill='gray' xmlns='http://www.w3.org/2000/svg'><path d='M7 8l3 3 3-3'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 1.5rem center !important;
+  background-size: 2rem !important;
+  margin-bottom: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.compliance-select:focus {
+  border-color: #1976d2 !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15) !important;
+  background: #fff !important;
+}
+
+.compliance-selection-row label {
+  font-weight: 700 !important;
+  color: #2d3748 !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: 0.03em !important;
+  font-size: 1.05rem !important;
+  display: block;
+}
+
+.compliance-table-container {
+  margin: 32px 0 0 0;
+  padding: 0 24px;
+}
+
+.compliance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.compliance-table th, .compliance-table td {
+  border: 1.5px solid #e0e0e0;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.compliance-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.compliance-loading {
+  text-align: center;
+  color: #888;
+  margin-top: 24px;
+}
+
+.compliance-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.compliance-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: compliance-spin 1s linear infinite;
+}
+
+.compliance-loading-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+@keyframes compliance-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.compliance-error-message {
+  background-color: #fff2f2;
+  color: #c00;
+  padding: 16px;
+  margin: 24px 16px;
+  border-radius: 8px;
+  border: 1px solid #ffcccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compliance-error-message i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.compliance-retry-btn {
+  background: #c00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.compliance-retry-btn:hover {
+  background: #a00;
+}
+
+.compliance-refresh-btn {
+  background: #f5f5f5;
+  border: 1.5px solid #e0e3ea;
+  border-radius: 16px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.compliance-refresh-btn:hover {
+  background: #e0e0e0;
+}
+
+.compliance-refresh-btn i {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.compliance-no-compliances {
+  text-align: center;
+  color: #888;
+  margin: 24px 0;
+  font-size: 1.1rem;
+}
+
+.compliance-copy-error {
+  color: #c00;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+/* Modal styles */
+.compliance-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.compliance-modal-content {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 8px;
+  min-width: 400px;
+  max-width: 90vw;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.compliance-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.compliance-modal-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.compliance-modal-form label {
+  font-weight: 600;
+  margin-bottom: 2px;
+  margin-top: 10px;
+  color: #222;
+}
+
+.compliance-modal-form input,
+.compliance-modal-form select {
+  padding: 1rem 1.5rem !important;
+  border: 1.5px solid #e0e3ea !important;
+  border-radius: 16px !important;
+  background: #f9fafb !important;
+  font-size: 1.15rem !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07) !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  outline: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 0 !important;
+}
+
+.compliance-modal-form input:focus,
+.compliance-modal-form select:focus {
+  border-color: #1976d2 !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15) !important;
+  background: #fff !important;
+}
+
+.compliance-modal-content {
+  max-width: 500px;
+}
+
+.compliance-modal-actions {
+  margin-top: 18px;
+}
+
+.compliance-dynamic-modal {
+  max-width: 700px;
+  width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border-radius: 18px;
+  border: 1.5px solid #e0e0e0;
+  background: linear-gradient(120deg, #f8fafc 60%, #e3e9f3 100%);
+  animation: compliance-modal-pop 0.25s cubic-bezier(.4,2,.6,1) 1;
+}
+
+@keyframes compliance-modal-pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.compliance-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+.compliance-modal-header h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.compliance-modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-left: 10px;
+}
+
+.compliance-modal-close:hover {
+  color: #c00;
+}
+
+.compliance-dynamic-form {
+  width: 100%;
+}
+
+.compliance-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+}
+
+@media (max-width: 700px) {
+  .compliance-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compliance-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.compliance-form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #2a2a2a;
+  letter-spacing: 0.01em;
+}
+
+.compliance-form-group input,
+.compliance-form-group select {
+  margin-bottom: 0;
+  padding: 8px 12px;
+  border: 1.5px solid #bfc7d1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border-color 0.2s, background 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.compliance-form-group input:focus,
+.compliance-form-group select:focus {
+  border-color: #4f8cff;
+  background: #fff;
+}
+
+.compliance-form-group select:disabled {
+  background-color: #f0f0f0 !important;
+  cursor: not-allowed !important;
+  opacity: 0.8 !important;
+  border-color: #ccc !important;
+}
+
+.compliance-form-group select:disabled:hover {
+  border-color: #ccc !important;
+  box-shadow: none !important;
+}
+
+.compliance-form-group select:disabled + label {
+  color: #666 !important;
+}
+
+.compliance-modal-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.compliance-modal-actions button[type="submit"] {
+  background: linear-gradient(90deg, #4f8cff 60%, #6ed0fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(79,140,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.compliance-modal-actions button[type="submit"]:hover:enabled {
+  background: linear-gradient(90deg, #357ae8 60%, #4f8cff 100%);
+  box-shadow: 0 4px 16px rgba(79,140,255,0.13);
+}
+
+.compliance-modal-actions button[type="button"] {
+  background: #fff;
+  color: #4f8cff;
+  border: 1.5px solid #4f8cff;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.compliance-modal-actions button[type="button"]:hover {
+  background: #f0f7ff;
+  color: #357ae8;
+}
+
+.compliance-copy-error {
+  color: #c00;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* Modern, soft, rounded style for modal and form-group inputs/selects */
+.compliance-form-group input,
+.compliance-form-group select,
+.compliance-modal-form input,
+.compliance-modal-form select {
+  padding: 1rem 1.5rem !important;
+  border: 1.5px solid #e0e3ea !important;
+  border-radius: 16px !important;
+  background: #f9fafb !important;
+  font-size: 1.15rem !important;
+  color: #333 !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07) !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  outline: none !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 0 !important;
+}
+
+.compliance-form-group input:focus,
+.compliance-form-group select:focus,
+.compliance-modal-form input:focus,
+.compliance-modal-form select:focus {
+  border-color: #1976d2 !important;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15) !important;
+  background: #fff !important;
+}
+
+.compliance-heading {
+  margin-bottom: 24px;
+  margin-left: -2px;
+}
+.compliance-heading h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #23272f;
+  margin: 0;
+}
+.compliance-heading-underline {
+  width: 60px;
+  height: 4px;
+  background: #1976d2;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Static Content Section - Minimal and Professional */
+.static-content-section {
+  margin: 0 24px 32px 24px;
+  padding: 0;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1;
+}
+
+.content-wrapper {
+  max-width: 100%;
+  padding: 0;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.content-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2d3748 !important;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.01em;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.feature-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #1a202c !important;
+  font-weight: 500;
+  opacity: 1 !important;
+  visibility: visible !important;
+  white-space: nowrap;
+  line-height: 1.4;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+  margin-right: 32px;
+}
+
+.feature-badge:last-child {
+  margin-right: 0;
+}
+
+.feature-badge span {
+  color: #1a202c !important;
+  font-weight: 500;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.4;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.feature-badge i {
+  font-size: 1rem;
+  color: #4a5568 !important;
+  min-width: 18px;
+  text-align: center;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.4;
+  flex-shrink: 0;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Force text visibility with higher specificity */
+.compliance-versioning-container .static-content-section .content-description {
+  color: #1a202c !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.compliance-versioning-container .static-content-section .feature-badge {
+  color: #1a202c !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.compliance-versioning-container .static-content-section .feature-badge span {
+  color: #1a202c !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.compliance-versioning-container .static-content-section .feature-badge i {
+  color: #4a5568 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  cursor: default !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Prevent any hover effects on feature badges */
+.feature-badge:hover,
+.feature-badge:hover span,
+.feature-badge:hover i,
+.compliance-versioning-container .static-content-section .feature-badge:hover,
+.compliance-versioning-container .static-content-section .feature-badge:hover span,
+.compliance-versioning-container .static-content-section .feature-badge:hover i {
+  cursor: default !important;
+  pointer-events: none !important;
+  color: inherit !important;
+  background: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (max-width: 768px) {
+  .feature-badge {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  
+  .feature-badge:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Action buttons for table (Edit/Copy) */
+.compliance-action-btn {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.18s, opacity 0.18s;
+  font-size: 1.2rem;
+  color: #4f8cff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.compliance-action-btn:hover {
+  background: transparent;
+  border: none;
+  color: #357ae8;
+  opacity: 0.8;
+}
+
+
+.compliance-action-btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.compliance-edit-form-grid .compliance-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.compliance-edit-form-grid .compliance-form-group {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 900px) {
+  .compliance-edit-form-grid .compliance-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.compliance-edit-form-grid .compliance-form-group input,
+.compliance-edit-form-grid .compliance-form-group select,
+.compliance-input,
+.compliance-select,
+.compliance-modal-form input,
+.compliance-modal-form select {
+  font-size: 0.8rem !important;
+}
+
+
+.compliance-edit-form-grid .compliance-form-actions button[type="submit"] {
+  background: linear-gradient(90deg, #6a5acd 60%, #3f3f3f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6a5acd;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.compliance-edit-form-grid .compliance-form-actions button[type="submit"]:hover:enabled {
+  background: linear-gradient(90deg, #6a5acd 60%, #6a5acd 100%);
+  box-shadow: 0 4px 16px #6a5acd;
+}
+.compliance-edit-form-grid .compliance-form-actions button[type="button"] {
+  background: #fff;
+  color: #6a5acd;
+  border: 1.5px solid #6a5acd;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.compliance-edit-form-grid .compliance-form-actions button[type="button"]:hover {
+  background: #f8f0ff;
+  color: #6a5acd;
+  border-color: #6a5acd;
+  box-shadow: 0 2px 8px #6a5acd;
+}
+
+.compliance-form-group > div > button[type="submit"] {
+  background: linear-gradient(90deg, #6a5acd 60%, #3f3f3f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #6a5acd;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-right: 8px;
+}
+.compliance-form-group > div > button[type="submit"]:hover:enabled {
+  background: linear-gradient(90deg, #6a5acd 60%, #6a5acd 100%);
+  box-shadow: 0 4px 16px #6a5acd;
+}
+.compliance-form-group > div > button[type="button"] {
+  background: #fff;
+  color: #6a5acd;
+  border: 1.5px solid #6a5acd;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.compliance-form-group > div > button[type="button"]:hover {
+  background: #f8f0ff;
+  color: #6a5acd;
+  border-color: #6a5acd;
+  box-shadow: 0 2px 8px #6a5acd;
+}
+
+/* Ensure approver and approval due date appear in the same row */
+.compliance-form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.compliance-form-row .compliance-form-group {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Special styling for the framework-policy-row to ensure all three dropdowns fit in one row */
+.compliance-framework-policy-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.compliance-framework-policy-row .compliance-form-group {
+  flex: 1 1 0;
+  min-width: 0; /* Ensures the content can shrink below its minimum content size */
+}
+
+.compliance-framework-policy-row select {
+  width: 100%;
+  font-size: 0.75rem !important; /* Slightly smaller font to fit better */
+}
+
+@media (max-width: 1200px) {
+  .compliance-selection-row {
+    gap: 20px;
+    padding: 0 16px;
+  }
+  
+  .compliance-selection-group {
+    width: 280px;
+    max-width: 280px;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .compliance-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .compliance-framework-policy-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .compliance-selection-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .compliance-selection-group {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  .compliance-select {
+    min-width: 100% !important;
+  }
+}
+
+.compliance-edit-form-grid .compliance-form-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Searchable dropdown styles */
+.searchable-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 99999 !important;
+  margin-top: 4px;
+  /* Enhanced scrollbar styling for better UX */
+  scrollbar-width: thin;
+  scrollbar-color: #7B6FDD #f1f1f1;
+}
+
+.dropdown-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+  color: #334155;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.dropdown-option:hover {
+  background-color: #f1f5f9;
+}
+
+.dropdown-add-option {
+  padding: 8px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.dropdown-add-btn {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  margin-top: 4px;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 4px;
+  color: #1e293b;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.dropdown-add-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Webkit scrollbar styling for dropdown options */
+.dropdown-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+  background: #7B6FDD;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb:hover {
+  background: #6B5FCD;
+}
+
+.compliance-edit-btnn, .compliance-copy-btnn {
+  background-color: transparent !important;
+  color: #4f8cff !important;
+  border: none !important;
+}
+.compliance-edit-btnn i, .compliance-copy-btnn i {
+  color: #4f8cff !important;
+}
+.compliance-edit-btnn:hover, .compliance-copy-btnn:hover {
+  background-color: transparent !important;
+  color: #357ae8 !important;
+  opacity: 0.8 !important;
+}
+.compliance-edit-btnn:hover i, .compliance-copy-btnn:hover i {
+  color: #357ae8 !important;
+}
+
+/* Ensure action buttons are contained within table cells */
+.compliance-table td:last-child {
+  width: 120px;
+  text-align: center;
+  padding: 8px 4px !important;
+}
+
+.compliance-table th:last-child {
+  width: 120px;
+  text-align: center;
+  padding: 8px 4px !important;
+}
+
+/* Prevent action buttons from overflowing */
+.compliance-table td:last-child .compliance-action-btn-group {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Force remove all button containers with maximum specificity */
+.compliance-table td:last-child .compliance-action-btn,
+.compliance-table td:last-child button.compliance-action-btn,
+.compliance-table td:last-child .compliance-edit-btnn,
+.compliance-table td:last-child .compliance-copy-btnn,
+.compliance-table td:last-child .compliance-action-btn-group button,
+.compliance-table td:last-child .compliance-action-btn-group .compliance-action-btn {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+  min-width: auto !important;
+  height: auto !important;
+}
+
+.compliance-table td:last-child .compliance-action-btn:hover,
+.compliance-table td:last-child button.compliance-action-btn:hover,
+.compliance-table td:last-child .compliance-edit-btnn:hover,
+.compliance-table td:last-child .compliance-copy-btnn:hover,
+.compliance-table td:last-child .compliance-action-btn-group button:hover,
+.compliance-table td:last-child .compliance-action-btn-group .compliance-action-btn:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #000000 !important;
+  opacity: 0.6 !important;
+}
+
+.compliance-table td:last-child .compliance-action-btn i,
+.compliance-table td:last-child button.compliance-action-btn i,
+.compliance-table td:last-child .compliance-edit-btnn i,
+.compliance-table td:last-child .compliance-copy-btnn i,
+.compliance-table td:last-child .compliance-action-btn-group button i,
+.compliance-table td:last-child .compliance-action-btn-group .compliance-action-btn i {
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+}
+
+.compliance-table td:last-child .compliance-action-btn:hover i,
+.compliance-table td:last-child button.compliance-action-btn:hover i,
+.compliance-table td:last-child .compliance-edit-btnn:hover i,
+.compliance-table td:last-child .compliance-copy-btnn:hover i,
+.compliance-table td:last-child .compliance-action-btn-group button:hover i,
+.compliance-table td:last-child .compliance-action-btn-group .compliance-action-btn:hover i {
+  color: #000000 !important;
+}
+
+/* Force CustomDropdown styles to take precedence */
+.compliance-selection-group .dropdown-container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.compliance-selection-group .dropdown-container .dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  z-index: 99999 !important;
+  margin-top: 4px !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  max-height: 300px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-top: 0 !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #7B6FDD #f1f1f1 !important;
+}
+
+.compliance-selection-group .dropdown-container .dropdown-menu::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.compliance-selection-group .dropdown-container .dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 3px !important;
+}
+
+.compliance-selection-group .dropdown-container .dropdown-menu::-webkit-scrollbar-thumb {
+  background: #7B6FDD !important;
+  border-radius: 3px !important;
+  transition: background 0.3s ease !important;
+}
+
+.compliance-selection-group .dropdown-container .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #6B5FCD !important;
+}
+
+/* ULTRA AGGRESSIVE STYLES TO FORCE REMOVE ALL BUTTON CONTAINERS */
+button[class*="compliance-action-btn"],
+button[class*="compliance-edit-btnn"],
+button[class*="compliance-copy-btnn"],
+.compliance-action-btn,
+.compliance-edit-btnn,
+.compliance-copy-btnn,
+.compliance-action-btn-group button,
+.compliance-action-btn-group .compliance-action-btn,
+.compliance-action-btn-group .compliance-edit-btnn,
+.compliance-action-btn-group .compliance-copy-btnn,
+table .compliance-action-btn,
+table .compliance-edit-btnn,
+table .compliance-copy-btnn,
+table button[class*="compliance-action"],
+table button[class*="compliance-edit"],
+table button[class*="compliance-copy"],
+.compliance-table .compliance-action-btn,
+.compliance-table .compliance-edit-btnn,
+.compliance-table .compliance-copy-btnn,
+.compliance-table button[class*="compliance-action"],
+.compliance-table button[class*="compliance-edit"],
+.compliance-table button[class*="compliance-copy"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+  min-width: auto !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+button[class*="compliance-action-btn"]:hover,
+button[class*="compliance-edit-btnn"]:hover,
+button[class*="compliance-copy-btnn"]:hover,
+.compliance-action-btn:hover,
+.compliance-edit-btnn:hover,
+.compliance-copy-btnn:hover,
+.compliance-action-btn-group button:hover,
+.compliance-action-btn-group .compliance-action-btn:hover,
+.compliance-action-btn-group .compliance-edit-btnn:hover,
+.compliance-action-btn-group .compliance-copy-btnn:hover,
+table .compliance-action-btn:hover,
+table .compliance-edit-btnn:hover,
+table .compliance-copy-btnn:hover,
+table button[class*="compliance-action"]:hover,
+table button[class*="compliance-edit"]:hover,
+table button[class*="compliance-copy"]:hover,
+.compliance-table .compliance-action-btn:hover,
+.compliance-table .compliance-edit-btnn:hover,
+.compliance-table .compliance-copy-btnn:hover,
+.compliance-table button[class*="compliance-action"]:hover,
+.compliance-table button[class*="compliance-edit"]:hover,
+.compliance-table button[class*="compliance-copy"]:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  border-color: transparent !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  color: #000000 !important;
+  opacity: 0.6 !important;
+}
+
+button[class*="compliance-action-btn"] i,
+button[class*="compliance-edit-btnn"] i,
+button[class*="compliance-copy-btnn"] i,
+.compliance-action-btn i,
+.compliance-edit-btnn i,
+.compliance-copy-btnn i,
+.compliance-action-btn-group button i,
+.compliance-action-btn-group .compliance-action-btn i,
+.compliance-action-btn-group .compliance-edit-btnn i,
+.compliance-action-btn-group .compliance-copy-btnn i,
+table .compliance-action-btn i,
+table .compliance-edit-btnn i,
+table .compliance-copy-btnn i,
+table button[class*="compliance-action"] i,
+table button[class*="compliance-edit"] i,
+table button[class*="compliance-copy"] i,
+.compliance-table .compliance-action-btn i,
+.compliance-table .compliance-edit-btnn i,
+.compliance-table .compliance-copy-btnn i,
+.compliance-table button[class*="compliance-action"] i,
+.compliance-table button[class*="compliance-edit"] i,
+.compliance-table button[class*="compliance-copy"] i {
+  color: #000000 !important;
+  font-size: 1.2rem !important;
+}
+
+button[class*="compliance-action-btn"]:hover i,
+button[class*="compliance-edit-btnn"]:hover i,
+button[class*="compliance-copy-btnn"]:hover i,
+.compliance-action-btn:hover i,
+.compliance-edit-btnn:hover i,
+.compliance-copy-btnn:hover i,
+.compliance-action-btn-group button:hover i,
+.compliance-action-btn-group .compliance-action-btn:hover i,
+.compliance-action-btn-group .compliance-edit-btnn:hover i,
+.compliance-action-btn-group .compliance-copy-btnn:hover i,
+table .compliance-action-btn:hover i,
+table .compliance-edit-btnn:hover i,
+table .compliance-copy-btnn:hover i,
+table button[class*="compliance-action"]:hover i,
+table button[class*="compliance-edit"]:hover i,
+table button[class*="compliance-copy"]:hover i,
+.compliance-table .compliance-action-btn:hover i,
+.compliance-table .compliance-edit-btnn:hover i,
+.compliance-table .compliance-copy-btnn:hover i,
+.compliance-table button[class*="compliance-action"]:hover i,
+.compliance-table button[class*="compliance-edit"]:hover i,
+.compliance-table button[class*="compliance-copy"]:hover i {
+  color: #000000 !important;
+} 

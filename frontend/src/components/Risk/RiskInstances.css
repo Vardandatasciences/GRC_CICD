@@ -1,0 +1,1066 @@
+/* Modern Card Layout - sidebar-inspired */
+.risk-instance-container {
+  padding: 80px 16px 16px 210px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--risk-gray-800);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+  margin-top: 0;
+  background-color: #ffffff;
+}
+
+.risk-instance-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+  margin-left: 0;
+  padding-left: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Simplified card styling with gradient accent */
+.risk-instance-item-card {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  height: auto;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.risk-instance-item-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #6a5acd, #3f3f3f);
+}
+
+.risk-instance-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(106, 90, 205, 0.15);
+}
+
+/* Simplified header */
+.risk-instance-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.risk-instance-item-header h3 {
+  color: #7B6FDD;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0;
+  position: relative;
+  padding-bottom: 5px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.risk-instance-item-header h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background: #6a5acd;
+  border-radius: 2px;
+}
+
+/* Badge styling */
+.risk-instance-priority-badge {
+  padding: 3px 12px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-align: center;
+  background: transparent;
+  border: 2px solid;
+}
+
+/* Description styling */
+.risk-instance-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Meta items with better spacing and styling */
+.risk-instance-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(106, 90, 205, 0.1);
+}
+
+.risk-instance-meta-item {
+  display: flex;
+  gap: 5px;
+  font-size: 0.85rem;
+  align-items: center;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.risk-instance-meta-label {
+  color: #7B6FDD;
+  font-weight: 600;
+  min-width: 70px;
+}
+
+.risk-instance-meta-value {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Button styling */
+.risk-instance-view-details-btn {
+  background: #6a5acd;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin-top: 12px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.risk-instance-view-details-btn:hover {
+  background: #5a4abf;
+  transform: translateY(-2px);
+}
+
+/* Title section styling */
+.risk-instance-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.risk-instance-data-source {
+  margin: 0 16px;
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 600;
+  flex: 0 1 auto;
+}
+
+.risk-instance-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--form-header-text, var(--card-view-title-color, var(--text-primary, #333)));
+  margin: 0;
+  letter-spacing: 0.01em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-right: 100px;
+  background: transparent;
+  font-family: var(--font-family-primary, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
+  flex: 1;
+}
+.risk-instance-title::after {
+  content: '';
+  display: block;
+  margin-top: 4px;
+  margin-left: 0;
+  height: 4px;
+  width: 25%;
+  background: var(--primary-color, #4f7cff);
+  border-radius: 2px;
+}
+
+/* Priority/Status Badges */
+.risk-instance-priority-badge,
+.risk-instance-status-badge {
+  padding: 3px 12px;
+  border-radius: 16px;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 70px;
+  text-align: center;
+  background: transparent;
+  border: 2px solid;
+}
+
+/* Priority colors */
+.risk-instance-priority-critical {
+  color: #990000; /* Dark red text */
+  border-color: #990000;
+  background: rgba(153, 0, 0, 0.1); /* Transparent dark red background */
+  border-radius: 999px;
+  padding: 4px 18px;
+}
+.risk-instance-priority-high {
+  color: #e57373; /* Light red text */
+  border-color: #e57373;
+  background: rgba(229, 115, 115, 0.1); /* Transparent light red background */
+  border-radius: 999px;
+  padding: 4px 18px;
+}
+.risk-instance-priority-medium {
+  color: #f9a825; /* Dark yellow text */
+  border-color: #f9a825;
+  background: rgba(249, 168, 37, 0.1); /* Transparent light yellow background */
+  border-radius: 999px;
+  padding: 4px 18px;
+}
+.risk-instance-priority-low {
+  color: #1976d2; /* Light blue text */
+  border-color: #1976d2;
+  background: rgba(25, 118, 210, 0.1); /* Transparent light blue background */
+  border-radius: 999px;
+  padding: 4px 18px;
+}
+
+/* Status indicators */
+.risk-instance-status-badge {
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline;
+  min-width: 0;
+  text-align: left;
+  background: none;
+  border: none;
+}
+
+.risk-instance-status-open {
+  color: #2980b9;
+  border: none;
+  background: none;
+}
+.risk-instance-status-in-progress {
+  color: #f39c12;
+  border: none;
+  background: none;
+}
+.risk-instance-status-approved {
+  color: #27ae60;
+  border: none;
+  background: none;
+}
+.risk-instance-status-revision {
+  color: #8e44ad;
+  border: none;
+  background: none;
+}
+.risk-instance-status-closed {
+  color: #7f8c8d;
+  border: none;
+  background: none;
+}
+.risk-instance-status-rejected {
+  color: #c0392b;
+  border: none;
+  background: none;
+}
+
+.risk-instance-due-status {
+  margin-left: 4px;
+  font-size: 0.75em;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+.overdue { background: #e74c3c; color: #fff; }
+.urgent { background: #e67e22; color: #fff; }
+.warning { background: #f1c40f; color: #222; }
+.on-track { background: #2ecc71; color: #fff; }
+
+.risk-instance-item-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.risk-instance-item-card {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Custom status badge styling */
+.risk-instance-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.status-approved::before,
+.status-open::before {
+  content: '';
+  margin-right: 0;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 1200px) {
+  .risk-instance-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Risk Dashboard Filter Status Styles */
+.risk-filter-loading {
+  font-size: 0.8rem;
+  color: #f59e0b;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.risk-filter-error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.risk-filter-success {
+  font-size: 0.8rem;
+  color: #10b981;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .risk-instance-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .risk-instance-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .risk-instance-container {
+    padding: 16px;
+  }
+}
+
+/* Risk Instances Table Styling - Adapted from RiskRegisterList.css */
+:root {
+  --risk-primary: #7B6FDD;
+  --risk-primary-light: #8F84E8;
+  --risk-primary-dark: #6A5ED4;
+  --risk-secondary: #f72585;
+  --risk-success: #4cc9f0;
+  --risk-warning: #f8961e;
+  --risk-danger: #e63946;
+  --risk-light: #f8f9fa;
+  --risk-dark: #212529;
+  --risk-gray-100: #f8f9fa;
+  --risk-gray-200: #e9ecef;
+  --risk-gray-300: #dee2e6;
+  --risk-gray-400: #ced4da;
+  --risk-gray-500: #adb5bd;
+  --risk-gray-600: #6c757d;
+  --risk-gray-700: #495057;
+  --risk-gray-800: #343a40;
+  --risk-gray-900: #212529;
+  --risk-border-radius: 8px;
+  --risk-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --risk-transition: all 0.3s ease;
+}
+
+/* Filter Controls Styles - Updated for search bar on top, dropdowns below */
+.risk-instance-filters-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px 16px 24px;
+  border-bottom: 1px solid var(--risk-gray-200);
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.risk-instance-search-row {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.risk-instance-search-row .dynamic-search-bar {
+  min-width: 150px;
+  max-width: 350px;
+  flex: 0 0 auto;
+  position: relative;
+  background: transparent;
+}
+
+/* Clean container styling - no box on container */
+
+/* Clean Box-style search input styling - Only target input elements */
+.risk-instance-search-row .dynamic-search-bar input,
+.risk-instance-search-row .dynamic-search-bar .search-input,
+.risk-instance-search-row .dynamic-search-bar [type="text"],
+.risk-instance-search-row .dynamic-search-bar [type="search"] {
+  background: #ffffff !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 4px !important;
+  padding: 12px 16px !important;
+  font-size: 0.9rem !important;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  color: #333 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  min-height: 42px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+.risk-instance-search-row .dynamic-search-bar input:focus,
+.risk-instance-search-row .dynamic-search-bar .search-input:focus,
+.risk-instance-search-row .dynamic-search-bar [type="text"]:focus,
+.risk-instance-search-row .dynamic-search-bar [type="search"]:focus {
+  outline: none !important;
+  border-color: #7B6FDD !important;
+  box-shadow: 0 0 0 3px rgba(123, 111, 221, 0.1), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  background: #ffffff !important;
+}
+
+.risk-instance-search-row .dynamic-search-bar input:hover,
+.risk-instance-search-row .dynamic-search-bar .search-input:hover,
+.risk-instance-search-row .dynamic-search-bar [type="text"]:hover,
+.risk-instance-search-row .dynamic-search-bar [type="search"]:hover {
+  border-color: #cbd5e0 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Search container styling - merged with existing styles */
+
+/* Search icon styling if present */
+.risk-instance-search-row .dynamic-search-bar .search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+/* Remove duplicate styling - keep only the input styling */
+
+.risk-instance-dropdowns-row {
+  /* Use responsive grid for clean alignment */
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 12px !important;
+  align-items: center !important;
+  width: 100%;
+  overflow: visible;
+  padding-right: 0;
+}
+
+/* Style overrides for dynamic components */
+.risk-instance-dropdowns-row .dropdown-container {
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+}
+
+.risk-instance-dropdowns-row .filter-btn {
+  width: 100%;
+  height: 40px;
+  padding: 2px 10px;
+  font-size: 12px;
+  border: 1px solid var(--risk-gray-300);
+  border-radius: 6px;
+  background-color: white;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.risk-instance-dropdowns-row .filter-btn:hover {
+  border-color: var(--risk-primary);
+  box-shadow: 0 0 0 2px rgba(123, 111, 221, 0.1);
+}
+
+.risk-instance-dropdowns-row .dropdown-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+  display: inline-block;
+}
+
+/* Dynamic Table Cell Styling */
+.risk-instance-id {
+  text-align: center;
+  color: #7B6FDD;
+  font-weight: 600;
+  background: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+.risk-instance-origin-cell {
+  text-align: center;
+}
+
+.risk-instance-category-cell {
+  text-align: center;
+}
+
+.risk-instance-criticality-cell {
+  text-align: center;
+}
+
+.risk-instance-status-cell {
+  text-align: center;
+}
+
+.risk-instance-department-cell {
+  text-align: center;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.risk-instance-business-unit-cell {
+  text-align: center;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.risk-instance-description-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+/* Risk Description Link Styling */
+.risk-description-link {
+  color: #0066cc;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline;
+  line-height: 1.4;
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.risk-description-link:hover {
+  color: #004499;
+  text-decoration: underline;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.risk-description-link:visited {
+  color: #0066cc;
+}
+
+.risk-description-link:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+  background: none !important;
+  border: none !important;
+}
+
+/* Risk Instance Row Styling with Criticality Colors */
+.risk-instance-container .dynamic-table-row {
+  cursor: default;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Criticality-based row colors */
+.risk-instance-container .dynamic-table-row.criticality-critical {
+  background: linear-gradient(90deg, 
+    rgba(239, 68, 68, 0.08) 0%, 
+    rgba(239, 68, 68, 0.04) 50%, 
+    rgba(239, 68, 68, 0.02) 100%);
+  border-left: 4px solid #ef4444;
+}
+
+.risk-instance-container .dynamic-table-row.criticality-high {
+  background: linear-gradient(90deg, 
+    rgba(245, 158, 11, 0.08) 0%, 
+    rgba(245, 158, 11, 0.04) 50%, 
+    rgba(245, 158, 11, 0.02) 100%);
+  border-left: 4px solid #f59e0b;
+}
+
+.risk-instance-container .dynamic-table-row.criticality-medium {
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.08) 0%, 
+    rgba(59, 130, 246, 0.04) 50%, 
+    rgba(59, 130, 246, 0.02) 100%);
+  border-left: 4px solid #3b82f6;
+}
+
+.risk-instance-container .dynamic-table-row.criticality-low {
+  background: linear-gradient(90deg, 
+    rgba(34, 197, 94, 0.08) 0%, 
+    rgba(34, 197, 94, 0.04) 50%, 
+    rgba(34, 197, 94, 0.02) 100%);
+  border-left: 4px solid #22c55e;
+}
+
+/* Hover effects for criticality-colored rows */
+.risk-instance-container .dynamic-table-row.criticality-critical:hover {
+  background: linear-gradient(90deg, 
+    rgba(239, 68, 68, 0.15) 0%, 
+    rgba(239, 68, 68, 0.08) 50%, 
+    rgba(239, 68, 68, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-high:hover {
+  background: linear-gradient(90deg, 
+    rgba(245, 158, 11, 0.15) 0%, 
+    rgba(245, 158, 11, 0.08) 50%, 
+    rgba(245, 158, 11, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-medium:hover {
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.15) 0%, 
+    rgba(59, 130, 246, 0.08) 50%, 
+    rgba(59, 130, 246, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-low:hover {
+  background: linear-gradient(90deg, 
+    rgba(34, 197, 94, 0.15) 0%, 
+    rgba(34, 197, 94, 0.08) 50%, 
+    rgba(34, 197, 94, 0.04) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+/* Active state for criticality-colored rows */
+.risk-instance-container .dynamic-table-row.criticality-critical:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.15);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-high:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.15);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-medium:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
+}
+
+.risk-instance-container .dynamic-table-row.criticality-low:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(34, 197, 94, 0.15);
+}
+
+/* Default hover for rows without criticality class */
+.risk-instance-container .dynamic-table-row:hover:not([class*="criticality-"]) {
+  background: linear-gradient(90deg, 
+    rgba(123, 111, 221, 0.08) 0%, 
+    rgba(123, 111, 221, 0.04) 50%, 
+    transparent 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 111, 221, 0.15);
+}
+
+.risk-instance-container .dynamic-table-row:active:not([class*="criticality-"]) {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(123, 111, 221, 0.1);
+}
+
+/* Criticality Legend Styles */
+.risk-instance-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid var(--risk-gray-200);
+  backdrop-filter: blur(10px);
+}
+
+.legend-title {
+  font-weight: 600;
+  color: var(--risk-gray-700);
+  font-size: 0.9rem;
+}
+
+.legend-items {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--risk-gray-600);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.legend-item.criticality-critical .legend-color {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  border-color: #ef4444;
+}
+
+.legend-item.criticality-high .legend-color {
+  background: linear-gradient(45deg, #f59e0b, #d97706);
+  border-color: #f59e0b;
+}
+
+.legend-item.criticality-medium .legend-color {
+  background: linear-gradient(45deg, #3b82f6, #2563eb);
+  border-color: #3b82f6;
+}
+
+.legend-item.criticality-low .legend-color {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border-color: #22c55e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .risk-instance-container {
+    padding: 80px 16px 16px 210px;
+  }
+  
+  .risk-instance-dropdowns-row {
+    gap: 12px !important;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  
+  .risk-instance-dropdowns-row .dropdown-container {
+    min-width: 0;
+    max-width: none;
+  }
+  
+  .risk-instance-search-row .dynamic-search-bar {
+    min-width: 150px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .risk-instance-container {
+    padding: 80px 16px 16px 16px;
+  }
+  
+  .risk-instance-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .risk-instance-export-controls {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  
+  .risk-instance-export-dropdown {
+    min-width: 140px;
+    flex: 1;
+    margin-right: 12px;
+  }
+  
+  .risk-instance-export-button {
+    flex-shrink: 0;
+  }
+  
+  .risk-instance-title {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  
+  .risk-instance-search-row {
+    justify-content: center;
+  }
+  
+  .risk-instance-search-row .dynamic-search-bar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Mobile box styling for search */
+  .risk-instance-search-row .dynamic-search-bar input,
+  .risk-instance-search-row .dynamic-search-bar .search-input {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    min-height: 40px;
+  }
+  
+  .risk-instance-dropdowns-row {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 12px !important;
+    width: 100%;
+  }
+  
+  .risk-instance-dropdowns-row .dropdown-container {
+    min-width: 0;
+    max-width: none;
+  }
+  
+  .risk-instance-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .legend-items {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Additional responsive adjustments for 4 dropdowns */
+@media (max-width: 1200px) {
+  .risk-instance-dropdowns-row {
+    gap: 8px !important;
+  }
+  
+  .risk-instance-dropdowns-row .dropdown-container {
+    min-width: 180px;
+    max-width: 200px;
+  }
+}
+
+/* Override dynamic table styles to match risk instance theme - Remove double wrapper */
+.dynamic-table-container {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.dynamic-table-container .table-wrapper {
+  margin-top: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.dynamic-table {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-collapse: separate !important;
+}
+
+.dynamic-table th {
+  background: #ffffff !important;
+  color: #333 !important;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #dee2e6;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.dynamic-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  background-color: transparent !important;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+.dynamic-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.dynamic-table tbody tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+/* Ensure proper cell content display */
+.dynamic-table td.risk-instance-origin-cell,
+.dynamic-table td.risk-instance-category-cell,
+.dynamic-table td.risk-instance-criticality-cell,
+.dynamic-table td.risk-instance-status-cell {
+  text-align: center;
+}
+
+/* Remove any unwanted underlines or black lines from table cells */
+.dynamic-table td,
+.dynamic-table td *,
+.dynamic-table tr,
+.dynamic-table tr * {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.dynamic-table td:hover,
+.dynamic-table td:hover *,
+.dynamic-table tr:hover,
+.dynamic-table tr:hover * {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove old table styles that are no longer needed */
+.risk-instance-table-container,
+.risk-instance-table,
+.risk-instance-search-input,
+.risk-instance-filter-select {
+  display: none;
+}
+
+/* Export controls styling */
+.risk-instance-export-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-right: 40px;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.risk-instance-export-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.risk-instance-export-dropdown {
+  min-width: 100px !important;
+  height: 36px !important;
+  border-radius: 6px !important;
+  border: 1px solid #e2e8f0 !important;
+  font-size: 0.85rem !important;
+  padding: 0 32px 0 12px !important;
+  background: #fff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%234b5563' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 10px center !important;
+  background-size: 14px !important;
+  color: #333 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  cursor: pointer !important;
+  font-family: inherit !important;
+}
+
+.risk-instance-export-dropdown:hover {
+  border-color: #cbd5e1 !important;
+}
+
+.risk-instance-export-dropdown:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.risk-instance-export-arrow {
+  display: none !important;
+}
+
+.risk-instance-export-button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #4f6cff;
+  color: #fff;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+}
+
+.risk-instance-export-button:hover:not(:disabled) {
+  background: #3d56e8;
+  transform: translateY(-1px);
+}
+
+.risk-instance-export-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.risk-instance-origin-badge {
+  background-color: #eef1ff;
+  color: #7B6FDD;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+

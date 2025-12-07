@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWT Storage Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .debug-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 3px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🔐 JWT Storage Debug</h1>
+    
+    <div class="debug-section">
+        <h3>1. Check Local Storage</h3>
+        <button onclick="checkLocalStorage()">Check JWT Tokens</button>
+        <div id="localStorageResult"></div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>2. Test JWT Login</h3>
+        <input type="text" id="username" placeholder="Username" value="audit.mgr.suman.pillai">
+        <input type="password" id="password" placeholder="Password" value="admin123">
+        <button onclick="testJWTLogin()">Login with JWT</button>
+        <div id="loginResult"></div>
+    </div>
+    
+    <div class="debug-section">
+        <h3>3. Test API Call with JWT</h3>
+        <button onclick="testAPICall()">Test /api/my-audits/ with JWT</button>
+        <div id="apiResult"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000';
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            console.log(`[${timestamp}] ${message}`);
+            
+            const color = type === 'success' ? 'green' : type === 'error' ? 'red' : type === 'warning' ? 'orange' : 'black';
+            return `<div style="color: ${color}">[${timestamp}] ${message}</div>`;
+        }
+        
+        function checkLocalStorage() {
+            const resultDiv = document.getElementById('localStorageResult');
+            let html = '<h4>Local Storage Contents:</h4>';
+            
+            const accessToken = localStorage.getItem('access_token');
+            const refreshToken = localStorage.getItem('refresh_token');
+            const userId = localStorage.getItem('user_id');
+            const user = localStorage.getItem('user');
+            const isAuthenticated = localStorage.getItem('isAuthenticated');
+            
+            html += log(`Access Token: ${accessToken ? '✅ Found' : '❌ Not found'}`, accessToken ? 'success' : 'error');
+            html += log(`Refresh Token: ${refreshToken ? '✅ Found' : '❌ Not found'}`, refreshToken ? 'success' : 'error');
+            html += log(`User ID: ${userId || '❌ Not found'}`, userId ? 'success' : 'error');
+            html += log(`User Data: ${user ? '✅ Found' : '❌ Not found'}`, user ? 'success' : 'error');
+            html += log(`Is Authenticated: ${isAuthenticated || '❌ Not found'}`, isAuthenticated ? 'success' : 'error');
+            
+            if (accessToken) {
+                html += '<h4>Token Details:</h4>';
+                try {
+                    const payload = JSON.parse(atob(accessToken.split('.')[1]));
+                    html += `<pre>${JSON.stringify(payload, null, 2)}</pre>`;
+                } catch (e) {
+                    html += log('❌ Could not decode token', 'error');
+                }
+            }
+            
+            resultDiv.innerHTML = html;
+        }
+        
+        async function testJWTLogin() {
+            const resultDiv = document.getElementById('loginResult');
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            resultDiv.innerHTML = log('🔐 Attempting JWT login...', 'info');
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/jwt/login/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password,
+                        login_type: 'username'
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok && data.status === 'success') {
+                    resultDiv.innerHTML += log('✅ JWT Login successful!', 'success');
+                    resultDiv.innerHTML += log(`User: ${data.user.username} (ID: ${data.user.id})`, 'success');
+                    resultDiv.innerHTML += log(`Access Token: ${data.tokens.access.substring(0, 50)}...`, 'success');
+                    
+                    // Store tokens
+                    localStorage.setItem('access_token', data.tokens.access);
+                    localStorage.setItem('refresh_token', data.tokens.refresh);
+                    localStorage.setItem('user_id', data.user.id);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    localStorage.setItem('isAuthenticated', 'true');
+                    
+                    resultDiv.innerHTML += log('✅ Tokens stored in localStorage', 'success');
+                    
+                    // Check localStorage again
+                    setTimeout(() => {
+                        checkLocalStorage();
+                    }, 1000);
+                } else {
+                    resultDiv.innerHTML += log(`❌ JWT Login failed: ${data.message || 'Unknown error'}`, 'error');
+                }
+            } catch (error) {
+                resultDiv.innerHTML += log(`❌ JWT Login error: ${error.message}`, 'error');
+            }
+        }
+        
+        async function testAPICall() {
+            const resultDiv = document.getElementById('apiResult');
+            const token = localStorage.getItem('access_token');
+            
+            if (!token) {
+                resultDiv.innerHTML = log('❌ No JWT token found. Please login first.', 'error');
+                return;
+            }
+            
+            resultDiv.innerHTML = log('🔍 Testing /api/my-audits/ with JWT...', 'info');
+            resultDiv.innerHTML += log(`Using token: ${token.substring(0, 50)}...`, 'info');
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/my-audits/`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    resultDiv.innerHTML += log('✅ /api/my-audits/ successful!', 'success');
+                    resultDiv.innerHTML += log(`Found ${Array.isArray(data) ? data.length : 'unknown'} audits`, 'success');
+                    resultDiv.innerHTML += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                } else {
+                    resultDiv.innerHTML += log(`❌ /api/my-audits/ failed: ${data.error || data.message || 'Unknown error'}`, 'error');
+                    resultDiv.innerHTML += log(`Status: ${response.status}`, 'error');
+                    resultDiv.innerHTML += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML += log(`❌ /api/my-audits/ error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Auto-check localStorage on page load
+        window.onload = function() {
+            checkLocalStorage();
+        };
+    </script>
+</body>
+</html>

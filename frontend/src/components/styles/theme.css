@@ -1,0 +1,855 @@
+:root {
+  --sidebar-bg: #f8f9fa;
+  --main-bg: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-tertiary: #6b7280;
+  --border-color: #dee2e6;
+  --logo-bg: #ffc107;
+  --hover-bg: #e9ecef;
+
+  /* Form variables */
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --text-secondary: #6c757d;
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #f8f9fa;
+  --secondary-hover: #e9ecef;
+  --input-bg: #ffffff;
+
+  /* Form Container Variables */
+  --form-container-max-width: 1400px;
+  --form-container-bg: #ffffff;
+  --form-container-shadow: rgba(0, 0, 0, 0.1);
+  --form-header-text: #333333;
+  --form-header-subtext: #666666;
+  --form-content-bg: #ffffff;
+  --form-content-border-radius: 8px;
+  --form-content-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --form-actions-border: #e5e7eb;
+
+  /* Form Section Variables */
+  --form-section-title: #374151;
+  --form-section-border: #e5e7eb;
+
+  /* Form Row Variables */
+  --form-row-gap: 20px;
+
+  /* Input Base Variables */
+  --input-border: #d1d5db;
+  --input-border-focus: #3b82f6;
+  --input-border-error: #ef4444;
+  --input-border-disabled: #d1d5db;
+  --input-bg-disabled: #f9fafb;
+  --input-text: #374151;
+  --input-text-disabled: #6b7280;
+  --input-placeholder: #9ca3af;
+  --input-shadow-focus: rgba(59, 130, 246, 0.1);
+  --input-shadow-error: rgba(239, 68, 68, 0.1);
+  --input-border-radius: 6px;
+  --input-padding: 10px 12px;
+  --input-font-size: 14px;
+
+  /* Label Variables */
+  --label-text: #374151;
+  --label-text-error: #ef4444;
+  --label-required: #ef4444;
+  --label-font-size: 14px;
+  --label-font-weight: 500;
+
+  /* Helper Text Variables */
+  --helper-text: #6b7280;
+  --error-text: #ef4444;
+  --helper-font-size: 12px;
+
+  /* Select Input Variables */
+  --select-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  --select-arrow-disabled: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+
+  /* Checkbox Variables */
+  --checkbox-border: #d1d5db;
+  --checkbox-border-checked: #3b82f6;
+  --checkbox-border-disabled: #d1d5db;
+  --checkbox-bg: #ffffff;
+  --checkbox-bg-checked: #3b82f6;
+  --checkbox-bg-disabled: #f9fafb;
+  --checkbox-bg-disabled-checked: #9ca3af;
+  --checkbox-checkmark: #ffffff;
+  --checkbox-checkmark-disabled: #ffffff;
+
+  /* Radio Variables */
+  --radio-border: #d1d5db;
+  --radio-border-checked: #3b82f6;
+  --radio-border-disabled: #d1d5db;
+  --radio-bg: #ffffff;
+  --radio-bg-checked: #3b82f6;
+  --radio-bg-disabled: #f9fafb;
+  --radio-bg-disabled-checked: #9ca3af;
+  --radio-dot: #ffffff;
+  --radio-dot-disabled: #ffffff;
+
+  /* File Input Variables */
+  --file-input-btn-bg: #f3f4f6;
+  --file-input-btn-border: #d1d5db;
+  --file-input-btn-hover-bg: #e5e7eb;
+  --file-input-btn-hover-border: #9ca3af;
+  --file-input-btn-disabled-bg: #f3f4f6;
+  --file-input-btn-disabled-text: #9ca3af;
+  --file-list-bg: #f9fafb;
+  --file-list-border: #e5e7eb;
+  --file-name-text: #374151;
+  --file-size-text: #6b7280;
+  --file-remove-btn-bg: #ef4444;
+  --file-remove-btn-hover-bg: #dc2626;
+
+  /* Button Variables */
+  --btn-primary-bg: #3b82f6;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: #2563eb;
+  --btn-secondary-bg: #f3f4f6;
+  --btn-secondary-text: #374151;
+  --btn-secondary-border: #d1d5db;
+  --btn-secondary-hover-bg: #e5e7eb;
+  --btn-secondary-hover-border: #9ca3af;
+
+  /* New theme variables */
+  --button-primary-bg: #4f46e5;
+  --button-primary-text: #ffffff;
+  --filter-btn-bg: #ffffff;
+  --filter-btn-border: #e5e7eb;
+  --filter-btn-text: #374151;
+  --task-section-bg: #ffffff;
+  --status-pending-bg: #fef3c7;
+  --status-pending-text: #92400e;
+  --status-inprogress-bg: #dbeafe;
+  --status-inprogress-text: #1e40af;
+  --status-completed-bg: #d1fae5;
+  --status-completed-text: #065f46;
+  --task-item-hover-bg: #f9fafb;
+  --assignee-initials-bg: #e0e7ff;
+  --assignee-initials-text: #4338ca;
+  --add-task-btn-text: #4f46e5;
+  --priority-high: #ef4444;
+  --priority-normal: #3b82f6;
+  --priority-none: #9ca3af;
+
+  /* Custom component variables */
+  /* Dropdown */
+  --dropdown-bg: #ffffff;
+  --dropdown-border: #e2e8f0;
+  --dropdown-hover-bg: #f9fafb;
+  --dropdown-hover-border: #d1d5db;
+  --dropdown-label-text: #6b7280;
+  --dropdown-value-text: #1f2937;
+  --dropdown-menu-bg: #ffffff;
+  --dropdown-menu-shadow: rgba(0, 0, 0, 0.1);
+  --dropdown-item-text: #374151;
+  --dropdown-item-hover-bg: #f3f4f6;
+
+  /* Button */
+  --add-new-btn-bg: #3b82f6;
+  --add-new-btn-text: #ffffff;
+  --add-new-btn-hover-bg: #2563eb;
+
+  /* Collapsible Table */
+  --table-section-border: #e5e7eb;
+  --table-section-bg: #ffffff;
+  --table-header-text: #374151;
+  --table-header-dots: #9ca3af;
+  --table-subheader-text: #6b7280;
+  --table-row-border: #f3f4f6;
+  --table-row-text: #111827;
+  --table-add-task-btn-text: #6b7280;
+  --table-add-task-btn-hover-text: #1f2937;
+  --assignee-placeholder-text: #6b7280;
+  --assignee-initials-bg: #e5e7eb;
+  --assignee-initials-text: #6b7280;
+
+  /* Status Chips & Icons */
+  --chip-pending-bg: #f3f4f6;
+  --chip-pending-text: #374151;
+  --chip-pending-border: #e5e7eb;
+  --chip-pending-icon: #9ca3af;
+  --chip-inprogress-bg: #fef9c3;
+  --chip-inprogress-text: #92400e;
+  --chip-inprogress-border: #fef08a;
+  --chip-inprogress-icon: #9333ea;
+  --chip-completed-bg: #dcfce7;
+  --chip-completed-text: #15803d;
+  --chip-completed-border: #bbf7d0;
+  --chip-completed-icon: #22c55e;
+  --task-icon-default: #d1d5db;
+
+  /* Priority Colors */
+  --priority-high-text: #dc2626;
+  --priority-normal-text: #3b82f6;
+  --priority-low-text: #10b981;
+  --priority-none-text: #9ca3af;
+
+  /* Dynamic Table */
+  --dynamic-table-container-bg: #ffffff;
+  --dynamic-table-container-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --dynamic-table-border-color: #e5e7eb;
+  --dynamic-table-header-bg: #f9fafb;
+  --dynamic-table-header-text: #374151;
+  --dynamic-table-row-hover-bg: #f9fafb;
+  --dynamic-table-row-text-color: #374151;
+  --dynamic-table-row-border-color: #f3f4f6;
+  --dynamic-table-pagination-bg: var(--dynamic-table-header-bg);
+  --dynamic-table-pagination-text-color: #6b7280;
+  --dynamic-table-pagination-btn-bg: #ffffff;
+  --dynamic-table-pagination-btn-border: #d1d5db;
+  --dynamic-table-pagination-btn-text: #374151;
+  --dynamic-table-pagination-btn-hover-bg: #f3f4f6;
+  --dynamic-table-pagination-btn-active-bg: #3b82f6;
+  --dynamic-table-pagination-btn-active-text: #ffffff;
+  --dynamic-table-sort-btn-color: #6b7280;
+  --dynamic-table-sort-btn-hover-color: #374151;
+  --status-on-rent-bg: #dbeafe;
+  --status-on-rent-text: #1d4ed8;
+  --status-on-sell-bg: #fef3c7;
+  --status-on-sell-text: #d97706;
+  --status-renovation-bg: #fce7f3;
+  --status-renovation-text: #be185d;
+  --status-on-construction-bg: #e0e7ff;
+  --status-on-construction-text: #7c3aed;
+  --status-active-bg: #d1fae5;
+  --status-active-text: #059669;
+  --status-inactive-bg: #fee2e2;
+  --status-inactive-text: #dc2626;
+  --status-pending-bg: var(--status-on-sell-bg);
+  --status-pending-text: var(--status-on-sell-text);
+  --status-approved-bg: var(--status-active-bg);
+  --status-approved-text: var(--status-active-text);
+  --status-rejected-bg: var(--status-inactive-bg);
+  --status-rejected-text: var(--status-inactive-text);
+  --progress-bar-container-bg: #e5e7eb;
+  --progress-bar-success-bg: #28a745;
+  --progress-bar-warning-bg: #ffc107;
+  --progress-bar-danger-bg: #dc3545;
+  --progress-bar-default-bg: #e9ecef;
+
+  /* Card View & Card Container */
+  --card-view-bg: #f7f8fc;
+  --card-view-radius: 12px;
+  --card-view-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --card-view-title-color: #333;
+  --card-view-header-bg: transparent;
+  --card-view-header-border: none;
+  --card-view-search-bg: #fff;
+  --card-view-search-border: #dcdfe6;
+  --card-view-search-text: #333;
+  --card-view-search-placeholder: #909399;
+  --card-grid-gap: 24px;
+
+  --card-bg: #fff;
+  --card-border: #e0e0e0;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --card-header-bg: #f8f9fa;
+  --card-header-border: #e0e0e0;
+  --card-title-color: #212529;
+  --card-status-radius: 16px;
+  --card-status-font: 12px;
+  --card-status-font-weight: 700;
+  --card-body-bg: #fff;
+  --card-details-label: #343a40;
+  --card-details-value: #495057;
+  --card-details-border: #e9ecef;
+  --card-footer-bg: #f8f9fa;
+  --card-footer-border: #e0e0e0;
+
+  /* Pagination */
+  --pagination-bg: #fff;
+  --pagination-radius: 8px;
+  --pagination-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  --pagination-info-color: #444;
+  --pagination-btn-bg: #fff;
+  --pagination-btn-border: #e5e7eb;
+  --pagination-btn-color: #222;
+  --pagination-btn-active-bg: #2563eb;
+  --pagination-btn-active-color: #fff;
+  --pagination-btn-disabled-opacity: 0.5;
+  --pagination-ellipsis-color: #888;
+  --pagination-select-bg: #f9fafb;
+  --pagination-select-border: #e5e7eb;
+  --pagination-select-color: #222;
+}
+
+[data-theme="dark"] {
+  --sidebar-bg: #212529;
+  --main-bg: #111827;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-tertiary: #9ca3af;
+  --border-color: #495057;
+  --logo-bg: #ffc107;
+  --hover-bg: #495057;
+
+  /* Form variables */
+  --bg-color: #111827;
+  --card-bg: #1f2937;
+  --text-color: #f8f9fa;
+  --text-secondary: #9ca3af;
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary-color: #374151;
+  --secondary-hover: #4b5563;
+  --input-bg: #374151;
+
+  /* Form Container Variables */
+  --form-container-max-width: 1000px;
+  --form-container-bg: #1f2937;
+  --form-container-shadow: rgba(0, 0, 0, 0.3);
+  --form-header-text: #f9fafb;
+  --form-header-subtext: #d1d5db;
+  --form-content-bg: #1f2937;
+  --form-content-border-radius: 8px;
+  --form-content-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --form-actions-border: #374151;
+
+  /* Form Section Variables */
+  --form-section-title: #f9fafb;
+  --form-section-border: #374151;
+
+  /* Form Row Variables */
+  --form-row-gap: 20px;
+
+  /* Input Base Variables */
+  --input-border: #4b5563;
+  --input-border-focus: #6366f1;
+  --input-border-error: #f87171;
+  --input-border-disabled: #4b5563;
+  --input-bg-disabled: #374151;
+  --input-text: #f9fafb;
+  --input-text-disabled: #9ca3af;
+  --input-placeholder: #6b7280;
+  --input-shadow-focus: rgba(99, 102, 241, 0.1);
+  --input-shadow-error: rgba(248, 113, 113, 0.1);
+  --input-border-radius: 6px;
+  --input-padding: 10px 12px;
+  --input-font-size: 14px;
+
+  /* Label Variables */
+  --label-text: #f9fafb;
+  --label-text-error: #f87171;
+  --label-required: #f87171;
+  --label-font-size: 14px;
+  --label-font-weight: 500;
+
+  /* Helper Text Variables */
+  --helper-text: #9ca3af;
+  --error-text: #f87171;
+  --helper-font-size: 12px;
+
+  /* Select Input Variables */
+  --select-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23d1d5db' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  --select-arrow-disabled: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+
+  /* Checkbox Variables */
+  --checkbox-border: #4b5563;
+  --checkbox-border-checked: #6366f1;
+  --checkbox-border-disabled: #4b5563;
+  --checkbox-bg: #374151;
+  --checkbox-bg-checked: #6366f1;
+  --checkbox-bg-disabled: #374151;
+  --checkbox-bg-disabled-checked: #9ca3af;
+  --checkbox-checkmark: #ffffff;
+  --checkbox-checkmark-disabled: #ffffff;
+
+  /* Radio Variables */
+  --radio-border: #4b5563;
+  --radio-border-checked: #6366f1;
+  --radio-border-disabled: #4b5563;
+  --radio-bg: #374151;
+  --radio-bg-checked: #6366f1;
+  --radio-bg-disabled: #374151;
+  --radio-bg-disabled-checked: #9ca3af;
+  --radio-dot: #ffffff;
+  --radio-dot-disabled: #ffffff;
+
+  /* File Input Variables */
+  --file-input-btn-bg: #374151;
+  --file-input-btn-border: #4b5563;
+  --file-input-btn-hover-bg: #4b5563;
+  --file-input-btn-hover-border: #6b7280;
+  --file-input-btn-disabled-bg: #374151;
+  --file-input-btn-disabled-text: #9ca3af;
+  --file-list-bg: #374151;
+  --file-list-border: #4b5563;
+  --file-name-text: #f9fafb;
+  --file-size-text: #9ca3af;
+  --file-remove-btn-bg: #f87171;
+  --file-remove-btn-hover-bg: #ef4444;
+
+  /* Button Variables */
+  --btn-primary-bg: #6366f1;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: #4f46e5;
+  --btn-secondary-bg: #374151;
+  --btn-secondary-text: #f9fafb;
+  --btn-secondary-border: #4b5563;
+  --btn-secondary-hover-bg: #4b5563;
+  --btn-secondary-hover-border: #6b7280;
+
+  /* New dark theme variables */
+  --button-primary-bg: #6366f1;
+  --button-primary-text: #ffffff;
+  --filter-btn-bg: #374151;
+  --filter-btn-border: #4b5563;
+  --filter-btn-text: #f3f4f6;
+  --task-section-bg: #1f2937;
+  --status-pending-bg: #b45309;
+  --status-pending-text: #fef3c7;
+  --status-inprogress-bg: #2563eb;
+  --status-inprogress-text: #dbeafe;
+  --status-completed-bg: #059669;
+  --status-completed-text: #d1fae5;
+  --task-item-hover-bg: #374151;
+  --assignee-initials-bg: #4338ca;
+  --assignee-initials-text: #e0e7ff;
+  --add-task-btn-text: #a78bfa;
+  --priority-high: #f87171;
+  --priority-normal: #60a5fa;
+  --priority-none: #9ca3af;
+
+  /* Custom component variables */
+  /* Dropdown */
+  --dropdown-bg: #374151;
+  --dropdown-border: #4b5563;
+  --dropdown-hover-bg: #4b5563;
+  --dropdown-hover-border: #6b7280;
+  --dropdown-label-text: #d1d5db;
+  --dropdown-value-text: #f9fafb;
+  --dropdown-menu-bg: #374151;
+  --dropdown-menu-shadow: rgba(0, 0, 0, 0.4);
+  --dropdown-item-text: #f3f4f6;
+  --dropdown-item-hover-bg: #4b5563;
+
+  /* Button */
+  --add-new-btn-bg: #4f46e5;
+  --add-new-btn-text: #ffffff;
+  --add-new-btn-hover-bg: #6366f1;
+
+  /* Collapsible Table */
+  --table-section-border: #374151;
+  --table-section-bg: #1f2937;
+  --table-header-text: #f9fafb;
+  --table-header-dots: #6b7280;
+  --table-subheader-text: #9ca3af;
+  --table-row-border: #374151;
+  --table-row-text: #f9fafb;
+  --table-add-task-btn-text: #9ca3af;
+  --table-add-task-btn-hover-text: #f9fafb;
+  --assignee-placeholder-text: #9ca3af;
+  --assignee-initials-bg: #3730a3;
+  --assignee-initials-text: #e0e7ff;
+
+  /* Status Chips & Icons */
+  --chip-pending-bg: #374151;
+  --chip-pending-text: #f9fafb;
+  --chip-pending-border: #4b5563;
+  --chip-pending-icon: #9ca3af;
+  --chip-inprogress-bg: #4a2c0d;
+  --chip-inprogress-text: #fef3c7;
+  --chip-inprogress-border: #78350f;
+  --chip-inprogress-icon: #c084fc;
+  --chip-completed-bg: #064e3b;
+  --chip-completed-text: #d1fae5;
+  --chip-completed-border: #065f46;
+  --chip-completed-icon: #4ade80;
+  --task-icon-default: #4b5563;
+
+  /* Priority Colors */
+  --priority-high-text: #f87171;
+  --priority-normal-text: #60a5fa;
+  --priority-low-text: #34d399;
+  --priority-none-text: #9ca3af;
+
+  /* Dynamic Table */
+  --dynamic-table-container-bg: #1f2937;
+  --dynamic-table-container-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --dynamic-table-border-color: #374151;
+  --dynamic-table-header-bg: #111827;
+  --dynamic-table-header-text: #f9fafb;
+  --dynamic-table-row-hover-bg: #374151;
+  --dynamic-table-row-text-color: #f9fafb;
+  --dynamic-table-row-border-color: #374151;
+  --dynamic-table-pagination-bg: var(--dynamic-table-header-bg);
+  --dynamic-table-pagination-text-color: #9ca3af;
+  --dynamic-table-pagination-btn-bg: #1f2937;
+  --dynamic-table-pagination-btn-border: #4b5563;
+  --dynamic-table-pagination-btn-text: #f9fafb;
+  --dynamic-table-pagination-btn-hover-bg: #374151;
+  --dynamic-table-pagination-btn-active-bg: #4f46e5;
+  --dynamic-table-pagination-btn-active-text: #ffffff;
+  --dynamic-table-sort-btn-color: #9ca3af;
+  --dynamic-table-sort-btn-hover-color: #f9fafb;
+  --status-on-rent-bg: #1e40af;
+  --status-on-rent-text: #dbeafe;
+  --status-on-sell-bg: #92400e;
+  --status-on-sell-text: #fef3c7;
+  --status-renovation-bg: #be185d;
+  --status-renovation-text: #fce7f3;
+  --status-on-construction-bg: #5b21b6;
+  --status-on-construction-text: #e0e7ff;
+  --status-active-bg: #065f46;
+  --status-active-text: #d1fae5;
+  --status-inactive-bg: #991b1b;
+  --status-inactive-text: #fee2e2;
+  --status-pending-bg: var(--status-on-sell-bg);
+  --status-pending-text: var(--status-on-sell-text);
+  --status-approved-bg: var(--status-active-bg);
+  --status-approved-text: var(--status-active-text);
+  --status-rejected-bg: var(--status-inactive-bg);
+  --status-rejected-text: var(--status-inactive-text);
+  --progress-bar-container-bg: #374151;
+  --progress-bar-success-bg: #22c55e;
+  --progress-bar-warning-bg: #f59e0b;
+  --progress-bar-danger-bg: #ef4444;
+  --progress-bar-default-bg: #4b5563;
+
+  /* Card View & Card Container */
+  --card-view-bg: #181a20;
+  --card-view-radius: 12px;
+  --card-view-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  --card-view-title-color: #f8f9fa;
+  --card-view-header-bg: transparent;
+  --card-view-header-border: none;
+  --card-view-search-bg: #23262f;
+  --card-view-search-border: #353945;
+  --card-view-search-text: #f8f9fa;
+  --card-view-search-placeholder: #909399;
+  --card-grid-gap: 24px;
+
+  --card-bg: #23262f;
+  --card-border: #353945;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  --card-header-bg: #181a20;
+  --card-header-border: #23262f;
+  --card-title-color: #f8f9fa;
+  --card-status-radius: 16px;
+  --card-status-font: 12px;
+  --card-status-font-weight: 700;
+  --card-body-bg: #23262f;
+  --card-details-label: #f8f9fa;
+  --card-details-value: #adb5bd;
+  --card-details-border: #353945;
+  --card-footer-bg: #181a20;
+  --card-footer-border: #23262f;
+
+  /* Pagination */
+  --pagination-bg: #23262f;
+  --pagination-radius: 8px;
+  --pagination-shadow: 0 1px 2px rgba(0,0,0,0.18);
+  --pagination-info-color: #adb5bd;
+  --pagination-btn-bg: #23262f;
+  --pagination-btn-border: #353945;
+  --pagination-btn-color: #f8f9fa;
+  --pagination-btn-active-bg: #6366f1;
+  --pagination-btn-active-color: #fff;
+  --pagination-btn-disabled-opacity: 0.5;
+  --pagination-ellipsis-color: #888;
+  --pagination-select-bg: #181a20;
+  --pagination-select-border: #353945;
+  --pagination-select-color: #f8f9fa;
+}
+
+[data-theme="blue"] {
+  --sidebar-bg: #182950;
+  --main-bg: #f2f3f7;
+  --sidebar-text-primary: #fff;
+  --sidebar-text-secondary: #bfc8db;
+  --text-primary: #182950;
+  --text-secondary: #3a4a6b;
+  --text-tertiary: #6b7280;
+  --border-color: #3a4a6b;
+  --logo-bg: #ffc107;
+  --hover-bg: #e0e4ef;
+
+  /* Form variables */
+  --bg-color: #f2f3f7;
+  --card-bg: #ffffff;
+  --text-color: #ffffff;
+  --text-secondary: #3a4a6b;
+  --primary-color: #182950;
+  --primary-hover: #0f1a33;
+  --secondary-color: #f2f3f7;
+  --secondary-hover: #e0e4ef;
+  --input-bg: #ffffff;
+
+  /* Form Container Variables */
+  --form-container-max-width: 1000px;
+  --form-container-bg: #f2f3f7;
+  --form-container-shadow: rgba(24, 41, 80, 0.1);
+  --form-header-text: #182950;
+  --form-header-subtext: #3a4a6b;
+  --form-content-bg: #ffffff;
+  --form-content-border-radius: 8px;
+  --form-content-shadow: 0 2px 10px rgba(24, 41, 80, 0.1);
+  --form-actions-border: #3a4a6b;
+
+  /* Form Section Variables */
+  --form-section-title: #182950;
+  --form-section-border: #3a4a6b;
+
+  /* Form Row Variables */
+  --form-row-gap: 20px;
+
+  /* Input Base Variables */
+  --input-border: #3a4a6b;
+  --input-border-focus: #182950;
+  --input-border-error: #ef4444;
+  --input-border-disabled: #bfc8db;
+  --input-bg-disabled: #e0e4ef;
+  --input-text: #182950;
+  --input-text-disabled: #6b7280;
+  --input-placeholder: #9ca3af;
+  --input-shadow-focus: rgba(24, 41, 80, 0.1);
+  --input-shadow-error: rgba(239, 68, 68, 0.1);
+  --input-border-radius: 6px;
+  --input-padding: 10px 12px;
+  --input-font-size: 14px;
+
+  /* Label Variables */
+  --label-text: #182950;
+  --label-text-error: #ef4444;
+  --label-required: #ef4444;
+  --label-font-size: 14px;
+  --label-font-weight: 500;
+
+  /* Helper Text Variables */
+  --helper-text: #3a4a6b;
+  --error-text: #ef4444;
+  --helper-font-size: 12px;
+
+  /* Select Input Variables */
+  --select-arrow: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%233a4a6b' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  --select-arrow-disabled: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+
+  /* Checkbox Variables */
+  --checkbox-border: #3a4a6b;
+  --checkbox-border-checked: #182950;
+  --checkbox-border-disabled: #bfc8db;
+  --checkbox-bg: #ffffff;
+  --checkbox-bg-checked: #182950;
+  --checkbox-bg-disabled: #e0e4ef;
+  --checkbox-bg-disabled-checked: #9ca3af;
+  --checkbox-checkmark: #ffffff;
+  --checkbox-checkmark-disabled: #ffffff;
+
+  /* Radio Variables */
+  --radio-border: #3a4a6b;
+  --radio-border-checked: #182950;
+  --radio-border-disabled: #bfc8db;
+  --radio-bg: #ffffff;
+  --radio-bg-checked: #182950;
+  --radio-bg-disabled: #e0e4ef;
+  --radio-bg-disabled-checked: #9ca3af;
+  --radio-dot: #ffffff;
+  --radio-dot-disabled: #ffffff;
+
+  /* File Input Variables */
+  --file-input-btn-bg: #e0e4ef;
+  --file-input-btn-border: #3a4a6b;
+  --file-input-btn-hover-bg: #d1d5db;
+  --file-input-btn-hover-border: #182950;
+  --file-input-btn-disabled-bg: #e0e4ef;
+  --file-input-btn-disabled-text: #9ca3af;
+  --file-list-bg: #f2f3f7;
+  --file-list-border: #3a4a6b;
+  --file-name-text: #182950;
+  --file-size-text: #3a4a6b;
+  --file-remove-btn-bg: #ef4444;
+  --file-remove-btn-hover-bg: #dc2626;
+
+  /* Button Variables */
+  --btn-primary-bg: #182950;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: #0f1a33;
+  --btn-secondary-bg: #e0e4ef;
+  --btn-secondary-text: #182950;
+  --btn-secondary-border: #3a4a6b;
+  --btn-secondary-hover-bg: #d1d5db;
+  --btn-secondary-hover-border: #182950;
+
+  /* New theme variables */
+  --button-primary-bg: #182950;
+  --button-primary-text: #ffffff;
+  --filter-btn-bg: #f2f3f7;
+  --filter-btn-border: #3a4a6b;
+  --filter-btn-text: #182950;
+  --task-section-bg: #f2f3f7;
+  --status-pending-bg: #e0e4ef;
+  --status-pending-text: #182950;
+  --status-inprogress-bg: #d1d5db;
+  --status-inprogress-text: #182950;
+  --status-completed-bg: #bfc8db;
+  --status-completed-text: #182950;
+  --task-item-hover-bg: #e0e4ef;
+  --assignee-initials-bg: #bfc8db;
+  --assignee-initials-text: #182950;
+  --add-task-btn-text: #182950;
+  --priority-high: #ef4444;
+  --priority-normal: #182950;
+  --priority-none: #9ca3af;
+
+  /* Custom component variables */
+  /* Dropdown */
+  --dropdown-bg: #f2f3f7;
+  --dropdown-border: #3a4a6b;
+  --dropdown-hover-bg: #e0e4ef;
+  --dropdown-hover-border: #182950;
+  --dropdown-label-text: #3a4a6b;
+  --dropdown-value-text: #182950;
+  --dropdown-menu-bg: #f2f3f7;
+  --dropdown-menu-shadow: rgba(24, 41, 80, 0.1);
+  --dropdown-item-text: #182950;
+  --dropdown-item-hover-bg: #e0e4ef;
+
+  /* Button */
+  --add-new-btn-bg: #182950;
+  --add-new-btn-text: #ffffff;
+  --add-new-btn-hover-bg: #0f1a33;
+
+  /* Collapsible Table */
+  --table-section-border: #3a4a6b;
+  --table-section-bg: #f2f3f7;
+  --table-header-text: #182950;
+  --table-header-dots: #9ca3af;
+  --table-subheader-text: #3a4a6b;
+  --table-row-border: #e0e4ef;
+  --table-row-text: #182950;
+  --table-add-task-btn-text: #3a4a6b;
+  --table-add-task-btn-hover-text: #182950;
+  --assignee-placeholder-text: #3a4a6b;
+  --assignee-initials-bg: #bfc8db;
+  --assignee-initials-text: #182950;
+
+  /* Status Chips & Icons */
+  --chip-pending-bg: #e0e4ef;
+  --chip-pending-text: #182950;
+  --chip-pending-border: #3a4a6b;
+  --chip-pending-icon: #9ca3af;
+  --chip-inprogress-bg: #d1d5db;
+  --chip-inprogress-text: #182950;
+  --chip-inprogress-border: #bfc8db;
+  --chip-inprogress-icon: #182950;
+  --chip-completed-bg: #bfc8db;
+  --chip-completed-text: #182950;
+  --chip-completed-border: #bfc8db;
+  --chip-completed-icon: #182950;
+  --task-icon-default: #3a4a6b;
+
+  /* Priority Colors */
+  --priority-high-text: #dc2626;
+  --priority-normal-text: #182950;
+  --priority-low-text: #10b981;
+  --priority-none-text: #9ca3af;
+
+  /* Dynamic Table */
+  --dynamic-table-container-bg: #f2f3f7;
+  --dynamic-table-container-shadow: 0 2px 4px rgba(24, 41, 80, 0.1);
+  --dynamic-table-border-color: #3a4a6b;
+  --dynamic-table-header-bg: #e0e4ef;
+  --dynamic-table-header-text: #182950;
+  --dynamic-table-row-hover-bg: #e0e4ef;
+  --dynamic-table-row-text-color: #182950;
+  --dynamic-table-row-border-color: #e0e4ef;
+  --dynamic-table-pagination-bg: var(--dynamic-table-header-bg);
+  --dynamic-table-pagination-text-color: #3a4a6b;
+  --dynamic-table-pagination-btn-bg: #f2f3f7;
+  --dynamic-table-pagination-btn-border: #3a4a6b;
+  --dynamic-table-pagination-btn-text: #182950;
+  --dynamic-table-pagination-btn-hover-bg: #e0e4ef;
+  --dynamic-table-pagination-btn-active-bg: #182950;
+  --dynamic-table-pagination-btn-active-text: #ffffff;
+  --dynamic-table-sort-btn-color: #3a4a6b;
+  --dynamic-table-sort-btn-hover-color: #182950;
+  --status-on-rent-bg: #d1d5db;
+  --status-on-rent-text: #182950;
+  --status-on-sell-bg: #e0e4ef;
+  --status-on-sell-text: #182950;
+  --status-renovation-bg: #bfc8db;
+  --status-renovation-text: #182950;
+  --status-on-construction-bg: #bfc8db;
+  --status-on-construction-text: #182950;
+  --status-active-bg: #bfc8db;
+  --status-active-text: #182950;
+  --status-inactive-bg: #e0e4ef;
+  --status-inactive-text: #182950;
+  --status-pending-bg: var(--status-on-sell-bg);
+  --status-pending-text: var(--status-on-sell-text);
+  --status-approved-bg: var(--status-active-bg);
+  --status-approved-text: var(--status-active-text);
+  --status-rejected-bg: var(--status-inactive-bg);
+  --status-rejected-text: var(--status-inactive-text);
+  --progress-bar-container-bg: #3a4a6b;
+  --progress-bar-success-bg: #28a745;
+  --progress-bar-warning-bg: #ffc107;
+  --progress-bar-danger-bg: #dc3545;
+  --progress-bar-default-bg: #e0e4ef;
+
+  /* Dynamic Table Text Wrapping */
+  --dynamic-table-cell-content-max-width: 300px;
+  --dynamic-table-cell-content-min-height: 1.4em;
+  --dynamic-table-cell-content-line-height: 1.4;
+  --dynamic-table-name-column-max-width: 400px;
+  --dynamic-table-name-column-min-width: 200px;
+
+  /* Card View & Card Container */
+  --card-view-bg: #f2f3f7;
+  --card-view-radius: 12px;
+  --card-view-shadow: 0 2px 8px rgba(24,41,80,0.04);
+  --card-view-title-color: #182950;
+  --card-view-header-bg: transparent;
+  --card-view-header-border: none;
+  --card-view-search-bg: #fff;
+  --card-view-search-border: #3a4a6b;
+  --card-view-search-text: #182950;
+  --card-view-search-placeholder: #909399;
+  --card-grid-gap: 24px;
+
+  --card-bg: #fff;
+  --card-border: #3a4a6b;
+  --card-radius: 12px;
+  --card-shadow: 0 4px 6px rgba(24, 41, 80, 0.05);
+  --card-header-bg: #f2f3f7;
+  --card-header-border: #3a4a6b;
+  --card-title-color: #182950;
+  --card-status-radius: 16px;
+  --card-status-font: 12px;
+  --card-status-font-weight: 700;
+  --card-body-bg: #fff;
+  --card-details-label: #182950;
+  --card-details-value: #3a4a6b;
+  --card-details-border: #e0e4ef;
+  --card-footer-bg: #f2f3f7;
+  --card-footer-border: #3a4a6b;
+
+  /* Pagination */
+  --pagination-bg: #f2f3f7;
+  --pagination-radius: 8px;
+  --pagination-shadow: 0 1px 2px rgba(24,41,80,0.03);
+  --pagination-info-color: #182950;
+  --pagination-btn-bg: #f2f3f7;
+  --pagination-btn-border: #3a4a6b;
+  --pagination-btn-color: #182950;
+  --pagination-btn-active-bg: #182950;
+  --pagination-btn-active-color: #fff;
+  --pagination-btn-disabled-opacity: 0.5;
+  --pagination-ellipsis-color: #888;
+  --pagination-select-bg: #e0e4ef;
+  --pagination-select-border: #3a4a6b;
+  --pagination-select-color: #182950;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  color: var(--text-primary);
+  background-color: var(--main-bg);
+} 
