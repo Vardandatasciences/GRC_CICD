@@ -36,3 +36,5 @@ Write-Host "🔍 Monitor logs with: docker-compose logs -f backend" -ForegroundC
 
 
 
+
+
