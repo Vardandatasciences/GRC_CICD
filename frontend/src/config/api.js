@@ -2,13 +2,13 @@
 // Change this variable to switch between different environments
  
 // Environment Configuration
-const ENVIRONMENT = 'development'; 
+const ENVIRONMENT = 'aws'; 
 // Options: 'aws', 'local', 'development'
  
 // API Base URLs for different environments
 const API_URLS = {
   // aws: 'https://grc-backend.vardaands.com',
-  aws: 'https://grc-backend.vardaands.com',
+  aws: 'http://13.203.46.60:8000',
   local: 'http://localhost:8000',
   development: 'http://127.0.0.1:8000'
 };
