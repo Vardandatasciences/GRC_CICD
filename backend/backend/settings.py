@@ -46,7 +46,15 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "changeme-in-dev-only")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'grc-backend.vardaands.com','grc-backend.vardaands.com', '15.207.108.158','127.0.0.1','e581-2405-201-c00b-4973-29e6-34b2-9eae-1e0c.ngrok-free.app', '13.204.228.21']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'grc-backend.vardaands.com',
+    '15.207.108.158',
+    '13.204.228.21',
+    '13.203.46.60',  # New backend EC2 public IP
+    'e581-2405-201-c00b-4973-29e6-34b2-9eae-1e0c.ngrok-free.app',
+]
 
 
 # Application definition
@@ -266,9 +274,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://13.201.54.231:80",  # Deployed frontend URL with port
     "http://13.201.54.231:8080",  # Deployed frontend URL with port
     "http://13.201.54.231:8081",  # Deployed frontend URL with port
-    "https://grc-backend.vardaands.com",  # New server IP with port
-    "https://13.204.228.21:8000",  # New server IP with port (HTTPS),
+    "https://grc-backend.vardaands.com",
+    "https://13.204.228.21:8000",
     "http://13.204.228.21:8000",
+    # New EC2 frontend (current deployment)
+    "http://13.203.46.60:8080",
+    "https://13.203.46.60:8080",
 
 ]
 
@@ -288,9 +299,12 @@ CSRF_TRUSTED_ORIGINS = [
     "http://13.201.54.231:80",  # Deployed frontend URL with port
     "http://13.201.54.231:8080",  # Deployed frontend URL with port
     "http://13.201.54.231:8081",  # Deployed frontend URL with port
-    "https://grc-backend.vardaands.com",  # New server IP with port
-    "https://13.204.228.21:8000",  # New server IP with port (HTTPS)
+    "https://grc-backend.vardaands.com",
+    "https://13.204.228.21:8000",
     "http://13.204.228.21:8000",
+    # New EC2 frontend (current deployment)
+    "http://13.203.46.60:8080",
+    "https://13.203.46.60:8080",
 ]
 
 # Additional CORS settings

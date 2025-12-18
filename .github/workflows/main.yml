@@ -65,8 +65,11 @@ jobs:
         working-directory: ./frontend
         run: |
           echo "Building Docker image: ${{ env.DOCKER_IMAGE_NAME }}"
-          docker build -t ${{ env.DOCKER_IMAGE_NAME }}:latest .
-          docker build -t ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }} .
+          # Build once, apply both tags to reuse cache and speed up rebuilds
+          docker build \
+            -t ${{ env.DOCKER_IMAGE_NAME }}:latest \
+            -t ${{ env.DOCKER_IMAGE_NAME }}:${{ github.sha }} \
+            .
           echo "Docker image built successfully!"
 
       # ---------------------------------------------------------------------
